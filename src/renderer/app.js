@@ -412,7 +412,7 @@ function renderMarkdown(md) {
   $$('*', tpl.content).forEach(n => [...n.attributes].forEach(a => { if (/^on/i.test(a.name)) n.removeAttribute(a.name); }));
   $$('img', tpl.content).forEach(img => {
     const src = img.getAttribute('src') || '';
-    if (src.startsWith('images/')) img.src = 'campaign://' + src;
+    if (src.startsWith('images/')) img.src = imageSrc(src);
   });
   // Found coins: a button that puts them in the party purse.
   $$('a[href^="#purse-"]', tpl.content).forEach(a => {
@@ -494,7 +494,7 @@ function inlineMarkdown(md) {
 }
 
 function imageSrc(path) {
-  return path ? 'campaign://' + path : '';
+  return path ? api.imageUrl(path) : '';
 }
 
 async function loadPages() {
