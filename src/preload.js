@@ -55,6 +55,7 @@ contextBridge.exposeInMainWorld('api', {
     onUpdate: (cb) => ipcRenderer.on('battle:update', (_e, snap) => cb(snap)),
     ready: () => ipcRenderer.send('battle:ready'),
   },
+  imageUrl: (rel) => 'campaign://' + rel,
   exportMarkdown: (name, text) => call('export:markdown', name, text),
   tourAllowed: () => call('app:tourAllowed'),
   files: {
