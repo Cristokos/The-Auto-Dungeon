@@ -1,0 +1,71 @@
+{
+  "_about": "Essences from the DM primer. Add your own by copying an entry. traits: the small perk each essence grants (skill/tool proficiency or a cantrip). stoneSpells: spells an awakening stone of this essence can grant, by spell level 1-5. manifest: how the essence shows on its user.",
+  "essences": [
+    {
+      "name": "Dark", "theme": "Shadow, stealth, concealment",
+      "traits": ["Stealth proficiency", "the *minor illusion* cantrip"],
+      "manifest": ["shadow wisps trailing every strike", "eyes that swallow lamplight", "a shadow that moves a heartbeat late", "a faint chill and dimmer light around them"],
+      "stoneSpells": {"1": ["disguise self", "silent image", "fog cloud"], "2": ["darkness", "invisibility", "pass without trace"], "3": ["fear", "nondetection", "major image"], "4": ["greater invisibility", "phantasmal killer"], "5": ["mislead", "dream"]}
+    },
+    {
+      "name": "Blood", "theme": "Vitality, bleeding, life drain",
+      "traits": ["Medicine proficiency", "the *chill touch* cantrip"],
+      "manifest": ["crimson mist when they bleed", "veins that glow red when they fight", "a metallic scent in the air", "wounds that close a little too quickly"],
+      "stoneSpells": {"1": ["false life", "inflict wounds", "cure wounds"], "2": ["ray of enfeeblement", "aid", "blindness/deafness"], "3": ["vampiric touch", "revivify", "bestow curse"], "4": ["blight", "death ward"], "5": ["contagion", "mass cure wounds"]}
+    },
+    {
+      "name": "Sin", "theme": "Corruption, guilt, curses",
+      "traits": ["Intimidation proficiency", "the *toll the dead* cantrip"],
+      "manifest": ["a voice that makes people recall their regrets", "black veins spreading from their touch", "whispers only the guilty hear", "an aura that makes animals uneasy"],
+      "stoneSpells": {"1": ["hex", "bane", "command"], "2": ["suggestion", "enthrall", "ray of enfeeblement"], "3": ["bestow curse", "fear", "speak with dead"], "4": ["compulsion", "confusion"], "5": ["geas", "dominate person"]}
+    },
+    {
+      "name": "Fire", "theme": "Heat, destruction, light",
+      "traits": ["the *fire bolt* cantrip", "the *produce flame* cantrip"],
+      "manifest": ["a blade that glows like a forge", "embers drifting from their hair", "skin warm to the touch", "heat shimmer when they are angry"],
+      "stoneSpells": {"1": ["burning hands", "hellish rebuke"], "2": ["scorching ray", "flaming sphere", "heat metal"], "3": ["fireball", "daylight"], "4": ["wall of fire", "fire shield"], "5": ["flame strike", "immolation"]}
+    },
+    {
+      "name": "Water", "theme": "Flow, healing, adaptation",
+      "traits": ["Athletics proficiency (swimming)", "the *shape water* cantrip"],
+      "manifest": ["droplets beading on their skin in dry air", "movements that flow like a current", "eyes the colour of deep water", "the sound of rain when they cast"],
+      "stoneSpells": {"1": ["create or destroy water", "fog cloud", "cure wounds"], "2": ["lesser restoration", "prayer of healing", "blur"], "3": ["water breathing", "water walk", "sleet storm"], "4": ["control water", "ice storm"], "5": ["cone of cold", "mass cure wounds"]}
+    },
+    {
+      "name": "Earth", "theme": "Stability, defence, endurance",
+      "traits": ["proficiency with mason's tools", "the *mold earth* cantrip"],
+      "manifest": ["skin with a faint granite grain", "footsteps that sound heavier than they should", "dust that settles when they stand still", "small stones that roll toward them"],
+      "stoneSpells": {"1": ["shield", "longstrider", "earth tremor"], "2": ["spike growth", "barkskin", "shatter"], "3": ["meld into stone", "erupting earth", "protection from energy"], "4": ["stoneskin", "stone shape"], "5": ["wall of stone", "passwall"]}
+    },
+    {
+      "name": "Wind", "theme": "Speed, freedom, the sky",
+      "traits": ["Acrobatics proficiency", "the *gust* cantrip"],
+      "manifest": ["a breeze that follows them indoors", "hair and cloak always in motion", "the smell of rain before a storm", "a faint whistle when they move fast"],
+      "stoneSpells": {"1": ["feather fall", "thunderwave", "jump"], "2": ["gust of wind", "levitate", "misty step"], "3": ["fly", "wind wall", "lightning bolt"], "4": ["freedom of movement", "storm sphere"], "5": ["control winds", "steel wind strike"]}
+    },
+    {
+      "name": "Light", "theme": "Purity, revelation, healing",
+      "traits": ["the *light* cantrip", "the *sacred flame* cantrip"],
+      "manifest": ["a soft glow under the skin", "a halo of motes when they heal", "shadows that recoil from them", "eyes like polished gold"],
+      "stoneSpells": {"1": ["guiding bolt", "cure wounds", "faerie fire"], "2": ["lesser restoration", "moonbeam", "see invisibility"], "3": ["daylight", "beacon of hope", "remove curse"], "4": ["guardian of faith", "death ward"], "5": ["dispel evil and good", "greater restoration"]}
+    },
+    {
+      "name": "Magic", "theme": "Raw mana, versatility",
+      "traits": ["Arcana proficiency", "the *mage hand* cantrip"],
+      "manifest": ["blue-white motes orbiting their hands", "a hum that sensitive people can feel", "runes that flicker across their skin", "enchanted items reacting when they pass"],
+      "stoneSpells": {"1": ["magic missile", "shield", "detect magic"], "2": ["misty step", "see invisibility", "magic weapon"], "3": ["counterspell", "dispel magic", "glyph of warding"], "4": ["arcane eye", "banishment"], "5": ["wall of force", "telekinesis"]}
+    },
+    {
+      "name": "Swift", "theme": "Speed, reflexes",
+      "traits": ["Acrobatics proficiency", "the *message* cantrip"],
+      "manifest": ["afterimages when they dodge", "restless, quick hands", "a blur at the edge of vision", "never seeming to be out of breath"],
+      "stoneSpells": {"1": ["expeditious retreat", "longstrider", "zephyr strike"], "2": ["misty step", "blur", "pass without trace"], "3": ["haste", "blink"], "4": ["dimension door", "freedom of movement"], "5": ["far step", "steel wind strike"]}
+    },
+    {
+      "name": "Might", "theme": "Strength, impact",
+      "traits": ["Athletics proficiency", "the *thunderclap* cantrip"],
+      "manifest": ["blows that land with a thunderclap", "a frame that seems to take up more room", "cracked stone where they plant their feet", "a grip that dents metal"],
+      "stoneSpells": {"1": ["thunderwave", "shield of faith", "heroism"], "2": ["enhance ability", "shatter", "magic weapon"], "3": ["thunder step", "crusader's mantle", "protection from energy"], "4": ["staggering smite", "stoneskin"], "5": ["destructive wave", "hold monster"]}
+    }
+  ]
+}

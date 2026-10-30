@@ -1,0 +1,1010 @@
+{
+ "_about": "Lists for the generator tools: who lives where (people mix by region and terrain), the terrain words on place pages, encounter details, quick rolls, treasure and the no-repeat decks.",
+ "version": 1,
+ "peopleMix": {
+  "_about": "Multiplies each people's weight in peoples.json for NPCs rolled at a place. A place page can set its own with `peoples: {Merfolk: 3}`.",
+  "styles": {
+   "greenstone": {
+    "Merfolk": 1.5,
+    "Smoulder": 1.3
+   },
+   "yaresh": {
+    "Elf": 1.2,
+    "Leonid": 1.2,
+    "Runic": 1.3,
+    "Draconian": 1.3,
+    "Smoulder": 1.3,
+    "Goblin": 1.3,
+    "Celestine": 1.5,
+    "Merfolk": 1.5
+   },
+   "vitesse": {
+    "Elf": 1.6,
+    "Runic": 1.6,
+    "Celestine": 1.5,
+    "Goblin": 0.8
+   },
+   "northern": {
+    "Human": 1.3,
+    "Runic": 1.3,
+    "Smoulder": 0.6
+   },
+   "rimaros": {
+    "Celestine": 3,
+    "Merfolk": 2.5,
+    "Draconian": 1.2
+   },
+   "steppe": {
+    "Leonid": 2,
+    "Goblin": 1.6,
+    "Merfolk": 0.2
+   }
+  },
+  "terrain": {
+   "Coast": {
+    "Merfolk": 3
+   },
+   "Open sea": {
+    "Merfolk": 5
+   },
+   "Delta and marsh": {
+    "Merfolk": 2,
+    "Goblin": 1.3
+   },
+   "Forest": {
+    "Elf": 1.5
+   },
+   "Jungle": {
+    "Elf": 1.3,
+    "Leonid": 1.3
+   },
+   "Desert": {
+    "Smoulder": 2,
+    "Draconian": 1.3
+   },
+   "Mountains": {
+    "Runic": 1.4,
+    "Draconian": 1.5
+   },
+   "Steppe": {
+    "Leonid": 1.6,
+    "Goblin": 1.3
+   }
+  },
+  "inland": {
+   "Merfolk": 0.25
+  }
+ },
+ "terrainWords": {
+  "_about": "Words used in a place page's `terrain` list, and the travel terrain each one means.",
+  "road": "Road",
+  "roads": "Road",
+  "farmland": "Farmland",
+  "fields": "Farmland",
+  "plains": "Farmland",
+  "orchards": "Farmland",
+  "delta": "Delta and marsh",
+  "marsh": "Delta and marsh",
+  "swamp": "Delta and marsh",
+  "river": "Delta and marsh",
+  "lake": "Delta and marsh",
+  "fen": "Delta and marsh",
+  "bog": "Delta and marsh",
+  "forest": "Forest",
+  "woods": "Forest",
+  "woodland": "Forest",
+  "desert": "Desert",
+  "dunes": "Desert",
+  "badlands": "Desert",
+  "steppe": "Steppe",
+  "grassland": "Steppe",
+  "prairie": "Steppe",
+  "tundra": "Steppe",
+  "mountains": "Mountains",
+  "mountain": "Mountains",
+  "hills": "Mountains",
+  "highlands": "Mountains",
+  "volcano": "Mountains",
+  "jungle": "Jungle",
+  "rainforest": "Jungle",
+  "coast": "Coast",
+  "beach": "Coast",
+  "cliffs": "Coast",
+  "islands": "Coast",
+  "island": "Coast",
+  "sea": "Open sea",
+  "ocean": "Open sea",
+  "open sea": "Open sea"
+ },
+ "streets": {
+  "name": "Streets",
+  "themes": [
+   "Sin",
+   "Dark",
+   "Swift"
+  ],
+  "about": "Inside a town or city: alleys, rooftops, sewers and markets."
+ },
+ "encounter": {
+  "_about": "Encounter details. wants and tactics are by creature type (monsterType), with 'any' for all. situations and features are by travel terrain, with 'Streets' and 'any'. {monster} is the lead monster's name.",
+  "wants": {
+   "beast": [
+    "Food. They are starving after a bad season and anything that moves is a meal.",
+    "Their young. A den or nest is close by and they will not let anyone near it.",
+    "Territory. The party has walked into ground they have marked and defended for years.",
+    "Water. The only drinkable water for miles is behind them.",
+    "To get away. They were driven here by something bigger and are panicking.",
+    "A carcass. They have a kill and will fight to keep it."
+   ],
+   "monstrosity": [
+    "To feed, and the party smells like the easiest meal in the area.",
+    "To guard a spawn point thick with magic, which feeds them as they wait.",
+    "To lair. They are looking for a new den, and the party's camp would do.",
+    "Shiny things. Coins, cores and polished weapons draw them like a magpie.",
+    "To mate, and anything that comes near is a rival.",
+    "Revenge on whoever hurt them last, and the party smells like an adventurer."
+   ],
+   "undead": [
+    "To finish something they started in life: a delivery, a guard post, a vow.",
+    "Warmth. They are drawn to living heat and cannot tell friend from food.",
+    "To be laid to rest, though they attack anyone who cannot do it.",
+    "To obey. Someone raised them and gave them an order they cannot break.",
+    "To keep the living out of a tomb, a battlefield or a ruin.",
+    "To spread. Each body they kill may rise to join them."
+   ],
+   "humanoid": [
+    "Money. They are paid to stop anyone passing, and they would rather be paid without bleeding.",
+    "The party's gear, cores or coin.",
+    "Someone the party is travelling with, or someone they are looking for.",
+    "To keep a secret: a smuggling run, a hidden camp, a stolen cargo.",
+    "Food and shelter. They are desperate, not cruel.",
+    "Glory. They want to beat a team of adventurers and be talked about.",
+    "To prove themselves to someone watching.",
+    "To recruit. They will offer before they fight."
+   ],
+   "fiend": [
+    "A bargain. They would rather trade than fight, and the price is always too high.",
+    "Souls, or at least suffering. They are here to enjoy themselves.",
+    "Something a cult promised them and has not delivered.",
+    "A way home. They were summoned and left behind.",
+    "To corrupt someone in the party, and they have picked who."
+   ],
+   "elemental": [
+    "Nothing a mortal can understand. They are a piece of the weather that woke up.",
+    "To return to their element, and the party stands between them and it.",
+    "To grow. They feed on their element and the party is carrying some of it.",
+    "Release from a binding: a broken ward, a half-finished ritual."
+   ],
+   "aberration": [
+    "Minds. They feed on thought and the party is thinking loudly.",
+    "To learn. They take people apart to see how they work.",
+    "A door. They are holding open a crack to somewhere else.",
+    "To be left alone, though they do not believe that anyone would leave them alone."
+   ],
+   "construct": [
+    "To follow their last order, which nobody alive remembers giving.",
+    "To guard what they were built to guard.",
+    "Repairs. They are scavenging metal and cores to keep working.",
+    "A password the party does not know."
+   ],
+   "dragon": [
+    "Treasure, and respect, in that order.",
+    "To be flattered. A clever party might talk its way past.",
+    "Territory. This valley, this coast, this sky is theirs.",
+    "To test the party. They are curious about adventurers."
+   ],
+   "fey": [
+    "A game. They want to play, and the rules are theirs.",
+    "A name, a memory or a year of someone's life.",
+    "To punish a broken promise, whether or not the party made it.",
+    "Mischief. Nothing more than that."
+   ],
+   "giant": [
+    "Tribute, as the old agreements say.",
+    "Food for the hold, and livestock first.",
+    "To settle a grudge with the nearest town.",
+    "A lost thing: a hammer, a child, a herd."
+   ],
+   "ooze": [
+    "To dissolve whatever it touches. That is all.",
+    "Warmth and minerals. It is drawn to metal."
+   ],
+   "plant": [
+    "To spread its seed, and bodies make good soil.",
+    "Sunlight. The party is standing in its light.",
+    "To protect the grove that grew it."
+   ],
+   "celestial": [
+    "To judge. They have come to see whether someone here is worthy.",
+    "A message delivered, whatever it costs.",
+    "To stop a wrong that only they can see."
+   ],
+   "any": [
+    "To be left alone. The party walked into them.",
+    "Whatever the party is carrying, which they can smell or sense.",
+    "To drive everyone off this ground before something happens here.",
+    "They are guarding a fresh spawn point thick with magic."
+   ]
+  },
+  "whyHere": [
+   "A spawn point opened here in the last few days and the magic has not settled.",
+   "They followed a trail of blood, food or magic to this spot.",
+   "Someone left a gate open, a ward unrenewed or a cage unlocked.",
+   "This is where they always are. The locals know to avoid it, and the party didn't ask.",
+   "A storm, flood or fire pushed them out of their usual ground.",
+   "They are hunting the same thing the party is.",
+   "Someone sent them, and that someone is watching.",
+   "They were fleeing another team of adventurers and ran straight into this one.",
+   "The Adventure Society missed this nest in its last sweep.",
+   "The local magic is rising, and they came with it."
+  ],
+  "exits": [
+   "Give them what they want, or something that smells like it: food, a shiny lure, a way past.",
+   "A show of force: one hard hit or a loud spell and they think twice. A DC {dc} Intimidation check makes them back off.",
+   "Back away slowly and leave them their ground. They don't follow past a landmark the DM picks.",
+   "Talk. Someone who speaks their language, or a DC {dc} Persuasion or Animal Handling check, buys a truce.",
+   "Distraction. Fire, noise or a thrown pack sends them after something else for a minute.",
+   "Hide. A DC {dc} group Stealth check and they pass by without noticing the party.",
+   "Bargain. They will trade passage for a favour, and they will remember it.",
+   "Point them at a better target: a rival, a nest, a bigger threat.",
+   "Outlast them. They tire, lose interest or the light changes and they leave.",
+   "Find the one in charge. Beat or persuade the leader and the rest go with it."
+  ],
+  "features": {
+   "Road": [
+    "An overturned cart for cover (half cover, difficult terrain around it).",
+    "A milestone shrine; touching it gives one creature advantage on its next save, once.",
+    "Deep ruts: a creature that dashes along them must make a DC 10 Dexterity save or fall prone.",
+    "A narrow bridge over a ditch, only wide enough for one at a time.",
+    "Dust kicked up by the fight: heavily obscured past 30 feet after the first round."
+   ],
+   "Farmland": [
+    "A scarecrow that looks a lot like a person from a distance.",
+    "Tall crops: lightly obscured, and Stealth with advantage while you stay low.",
+    "An irrigation channel, 5 feet wide and 3 deep: difficult terrain.",
+    "A barn with a hayloft for high ground and a ladder to pull up.",
+    "Panicked livestock: at the top of each round, a random line of 20 feet is trampled (DC 12 Dexterity save or 1d6)."
+   ],
+   "Delta and marsh": [
+    "Reeds taller than a person: heavily obscured beyond 10 feet.",
+    "Sucking mud: difficult terrain, and a creature that ends its turn there is restrained until it uses an action to pull free (DC 12 Strength).",
+    "A half-sunk boat for cover and a dry place to stand.",
+    "Channels of deep water; heavy armour sinks.",
+    "Mist until noon: lightly obscured everywhere."
+   ],
+   "Forest": [
+    "Thick undergrowth: difficult terrain off the path.",
+    "A fallen trunk for half cover, or three-quarters if you lie behind it.",
+    "Low branches: climbers get high ground and a +2 to ranged attacks down.",
+    "A ravine hidden by ferns (DC 13 Perception to spot before falling 10 feet).",
+    "Dim light under the canopy: lightly obscured."
+   ],
+   "Desert": [
+    "Loose sand: difficult terrain on the slopes.",
+    "A rock outcrop, the only shade and the only high ground.",
+    "Heat shimmer: ranged attacks past 60 feet have disadvantage.",
+    "A sinkhole that opens on the third round under a random creature (DC 13 Dexterity save or fall 15 feet).",
+    "A dust devil crossing the field, blinding whoever it passes for a round."
+   ],
+   "Steppe": [
+    "Open ground: nowhere to hide, and nothing to stop a charge.",
+    "Tall grass in one quarter of the field: lightly obscured.",
+    "A burrow field: difficult terrain, and a DC 10 Dexterity save on a dash or twist an ankle (speed halved for a minute).",
+    "A lone standing stone for half cover.",
+    "Wind strong enough to blow out torches and give disadvantage on ranged attacks into it."
+   ],
+   "Mountains": [
+    "A narrow ledge: a creature shoved off falls 20 feet.",
+    "Scree: difficult terrain, and loud.",
+    "A cave mouth that the creatures know and the party doesn't.",
+    "Thin air above the snowline: a DC 10 Constitution save at the end of each round of hard fighting or gain a level of exhaustion.",
+    "Loose boulders that can be levered down a slope (Strength DC 14, 3d10 in a 10-foot line)."
+   ],
+   "Jungle": [
+    "Vines that grab: difficult terrain, and a creature that falls prone there is restrained until it uses an action to get free.",
+    "Canopy above: anything that climbs is hard to see (heavily obscured from below).",
+    "A river crossing with something already in the water.",
+    "Rain so heavy that ranged attacks past 30 feet have disadvantage.",
+    "Stinging plants that deal 1d4 poison to anyone shoved into them."
+   ],
+   "Coast": [
+    "Wet rocks: a creature that dashes must make a DC 10 Dexterity save or fall prone.",
+    "The tide coming in: each round the dry ground shrinks by 5 feet.",
+    "A wreck on the sand for cover.",
+    "Sea caves that echo, so nobody can tell where a sound came from.",
+    "Surf that knocks over anyone standing in it (DC 12 Strength save each turn)."
+   ],
+   "Open sea": [
+    "A heaving deck: ranged attacks have disadvantage when the ship rolls (on a 1-2 on a d6 each round).",
+    "Rigging to climb for high ground, and to fall from.",
+    "A cargo hatch open below: a shove sends someone 10 feet into the hold.",
+    "Spray and wind: fires go out and loud voices don't carry.",
+    "The ship's own crew, frightened and in the way."
+   ],
+   "Streets": [
+    "Market stalls to overturn, hide behind or climb.",
+    "A crowd that panics: difficult terrain, and area spells will hit bystanders.",
+    "Rooftops reached by a stack of crates (Athletics DC 10).",
+    "A narrow alley where only two can fight side by side.",
+    "The watch arriving in 1d4 + 2 rounds, and they will arrest everyone.",
+    "A sewer grate that opens onto a 10-foot drop into running water."
+   ],
+   "any": [
+    "A choke point between two rocks or walls, only 5 feet wide.",
+    "High ground at one side of the field.",
+    "Something flammable: dry brush, a tar barrel, a pile of sacks.",
+    "Bad light: lightly obscured beyond 30 feet."
+   ]
+  },
+  "situations": {
+   "Road": [
+    "The creatures are already fighting a merchant's guards when the party crests the hill.",
+    "A broken-down wagon blocks the road and the creatures are inside it.",
+    "They are waiting where the road narrows between two banks.",
+    "A patrol of the local lord's riders lies dead on the road; whatever did it is still here.",
+    "A traveller runs towards the party, shouting a warning a few seconds too late."
+   ],
+   "Farmland": [
+    "The creatures are in a farmer's field and the farmer is begging someone to do something.",
+    "A herd has been scattered; the creatures are picking off the stragglers.",
+    "The fight starts in a barn and the hay catches fire.",
+    "Farmhands with pitchforks want to help and will mostly get in the way.",
+    "The creatures came up from a well that was sealed for good reason."
+   ],
+   "Delta and marsh": [
+    "Fog or reeds limit sight to 30 feet.",
+    "The ground is unstable; a failed check drops someone into water.",
+    "A coin-farm patrol is overdue and these creatures are why.",
+    "The creatures are in the water, and the party is in a boat.",
+    "A green-stone barge is stuck on a mudbank and the crew are on the roof."
+   ],
+   "Forest": [
+    "The trees have gone silent, and everyone knows what that means.",
+    "A hunter's trap has caught one of the creatures, and the rest are furious.",
+    "The creatures are dragging something heavy back to their den.",
+    "Woodcutters have fled and left their axes and fire behind.",
+    "Another team of adventurers is already here and wants the kill."
+   ],
+   "Desert": [
+    "The party finds the creatures at the only waterhole for a day in every direction.",
+    "A sandstorm is an hour away and the fight has to be over before it hits.",
+    "The creatures are digging out something buried in the dunes.",
+    "A caravan's beasts have bolted and the creatures are between the party and the caravan.",
+    "Bones of the last group that tried this are scattered round the rocks."
+   ],
+   "Steppe": [
+    "The creatures are running a herd down and the party is in the herd's way.",
+    "Riders from a clan camp watch from a ridge to see how the party fights.",
+    "A grass fire is coming and both sides know it.",
+    "The creatures are circling something wounded in the long grass.",
+    "There is nowhere to hide, so the creatures saw the party coming a mile off."
+   ],
+   "Mountains": [
+    "The fight starts on a switchback, with a drop on one side.",
+    "The creatures are holding a pass, and there is no other way through.",
+    "An avalanche is a real risk if anyone uses loud magic.",
+    "A goat herder is stuck on a ledge above the creatures.",
+    "Snow begins to fall, thick and fast."
+   ],
+   "Jungle": [
+    "The creatures are in the canopy; the party only sees leaves moving.",
+    "A temple ruin is half swallowed by roots, and the creatures nest inside.",
+    "A river is in flood and the only crossing is a fallen tree.",
+    "Insects are so thick that concentration checks are made with disadvantage.",
+    "Someone left trail markers that lead straight into the nest."
+   ],
+   "Coast": [
+    "The creatures came out of the surf at low tide and will go back with the high.",
+    "A fishing village's boats are drawn up on the beach and the creatures are among them.",
+    "A wreck has washed in and the creatures are picking it over.",
+    "The party is on a sea cliff path when the creatures attack from above and below.",
+    "Smugglers' lights on the water: someone else is landing here tonight."
+   ],
+   "Open sea": [
+    "The creatures come aboard over the rail at night.",
+    "The ship is becalmed and the creatures are circling.",
+    "A second ship is under attack and signalling for help.",
+    "Something has holed the hull and the hold is filling.",
+    "The crew wants to throw something overboard to buy their way out."
+   ],
+   "Streets": [
+    "The creatures are loose in a market at the busiest hour.",
+    "The watch has already lost and wants the party to finish it.",
+    "The fight starts in a tavern and moves out into the street.",
+    "Someone in the crowd is helping the creatures.",
+    "A temple bell is ringing the alarm and people are running the wrong way."
+   ],
+   "any": [
+    "The monsters are fighting each other when the party arrives.",
+    "A Normal-rank traveller is hiding nearby and needs rescue.",
+    "They are fleeing something worse.",
+    "The monsters are unusually strong; the local magic is rising.",
+    "Someone is watching how the party fights and will want to talk after."
+   ]
+  },
+  "tactics": {
+   "beast": [
+    "They circle and look for the weakest, then all go for it at once.",
+    "The biggest one charges while the others flank.",
+    "They fight until hurt, then run and try again later."
+   ],
+   "monstrosity": [
+    "It opens with its strongest attack on whoever looks most dangerous.",
+    "It uses the ground: high places, water, darkness.",
+    "It drags one victim away from the rest and fights there."
+   ],
+   "undead": [
+    "They never retreat and never take cover.",
+    "They go for the living first and ignore anything that looks dead.",
+    "They mob the nearest creature and keep coming."
+   ],
+   "humanoid": [
+    "Archers hang back behind cover while the rest hold the line.",
+    "They focus spellcasters first, because their leader told them to.",
+    "They try to take a hostage and bargain.",
+    "They use nets, caltrops and smoke before they use swords."
+   ],
+   "fiend": [
+    "It talks the whole time, picking at whoever it can upset.",
+    "It sets the party against each other before it fights.",
+    "It holds back until someone is alone."
+   ],
+   "elemental": [
+    "It goes straight for whatever matches its element: fire to dry wood, water to the river.",
+    "It ignores cover and fights in a straight line."
+   ],
+   "aberration": [
+    "It attacks minds first and bodies after.",
+    "It has a way out that no one else can use.",
+    "It flees at the first real hit and comes back stronger."
+   ],
+   "construct": [
+    "It keeps to its patrol until someone breaks a rule it was given.",
+    "It targets whoever touched what it guards."
+   ],
+   "dragon": [
+    "It strafes with breath from the air and never lands near a fighter.",
+    "It fights from its lair's best ground and makes the party come to it."
+   ],
+   "fey": [
+    "They play tricks first: illusions, charms, stolen boots.",
+    "They only fight for real if someone breaks their rules."
+   ],
+   "giant": [
+    "It throws rocks until the party closes, then swings.",
+    "It grabs the smallest creature and uses it as a club or a shield."
+   ],
+   "any": [
+    "They fight the nearest creature and switch to whoever hurts them most.",
+    "They try to push the party into the worst ground on the field.",
+    "The leader stays back while the rest wear the party down."
+   ]
+  },
+  "morale": [
+   "When the leader falls, the rest flee.",
+   "At half their number, they break and run in every direction.",
+   "At half their hit points, each one tries to get away. Cornered, they fight harder.",
+   "When one of them dies, the rest stop to drag the body away.",
+   "They surrender when outnumbered, and offer to tell what they know.",
+   "They never break. Something is making them fight.",
+   "At half strength, the leader calls for help (see reinforcements).",
+   "At half strength, they fall back to better ground and try again.",
+   "When fire, water or bright light is used against them, they panic for a round.",
+   "They fight to the death to protect what they are guarding, and no further."
+  ],
+  "reinforcements": [
+   "On round 3, another of the lead monster comes to the noise.",
+   "On round 4, 1d4 smaller creatures of the same kind arrive.",
+   "If the fight lasts more than 5 rounds, something bigger comes to see what's going on.",
+   "A rival group arrives on round 3 and attacks whoever looks weakest, party or monster.",
+   "The watch, a patrol or another team arrives on round 4, on the party's side.",
+   "No one else is coming. The party is on its own."
+  ],
+  "reinforceChance": 0.35,
+  "nonFight": {
+   "chance": 0.2,
+   "kinds": [
+    {
+     "name": "Stand-off",
+     "text": "Both sides have seen each other and neither has moved. The first to act decides what this is."
+    },
+    {
+     "name": "Parley",
+     "text": "They call out, or signal, before anyone attacks. They want to talk, and they want something."
+    },
+    {
+     "name": "Chase",
+     "text": "They run as soon as they see the party. Catching them is the challenge, not killing them."
+    },
+    {
+     "name": "Passing by",
+     "text": "They have somewhere to be and don't care about the party unless the party makes them care."
+    },
+    {
+     "name": "Aftermath",
+     "text": "The fight already happened. The party finds the creatures wounded, or the bodies of whoever met them first."
+    },
+    {
+     "name": "Ambush being set",
+     "text": "The party spots them before they spot the party, laying an ambush for someone else."
+    }
+   ]
+  }
+ },
+ "quick": {
+  "_about": "Quick rolls (F2). Names, rumours, weather and shop signs come from the peoples, tavern, market and travel lists; these are the rest.",
+  "doing": [
+   "haggling loudly over the price of a goat",
+   "carrying a ladder much too long for the street",
+   "reading a letter and trying not to cry",
+   "chasing a runaway heidel calf",
+   "sweeping the same step for the third time, watching everyone",
+   "selling roasted nuts from a brazier on wheels",
+   "arguing with a street preacher of the Church of Purity",
+   "teaching a child to count spirit coins",
+   "asleep on a bench with a purse in plain sight",
+   "painting a shop sign, badly",
+   "trying to read an Adventure Society contract notice out loud",
+   "carrying a caged bird that will not stop talking",
+   "following the party at a careful distance",
+   "looking for a lost earring in the gutter",
+   "practising sword forms with a stick",
+   "mending a net on the dockside",
+   "waiting outside a temple with flowers",
+   "counting barrels off a cart with a tally stick",
+   "trying to sell a map nobody wants",
+   "drunk at midday and very cheerful about it",
+   "bandaging a dog's paw",
+   "showing off a fresh Iron-rank badge",
+   "telling fortunes with monster teeth",
+   "standing perfectly still and staring at the sky",
+   "trying to remember a song's second verse",
+   "eating a chittle kebab as if it were a challenge",
+   "handing out pamphlets for a lecture at the Magic Society",
+   "repairing a wheel, swearing",
+   "walking a very old, very slow goat",
+   "hurrying, with ink on both hands",
+   "posting a notice about a missing cat",
+   "carrying a basket of eggs on their head",
+   "playing a flute for coins, very well",
+   "whittling small wooden heidels to sell",
+   "looking for someone, holding a sketch of their face",
+   "tidying the offerings at a crossroads shrine",
+   "unloading a sky ship's cargo net",
+   "picking a lock, then pretending not to be",
+   "humming and dancing alone",
+   "kneeling to pray at a wayside shrine of the Church of the Journey"
+  ],
+  "trinkets": [
+   "a brass key with no teeth",
+   "a monster core cracked clean in two",
+   "a wooden heidel with one head missing",
+   "a letter sealed with black wax and never opened",
+   "a glass eye that is warm to the touch",
+   "a map of a city that does not exist",
+   "a spirit coin with a hole punched through it",
+   "a tooth with a tiny rune carved into it",
+   "a doll dressed in an Adventure Society uniform",
+   "a compass that points at the nearest temple",
+   "a vial of sand that sifts upwards",
+   "a ring too small for any finger",
+   "a pressed flower from Vitesse that still smells fresh",
+   "a list of names, half crossed out",
+   "a dice set with only sixes",
+   "a silver bell with no clapper that still rings",
+   "a stone that is always cold",
+   "a feather from a bird nobody can name",
+   "a ticket for a ship that sank ten years ago",
+   "a lock of hair in a locket marked with a date",
+   "a small painting of the party, unfinished",
+   "a jar of honey with a bee still alive in it",
+   "a toy boat carved from green stone",
+   "an iron badge with the rank scratched off",
+   "a recipe for owlbear stew, annotated in three hands",
+   "a pebble that hums when held near water",
+   "a chess piece shaped like an astral power",
+   "a snuffbox full of teeth",
+   "a mask made of bark",
+   "a pair of spectacles that make everything look slightly later",
+   "a seashell that whispers in a language nobody speaks",
+   "a spoon bent into a knot",
+   "a bone flute with one hole",
+   "a page torn from a church's book of names",
+   "an arrowhead made of glass",
+   "a velvet pouch with one gold coin and a note: 'for the ferryman'",
+   "a wax seal of a house that died out",
+   "a candle that burns blue",
+   "a tin soldier painted as a celestine knight",
+   "a puzzle box that rattles"
+  ],
+  "pockets": [
+   "3 copper, a stub of candle and a bit of string",
+   "a half-eaten pastry wrapped in a handkerchief",
+   "a folded contract notice from the Adventure Society",
+   "a note: 'the blue door, after dark'",
+   "a pawn ticket from a shop in the Old City",
+   "two iron spirit coins and a lucky pebble",
+   "a small knife and a whetstone",
+   "a love letter, unsent",
+   "dice, loaded",
+   "a list of debts, with the party's patron's name on it",
+   "a key on a ribbon",
+   "dried fish, a lot of it",
+   "a wanted poster with this person's own face on it",
+   "a bundle of herbs for the healer's temple",
+   "a bronze ring with a family crest",
+   "nothing but lint and a button",
+   "a sketch of the local watch house, with the doors marked",
+   "a monster tooth on a cord",
+   "a vial of something that smells like the sea",
+   "a betting slip for the arena",
+   "a prayer card of the Church of the Hearth",
+   "a letter of introduction to a noble house",
+   "a map of the sewers, in pencil",
+   "three different coins from three different cities",
+   "a lock of hair tied with red thread",
+   "an iron core, not cracked, worth 50 gp",
+   "a seed that glows faintly",
+   "a child's drawing of a dragon",
+   "a receipt from a black-market stall",
+   "a bone whistle"
+  ],
+  "smells": [
+   "fried dough and hot oil",
+   "wet canvas and cheap perfume",
+   "brine and rotting kelp",
+   "fresh bread from somewhere close",
+   "incense from a temple door",
+   "horse dung, except there are no horses here; it's heidel",
+   "smoke from a forge",
+   "sour beer spilled hours ago",
+   "spices from the far side of the sea",
+   "burnt sugar",
+   "something dead in the water",
+   "rain on hot stone",
+   "flowers, far too many of them",
+   "tar and new rope",
+   "ozone after a spell",
+   "a tannery downwind",
+   "roasting meat of an unknown monster",
+   "mint and tea leaves",
+   "old paper and dust",
+   "blood, faint but there"
+  ],
+  "sounds": [
+   "a temple bell ringing the hour, a little late",
+   "gulls fighting over a fish head",
+   "a street singer with a cracked voice",
+   "hammering from a smithy",
+   "a crowd cheering somewhere out of sight",
+   "someone shouting a name, over and over",
+   "wagon wheels on cobbles",
+   "a baby crying in a high window",
+   "the crack of a spell being practised badly",
+   "water dripping in a culvert",
+   "a dog barking at nothing",
+   "laughter that stops suddenly",
+   "a heidel bellowing from both heads at once",
+   "coins being counted, fast",
+   "a door slammed three times",
+   "the watch's whistles, three short blasts",
+   "a flute playing a tune the party half knows",
+   "wind in loose shutters",
+   "a sky ship's horn overhead",
+   "someone humming right behind the party"
+  ],
+  "complications": [
+   "The street ahead is closed: a cart has overturned and spilled live crabs everywhere.",
+   "A pickpocket tries the party, and a watchman saw it happen.",
+   "Someone mistakes one of the party for a person they owe money.",
+   "A festival procession blocks the way for an hour.",
+   "Rain turns the road to mud: travel takes twice as long today.",
+   "The person they came to see left this morning, and nobody will say where.",
+   "A rival team of adventurers has taken the same contract.",
+   "The price has doubled since yesterday, and the shopkeeper won't say why.",
+   "A child follows the party and won't leave.",
+   "The bridge toll has gone up, and the guard is new and nervous.",
+   "Someone has spread a rumour about the party, and people are staring.",
+   "A loose animal from an astral space is running through the crowd.",
+   "A noble's guard tells them to step aside and kneel.",
+   "The inn is full because of a wedding, and the wedding needs help.",
+   "A message for the party arrives, meant for someone else.",
+   "The local magic flares: low-rank spells misfire on a 1 on the d20 for the next hour.",
+   "An Adventure Society official wants to inspect their badges.",
+   "Their contact is drunk and very, very honest.",
+   "A thief stole the wrong bag and wants to give it back, for a fee.",
+   "A street preacher points at one of them and names a sin."
+  ],
+  "shops": [
+   "{name}'s {noun}",
+   "The {adj} {noun}",
+   "{noun} and {noun2}",
+   "{name} and Daughters",
+   "The {noun} Exchange",
+   "{adj} Goods"
+  ]
+ },
+ "treasure": {
+  "_about": "Treasure tab and the quick-roll loot. Coins in gp; gems and art by value; items by rarity from the items list.",
+  "individual": {
+   "Normal": {
+    "coins": "3d6",
+    "trinket": 0.3
+   },
+   "Iron": {
+    "coins": "2d6x5",
+    "trinket": 0.25,
+    "core": 0.25,
+    "gem": 0.1
+   },
+   "Bronze": {
+    "coins": "2d6x100",
+    "trinket": 0.2,
+    "core": 0.3,
+    "gem": 0.15
+   },
+   "Silver": {
+    "coins": "2d6x10000",
+    "trinket": 0.15,
+    "core": 0.3,
+    "gem": 0.2
+   },
+   "Gold": {
+    "coins": "2d6x100000",
+    "trinket": 0.1,
+    "core": 0.3,
+    "gem": 0.2
+   },
+   "Diamond": {
+    "coins": "2d6x1000000",
+    "trinket": 0.1,
+    "core": 0.3,
+    "gem": 0.25
+   }
+  },
+  "hoard": {
+   "Normal": {
+    "coins": "2d6x10",
+    "gems": [
+     "1d4",
+     [
+      10,
+      25
+     ]
+    ],
+    "items": [
+     "1d2",
+     [
+      "common"
+     ],
+     0.5
+    ],
+    "cores": [
+     "0",
+     "Iron"
+    ],
+    "stones": [
+     "0",
+     1
+    ],
+    "essence": 0
+   },
+   "Iron": {
+    "coins": "4d6x10",
+    "gems": [
+     "1d6",
+     [
+      10,
+      25,
+      50
+     ]
+    ],
+    "items": [
+     "1d2",
+     [
+      "common",
+      "uncommon"
+     ],
+     0.7
+    ],
+    "cores": [
+     "1d4",
+     "Iron"
+    ],
+    "stones": [
+     "1d2",
+     1
+    ],
+    "essence": 0.2
+   },
+   "Bronze": {
+    "coins": "4d6x200",
+    "gems": [
+     "1d6",
+     [
+      50,
+      250,
+      750
+     ]
+    ],
+    "items": [
+     "1d3",
+     [
+      "uncommon",
+      "rare"
+     ],
+     0.8
+    ],
+    "cores": [
+     "1d4",
+     "Bronze"
+    ],
+    "stones": [
+     "1d2",
+     2
+    ],
+    "essence": 0.25
+   },
+   "Silver": {
+    "coins": "4d6x20000",
+    "gems": [
+     "1d6",
+     [
+      750,
+      2500,
+      7500
+     ]
+    ],
+    "items": [
+     "1d3",
+     [
+      "rare",
+      "very rare"
+     ],
+     0.85
+    ],
+    "cores": [
+     "1d4",
+     "Silver"
+    ],
+    "stones": [
+     "1d2",
+     3
+    ],
+    "essence": 0.3
+   },
+   "Gold": {
+    "coins": "4d6x200000",
+    "gems": [
+     "1d8",
+     [
+      2500,
+      7500,
+      25000
+     ]
+    ],
+    "items": [
+     "1d4",
+     [
+      "very rare",
+      "legendary"
+     ],
+     0.9
+    ],
+    "cores": [
+     "1d4",
+     "Gold"
+    ],
+    "stones": [
+     "1d3",
+     4
+    ],
+    "essence": 0.35
+   },
+   "Diamond": {
+    "coins": "4d6x2000000",
+    "gems": [
+     "1d8",
+     [
+      7500,
+      25000
+     ]
+    ],
+    "items": [
+     "1d4",
+     [
+      "legendary"
+     ],
+     0.9
+    ],
+    "cores": [
+     "1d4",
+     "Diamond"
+    ],
+    "stones": [
+     "1d3",
+     5
+    ],
+    "essence": 0.4
+   }
+  },
+  "gems": {
+   "10": [
+    "a chip of blue quartz",
+    "a polished river agate",
+    "a banded green-stone pebble from the Greenstone quarries",
+    "a tiger's-eye bead",
+    "a piece of moss agate",
+    "an obsidian flake",
+    "a freshwater pearl, misshapen",
+    "a turquoise bead"
+   ],
+   "25": [
+    "a small silver hair comb",
+    "a carved bone dice set",
+    "a copper bracelet set with glass",
+    "a painted clay icon of the Church of the Hearth",
+    "a little brass astrolabe that doesn't work",
+    "an embroidered silk purse",
+    "a pewter brooch shaped like a heidel",
+    "a wooden prayer box inlaid with shell"
+   ],
+   "50": [
+    "a bloodstone",
+    "a carnelian",
+    "a piece of rose quartz cut as a heart",
+    "an onyx signet",
+    "a moonstone",
+    "a zircon",
+    "a lump of polished jet",
+    "a citrine the size of a thumbnail"
+   ],
+   "250": [
+    "an amethyst",
+    "a deep red garnet",
+    "a black pearl",
+    "a coral figure of a merfolk dancer",
+    "a gold locket with two tiny portraits",
+    "a silver-chased drinking horn",
+    "a jade frog with emerald eyes",
+    "a spinel"
+   ],
+   "750": [
+    "an alexandrite",
+    "an aquamarine",
+    "a silver ewer set with moonstones",
+    "a carved ivory chess set with one piece missing",
+    "a gold music box that plays a Vitesse waltz",
+    "a topaz",
+    "a tapestry of the founding of Rimaros",
+    "a ceremonial dagger with a gold hilt"
+   ],
+   "2500": [
+    "a fire opal",
+    "a blue sapphire",
+    "a gold crown made for a child",
+    "an emerald brooch",
+    "a painting by a famous Vitesse master",
+    "a jewelled spirit-coin case from a great house",
+    "a set of astral-glass goblets"
+   ],
+   "7500": [
+    "a black opal",
+    "a star ruby",
+    "a jacinth",
+    "a jewelled gold idol of a forgotten god",
+    "a sapphire-studded sword hilt of the Sapphire Crown's old pattern",
+    "an emerald the size of a hen's egg",
+    "a celestine noble's diadem"
+   ],
+   "25000": [
+    "a flawless diamond",
+    "a star sapphire that glows faintly under astral light",
+    "the lost crown jewel of a drowned city",
+    "a royal sceptre of solid gold and diamonds",
+    "a gem that holds a sliver of a sky in it"
+   ]
+  },
+  "trinketChance": 0.25
+ }
+}

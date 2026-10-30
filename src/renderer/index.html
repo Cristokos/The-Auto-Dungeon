@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' campaign: data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>D&amp;D Campaign Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <div id="sidebar-resize" title="Drag to resize the sidebar. Double-click to reset."></div>
+    <div class="brand">
+      <button id="campaign-name" class="campaign-switch" title="Switch campaigns, or export and import backups">…</button>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search the wiki (Ctrl+K)" autocomplete="off">
+    </div>
+    <nav class="primary-nav">
+      <div class="nav-group" data-group="play"><button class="nav-head" title="Click to fold or unfold">Play</button><div class="nav-items">
+        <button data-nav="home">Home</button>
+        <button data-nav="party">Party</button>
+        <button data-nav="sessions">Sessions</button>
+        <button data-nav="battle" class="dm-tool" data-sys="battle">Battle</button>
+      </div></div>
+      <div class="nav-group" data-group="world"><button class="nav-head" title="Click to fold or unfold">World</button><div class="nav-items">
+        <button data-nav="world" class="dm-tool" data-sys="world" title="The calendar, the chronicle and Advance time">Calendar</button>
+        <button data-nav="news" data-sys="world" title="News and rumours: what the party has heard">News</button>
+        <button data-nav="legends" data-sys="world" title="Everything the chronicle remembers, by place, person, faction or year, and the web of ties">Legends</button>
+        <button data-nav="map">World map</button>
+      </div></div>
+      <div class="nav-group" data-group="reference"><button class="nav-head" title="Click to fold or unfold">Reference</button><div class="nav-items">
+        <button data-nav="essences">Essences</button>
+        <button data-nav="items">Items</button>
+        <button data-nav="spells">Spells</button>
+        <button data-nav="classes" title="The 2024 classes: each class's level table, features, subclasses and spell list">Classes</button>
+        <button data-nav="bestiary" class="dm-tool">Bestiary</button>
+      </div></div>
+      <div class="nav-group dm-tool" data-group="prep"><button class="nav-head" title="Click to fold or unfold">Prep</button><div class="nav-items">
+        <button data-nav="generators">Generators</button>
+        <button data-nav="hooks" data-sys="hooks">Saved hooks</button>
+      </div></div>
+    </nav>
+    <nav id="journey-pins" class="dm-tool" data-sys="travel" hidden></nav>
+    <button id="new-page" class="btn primary block dm-tool">+ New page</button>
+    <nav id="quick-pages" hidden></nav>
+    <nav id="page-tree"></nav>
+    <div class="sidebar-foot">
+      <button id="dm-toggle" class="link-btn dm-toggle">DM mode</button>
+      <button data-nav="lists" class="link-btn dm-tool">Generator lists</button>
+      <button data-nav="trash" class="link-btn dm-tool" title="Deleted pages, kept for 30 days">Trash</button>
+      <button id="settings-btn" class="link-btn" title="Colour theme and dark or light mode">Settings</button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <div id="topbar">
+      <button id="back" class="icon-btn" title="Back (Alt+Left)">‹</button>
+      <button id="forward" class="icon-btn" title="Forward (Alt+Right)">›</button>
+      <button id="refresh" class="icon-btn" title="Refresh this page: reread it and the campaign from disk (F5)">↻</button>
+      <div id="crumbs"></div>
+      <div id="save-state"></div>
+      <button id="world-date" class="btn small" data-sys="world" title="The date in the world"></button>
+      <button id="help-btn" class="icon-btn" title="What is this screen for? (F1)">?</button>
+      <button id="quick-btn" class="btn small dm-tool" title="Quick rolls: a name, a passer-by, a rumour, some loot (F2)">✦ Quick</button>
+      <button id="dice-btn" class="btn small" title="Dice tray">⚄ Dice</button>
+    </div>
+    <div id="view"></div>
+  </main>
+
+  <dialog id="dialog"></dialog>
+  <aside id="dice-tray" hidden></aside>
+  <aside id="quick-panel" class="dm-tool" hidden></aside>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

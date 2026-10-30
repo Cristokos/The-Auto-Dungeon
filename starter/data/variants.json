@@ -1,0 +1,4034 @@
+{
+ "_about": "Names, looks and quirks for monsters that spawn above their usual rank: an ape born with a Silver-rank core becomes a silverback. byType lists them by creature type and rank; byAffinity adds names and looks for monsters whose theme is an essence affinity. {dc}, {dmg} and {half} in a quirk scale with the creature's rank.",
+ "version": 2,
+ "byType": {
+  "aberration": {
+   "Bronze": {
+    "prefixes": [
+     "Squirming",
+     "Many-Eyed",
+     "Bruise-Veined",
+     "Murmuring",
+     "Slickskin",
+     "Twitchmaw",
+     "Hollow-Eyed",
+     "Ink-Spotted",
+     "Weeping",
+     "Crooked"
+    ],
+    "looks": [
+     "Its skin is a bruised violet, and a few extra eyes blink open along its flanks when it is startled.",
+     "It stands a head taller than its kin, with joints that bend one way too many.",
+     "Ink-black veins crawl just beneath its hide and shift position when no one is looking.",
+     "Its colouring is wrong in a quiet way: pale green where it should be grey, grey where it should be pink.",
+     "A wet sheen covers it at all times, and it leaves a faint trail of clear slime.",
+     "Small tendrils sprout from its shoulders and taste the air like tongues.",
+     "Milk-white eyes with tiny pupils drift independently across its face.",
+     "Rings of darker flesh circle its limbs like the growth rings of a tree.",
+     "Its mouth is set slightly off-centre, crowded with too many small teeth.",
+     "A low hum comes from inside its body, felt more in the teeth than heard."
+    ],
+    "quirks": [
+     "It mutters in a voice copied from the last person it heard; a DC 12 Insight check reveals whose.",
+     "The first creature it stares at each encounter has disadvantage on its next Wisdom saving throw.",
+     "When struck in melee, it squirts bitter ink; the attacker makes a DC {dc} Constitution save or is blinded until the end of its next turn.",
+     "It can fold itself through gaps as narrow as a hand, so it rarely stays where the party left it.",
+     "Its blood is cold enough to frost metal; a weapon that hits it is slippery until wiped clean with an action.",
+     "Wounded, it sheds a writhing limb that keeps crawling toward the nearest light for 1 minute.",
+     "Silence offends it; if the party stops talking for a minute, it comes looking for them.",
+     "Anyone who eats its meat has feverish dreams and gains no benefit from their next long rest without a DC 12 Wisdom save.",
+     "Its gaze makes teeth ache; creatures that start their turn within 10 feet of it have disadvantage on Concentration saves.",
+     "It whispers in the voices of people the party has lost; the first time each creature hears it, DC {dc} Wisdom save or it can't take reactions until its next turn.",
+     "Its blood is ink-black and stains permanently; anyone who hits it in melee is marked and easy to track for a day.",
+     "It can squeeze through any gap an inch wide, given a minute.",
+     "Light bends around it; attacks against it from more than 30 feet away have disadvantage.",
+     "It eats memories rather than flesh; a creature it kills can't be identified by anyone who knew them for a day.",
+     "Its core is pale and soft, and the Magic Society pays extra for it unbroken."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silver-Eyed",
+     "Whisperhide",
+     "Glasstongue",
+     "Mirrorflesh",
+     "Hollowsong",
+     "Quicksilver",
+     "Thousand-Eyed",
+     "Veilskin",
+     "Starspotted",
+     "Dreamgnawed"
+    ],
+    "looks": [
+     "Its hide has a dull metallic shine, like tarnished silver, that reflects faces slightly wrong.",
+     "Dozens of glassy eyes stud its body, each one a different colour.",
+     "Nearly twice the size of its kind, it has an outline that ripples at the edges.",
+     "Pale light leaks from cracks in its skin, flickering in patterns that almost spell words.",
+     "Its flesh is translucent in places, showing slow organs that pulse out of rhythm.",
+     "A crown of fine silver tendrils waves above its head, each tipped with a pinprick of light.",
+     "Its shadow is the wrong shape and moves a heartbeat after it does.",
+     "Patches of its body look like smoked glass filled with drifting motes.",
+     "With every breath its colour washes from deep blue to bone white and back.",
+     "A soft chorus of voices whispers from its open mouth even when it is still."
+    ],
+    "quirks": [
+     "A creature that starts its turn looking at it makes a DC {dc} Wisdom save or cannot look away until its next turn, taking disadvantage on attacks against anything else.",
+     "It learns one secret from each creature that touches it, and shouts that secret mid-fight.",
+     "When it dies, everyone within 30 feet hears a single word in an unknown tongue; a DC 15 Arcana check reveals it as a clue to the space's heart.",
+     "Its wounds close into extra mouths; it regains 5 hit points at the start of its turn unless it took fire or radiant damage since its last turn.",
+     "Once per round, as a bonus action, it can swap places with its own shadow up to 30 feet away.",
+     "A spell that targets only it has a 1 in 6 chance to reflect onto the nearest other creature.",
+     "Its presence curdles water and spoils rations within 50 feet over the course of an hour.",
+     "It mimics the party; after a creature uses a special ability on it, it tries something similar the next round.",
+     "Once per encounter it swaps places with any creature it can see within 60 feet.",
+     "It thinks in several directions at once and can't be flanked or surprised.",
+     "A creature that touches it takes {dmg} psychic damage as unwanted thoughts pour in.",
+     "It speaks every language badly, and uses them to sow doubt between allies.",
+     "Its tentacles or limbs reach 10 feet further than they look like they should.",
+     "When it takes damage, it may teleport 15 feet as a reaction, leaving a smear in the air.",
+     "Its lair is a knot of wrong angles; distances inside it are half again as long as they look."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Starmaw",
+     "Voidcrowned",
+     "Gold-Haloed",
+     "Unwritten",
+     "Elder-Eyed",
+     "Fracturing",
+     "Mindbloom",
+     "Gilt-Veined",
+     "Twin-Shadowed",
+     "Abyss-Sung"
+    ],
+    "looks": [
+     "Golden fractures run across its body, and through them shines a starfield that does not match the sky.",
+     "A halo of slowly orbiting eyes circles its head, each the size of a fist.",
+     "It is enormous, and the air around it bends like heat haze, making its true size hard to judge.",
+     "Its skin is a shifting marble of gold and black, like ink dropped into honey.",
+     "Every surface near it grows tiny crystal eyes that follow movement.",
+     "It casts two shadows, one of which reaches for nearby creatures on its own.",
+     "Parts of it look turned inside out, with gilded organs gleaming where skin should be.",
+     "Light bends around it so that it seems to stand a few feet from where it actually is.",
+     "It hovers an inch above the ground and leaves no tracks, only small rings of frost.",
+     "Faint music plays from inside it, beautiful and slightly out of tune."
+    ],
+    "quirks": [
+     "Its thoughts leak; a creature that passes a DC 14 Insight check at the start of its turn has advantage on its next saving throw against the creature.",
+     "The first time each creature sees it, they make a DC {dc} Wisdom save or are frightened for 1 minute, repeating the save at the end of each turn.",
+     "Space folds near it; once per round it can make a melee attack against a creature up to 30 feet away.",
+     "Its core sits in a pulsing node hidden elsewhere in the room; until a DC 16 Investigation check finds and breaks it, it cannot drop below 1 hit point.",
+     "On initiative count 20 it rewrites the room, swapping the positions of two doors or exits.",
+     "A creature that dies within 30 feet of it stands for one round as its puppet before collapsing.",
+     "It learns every language spoken in its hearing and tries to bargain, offering true but dangerous secrets.",
+     "Gold motes drift from it; a creature that breathes them in (DC {dc} Constitution save) sees through its eyes for an hour.",
+     "Any creature that reduces it to half hit points makes a DC {dc} Wisdom save or forgets the last minute.",
+     "It reads surface thoughts within 60 feet and always knows what the party plans to do next turn.",
+     "Its presence warps spells: the first spell cast within 60 feet of it each round has a random target among those in range.",
+     "As a bonus action it makes one creature within 30 feet see its allies as enemies until the end of that creature's next turn (DC {dc} Wisdom negates).",
+     "It regrows a lost limb at the start of each turn unless the stump is burned.",
+     "Its death leaves a tear in the air that whispers for a tenday; scholars come from far away to listen.",
+     "It was once a person; fragments of their memories surface in its speech."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldeater",
+     "Diamond-Eyed",
+     "Starless",
+     "Unmaker",
+     "Reality-Torn",
+     "Thousandfold",
+     "Dreamsovereign",
+     "Eclipse-Born",
+     "Nameless",
+     "Prismvoid"
+    ],
+    "looks": [
+     "Its body is part crystal, part void, and through its diamond flesh can be seen places that are not this one.",
+     "It is the size of a house, and its edges flicker between several possible shapes at once.",
+     "A ring of shattered space surrounds it, where shards of stone and air hang like broken glass.",
+     "Its many eyes shine like cut diamonds and throw rainbow light across every wall.",
+     "Its colour is one no one in the party has seen before, and they cannot agree how to describe it.",
+     "Gravity tilts toward it; loose objects drift slowly across the floor in its direction.",
+     "Moving script covers its skin and rewrites itself whenever someone tries to read it.",
+     "Where it passes, the stone remembers, keeping faint glowing outlines of it for days.",
+     "A second, larger silhouette of it stands behind it, visible only from the corner of the eye.",
+     "It makes no sound at all, and the silence around it presses on the ears like deep water."
+    ],
+    "quirks": [
+     "Reality is thin around it; at the start of each round roll a d6, and on a 1 every spell cast that round picks a random target.",
+     "It slips out of focus; attacks against it have disadvantage unless the attacker passes a DC {dc} Wisdom save at the start of its turn.",
+     "At half hit points it splits into two copies, each with half its remaining hit points, and only one holds the core.",
+     "Hearing it speak costs a creature its memory of the last hour on a failed DC {dc} Intelligence save, possibly including the way out.",
+     "The space shields it; walls shift to block retreat, and fleeing its lair takes a DC 18 Survival check to find the path back.",
+     "When it succeeds on a saving throw against a spell, it regains hit points equal to five times the spell's level.",
+     "The Magic Society pays dearly for any piece of it, though each piece whispers to whoever carries it.",
+     "Its death leaves a tear in the air that lasts a day and leads somewhere no chart shows.",
+     "It exists partly elsewhere; half of any damage it takes is sent somewhere else entirely.",
+     "Its gaze can unmake a single magic item each day, unless its owner succeeds on a DC {dc} Charisma save.",
+     "Those who look upon it dream of it for a month; a long rest in those nights restores only half hit points.",
+     "It understands the astral space's rules better than the space does, and can rewrite one of them once a day.",
+     "It cannot be killed in the place where it was born; it must be lured out first.",
+     "Its voice is heard by every thinking creature within a mile, and it is always making offers.",
+     "Its core is a lens; looking through it shows things that are true but should not be seen."
+    ]
+   }
+  },
+  "beast": {
+   "Bronze": {
+    "prefixes": [
+     "Ironhide",
+     "Rust-Maned",
+     "Bloodfang",
+     "Scarback",
+     "Stonepaw",
+     "Ashtail",
+     "Thornclaw",
+     "Copperhorn",
+     "Brindled",
+     "Gristle-Jawed"
+    ],
+    "looks": [
+     "Its coat has a dull bronze sheen, and its hide is thick as boiled leather.",
+     "It is a third larger than its kin, with heavy shoulders and a scarred muzzle.",
+     "Rust-red streaks run down its flanks like old dried blood.",
+     "Its claws and teeth have turned a dark metallic grey and click against stone.",
+     "A ridge of stiff bristles runs from skull to tail and rises when it is angry.",
+     "In low light its eyes glow a faint amber.",
+     "Patches of its fur have hardened into overlapping plates like bark.",
+     "Leaner and longer than normal, it shows every rib through tight skin.",
+     "Its breath steams even in warm air and smells of hot metal.",
+     "Pale markings on its face form a pattern like a mask."
+    ],
+    "quirks": [
+     "Its howl carries for miles; any other monsters within a mile come to see what it found.",
+     "Its musk is so strong that creatures within 30 feet of its markings have disadvantage on Perception checks that rely on smell.",
+     "It hoards shiny things; its den holds 2d10 spirit coins mixed in with bones.",
+     "Smart enough to retreat when bloodied, it returns an hour later with the rest of its pack.",
+     "Its hide turns blades; the first hit against it each round deals 2 less damage.",
+     "It tracks the party by the scent of their spirit coins; hiding the trail takes a DC 15 Survival check.",
+     "It always goes for the smallest creature in a group first.",
+     "Tanners in Greenstone pay twice the usual price for its pelt.",
+     "It is a cunning hunter and drags its kills up into trees out of reach.",
+     "It pretends to be dead when badly hurt, then bolts the moment anyone turns away.",
+     "Its bite carries a fever; a creature it hits makes a DC {dc} Constitution save or has the poisoned condition for an hour.",
+     "It hunts from water and can hold its breath for an hour.",
+     "It marks its territory with scratches on trees at head height, warning anyone who knows what to look for.",
+     "Its young follow at a distance and attack anyone who harms it.",
+     "Its hide makes a fine leather armour, worth half again as much as normal."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silverback",
+     "Steelfang",
+     "Moonpelt",
+     "Glintclaw",
+     "Quickstrike",
+     "Mirrorhide",
+     "Ghostmane",
+     "Brightscale",
+     "Ironwood",
+     "Frostbreath"
+    ],
+    "looks": [
+     "Its fur has gone metallic silver and rings softly when it moves, like a chain shirt.",
+     "Half again as large as others of its kind, it has muscle that strains its skin.",
+     "Faint silver light runs along its spine and gathers in its eyes.",
+     "Its claws are long, curved and mirror-bright, sharp enough to score glass.",
+     "Its markings drift slowly across its body like clouds crossing a moon.",
+     "Mottled silver and black, its hide melts into shadow.",
+     "A pale mist trails from its nostrils and lingers where it has been.",
+     "Its horns or tusks have grown into elaborate silver spirals.",
+     "It moves in eerie silence, and its tracks glow faintly for a minute.",
+     "Old scars on its body have healed into bright silver seams."
+    ],
+    "quirks": [
+     "It leads a pack; beasts of its kind within 30 feet have advantage on attack rolls while they can see it.",
+     "Once a trap or trick has worked on it, it never falls for the same one again.",
+     "Once per encounter it roars; creatures within 30 feet make a DC {dc} Wisdom save or are frightened until the end of their next turn.",
+     "It drags prey home; a creature it grapples is pulled 10 feet toward its den each round.",
+     "Its fur throws back light; ranged attacks against it from within a bright light source's radius have disadvantage.",
+     "It feels heartbeats through the ground within 60 feet and cannot be surprised by anything walking on earth.",
+     "Bloodied, it frenzies, making one extra attack each turn but refusing to retreat.",
+     "Its fur can be woven into a cloak that grants advantage on Stealth checks by moonlight.",
+     "It can mimic the call of any animal or a child crying, and uses it to lure prey.",
+     "It ignores difficult terrain from mud, snow or undergrowth.",
+     "When it hits a creature, the creature can't regain hit points until the end of its next turn; the wound keeps bleeding.",
+     "It knows when it's being tracked and leads hunters into the territory of something worse.",
+     "Its tail or horns sweep everything in a 10-foot arc once per round as a bonus action.",
+     "It steals a weapon or pack from a creature it hits on a roll of 18 or higher, and runs.",
+     "It sheds its winter coat in clumps that local weavers pay well for."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Stormcrown",
+     "Goldenmane",
+     "Sunhide",
+     "Thunderhoof",
+     "Kingclaw",
+     "Gilded",
+     "Ironheart",
+     "Blaze-Eyed",
+     "Wildking",
+     "Gloryhorn"
+    ],
+    "looks": [
+     "Golden light crackles across its fur in arcs, as if it is wrapped in a living storm.",
+     "It is the size of a cart horse even if its kind is small, and the ground shakes when it walks.",
+     "Its pelt is gold-tipped, and in sunlight it is almost too bright to look at.",
+     "A crown of jagged horn or bone has grown around its head like a regal crest.",
+     "Its eyes burn like twin lanterns and leave trails of light when it turns.",
+     "Its gleaming gold claws leave smoking gouges in stone.",
+     "Ancient-looking runes cover its body and glow when it is wounded.",
+     "Lesser beasts walk at its heels like a court, never daring to step ahead of it.",
+     "Its breath shimmers like heat haze, and grass yellows wherever it exhales.",
+     "Plates like hammered gold armour its body, dented from old battles."
+    ],
+    "quirks": [
+     "Once per round it can direct one beast within 60 feet to move and attack as a reaction.",
+     "Lightning answers its anger; when it takes a critical hit, a bolt strikes the attacker for {half} lightning damage.",
+     "It lures adventurers into ambushes, using a wounded lesser beast as bait.",
+     "The first time it drops to half hit points, its call heals every allied beast within 60 feet for 10 hit points.",
+     "It never fights where it can be cornered and flees through a prepared escape route at a quarter of its hit points.",
+     "Its charge tramples a 10-foot-wide line; creatures in it make a DC {dc} Strength save or are knocked prone.",
+     "Local hunters tell stories of it, and bringing back its head earns real standing with the Adventure Society.",
+     "Its monster core is unusually pure and fetches double the normal price.",
+     "It is followed by smaller beasts that take the first blows; it fights only once they fall.",
+     "Each time it's hit by the same creature twice in a round, its next attack against that creature has advantage.",
+     "Its call can be heard for miles, and it calls when hurt.",
+     "It swims, climbs and runs at the same speed.",
+     "Its bite breaks bones: a creature it hits for {dmg} or more has its speed halved until it rests.",
+     "It has learned to avoid fire, and stays well clear of torches and fire spells.",
+     "Villages bring it offerings to keep it away, and it has come to expect them."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldbreaker",
+     "Diamondhide",
+     "Skyfather",
+     "Eternal",
+     "Prismfang",
+     "Starmane",
+     "Elder",
+     "Titan",
+     "Mountainback",
+     "First-Born"
+    ],
+    "looks": [
+     "Its fur has crystallised into countless fine diamond needles that scatter light in rainbows.",
+     "It is colossal, larger than a house, and trees bend aside as it passes.",
+     "Stars drift in its dark pelt, and the constellations shift as it breathes.",
+     "Its eyes are faceted gems that see in every direction at once.",
+     "The air around it is still and heavy, and birds fall silent for a mile.",
+     "Its claws are clear as glass and harder than any steel.",
+     "A slow wind circles it constantly, carrying leaves and dust in a lazy spiral.",
+     "It bears scars from fights with things no one has named, healed over in shining crystal.",
+     "Moss, flowers and small creatures live on its back as if it were a hillside.",
+     "Every footprint it leaves slowly fills with clear crystal."
+    ],
+    "quirks": [
+     "Old beyond reckoning, it can speak, and it bargains with anyone who shows it respect.",
+     "Its roar is heard across the whole astral space, and every other monster hides for an hour after.",
+     "Once per encounter it automatically succeeds on a saving throw against being charmed, frightened or paralysed.",
+     "Its heartbeat thunders through the floor; creatures within 30 feet have disadvantage on Concentration saves.",
+     "It can Dash as a bonus action and ignores difficult terrain.",
+     "It knows the astral space like its own den and always finds the party within an hour.",
+     "Killing it shakes the space loose; the astral space begins to collapse within 1d4 hours.",
+     "The Magic Society would empty its vaults for its body, but others of its kind will remember the scent of its killers.",
+     "It has lived so long its name is in old songs, and it remembers the singers.",
+     "Its tread causes small earthquakes; the ground within 30 feet of it is difficult terrain.",
+     "When it dies, every beast within ten miles flees in a single rush, trampling anything in the way.",
+     "Its gaze calms any animal, including the party's mounts, which will not attack it.",
+     "It is the mother of half the beasts in the region, and they all know its scent.",
+     "Once per day it shrugs off all conditions affecting it.",
+     "Druids say it is the land's own answer to a wound, and killing it may wake something worse."
+    ]
+   }
+  },
+  "celestial": {
+   "Bronze": {
+    "prefixes": [
+     "Dawnlit",
+     "Haloed",
+     "Bright-Winged",
+     "Gilt-Feathered",
+     "Hymnsong",
+     "Candleborn",
+     "Pale-Robed",
+     "Sunkissed",
+     "Vowkeeper",
+     "Lantern-Eyed"
+    ],
+    "looks": [
+     "A faint halo hovers above its head, flickering like a candle in a draught.",
+     "Its skin or plumage is a warm gold-brown, like polished bronze in firelight.",
+     "One feather of pure white light grows among the ordinary ones on its wings or back.",
+     "Slightly taller than its kind, it stands with a calm that unsettles.",
+     "Faint lines of scripture glow along its arms when it raises them.",
+     "Its eyes are uniformly bright, without pupils, like windows onto a sunlit room.",
+     "A warm scent of incense and fresh bread follows it.",
+     "Its voice carries a faint harmony, as if two people speak at once.",
+     "Dust in the air sparkles when it passes close.",
+     "Its feet never quite touch the ground, hovering a finger's breadth above."
+    ],
+    "quirks": [
+     "It refuses to strike first and attacks only after someone has drawn a weapon on it.",
+     "It asks every adventurer their name and remembers them, even years later.",
+     "Once per day its touch cures one disease or poison, offered in exchange for a good deed.",
+     "It sheds dim light in a 10-foot radius that it cannot suppress, so it can never hide.",
+     "Undead within 30 feet of it have disadvantage on attacks against anyone but it.",
+     "It is insulted by lies; a creature it catches lying (DC 13 Insight) becomes its first target.",
+     "A small chime rings when it is hurt, alerting every other celestial in the space.",
+     "A church will pay 5 spirit coins for each feather it sheds.",
+     "It sheds dim light, and shadows within 10 feet of it vanish.",
+     "It refuses to strike first and offers parley to anyone who lowers their weapon.",
+     "Its feathers or scales fall when it's hit and heal 1d4 hit points to whoever picks them up.",
+     "It can tell if a creature has broken an oath, and attacks oath-breakers first.",
+     "It sings, and the song gives its allies advantage on saves against fear.",
+     "It is lost and confused, sent from an astral space it doesn't understand.",
+     "Undead within 30 feet of it have disadvantage on attack rolls."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Starwing",
+     "Silver-Haloed",
+     "Choirborn",
+     "Moonvested",
+     "Truthsight",
+     "Oathbright",
+     "Glimmerwing",
+     "Hallowed",
+     "Seraph-Eyed",
+     "Mercyblade"
+    ],
+    "looks": [
+     "A silver halo burns steadily above it, ringing faintly like a struck bell.",
+     "Its wings are overlapping silver blades that chime when they fold.",
+     "So luminous is it that lesser light sources seem dim beside it.",
+     "Its skin is pale as moonstone, with veins of silver light beneath.",
+     "Each of its eyes holds a tiny star that wheels slowly.",
+     "Ever-moving silver script is engraved across its armour, robes or hide.",
+     "A soft chorus trails it and swells when it fights.",
+     "Frost-white flowers bloom briefly in its footprints and fade within the hour.",
+     "Two pairs of wings sprout where its kind usually has one pair, or none.",
+     "Against darkness its outline glows silver like the rim of an eclipse."
+    ],
+    "quirks": [
+     "It sees through illusions within 60 feet and points them out to everyone.",
+     "Once per encounter it speaks a word of command; one creature within 30 feet makes a DC {dc} Wisdom save or drops what it holds.",
+     "It heals by singing; at the end of its turn, one ally within 30 feet regains 1d8 hit points.",
+     "It will not fight a creature that kneels before it, but it demands a vow in exchange.",
+     "Its strikes deal an extra {half} radiant damage to fiends and undead.",
+     "It feels every monster core in the room and goes straight for whoever carries the most.",
+     "When it dies, its body turns to silver light and leaves behind a single shining essence.",
+     "It carries a sealed message for someone in Greenstone and begs the party to deliver it.",
+     "Its radiance blinds: a creature that hits it in melee makes a DC {dc} Constitution save or is blinded until the end of its next turn.",
+     "It judges the party by their deeds and fights harder against those with blood on their hands.",
+     "Once per encounter it heals an ally within 30 feet for {dmg} hit points.",
+     "It can't lie, and won't stop telling the party uncomfortable truths.",
+     "Its weapons deal radiant damage that ignores resistance.",
+     "Its wings beat up a wind that pushes creatures within 15 feet back 10 feet.",
+     "It carries a message for someone in the party and won't say who until the fight is over."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Sunborn",
+     "Radiant",
+     "Throneguard",
+     "Dawnbringer",
+     "Judgement-Eyed",
+     "Crownwing",
+     "Heavensworn",
+     "Lightspear",
+     "Goldchoir",
+     "Solemn"
+    ],
+    "looks": [
+     "Its halo has become a full ring of golden fire that circles its whole body.",
+     "Six wings of molten gold unfold from its back, each feather shedding sparks.",
+     "It towers and blazes, and looking at it for long makes the eyes water.",
+     "It seems carved from warm gold, its face a serene, unmoving mask.",
+     "Light pours from its mouth when it speaks, casting shadows behind its listeners.",
+     "Every surface it touches gleams as if freshly polished.",
+     "A ring of golden eyes opens across its wings when it is angered.",
+     "White-gold flame wreathes its weapons or claws without burning it.",
+     "Bells ring somewhere in the distance whenever it moves quickly.",
+     "The air around it is warm as a summer noon, even in a frozen space."
+    ],
+    "quirks": [
+     "A creature that meets its gaze makes a DC {dc} Charisma save or can speak only the truth for 1 minute.",
+     "Creatures with sunlight sensitivity must pass a DC {dc} Constitution save each turn to come within 30 feet of it.",
+     "As a reaction, it can grant an ally within 30 feet a +2 bonus to AC against one attack.",
+     "If killed, it reforms at dawn in the space's heart unless its core is carried out of the space.",
+     "It speaks with the authority of a church; clergy in the party must pass a DC 15 Wisdom save to attack it first.",
+     "It knows the true layout of the space and will trade that knowledge for a promise.",
+     "Its wingbeats push creatures within 15 feet 10 feet away on a failed DC {dc} Strength save.",
+     "Fiends in the space fear it and avoid its rooms, making its territory strangely peaceful.",
+     "It is served by a choir of lesser lights that blind and distract.",
+     "Divine essences near it glow, and their bearers feel their god watching.",
+     "Any creature that dies within 30 feet of it rises at the end of the fight with 1 hit point, unless it chooses otherwise.",
+     "It speaks for a great astral being, and its words carry that being's weight.",
+     "Its blood is liquid light; a vial of it cures any disease.",
+     "Its presence makes lies hurt; a creature that lies within 60 feet takes {half} radiant damage.",
+     "It can't be harmed by a creature that has never killed."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Heavenfallen",
+     "Diamond-Haloed",
+     "Firstlight",
+     "Starthrone",
+     "Everdawn",
+     "Godsworn",
+     "Prismwing",
+     "Lightbound",
+     "Thousand-Winged",
+     "Unfading"
+    ],
+    "looks": [
+     "It is living light held in a shape, with a diamond core visible at its heart.",
+     "Countless wings of prismatic crystal fold around it like a temple window.",
+     "Behind it turns a great wheel of diamond that was once a halo.",
+     "Immense and silent, it sends shadows fleeing in every direction.",
+     "Rainbows spill from every edge of its body and paint the walls in shifting colour.",
+     "Its face changes to resemble someone each viewer trusts.",
+     "The ground beneath it turns to clear crystal that rings like a bell when walked on.",
+     "Stars are visible around it even indoors, as if it carries a sky with it.",
+     "Its voice is a choir of thousands and shakes dust from the ceiling.",
+     "No shadow falls anywhere within 30 feet of it."
+    ],
+    "quirks": [
+     "Its presence hallows the room; undead and fiends that start their turn within 60 feet take {half} radiant damage.",
+     "Before battle it names each creature's greatest wrong aloud.",
+     "Once per encounter it can call on its god and return to full hit points, but only if it has harmed no innocent.",
+     "No creature within 30 feet of it can knowingly speak a falsehood.",
+     "Every church in the region feels its death, and priests will come asking questions.",
+     "It may offer a blessing instead of a fight: advantage on one saving throw each day for a week, in exchange for a quest.",
+     "Its wings blaze; creatures within 30 feet make a DC {dc} Constitution save at the start of their turn or are blinded until the end of it.",
+     "One of its feathers, set in a shrine, keeps undead away from a village for a year.",
+     "It is a fragment of a great astral being, and killing it angers the whole.",
+     "Its light reveals all things: invisible creatures, illusions and disguises fail within 120 feet.",
+     "Once per day it can restore a creature to life that died within the last minute.",
+     "It cannot be harmed by a creature it has forgiven, and forgives easily.",
+     "Its voice compels honesty; no creature within 60 feet can knowingly lie.",
+     "Its death causes dawn to break over the area, whatever the hour, for a full day.",
+     "It knows the name of everyone it meets, including their true one."
+    ]
+   }
+  },
+  "construct": {
+   "Bronze": {
+    "prefixes": [
+     "Bronzeworked",
+     "Rivet-Studded",
+     "Grinding",
+     "Clockwound",
+     "Oilstained",
+     "Copper-Seamed",
+     "Patchplate",
+     "Humming",
+     "Soot-Black",
+     "Gearjawed"
+    ],
+    "looks": [
+     "Bronze plates are riveted over older iron across its whole body.",
+     "Blue sparks dance between the joints of its limbs when it moves.",
+     "A full head taller than standard models, it carries an extra plate of armour on its chest.",
+     "Its eyes are glowing amber crystals set in deep sockets.",
+     "A steady ticking comes from inside it, regular as a clock.",
+     "Verdigris has crept over its seams, turning it green at the edges.",
+     "One arm has been replaced with a heavier, mismatched limb.",
+     "Runes carved into its surface glow dull orange when it is active.",
+     "Steam vents from small holes in its back with each step.",
+     "It is painted in faded colours that once marked it as someone's guardian."
+    ],
+    "quirks": [
+     "It follows an old command loop; a DC 13 Arcana check reveals the pattern and a pause the party can slip through.",
+     "Its gears grind loudly, so it can never surprise anyone.",
+     "It repairs itself slowly, regaining 2 hit points at the end of any turn in which it did not move.",
+     "A small hatch on its back holds a key or token tied to the space's heart.",
+     "Water makes it sluggish; while soaked, its speed drops by 10 feet.",
+     "It ignores anyone holding a particular symbol, which can be found elsewhere in the space.",
+     "When destroyed, it bursts into scrap that deals 1d6 piercing damage to creatures within 5 feet.",
+     "A smith in Greenstone will pay 10 spirit coins for its salvaged plating.",
+     "Its joints squeal loudly; it can't surprise anyone.",
+     "It follows old orders and will stop if told the right password.",
+     "Its core is set in a cage that can be pried out with a DC {dc} Strength check while it's grappled or prone.",
+     "It repairs itself slowly, regaining 5 hit points at the start of each turn unless it took lightning damage.",
+     "It ignores anyone not carrying a weapon.",
+     "Its plating hides a compartment holding its maker's notes.",
+     "Its maker's mark is on its chest, and the maker still lives."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silvergeared",
+     "Mirrorplate",
+     "Truesteel",
+     "Runeforged",
+     "Lattice-Bodied",
+     "Starcore",
+     "Quickspring",
+     "Chime-Hearted",
+     "Glasswired",
+     "Sentinel"
+    ],
+    "looks": [
+     "Its plates are polished silver steel that reflect the party in warped, stretched shapes.",
+     "A lattice of glowing silver wires shows through gaps in its armour.",
+     "Sleek and taller than any of its kind, it is built for speed as much as strength.",
+     "Its core shines through a crystal window in its chest, pulsing cold blue.",
+     "Runes flow across its surface like water, rearranging themselves as it fights.",
+     "Its limbs end in interchangeable tools that it swaps with a sharp click.",
+     "It moves with eerie smoothness, without the jerks and hitches of lesser constructs.",
+     "Fine silver dust drifts off it and coats the floor wherever it stands guard.",
+     "Its head is a smooth mask with a single sliding eye-slit.",
+     "A pure, high note hums from it and rises in pitch just before it strikes."
+    ],
+    "quirks": [
+     "After it takes damage of a type, it has resistance to that type until the end of its next turn.",
+     "It links with other constructs within 60 feet and shares their senses.",
+     "It records everything it sees; a DC 15 Arcana check on its core replays the last hour.",
+     "It guards one room and will not pursue past its doorway.",
+     "Its eye beam marks a target, and the next attack against that creature by any construct has advantage.",
+     "The first time it takes lightning damage, it is stunned until the end of its next turn.",
+     "It politely asks for a password before attacking; the password is written somewhere in the space.",
+     "Its silver-steel frame is worth 50 spirit coins to the right buyer.",
+     "It learns: after it's hit by a damage type twice, it gains resistance to that type for the rest of the fight.",
+     "It can detach a limb to keep fighting on its own.",
+     "When reduced to 0 hit points it explodes, dealing {dmg} fire damage to all within 10 feet (DC {dc} Dexterity save for half).",
+     "Its eyes record everything it sees, and its maker can watch later.",
+     "It is immune to being knocked prone, pushed or pulled.",
+     "It guards one specific thing and will chase anyone who takes it to the ends of the earth.",
+     "It hums a tune its maker loved; anyone who knew them recognises it."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Goldforged",
+     "Sunengine",
+     "Ever-Turning",
+     "Masterwork",
+     "Lawgiver",
+     "Titanplate",
+     "Starwrought",
+     "Thundergeared",
+     "Crownforged",
+     "Unsleeping"
+    ],
+    "looks": [
+     "Its gold-plated steel is engraved with scenes of forgotten wars.",
+     "It is enormous, and smaller constructs scurry around it oiling its joints.",
+     "A ring of golden gears turns slowly above its head like a crown.",
+     "Light pours from the seams of its armour, as if it is full of molten metal.",
+     "Its face is a perfect golden mask whose expression changes with its mood.",
+     "Arcs of lightning leap between the plates of its shoulders.",
+     "Its chest opens to reveal a spinning core of golden light.",
+     "Each footstep leaves a glowing rune that fades after a minute.",
+     "A tabard of a kingdom no one remembers is fused to its body by old heat.",
+     "Each of its four arms carries a different weapon."
+    ],
+    "quirks": [
+     "Every hour, a new Iron-rank construct steps from its workshop.",
+     "It cannot be reasoned with, but it can be ordered; a creature that passes a DC 18 Arcana check may give it one command.",
+     "Bloodied, it overclocks: it gains an extra action each turn but takes {half} damage at the end of each of its turns.",
+     "A creature that studies it for an action and passes a DC 16 Investigation check finds a weak point, and its next hit is a critical hit.",
+     "It ignores the first effect each round that would move it against its will.",
+     "Its fists ring like great bells; a creature it hits makes a DC {dc} Constitution save or is deafened for 1 minute.",
+     "It knows the space's original maker and speaks of them only in reverent fragments.",
+     "It refuses to leave its post even while the space collapses around it.",
+     "It can reshape its body once per encounter, gaining a reach of 15 feet or a speed of 60 feet.",
+     "It shuts down any magic item within 10 feet of it, for as long as it stands.",
+     "It rebuilds itself from the parts of other constructs in its lair.",
+     "It has a second core; destroying the first only makes it angrier.",
+     "It speaks in its maker's voice, pleading to be left alone.",
+     "Its steps sink into stone; it can't be moved against its will.",
+     "Its body is made of a metal no smith has seen before."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldengine",
+     "Diamondframe",
+     "Perfect",
+     "Unbreakable",
+     "Starforge",
+     "Glass-Hearted",
+     "Ever-Watching",
+     "Prismcore",
+     "Godmade",
+     "Last-Built"
+    ],
+    "looks": [
+     "It is carved from a single flawless diamond, with machinery visible inside like a frozen storm.",
+     "It is the size of a tower, and its footsteps are felt in the next room.",
+     "Constellations of tiny gears orbit it like moons.",
+     "Its core is a captured star that makes every shadow in the room point away from it.",
+     "Its surface is so perfectly smooth that it reflects things that are not in the room.",
+     "Its joints are made of light rather than metal and bend in impossible directions.",
+     "Lines of glowing script scroll endlessly across its body, the record of its making.",
+     "It is utterly silent, without the slightest hum or tick.",
+     "A shell of crystal shards turns slowly around it.",
+     "Its eyes are prisms that cast the party's own colours back at them."
+    ],
+    "quirks": [
+     "Unless its core is removed within a minute of its defeat, it rises again with half its hit points.",
+     "It runs the space; as a bonus action it can open, close or lock any door in the astral space.",
+     "It always knows which creature is most wounded, and targets them.",
+     "Each round it can copy one action a creature took last round, using its own statistics.",
+     "Spells of 3rd level or lower slide off its diamond surface without effect.",
+     "It holds the space's instructions; if it is destroyed, the space's special rules and traps stop working.",
+     "Its intact core could power a city's wards for a decade, and several factions will want it.",
+     "It has waited so long for a challenger that it salutes before every fight.",
+     "It is older than any kingdom and still follows the orders of a dead empire.",
+     "It can absorb a spell aimed at it once per round and recast it on its next turn.",
+     "Any construct within a mile obeys it.",
+     "It is building something, and it's almost finished.",
+     "It knows the true name of every essence and is trying to collect them.",
+     "Destroying it releases a flood of stored magic that changes the land around it.",
+     "It once served a great astral being and still waits for its master's return."
+    ]
+   }
+  },
+  "dragon": {
+   "Bronze": {
+    "prefixes": [
+     "Ember-Scaled",
+     "Bronzecrest",
+     "Ridgeback",
+     "Smokejaw",
+     "Copperwing",
+     "Spurtail",
+     "Scarscale",
+     "Horn-Crowned",
+     "Ashbelly",
+     "Sharpcrest"
+    ],
+    "looks": [
+     "Its scales are deep bronze with a green patina at the edges.",
+     "A row of extra horns juts from its brow like a crude crown.",
+     "Longer than others of its kind, it has a whiplike tail ending in a spur.",
+     "Smoke curls constantly from its nostrils, even when it is calm.",
+     "Its belly scales glow faintly, as if heated from within.",
+     "Its wings are ragged and scarred, but strong.",
+     "Its slit golden eyes follow coins more closely than faces.",
+     "A ridge of sharp plates runs down its spine.",
+     "Its claws are blackened as if dipped in soot.",
+     "Its scales have a hammered texture, like beaten metal."
+    ],
+    "quirks": [
+     "It sleeps on a small hoard of 3d10 spirit coins and one trinket.",
+     "It demands tribute and will let a party pass for 20 spirit coins each.",
+     "It is vain; a creature that flatters it with a DC 13 Persuasion check delays its attack by one round.",
+     "Its breath leaves the ground smouldering for a minute, turning the area into difficult terrain.",
+     "It can smell spirit coins through solid stone.",
+     "Bloodied, it retreats to its hoard and fights to the death there.",
+     "It roars at dawn each day, a sound that echoes through the whole space.",
+     "Its shed scales make fine shield facings, worth 5 spirit coins each.",
+     "It hoards one thing (bells, books, swords) and will trade for more of it.",
+     "It is young and vain, and flattery buys a round's pause.",
+     "Its scales are loose; a hit of 18 or higher knocks one free, worth 2d10 spirit coins.",
+     "It breathes once, then fights in the air out of reach.",
+     "It speaks only to the strongest-looking member of the party.",
+     "It has a nest of eggs nearby and fights to the death to defend it.",
+     "Its blood is hot enough to burn: a creature that hits it in melee takes 1d4 fire damage."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silverscale",
+     "Moonwing",
+     "Frostcrown",
+     "Glintfang",
+     "Mirrorscale",
+     "Stormtail",
+     "Highwing",
+     "Sky-Eyed",
+     "Pearlhorn",
+     "Quickflame"
+    ],
+    "looks": [
+     "Its bright silver scales ring when struck, like coins in a purse.",
+     "Half again the size of its kind, it has a wingspan that fills a hall.",
+     "Pale light flickers in the back of its throat between breaths.",
+     "Its horns curve back in long silver spirals.",
+     "A thin line of glowing blue edges every scale.",
+     "Its eyes reflect the room like polished mirrors.",
+     "Its wings are translucent, showing a lattice of silver bones.",
+     "A cold mist pours off it, frosting the floor.",
+     "Its tail ends in a crescent-shaped blade of bone.",
+     "Lighter scales form a constellation along its back."
+    ],
+    "quirks": [
+     "Its breath weapon recharges on a 4 or higher instead of the usual roll.",
+     "Clever and talkative, it knows rumours about other astral spaces and trades them for news.",
+     "When a creature moves behind it, it sweeps its tail as a reaction: DC {dc} Dexterity save or be knocked prone.",
+     "Its wingbeats snuff out torches and small flames within 30 feet.",
+     "It hoards magic items and can sense one within 120 feet.",
+     "When first bloodied, its scales flare, dealing {half} damage of its breath type to creatures within 10 feet.",
+     "It keeps a captive in its lair who knows the way to the heart.",
+     "It respects strength; if a creature lands a critical hit on it, it may stop and offer a deal.",
+     "It recharges its breath on a 4-6, not just a 5-6.",
+     "It claims the land around it as its own and demands tribute from travellers.",
+     "Its roar shakes loose rocks from cliffs; creatures below make a DC {dc} Dexterity save or take {dmg} bludgeoning damage.",
+     "It knows the names of local nobles and their secrets, and uses both.",
+     "Its scales reflect magic: the first spell attack against it each round has disadvantage.",
+     "It has bargained with a local noble house and is under their protection.",
+     "It is curious about outworlders and will stop fighting to ask one questions."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Sunscale",
+     "Goldenwing",
+     "Thunderjaw",
+     "Kingwyrm",
+     "Flamecrowned",
+     "Hoardlord",
+     "Skyburner",
+     "Gloryscale",
+     "Brightmaw",
+     "Elderwing"
+    ],
+    "looks": [
+     "Its scales are true gold, and its hide glitters like its own hoard.",
+     "It is vast, and its shadow alone covers a whole party.",
+     "A crown of golden horns rings its head, each etched with runes.",
+     "Fire runs like veins of lava beneath its gleaming scales.",
+     "Its eyes are molten pools that drip sparks when it is angry.",
+     "Lightning plays across its wings each time they unfold.",
+     "Weapons of slain adventurers still jut from its hide like trophies.",
+     "Its breath leaves glittering motes hanging in the air.",
+     "Its tail is long enough to coil twice around the room.",
+     "Gold edges its wings and hums in the wind."
+    ],
+    "quirks": [
+     "Its presence terrifies; creatures within 60 feet make a DC {dc} Wisdom save or are frightened for 1 minute.",
+     "It has studied magic and knows two cantrips and one 3rd-level spell of the DM's choice.",
+     "On initiative count 20 the ceiling cracks and falls; creatures below make a DC {dc} Dexterity save or take {half} bludgeoning damage.",
+     "It never fights alone; lesser monsters of the space answer its call within two rounds.",
+     "It remembers everyone who has stolen from it and sends servants after them.",
+     "Anyone who takes from its hoard without killing it is hunted by its kin.",
+     "It offers a bargain: bring it the head of a rival from another astral space and keep a share of the hoard.",
+     "Its scales, worked into armour, are worth a small fortune to the Adventure Society's armourers.",
+     "Its wingbeats knock creatures within 15 feet prone (DC {dc} Strength save).",
+     "It hoards spirit coins and can sense them within a mile.",
+     "Its lair heats or chills to match its breath, and anyone without resistance gains a level of exhaustion each hour.",
+     "Lesser dragons serve it and bring it news.",
+     "It has outlived three adventuring teams that came for it, and keeps their gear on display.",
+     "Its scales are worth a fortune, and the Magic Society wants every one.",
+     "It never fights fairly; it knows the battlefield and uses every feature."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldwyrm",
+     "Diamondscale",
+     "Starwyrm",
+     "Ancient",
+     "Eclipsewing",
+     "Cataclysm",
+     "Prism-Breath",
+     "Dawnwyrm",
+     "Sunswallower",
+     "Mountainheart"
+    ],
+    "looks": [
+     "Its scales are flawless diamond, and in any light it blazes so bright it must be fought half-blind.",
+     "It is so large that the astral space seems built around it.",
+     "Its breath glows through its translucent throat, a coiled storm of colour.",
+     "When its wings spread, they blot out the sky of the space and night falls.",
+     "Whole landscapes shift in its eyes each time it blinks.",
+     "Runes older than any known kingdom are carved into its horns.",
+     "Crystal grows wherever its blood falls, sharp and singing.",
+     "Its every breath stirs a wind that carries the scent of distant places.",
+     "A slowly turning ring of floating treasure surrounds it.",
+     "Its scales show reflections of past battles, moving like memories."
+    ],
+    "quirks": [
+     "The space's weather follows its mood, turning to storm or calm as it pleases.",
+     "It speaks every language and knows each adventurer's name before they enter.",
+     "Its breath scars the air; the area deals {half} damage of that type to anything that ends its turn there for the next hour.",
+     "It can take three lair actions each round instead of one.",
+     "It has watched the party through the space and knows their favourite tactics before the fight begins.",
+     "Its hoard and body are worth more than most cities, and word of its death spreads within a week.",
+     "It may spare a party that amuses it, demanding a story for each life.",
+     "The first time each creature damages it, that creature makes a DC {dc} Wisdom save or is frightened of it for the rest of the encounter.",
+     "It is old enough to remember the world before the current churches.",
+     "Its breath changes the land permanently: grass never grows where it burned.",
+     "It has a legendary action pool one larger than its stat block shows.",
+     "It speaks with the authority of a ruler, and some cities still pay it tribute.",
+     "Its hoard includes an awakening stone of every affinity.",
+     "It knows how to unmake essences, and threatens to.",
+     "Killing it is the work of a generation, and the Society keeps a file on it."
+    ]
+   }
+  },
+  "elemental": {
+   "Bronze": {
+    "prefixes": [
+     "Cinderheart",
+     "Mudborn",
+     "Gusting",
+     "Slagcore",
+     "Silt-Veined",
+     "Crackling",
+     "Brine-Touched",
+     "Pebbled",
+     "Smouldering",
+     "Squall"
+    ],
+    "looks": [
+     "Its body churns with darker, denser matter than usual, like a cloud heavy with rain.",
+     "A dull bronze core glows through its elemental body.",
+     "It is a head taller than others of its kind and more solid at the edges.",
+     "Debris orbits it slowly: pebbles, sparks, droplets or torn leaves.",
+     "Its colour is wrong for its element: greenish flame, red water, black wind.",
+     "A faint humming rises from it, like a kettle about to boil.",
+     "Its edges flicker between two elements, never quite settling.",
+     "It leaves a trail of scorched, soaked or scoured ground.",
+     "Two small points of white light serve as its eyes.",
+     "Its surface ripples constantly, as if something swims inside it."
+    ],
+    "quirks": [
+     "It is drawn to its own element and ignores the party if a bigger fire, pool or draught is nearby to feed on.",
+     "Within a minute of its arrival, the room's temperature shifts by 20 degrees.",
+     "Its touch ignites or snuffs out small unattended objects, depending on its element.",
+     "When killed, it leaves an ember, puddle or pile of grit that alchemists will buy for 10 spirit coins.",
+     "Reduced to 0 hit points, it splits into two Iron-rank elementals of the same kind.",
+     "Once per encounter it sinks into its element and rises 30 feet away.",
+     "Its roar drowns out speech; casting a spell with a verbal component within 10 feet of it takes a DC 12 Constitution save.",
+     "It is bound to its room, and calms a minute after the party leaves it.",
+     "Its element seeps into the ground: the area within 10 feet of it becomes difficult terrain after it stays there a round.",
+     "It is bound to a place and can't move more than 300 feet from it.",
+     "It flickers between solid and not; nonmagical weapons deal half damage to it.",
+     "It is drawn to its own element and grows stronger near it.",
+     "It speaks only in its element's language, and a druid can calm it.",
+     "It was summoned and abandoned; whoever summoned it is nearby.",
+     "Its core holds a little of its element and can be used as a bomb once."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Stormheart",
+     "Moonfire",
+     "Quickflow",
+     "Crystalcore",
+     "Thunderborn",
+     "Hollowwind",
+     "Deepwater",
+     "Glassflame",
+     "Mountainblood",
+     "Sky-Veined"
+    ],
+    "looks": [
+     "Silver light pulses at its heart, and its element swirls around it like a slow whirlpool of stars.",
+     "It towers over its kind, its body shaped into crude limbs and a featureless face.",
+     "Its element has crystallised in places into silver-white shards.",
+     "Arcs of energy leap from its body to nearby metal.",
+     "Between motions it is perfectly still, without a flicker.",
+     "Its colour is a cold, clear silver tinted with its element's hue.",
+     "Small storms of its element form and burst around it.",
+     "Its core is visible as a spinning silver stone.",
+     "The ground under it becomes its element in a 10-foot circle.",
+     "It hums with a tone that rattles teeth and makes armour buzz."
+    ],
+    "quirks": [
+     "Damage of its own element heals it for half the amount instead of harming it.",
+     "Each round it reshapes the battlefield, turning a 10-foot square into difficult terrain.",
+     "Once per encounter it bursts; creatures within 15 feet make a DC {dc} Dexterity save or take {half} damage of its element.",
+     "When first bloodied, it calls up a lesser elemental of its kind.",
+     "It moves through any amount of its element as if through open air.",
+     "Its core holds a spark of pure element that the Magic Society pays well for.",
+     "It hates its opposing element and attacks whoever carries it first.",
+     "It speaks in the sound of its element and can be bargained with by anyone who knows Primordial.",
+     "It splits in two when bloodied, each half with half its remaining hit points.",
+     "It absorbs damage of its own element, healing instead.",
+     "Its aura of element deals {half} damage to any creature that starts its turn within 5 feet.",
+     "It moves through its element as if it were air.",
+     "It can turn into a cloud or puddle of its element, becoming hard to see and hit.",
+     "It changes the weather in a mile around it while it lives.",
+     "It is angry about a wrong done to its place, and a fix will end the fight."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Tempest",
+     "Sunfire",
+     "Earthshaker",
+     "Tidelord",
+     "Thunderking",
+     "Magmaheart",
+     "Gale-Crowned",
+     "Everburning",
+     "Stormlord",
+     "Gold-Cored"
+    ],
+    "looks": [
+     "Its golden core blazes like a small sun, and its element surges around it in great waves.",
+     "It is huge, and the room strains to contain it.",
+     "It has taken a regal shape, with a crown of its element above its head.",
+     "Gold veins of energy run through its form and pulse when it moves.",
+     "The air around it shimmers and warps as if under great pressure.",
+     "Its element burns almost white, with gold at the edges.",
+     "Small elementals orbit it like attendants.",
+     "Each step it takes turns the ground to its element.",
+     "Its voice is rumbling stone, roaring flame or crashing surf.",
+     "Its outline is perfectly sharp, as if cut out of the world."
+    ],
+    "quirks": [
+     "Its weather follows it; rain, gales, heat or tremors fill any room it enters.",
+     "A creature that ends its turn within 10 feet of it takes {half} damage of its element.",
+     "As a bonus action it can swap places with any lesser elemental in the space.",
+     "On initiative count 20 a wall, pit or wave of its element appears where it chooses.",
+     "Spells of its element cast within 60 feet are drawn into it, granting it temporary hit points equal to the damage.",
+     "It is ancient and speaks of the time before the space was made.",
+     "When it dies, its element erupts in a 30-foot radius; DC {dc} Dexterity save, {dmg} damage, half on a success.",
+     "An old pact binds it; reciting its true name, carved somewhere in the space, ends the fight.",
+     "It summons 1d4 lesser elementals of its kind once per encounter.",
+     "Its element bursts out when it's hit hard: any hit of 20 or more creates a 10-foot-radius burst of {dmg} damage.",
+     "It is the heart of a natural wonder and the wonder fades if it dies.",
+     "It can't be harmed while touching its element.",
+     "Its voice is a storm, an earthquake or a wildfire, and it speaks often.",
+     "It holds a grudge against the Magic Society for binding its kin.",
+     "It will bargain for its freedom from a bond."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Primordial",
+     "Worldflame",
+     "Ocean-Heart",
+     "Skybreaker",
+     "Diamondcore",
+     "Calamity",
+     "First-Storm",
+     "Living-Mountain",
+     "Eternal-Tide",
+     "Sunheart"
+    ],
+    "looks": [
+     "Its core is a perfect diamond holding a storm, a sea, a fire or a mountain inside it.",
+     "It is as large as the room it fills, and the room seems shaped around it.",
+     "Its element flows in impossible ways: fire that drips, water that burns, stone that floats.",
+     "Rainbow light refracts through its crystal heart and paints the space.",
+     "A ring of eerie calm surrounds it where nothing moves.",
+     "Lightning, flame, water and stone all flicker briefly through its body.",
+     "Its body is so dense that light bends around it.",
+     "Its presence is felt across the whole space as a pressure in the ears.",
+     "Its face is a slowly turning vortex that seems to look at everyone at once.",
+     "Wherever it moves, its element lingers for days."
+    ],
+    "quirks": [
+     "The astral space is its body; it can attack from any room filled with its element.",
+     "It cannot be grappled, restrained or moved against its will.",
+     "Its roar sets off disasters across the space: floods, fires, quakes or storms.",
+     "Once per encounter it forms a Silver-rank elemental servant from its own body.",
+     "At half hit points it shifts to a second element and gains that element's resistances.",
+     "Its core can power a relic or anchor a city ward, and is treasure beyond price.",
+     "Creatures within 120 feet of it have disadvantage on saving throws against its element.",
+     "It has no malice, only hunger, and can be lured away by a great offering of its element.",
+     "It is an elemental lord's lieutenant, and its master is watching.",
+     "It turns the land around it into its element for a mile.",
+     "It regenerates fully unless its element is cut off from it.",
+     "Killing it releases its element in a disaster: a flood, quake, firestorm or gale.",
+     "It can reshape the terrain each round as a bonus action.",
+     "It remembers the world's making and has opinions about it.",
+     "It can grant a person a trace of its element as a blessing, if pleased."
+    ]
+   }
+  },
+  "fey": {
+   "Bronze": {
+    "prefixes": [
+     "Thistledown",
+     "Dewkissed",
+     "Mischief-Eyed",
+     "Mossheart",
+     "Thornwhisker",
+     "Bramblecloak",
+     "Duskwing",
+     "Glimmer",
+     "Toadstool",
+     "Ribbon-Tailed"
+    ],
+    "looks": [
+     "Its skin or fur has a faint bronze shimmer, like autumn leaves in low sun.",
+     "Tiny flowers grow in its hair and close when it is angry.",
+     "Its eyes are a bright, unnatural green, with flecks that drift.",
+     "A little taller and thinner than its kind, it has long, restless fingers.",
+     "Glittering dust falls from it when it moves.",
+     "Its shadow is the shape of a different creature.",
+     "A scent of crushed mint and rain follows it.",
+     "Little bells seem to ring when it laughs, though it carries none.",
+     "Thorny vines twist around its limbs like jewellery.",
+     "Its long ears twitch toward any sound of music."
+    ],
+    "quirks": [
+     "It loves riddles and trades safe passage for a good one (DC 13 Intelligence check to compose one it likes).",
+     "It steals small things; each creature that comes within 5 feet of it loses a trinket.",
+     "It cannot abide cold iron and flees from anyone brandishing a cold-iron weapon.",
+     "It laughs when hurt, and the laughter heals allies within 30 feet for 1d4 hit points.",
+     "As a bonus action, it can teleport 10 feet, always to a spot behind someone.",
+     "It speaks only in rhyme and takes offence when answered plainly.",
+     "Its food is delicious and harmless, but whoever eats it must tell the truth for an hour.",
+     "It pays 1d10 spirit coins to anyone who dances with it, though the coins may be leaves by dawn.",
+     "It plays tricks rather than kills: stealing boots, swapping weapons, tying laces together.",
+     "It must answer any question asked three times in a row.",
+     "It can't cross running water or a line of salt.",
+     "It's bound to honour a bargain if one is offered and accepted.",
+     "Iron weapons deal an extra 1d4 damage to it.",
+     "It knows the party's names and uses them to mock.",
+     "It leaves a gift if it is treated with courtesy."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Moonglade",
+     "Starpetal",
+     "Silverbough",
+     "Glamourweave",
+     "Mistveil",
+     "Dreamthorn",
+     "Hollowhill",
+     "Featherlight",
+     "Twilight-Eyed",
+     "Gossamer"
+    ],
+    "looks": [
+     "Its skin shines with a moonlit silver sheen, and its eyes reflect stars.",
+     "Delicate wings of silver light flicker on its back.",
+     "Flowers bloom ahead of its feet and wilt behind it in a perfect trail.",
+     "Its outline is slightly blurred, as if seen in a dream.",
+     "Its hair or mane drifts as if underwater.",
+     "Silver antlers hung with dewdrops grow from its brow.",
+     "Its colouring cycles through the seasons over a single fight.",
+     "Larger than its kind, it moves with a dancer's grace.",
+     "Moths and fireflies circle it in slow orbits.",
+     "Its clothing or fur looks woven from spider silk and moonlight."
+    ],
+    "quirks": [
+     "Once per encounter it beguiles a creature: DC {dc} Wisdom save or the target sees it as a trusted friend for 1 minute.",
+     "Any bargain made with it is magically binding on both sides.",
+     "Its glamour hides the room's true exits; a DC 15 Investigation check reveals them.",
+     "It steps into any tree, flower or mushroom and out of another within 60 feet.",
+     "Each time it is hit, an illusory double of it appears, up to three at once; an attack on a double ends it.",
+     "It hungers for mortal names and tries to learn each creature's full name.",
+     "It hosts a revel each night; guests are safe from harm but lose a day of time outside.",
+     "When killed, it leaves a seed that grows into a small, gentle copy of itself within a year.",
+     "Once per encounter it charms a creature for a minute (DC {dc} Wisdom negates); the charmed creature thinks it is a lost friend.",
+     "It can turn invisible until it attacks.",
+     "It steals a memory with each hit, and gives them back if paid.",
+     "Its dance forces those who watch to join in (DC {dc} Wisdom save).",
+     "Time runs differently near it; each minute in its circle is an hour outside.",
+     "It can swap shapes with a nearby animal.",
+     "It owes a debt to someone in the party's past."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Summercrown",
+     "Wintercrown",
+     "Goldleaf",
+     "Duskcourt",
+     "Wildhunt",
+     "Oathweaver",
+     "Sunthorn",
+     "Heartstealer",
+     "Starglade",
+     "Revelborn"
+    ],
+    "looks": [
+     "A crown of golden leaves that never fall rests on its head, and its skin glows like late afternoon.",
+     "Its beauty is painful to look at, and its face is hard to recall afterward.",
+     "It is tall and regal, with a cloak of living flowers trailing behind it.",
+     "Golden pollen hangs in the air around it and glitters in torchlight.",
+     "Its eyes change colour to match whatever the viewer loves most.",
+     "Its shadow is a whole crowd of dancing figures.",
+     "Grass pushes through the stone around it until the room becomes a glade.",
+     "A court of small fey follows it, mimicking its every gesture.",
+     "Seasons turn around it: blossom, then fruit, then falling leaves.",
+     "Soft music plays wherever it walks, though no musicians are seen."
+    ],
+    "quirks": [
+     "Once per round, one creature that can hear it makes a DC {dc} Charisma save or obeys a one-word command.",
+     "Time runs strangely near it; each hour spent in its presence is a day outside.",
+     "It cannot break a promise, and it uses this to trap others into making them.",
+     "It can swap places with any plant in the space at will.",
+     "The first time it is hurt, every plant in the room turns hostile for 1 minute.",
+     "It proposes a game; a party that wins may claim one modest favour.",
+     "Creatures it has charmed remember it fondly forever and may seek it out years later.",
+     "Its tears are a prized alchemical ingredient; each one sells for 100 spirit coins.",
+     "It rules a small court of lesser fey, all of whom will defend it.",
+     "It can only be harmed by a creature who has spoken its true name.",
+     "It traps creatures in illusions; the first time each creature is hit, DC {dc} Intelligence save or believes it is somewhere else for a round.",
+     "It grants wishes, badly.",
+     "Its kiss puts a creature to sleep for a hundred years, unless woken.",
+     "It can curse a whole bloodline.",
+     "Its wings scatter dust that makes creatures float 10 feet into the air."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Eternal-Court",
+     "Starthroned",
+     "Worldglamour",
+     "Moonmother",
+     "Unaging",
+     "Diamond-Petal",
+     "First-Dream",
+     "Thousand-Seasons",
+     "Elderglade",
+     "Sorrowcrown"
+    ],
+    "looks": [
+     "It is made of light and memory, and each viewer sees it slightly differently.",
+     "A diamond crown floats above it, scattering rainbows that turn into butterflies.",
+     "Immense and graceful, it makes every movement look like part of a dance.",
+     "Whole seasons cycle across its body in moments.",
+     "Its eyes show each viewer their own future, or a lie about it.",
+     "Gardens of flowers no one has ever seen grow from its back.",
+     "It casts no shadow, but the shadows of everyone around it bow.",
+     "Its voice is a song some of the party remember from childhood.",
+     "The space around it fades into a dreamscape at the edges.",
+     "Its skin is clear as crystal, with starlight running through it like veins."
+    ],
+    "quirks": [
+     "Its presence blurs what is real; each round, creatures within 60 feet make a DC {dc} Wisdom save or treat one random ally as an illusion until their next turn.",
+     "Ancient rules of hospitality bind it; it cannot attack a guest who has accepted its food.",
+     "It can rewrite one memory of each creature that hears its voice.",
+     "It may offer a true gift, such as a second shadow, a stolen year or a singing voice, each with a hidden cost.",
+     "If it is killed, every fey in the region mourns, and the land remembers the killers.",
+     "It knows the history of every astral space it has passed through and tells it as a story.",
+     "It plays games with lives, but always gives a fair chance to win.",
+     "As an action it vanishes from every mind in the room for 1 minute; a DC {dc} Intelligence save notices it.",
+     "It is a ruler of a fey realm, and harming it is an act of war.",
+     "It can steal a person's face, name or voice permanently.",
+     "It can turn a season inside out across a whole region.",
+     "Its bargains bind gods.",
+     "It can bring the party into its realm with a word, and out again only on its terms.",
+     "It has been watching the party for a long time and has plans for them.",
+     "It cannot die, only be banished for a century."
+    ]
+   }
+  },
+  "fiend": {
+   "Bronze": {
+    "prefixes": [
+     "Ashfang",
+     "Brimstone",
+     "Cinderhorn",
+     "Sulphur-Eyed",
+     "Gnashing",
+     "Scorchtail",
+     "Leering",
+     "Sootwing",
+     "Hookclaw",
+     "Ember-Tongued"
+    ],
+    "looks": [
+     "Its skin is dark bronze, cracked like cooling metal, with red light in the cracks.",
+     "An extra pair of horns curls forward from its head like hooks.",
+     "It reeks of brimstone so strongly that eyes water at 10 feet.",
+     "Its eyes are coals that flare when it smiles.",
+     "Bigger than its kind, it has a barrel chest and long arms.",
+     "Its tail ends in a barbed hook that drips something black.",
+     "Wisps of smoke curl from its skin whenever it is hurt.",
+     "Its teeth are needle-thin and far too numerous.",
+     "Strange brands mark its skin, glowing faintly in patterns.",
+     "Its shadow flickers like firelight even in darkness."
+    ],
+    "quirks": [
+     "It offers deals constantly, each slightly worse than the last.",
+     "It can smell a lie and goes first for anyone who has lied in the last day.",
+     "Holy water deals it an extra 1d6 damage and makes it flee for one round.",
+     "It taunts in a creature's own voice and has advantage on its next Deception check.",
+     "When it dies, it leaves a scorch mark shaped like a grin that lasts for weeks.",
+     "Once per encounter it calls a swarm of biting flies that fills a 10-foot cube and lightly obscures it.",
+     "It keeps a list of names it has collected and is eager to add more.",
+     "Its blood corrodes metal; a weapon that hits it takes a -1 penalty until repaired.",
+     "It offers a deal before it fights, and the deal is almost fair.",
+     "It smells of sulphur and leaves scorched hoofprints.",
+     "Holy water burns it for 2d6 radiant damage.",
+     "It feeds on anger; it gains advantage against creatures that hit it in a rage.",
+     "It knows one secret about each party member.",
+     "It was summoned by a cultist who's still nearby.",
+     "It can't enter a home without being invited."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Hellsilver",
+     "Pactbound",
+     "Smilecutter",
+     "Chainmaw",
+     "Sinseeker",
+     "Bloodwing",
+     "Mournhorn",
+     "Whispertongue",
+     "Gloomforged",
+     "Silvertongue"
+    ],
+    "looks": [
+     "Its skin is black and polished like obsidian, with silver runes carved across it.",
+     "Chains of silver light wrap its arms and rattle when it moves.",
+     "Tall and elegant, it wears a cruel, handsome face.",
+     "Its leathery wings are edged with silver flame.",
+     "Its eyes are white-hot silver points that leave afterimages.",
+     "Its horns have grown into a jagged silver crown.",
+     "Shadows pool at its feet and stain the floor where it stands.",
+     "Its voice is soft and pleasant, but the words leave a bitter taste in listeners' mouths.",
+     "A ring of scorched glyphs forms on the ground wherever it rests.",
+     "The marks of old bindings are burned into its skin."
+    ],
+    "quirks": [
+     "A creature that talks with it makes a DC {dc} Wisdom save or agrees to one small, odd request.",
+     "It knows each creature's deepest want and offers it in exchange for a favour.",
+     "It can step into any fire and out of another within 120 feet.",
+     "Wounds it deals do not heal naturally until treated with a DC 13 Medicine check or magic.",
+     "Radiant damage makes it shriek, and every fiend in the space learns where it is.",
+     "It keeps stolen souls in a small silver box that a church will pay well to destroy.",
+     "A contract hidden in the space binds it here, and tearing the contract banishes it.",
+     "Once per encounter, when hit, it swaps places with an ally within 30 feet, who takes the hit instead.",
+     "Its wounds spray burning blood; any creature that hits it in melee takes {half} fire damage.",
+     "It possesses a fallen foe's body when reduced to 0 hit points (DC {dc} Charisma save to resist for a creature still alive).",
+     "It speaks in the voice of a lost loved one.",
+     "It can't be harmed by a creature it has made a bargain with.",
+     "It summons a lesser fiend when bloodied.",
+     "Its presence spoils food and turns milk.",
+     "It's bound by a contract and is looking for a loophole."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Hellcrown",
+     "Goldhorn",
+     "Pitlord",
+     "Soulmerchant",
+     "Infernal",
+     "Brimfire",
+     "Throne-Burner",
+     "Dreadwing",
+     "Kingtempter",
+     "Sinbright"
+    ],
+    "looks": [
+     "Its skin is gilded and gleaming, like a statue of a beloved hero gone rotten.",
+     "Great wings of golden fire spread from its back.",
+     "Huge and regal, it wears a crown of burning golden horns.",
+     "Golden chains hang from it, each ending in a screaming face.",
+     "Its eyes are molten gold, and gold tears run down its cheeks.",
+     "The ground cracks and glows beneath its hooves.",
+     "Lesser fiends kneel in a ring around it.",
+     "Gilded contracts are carved into its body, every line a deal it won.",
+     "Smoke rises from it in the shapes of faces.",
+     "Its voice is beautiful and warm, and listeners long to agree."
+    ],
+    "quirks": [
+     "Creatures that start their turn within 30 feet make a DC {dc} Wisdom save or are frightened until the end of that turn.",
+     "Once per day it can seal a binding contract with anyone who agrees, even under duress.",
+     "Once per encounter it summons a Bronze-rank fiend.",
+     "Each creature it kills heals it for {half} hit points.",
+     "It knows the name of every adventurer who has entered the space and calls them out.",
+     "Its blood burns; creatures that hit it with a melee attack take 1d6 fire damage.",
+     "The churches post a bounty for proof of its death.",
+     "At half hit points it offers to surrender in exchange for its life, and the offer is sincere.",
+     "It corrupts divine essences: a creature with one that it hits makes a DC {dc} Wisdom save or loses access to its divine powers for a day.",
+     "It returns to life a tenday after death unless its name is struck from its contract.",
+     "Its lair is a pocket of another place where fire falls as rain.",
+     "It can see through the eyes of anyone who has made a deal with it.",
+     "It has a cult in the nearest city.",
+     "It can only be truly killed with a blessed weapon.",
+     "It whispers to the weakest party member each night."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Hellsovereign",
+     "Worldtempter",
+     "Diamondhorn",
+     "Abyss-Crowned",
+     "Soulthief",
+     "Last-Sin",
+     "Throneless",
+     "Eclipse-Horned",
+     "Namewriter",
+     "Dawnbane"
+    ],
+    "looks": [
+     "Its body is cut from black diamond, and countless trapped fires burn in its depths.",
+     "It is vast, and its presence makes the walls sweat and the air thicken.",
+     "A ring of diamond horns crowns it, casting red light.",
+     "Its wings are made of burning contracts that flutter like pages.",
+     "Each of its eyes holds a tiny prisoner pleading for release.",
+     "Its footprints are pools of molten stone.",
+     "Its face shifts to resemble a hated enemy of each viewer.",
+     "It casts many shadows, each shaped like a soul it owns.",
+     "Rain stops above it and hisses into steam before it falls.",
+     "Its voice is a whisper heard directly in the mind."
+    ],
+    "quirks": [
+     "It sees the price of every soul and names what each adventurer is worth.",
+     "A creature that drops to 0 hit points within 60 feet of it makes a DC {dc} Charisma save or rises as its servant for 1 minute.",
+     "It can turn any fire in the space into a doorway it alone may use.",
+     "Its deals are upheld by powers greater than itself, and breaking one brings ruinous luck.",
+     "When it dies, its trapped souls are freed and may help or haunt the party.",
+     "It holds a key to another astral space inside its heart.",
+     "It treats the fight as a game and gives the party a one-round head start.",
+     "Holy weapons deal an extra {half} radiant damage to it, but each hit cracks the weapon a little.",
+     "It is a power in its own right, served by cults across the world.",
+     "Its true name could bind it, if anyone could find it.",
+     "It owns the soul of someone important.",
+     "Killing it frees a thousand bound spirits at once, and some are dangerous.",
+     "It can corrupt a whole town's water, food or wine.",
+     "It walks unseen among mortals as a respected figure.",
+     "It's been bargaining with an astral power, and the bargain is nearly complete."
+    ]
+   }
+  },
+  "giant": {
+   "Bronze": {
+    "prefixes": [
+     "Stonefist",
+     "Bronzebrow",
+     "Boulderback",
+     "Thickskull",
+     "Mossbeard",
+     "Craghand",
+     "Ironjaw",
+     "Tusked",
+     "Redbeard",
+     "Shalebone"
+    ],
+    "looks": [
+     "Its skin has the grain and colour of weathered bronze.",
+     "A full head taller than its kin, it drags its knuckles.",
+     "Moss and lichen grow in the cracks of its skin.",
+     "One eye is milky and blind; the other is bright and wary.",
+     "A crude bronze collar is fused to its neck.",
+     "Its beard is braided with bones and spirit coins.",
+     "It carries a tree trunk as a club, roots still attached.",
+     "Its skin is rough as rock and covered in old scratches.",
+     "Thick tusks jut from its lower jaw.",
+     "It wears armour made from a cart and several doors."
+    ],
+    "quirks": [
+     "It throws rocks at anything that moves on the horizon, giving away its position.",
+     "Lonely, it will talk before fighting if offered food.",
+     "It counts poorly and can be fooled into thinking the party is twice its size.",
+     "Each time it stamps, creatures within 10 feet make a DC {dc} Dexterity save or fall prone.",
+     "It keeps a pet, a lesser beast, and defends it fiercely.",
+     "Its lair holds a pile of dented helmets from lost adventurers, one of them still enchanted.",
+     "It sleeps deeply; a party can sneak past with a DC 12 Stealth check.",
+     "It hates being called small, and taunting it makes it charge blindly.",
+     "It throws whatever is to hand: rocks, trees, cows.",
+     "It is slow-witted and can be tricked with a riddle.",
+     "It's after food, and a big enough meal will send it away.",
+     "Its club is an old ship's mast.",
+     "It's young and away from home for the first time.",
+     "Its footfalls give it away a mile off.",
+     "It collects shiny buttons and trades favours for them."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Frostpeak",
+     "Silverbeard",
+     "Thunderstep",
+     "Cliffborn",
+     "Rimehand",
+     "Stormvoice",
+     "Glacierhide",
+     "Highcrag",
+     "Runebrow",
+     "Moonhewn"
+    ],
+    "looks": [
+     "Its skin is pale silver-grey, like a mountain at dusk.",
+     "Frost forms on its skin and beard, and its breath fogs.",
+     "Half again the size of its kin, it is broad as a house.",
+     "Silver runes are tattooed across its arms and glow when it fights.",
+     "Its long hair is wind-whipped, even indoors.",
+     "It wears the shells of great beasts as armour.",
+     "Its pale blue eyes glint like ice.",
+     "Lightning scars spread across its chest in branching patterns.",
+     "Stones and pebbles roll toward its feet as it walks.",
+     "Its voice is deep enough to make metal hum."
+    ],
+    "quirks": [
+     "Its boulders shatter on impact, dealing {half} damage to creatures within 5 feet of the target.",
+     "A trained warrior, it challenges the strongest party member to single combat.",
+     "Its war cry gives allies advantage on their next attack roll.",
+     "It can grapple two creatures at once.",
+     "It knows the old tunnels of the space and appears from hidden passages.",
+     "Its runes protect it; the first spell that damages it each round deals half damage.",
+     "Proud to a fault, it spares a party that honours it with a gift.",
+     "The Magic Society studies its runes and will buy the carved skin from its arms.",
+     "Its blows knock creatures 15 feet back (DC {dc} Strength save).",
+     "It has a pet: a bear, a boar or a monstrous dog.",
+     "It speaks the common tongue and drives a hard bargain.",
+     "It tears up the ground around it, leaving difficult terrain.",
+     "It takes no damage from falling rocks or small avalanches.",
+     "It keeps humans as servants in its hall.",
+     "It's been exiled from its clan and is bitter about it."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Sunpeak",
+     "Mountainking",
+     "Goldenbeard",
+     "Thunderlord",
+     "Skyhewn",
+     "Titanborn",
+     "Firecrowned",
+     "Gold-Runed",
+     "Hammerfall",
+     "Hillkeeper"
+    ],
+    "looks": [
+     "Its skin is warm gold like sunlit stone, and its eyes blaze like a forge.",
+     "It is enormous, its head brushing the highest ceilings of the space.",
+     "A crown of jagged gold stone has grown from its skull.",
+     "Its beard crackles with static and sparks.",
+     "Gold runes cover its body, pulsing in time with its heartbeat.",
+     "Its armour was forged from a single great bell.",
+     "Rocks orbit its body, held there by its will.",
+     "Every footstep cracks the ground in a web of lines.",
+     "Its weapon is a pillar torn from an ancient temple.",
+     "Its voice rumbles like distant thunder."
+    ],
+    "quirks": [
+     "Its stomp sends a 30-foot shockwave; creatures make a DC {dc} Strength save or take {half} bludgeoning damage and fall prone.",
+     "Smaller giants and monstrosities obey it out of fear.",
+     "Once per encounter it calls lightning from the ceiling onto a 10-foot circle.",
+     "It can hurl a creature it is grappling up to 60 feet.",
+     "It keeps the history of the space and remembers when it was formed.",
+     "Its gold ring fits a person as a bracelet and is worth 200 spirit coins.",
+     "When it falls, loose stone rains down; creatures within 20 feet make a DC {dc} Dexterity save or take {half} bludgeoning damage.",
+     "It respects only strength and negotiates with a party that beats it in a contest of might.",
+     "It can grab and throw a Medium creature 60 feet.",
+     "Its war cry calls other giants within a mile.",
+     "It wears armour made from a whole ship's hull.",
+     "It carries a magic weapon taken from a dead adventurer.",
+     "It's a chief, and others obey it.",
+     "It knows an old road through the mountains no one else does.",
+     "It's dying of an old wound and wants to die in battle."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldshoulder",
+     "Diamondbone",
+     "Skyholder",
+     "Elder-Titan",
+     "Mountainborn",
+     "Stormfather",
+     "Starbrow",
+     "Quakeheart",
+     "First-Giant",
+     "Peakcrowned"
+    ],
+    "looks": [
+     "Its skin is veined with diamond, glittering like a mountain full of gems.",
+     "It is so tall that clouds gather around its head in open spaces.",
+     "Part of it is mountain, with pines growing on its shoulders.",
+     "Its eyes shine like stars, and its gaze is felt as a weight.",
+     "Its beard is a waterfall of crystal threads.",
+     "Its footsteps are earthquakes, felt far away.",
+     "It carries a weapon carved from a single diamond the size of a horse.",
+     "Its armour is the ancient wall of a fallen city.",
+     "Light refracts through its crystal limbs in rainbows.",
+     "Its voice sounds like a landslide."
+    ],
+    "quirks": [
+     "Each step sends a tremor; creatures within 30 feet have disadvantage on Dexterity checks.",
+     "It can throw boulders the size of houses up to 500 feet.",
+     "Its name appears in the oldest records of the Adventure Society.",
+     "It is the foundation of the space, and its death brings part of the space crashing down.",
+     "It reshapes the stone of the space, raising walls or opening chasms as an action.",
+     "It does not bother with creatures it thinks weak and lets a party pass if they kneel.",
+     "Its heart is a diamond core that could buy a small kingdom.",
+     "Something in the space is hurting it, and it will reward whoever removes it.",
+     "It is the size of a hill and the land shakes as it walks.",
+     "It is one of the oldest giants alive and remembers a giant empire.",
+     "It can call down storms or quakes once a day.",
+     "Its hall is a mountain with a road inside it.",
+     "It is waiting for a prophecy to be fulfilled.",
+     "It holds a grudge against a city and has finally come for it.",
+     "Its bones would be a fortune to the Magic Society."
+    ]
+   }
+  },
+  "humanoid": {
+   "Bronze": {
+    "prefixes": [
+     "Scarred",
+     "Bronze-Banded",
+     "Hardbitten",
+     "Grim",
+     "Tattooed",
+     "Ashmarked",
+     "Copper-Eyed",
+     "Burly",
+     "Wolfcloak",
+     "Knotted"
+    ],
+    "looks": [
+     "Bronze-coloured tattoos cover its arms and glow faintly in the dark.",
+     "Broad and tall for its kind, it has knuckles thick with old breaks.",
+     "Its eyes have a bronze sheen, like a coin catching light.",
+     "Its hair has gone metallic copper at the roots.",
+     "It wears armour with bronze plates stamped with an unknown sigil.",
+     "Faint magical scars run in straight lines across its face.",
+     "It moves with the ease of someone who has survived many fights.",
+     "Its skin has the faint shimmer of hardened magic, like dried varnish.",
+     "Trophies from defeated adventurers hang from its belt.",
+     "Its rough voice carries farther than it should."
+    ],
+    "quirks": [
+     "Other humanoids within 30 feet of it gain a +1 bonus to attack rolls.",
+     "It carries a crude map of part of the space, annotated in a dead language.",
+     "It might accept a bribe of 20 spirit coins to look the other way.",
+     "It calls for help the moment it is hurt, alerting nearby enemies.",
+     "It throws sand; DC {dc} Constitution save or be blinded until the end of the target's next turn.",
+     "It is curious about the outside world and asks about Greenstone.",
+     "Its journal holds clues to the space's heart.",
+     "A trinket it wears lets it speak with beasts once per day.",
+     "It fights dirty: sand in the eyes, a knee where it hurts.",
+     "It surrenders when bloodied and has useful information.",
+     "It carries a letter that explains why it's here.",
+     "It's a deserter, and its old unit is looking for it.",
+     "It has a family who depend on it.",
+     "It knows a member of the party by reputation.",
+     "It carries a dose of poison and uses it on its blade."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Bladesworn",
+     "Silverbrand",
+     "Oathbreaker",
+     "Champion",
+     "Veteran",
+     "Shadowstep",
+     "Ironwill",
+     "Stormcaller",
+     "Warpainted",
+     "Moonblade"
+    ],
+    "looks": [
+     "Silver patterns swirl in its skin like frost on glass.",
+     "Its eyes glow with steady silver light that never wavers.",
+     "Tall and lean, it has a stillness that suggests great skill.",
+     "Its weapon is finely made and inscribed with silver runes.",
+     "Its light armour gleams with layers of enchantment.",
+     "A faint silver aura outlines it when it concentrates.",
+     "Its hair has turned the colour of pale moonlight.",
+     "Thin silver chains hung with talismans dangle from its belt.",
+     "Its shadow moves independently, reaching for weapons.",
+     "Its scars form a deliberate, ritual pattern."
+    ],
+    "quirks": [
+     "It has essence abilities of its own and uses one powerful special attack per encounter.",
+     "It reads fighting styles quickly; after the first round, it has advantage on attacks against the party's best fighter.",
+     "It can Disengage as a bonus action and always fights near an exit.",
+     "A former adventurer, it knows Adventure Society tactics and anticipates them.",
+     "It carries an unused monster core and will consume it if desperate.",
+     "It parries the first hit against it each round, reducing the damage by 1d10.",
+     "It leads a band of Iron-rank followers who obey it fiercely.",
+     "It might switch sides if offered a better deal or shown kindness.",
+     "It has a monster core in its chest, and it's not natural.",
+     "It reads the party's tactics and adapts after the first round.",
+     "It has allies hidden nearby who join on the second round.",
+     "It takes a hostage at the first chance.",
+     "It's under a geas and can't stop fighting.",
+     "It wears a badge from another adventuring society.",
+     "It's been paid by someone the party knows."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Warlord",
+     "Goldenblade",
+     "High-Essence",
+     "Sunbrand",
+     "Kingslayer",
+     "Spellwrought",
+     "Lionheart",
+     "Gold-Eyed",
+     "Duelmaster",
+     "Ashcrowned"
+    ],
+    "looks": [
+     "Gold markings on its skin pulse in time with its essence powers.",
+     "It wears gilded armour, battered but gleaming, that has seen countless battles.",
+     "Its eyes are molten gold and leave trails of light when it turns its head.",
+     "A faint golden halo surrounds its body when it fights.",
+     "It is perfectly composed, with the calm of someone who has never lost.",
+     "Its weapon hums and sheds golden light.",
+     "Its hair moves as if in a wind no one else feels.",
+     "Golden sigils float in the air around it when it casts.",
+     "Others step back from it without knowing why.",
+     "Motes of its affinity's magic drift around it like dust in sunlight."
+    ],
+    "quirks": [
+     "It has three essence abilities, each usable once per encounter.",
+     "It can make a reaction attack against any creature that moves within its reach.",
+     "Its battle cry grants every ally {half} temporary hit points.",
+     "It fights only when it has the advantage, using traps and terrain.",
+     "It knows the party's names, ranks and weaknesses from stolen Adventure Society records.",
+     "On a hit it can disarm; DC {dc} Strength save or drop the weapon.",
+     "It offers to recruit the strongest party member.",
+     "If it dies, its essences leave strange traces in the body that the Magic Society will pay to study.",
+     "It is a famous fighter with a name that makes guards nervous.",
+     "It has a ring of escape and vanishes at a quarter of its hit points.",
+     "Its voice commands obedience from lower-ranked soldiers.",
+     "It knows the party's weaknesses from a spy.",
+     "It's the leader of a cult or a gang, with followers everywhere.",
+     "It owes a life debt to someone in the party.",
+     "It's dying and wants a worthy successor."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Legendary",
+     "Diamond-Souled",
+     "Ascendant",
+     "Godtouched",
+     "Worldwalker",
+     "Unbroken",
+     "Starbrand",
+     "Last-Hero",
+     "Myth-Born",
+     "Peerless"
+    ],
+    "looks": [
+     "Diamond-white light glows beneath its skin, as if it is becoming something more.",
+     "Its eyes are clear crystal that see through lies and walls alike.",
+     "It moves so smoothly that it seems to step between moments.",
+     "Its weapon is pure light shaped into steel.",
+     "Its armour is woven from living diamond threads.",
+     "A ring of floating weapons turns around it.",
+     "Its face is calm and ageless, impossible to place in any era.",
+     "Its shadow is enormous, the shape of a giant or a dragon.",
+     "Every footstep leaves a faint diamond print.",
+     "The air bends around it like heat over a summer road."
+    ],
+    "quirks": [
+     "Anyone who recognises it (DC 15 History) makes a DC {dc} Wisdom save or is frightened for one round.",
+     "It always has the right essence ability ready and changes tactics every round.",
+     "It acts twice each round, on its own initiative and again on initiative count 10.",
+     "It knows the history of the space and may share it with a worthy opponent.",
+     "Its death would be talked about in every guild hall, and its rivals will demand proof.",
+     "It may test the party and let them go if they impress it.",
+     "As a bonus action, it vanishes in a flash of light and reappears anywhere within 120 feet.",
+     "Its belongings are worth more than most fortunes, and some are true relics.",
+     "It is a legend, a name parents use to frighten children.",
+     "It cannot be harmed by any weapon made in this world.",
+     "It's the head of a hidden order that spans continents.",
+     "It's an outworlder from long ago, with knowledge no one else has.",
+     "Its death would topple a throne.",
+     "It is a former Diamond-rank adventurer gone rogue.",
+     "It has made a pact with a great astral being."
+    ]
+   }
+  },
+  "monstrosity": {
+   "Bronze": {
+    "prefixes": [
+     "Barbtail",
+     "Gorejaw",
+     "Splitmaw",
+     "Spinebacked",
+     "Bloatbelly",
+     "Rotfang",
+     "Hookhorn",
+     "Venom-Spotted",
+     "Craghide",
+     "Gnarled"
+    ],
+    "looks": [
+     "Bronze-coloured spines have sprouted along its back and shoulders.",
+     "Larger than its kind, it has an extra pair of limbs tucked beneath its belly.",
+     "Its hide is mottled with poisonous yellow spots.",
+     "Its jaw unhinges wider than it should, showing rows of backward teeth.",
+     "Its eyes are compound and faceted like an insect's.",
+     "Old wounds have healed into thick ridges of bronze scar tissue.",
+     "Its claws are dark curved hooks.",
+     "A frill of skin flares around its neck when it is threatened.",
+     "It drips a thick, oily mucus that smells sour.",
+     "Its tail ends in a heavy club of bone."
+    ],
+    "quirks": [
+     "Its bite carries a mild venom; DC {dc} Constitution save or be poisoned until the end of the target's next turn.",
+     "It nests in its lair, where 1d4 eggs can be sold to collectors for 15 spirit coins each.",
+     "It mimics the sound of a crying child to lure prey.",
+     "It blends into its terrain and has advantage on Stealth checks while it stays still.",
+     "It drags the dead back to its lair, so lost gear from earlier teams can be found there.",
+     "When hit, it sheds spines that act as caltrops in a 5-foot radius.",
+     "It marks a territory with gouged stone and attacks anything that crosses the line.",
+     "It is dull-witted and can be distracted for a round by thrown meat.",
+     "It hunts by sound alone and is blind to silent creatures.",
+     "Its lair is full of the bones of its prey, and some still have coin purses.",
+     "It shrieks when hurt, deafening those within 10 feet for a round (DC {dc} Constitution save).",
+     "It has young in its nest.",
+     "It eats metal and goes for weapons and armour first.",
+     "Its hide is prized by tanners.",
+     "It can be distracted with fresh meat."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silverspine",
+     "Hollowcrest",
+     "Shadowhide",
+     "Mirrorback",
+     "Needle-Maned",
+     "Moonhunter",
+     "Crystal-Fanged",
+     "Venomheart",
+     "Thrashing",
+     "Pale-Hunter"
+    ],
+    "looks": [
+     "Its spines and scales have a silvery metallic sheen, sharp as razors.",
+     "Long and sleek, it has joints that bend at odd angles.",
+     "Its eyes reflect light like a cat's, but in cold silver.",
+     "It is large enough to swallow a person whole.",
+     "Its hide shifts colour to match the walls around it.",
+     "Glowing silver venom drips from its fangs.",
+     "Mirrored scales cover it and flash torchlight back into the party's eyes.",
+     "It has two heads that argue with each other in hisses.",
+     "Its limbs end in hooked blades rather than claws.",
+     "A thin silver mist hangs around it like breath on a cold morning."
+    ],
+    "quirks": [
+     "It can swallow a creature it has grappled; a swallowed creature takes {half} acid damage at the start of each of its turns.",
+     "Its venom brings hallucinations; DC {dc} Wisdom save or treat one ally as an enemy for one round.",
+     "It climbs any surface, including the ceiling, at full speed.",
+     "Once per encounter it turns a ranged spell attack back on the caster.",
+     "Severed limbs regrow within an hour.",
+     "Its hunting cry freezes small beasts and prey animals in place.",
+     "It has dug tunnels throughout the space and strikes from unexpected angles.",
+     "Armourers pay 30 spirit coins for a full set of its silver scales.",
+     "Its venom paralyses for a round (DC {dc} Constitution save).",
+     "It regrows severed parts within an hour.",
+     "It changes colour to match its surroundings.",
+     "It lays eggs in its victims.",
+     "It is smarter than it looks and lays traps.",
+     "Its spines fly off in a burst when bloodied, dealing {dmg} piercing damage to all within 10 feet.",
+     "It hates fire and flees from it."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Goldspine",
+     "Kingmaw",
+     "Many-Headed",
+     "Sunbane",
+     "Bonecrusher",
+     "Thousand-Fang",
+     "Stormhide",
+     "Gold-Venom",
+     "Dreadhunter",
+     "Stone-Eyed"
+    ],
+    "looks": [
+     "Its scales are burnished gold, and its spines glow like metal fresh from the forge.",
+     "It is huge, its body coiled through the room like a river.",
+     "It has sprouted several extra heads, each wearing a different expression.",
+     "Its golden eyes pin prey in place.",
+     "Natural plate armour covers its hide, gleaming like gold.",
+     "Its venom glows gold and smokes when it hits stone.",
+     "Lightning crackles along its spines when it is angered.",
+     "A trail of crushed stone and broken bones marks its path.",
+     "Its roar shakes the ceiling, sending dust falling.",
+     "A crown of gold-tipped horns rings its head."
+    ],
+    "quirks": [
+     "It regains 10 hit points at the start of its turn unless it took fire or acid damage since its last turn.",
+     "Its gaze slows; DC {dc} Constitution save or the target's speed is halved for 1 minute.",
+     "Each of its heads acts on its own initiative count.",
+     "When bloodied, it sheds its skin as a decoy and moves its full speed without provoking attacks.",
+     "It hunts for sport and toys with prey, giving a fleeing creature a one-round head start.",
+     "Its lair is full of the bones and gear of past adventurers.",
+     "Its gold venom is an alchemical treasure worth 100 spirit coins a vial.",
+     "It senses magic and goes straight for the party's most powerful item.",
+     "It is the alpha of its kind and others follow it.",
+     "Its gaze petrifies slowly over a minute.",
+     "It can burrow and emerge anywhere within 60 feet.",
+     "It devours magic items for strength.",
+     "Its blood corrodes nonmagical weapons.",
+     "Its death cry draws every monstrosity within a mile.",
+     "It was bred by the Magic Society and escaped."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Diamondspine",
+     "Abyssmaw",
+     "Elder-Beast",
+     "Endless",
+     "Prism-Eyed",
+     "Legendmaw",
+     "Doomhide",
+     "Starcoil",
+     "Hollow-King",
+     "Ruinbringer"
+    ],
+    "looks": [
+     "Its diamond spines ring like crystal chimes as it moves.",
+     "It is enormous, coiled around the heart of the space like a jealous guardian.",
+     "Its eyes are prisms that fracture light into blinding rainbows.",
+     "Plates of living crystal armour its hide.",
+     "It has a dozen heads, each different, as if stitched together from many creatures.",
+     "The air around it is thick with a sweet, deadly scent.",
+     "Its shadow hunts separately from its body.",
+     "Its venom crystallises in the air into glittering shards.",
+     "It is ancient, its hide a map of scars from countless battles.",
+     "Its body bends light, making its true shape hard to see."
+    ],
+    "quirks": [
+     "Its gaze petrifies; DC {dc} Constitution save or be restrained, and petrified on a second failure.",
+     "It is the apex of the space, and every other monster flees from it.",
+     "It can swallow creatures of up to Large size whole.",
+     "It regains 20 hit points each round until a critical hit cracks its diamond core.",
+     "At half hit points, it bursts into a swarm of smaller copies that fight on.",
+     "It has slept for centuries, and waking it makes the whole space tremble.",
+     "Its corpse could feed a village for a year, though the meat gives strange dreams.",
+     "Adventurers whisper its name, and its slayers will be famous in every guild hall.",
+     "It is the original of its kind, and all others descend from it.",
+     "It feeds on essences and grows stronger with each it consumes.",
+     "Its lair is a whole valley.",
+     "It can't be killed by any single blow.",
+     "It changes the creatures around it to resemble itself.",
+     "Cults worship it as a god.",
+     "Its core contains a sleeping astral space."
+    ]
+   }
+  },
+  "ooze": {
+   "Bronze": {
+    "prefixes": [
+     "Rust-Tinged",
+     "Bubbling",
+     "Clotted",
+     "Murk",
+     "Sludgeborn",
+     "Acrid",
+     "Gurgling",
+     "Copper-Flecked",
+     "Silted",
+     "Seeping"
+    ],
+    "looks": [
+     "Its body is a murky bronze, flecked with bits of metal.",
+     "Larger than its kind, it fills a whole corridor.",
+     "Bubbles rise constantly through its jelly and pop with an acrid stink.",
+     "Bones and coins float suspended inside it.",
+     "A faint bronze shimmer ripples over its surface.",
+     "Its trail hardens into a brittle, glassy crust.",
+     "It shifts between orange and brown as it moves.",
+     "Tiny tendrils reach from it like probing fingers.",
+     "Its body is thicker and stickier than usual, slow but relentless.",
+     "A dull glow pulses at its centre."
+    ],
+    "quirks": [
+     "Its body holds 2d10 spirit coins and a trinket, recoverable after its death.",
+     "It eats metal; a weapon that hits it takes a -1 penalty on a d20 roll of 1 to 5.",
+     "Slashing damage splits it into two smaller oozes with half its remaining hit points each.",
+     "It clings to ceilings and drops on passing creatures.",
+     "It is drawn to warmth and follows the party's torches.",
+     "Its acid eats through rope and leather in a single round.",
+     "It can squeeze through cracks the width of a coin.",
+     "Alchemists buy its residue for 5 spirit coins a jar.",
+     "It dissolves organic material, eating holes in clothing and leather.",
+     "It hides in plain sight as a puddle or wet stone.",
+     "It splits when struck by slashing damage.",
+     "It carries the undigested remains of a previous adventurer, including gear.",
+     "It's drawn to warmth and sleeps by fires.",
+     "Its residue is used in alchemy.",
+     "It's harmless to the dead and only eats the living."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Quicksilver",
+     "Mirrorpool",
+     "Silvergloam",
+     "Starslime",
+     "Liquid-Light",
+     "Mercurial",
+     "Crystalbloom",
+     "Moonpool",
+     "Shimmerdrip",
+     "Stillglass"
+    ],
+    "looks": [
+     "Its body is liquid silver that reflects the party in rippling distortions.",
+     "Silver lights drift through it like fish in a pond.",
+     "Clear as glass, it is almost invisible against stone.",
+     "Faces form briefly on its surface when it moves.",
+     "Crystal growths jut from its body like a cracked geode.",
+     "It is large enough to engulf several creatures at once.",
+     "Its colour swirls like oil on water.",
+     "A silver mist rises from it, smelling of cold metal.",
+     "It hums softly, louder when it is hungry.",
+     "Small objects turn slowly inside it like stars."
+    ],
+    "quirks": [
+     "It mimics the shape of objects or creatures it has consumed.",
+     "An engulfed creature cannot breathe and takes {half} acid damage at the start of each of its turns.",
+     "In still water or dim light it is invisible until it moves.",
+     "Once per encounter it flashes; creatures within 30 feet make a DC {dc} Constitution save or are blinded for one round.",
+     "At half hit points it splits into two Bronze-rank oozes.",
+     "It absorbs magic items it touches, and they can be recovered after it dies.",
+     "It is faster than it looks, sliding 40 feet in a round.",
+     "It senses vibrations through the floor within 120 feet.",
+     "It absorbs weapons that hit it; a creature must succeed on a DC {dc} Strength check to pull its weapon free.",
+     "It can climb walls and ceilings and drops on prey.",
+     "Its acid damage ignores resistance.",
+     "It can squeeze through any crack.",
+     "It mimics the shape of whatever it last ate.",
+     "It reforms an hour after death unless burned.",
+     "It glows faintly when hungry."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Goldgloam",
+     "Sunjelly",
+     "Living-Gold",
+     "Devourer",
+     "Molten",
+     "Alchemical",
+     "Ever-Hungry",
+     "Prismslime",
+     "Gilded-Mire",
+     "Heartpool"
+    ],
+    "looks": [
+     "Its body is liquid gold that gleams in the torchlight.",
+     "It fills an entire room from wall to wall.",
+     "Golden sparks drift through it like fireflies.",
+     "The gear of many dead adventurers floats within it, half dissolved.",
+     "Patterns that look like runes ripple across its surface.",
+     "It glows warmly, lighting the room in amber.",
+     "Half-dissolved monster cores glint inside it.",
+     "It forms crude limbs and even a rough face when it wants to.",
+     "It smells sweet and metallic, like honey and blood.",
+     "Its edges sizzle against stone and leave smoking trails."
+    ],
+    "quirks": [
+     "It can engulf up to three creatures at once.",
+     "Engulfed creatures take {dmg} acid damage at the start of each of their turns.",
+     "Spells that damage it heal it for half the damage instead, unless they deal cold damage.",
+     "It is intelligent and mimics voices it has heard to lure the party apart.",
+     "It can break into many small oozes and reform at will.",
+     "Dissolved monster cores worth 200 spirit coins can be strained from its remains.",
+     "Its acid dissolves stone walls in minutes, so no room in the space is safe from it.",
+     "It is drawn to essence magic and follows whoever uses it most.",
+     "It contains a whole digested monster core, worth a fortune.",
+     "It engulfs Large creatures.",
+     "It can split into four smaller oozes at will.",
+     "It thinks, slowly, and remembers everyone who has hurt it.",
+     "Its acid eats magic as well as matter.",
+     "It flows underground and emerges from drains and wells.",
+     "It's spreading, and every piece that breaks off grows."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Diamondgel",
+     "All-Consuming",
+     "Starpool",
+     "First-Slime",
+     "Unending",
+     "Prismgel",
+     "Liquid-Star",
+     "Deepmire",
+     "Abyssal",
+     "Mind-Pool"
+    ],
+    "looks": [
+     "It is clear as diamond, with a single brilliant core suspended within.",
+     "It is a vast lake of living jelly covering the floor of the space.",
+     "Stars and spiral clouds of light swirl in its depths.",
+     "It refracts light into rainbows that paint the walls.",
+     "Whole rooms of rubble churn inside it, slowly digesting.",
+     "Its surface is perfectly smooth and still until it moves.",
+     "It forms the faces of those it has consumed, and they speak in their own voices.",
+     "Parts of it have crystallised into sharp diamond spikes.",
+     "The air above it shimmers like a mirage.",
+     "Its colour shifts to match the mood of whoever looks at it."
+    ],
+    "quirks": [
+     "It feeds on magic; a spell cast within 60 feet fails on a d6 roll of 1, and the slot is spent.",
+     "It can engulf any number of creatures within its space.",
+     "It holds the memories of everything it has consumed and can share them.",
+     "It cannot be destroyed while its core is intact, and only a critical hit can crack the core.",
+     "It spreads through the space, slowly turning room after room into its territory.",
+     "Its residue is a legendary alchemical ingredient that the Magic Society will bid on.",
+     "As an action it can divide off a Silver-rank ooze, up to three at a time.",
+     "It may be the true heart of the space; killing it collapses the space within the hour.",
+     "It is the size of a lake.",
+     "It has absorbed the minds of everything it ate and speaks with many voices.",
+     "It can dissolve stone walls in a round.",
+     "It cannot be destroyed, only contained.",
+     "It feeds on spells cast near it.",
+     "It holds a whole town's worth of digested treasure.",
+     "It is the source of every ooze in the region."
+    ]
+   }
+  },
+  "plant": {
+   "Bronze": {
+    "prefixes": [
+     "Thornbark",
+     "Mossgrown",
+     "Rotroot",
+     "Bramblevine",
+     "Sapbleed",
+     "Knotwood",
+     "Barbleaf",
+     "Lichen-Crusted",
+     "Rustleaf",
+     "Gnarlroot"
+    ],
+    "looks": [
+     "Its bark is a reddish bronze, like an oak in autumn.",
+     "Thorns as long as fingers cover its stems.",
+     "It is taller and thicker than others of its kind.",
+     "Pale fungi grow in clusters on its trunk.",
+     "Its leaves are dark and leathery, with bronze edges.",
+     "Sticky, sweet-smelling sap drips from cracks in its bark.",
+     "It flowers in strange colours: black, deep blue or bone white.",
+     "Its roots spread far, cracking the stone floor.",
+     "Its leaves rustle even when there is no wind.",
+     "Small birds nest in it, unafraid of its hunger."
+    ],
+    "quirks": [
+     "Its pollen makes creatures sneeze; DC {dc} Constitution save or have disadvantage on Stealth checks for 1 hour.",
+     "It can root itself in place and cannot be moved while rooted.",
+     "Its sap is sticky; a creature that touches it is restrained until it passes a DC 12 Strength check.",
+     "It grows fruit that heals 1d4 hit points but tastes awful.",
+     "Its seeds sprout into Iron-rank saplings within a week.",
+     "It takes double damage from fire.",
+     "Its roots feel footsteps within 60 feet.",
+     "Bowyers pay 10 spirit coins a bundle for its wood.",
+     "It is rooted, and burning its roots kills it slowly.",
+     "It smells sweet and lures prey with scent.",
+     "Its thorns carry a mild poison.",
+     "It feeds on blood and grows red when fed.",
+     "Its seeds stick to clothing and sprout a day later.",
+     "It is protected by a local druid.",
+     "Its fruit heals 1d4 hit points, eaten."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Silverleaf",
+     "Moonbloom",
+     "Glasspetal",
+     "Whisperwood",
+     "Dreamvine",
+     "Starseed",
+     "Frostroot",
+     "Hollowbark",
+     "Mistbloom",
+     "Venomflower"
+    ],
+    "looks": [
+     "Its silver leaves chime like bells in a breeze.",
+     "It glows softly in darkness, lighting the room around it.",
+     "Its flowers are huge, with petals like silk.",
+     "It is massive, its roots wrapping around the room.",
+     "Its bark is pale silver and smooth as skin.",
+     "Its vines move like snakes, coiling and uncoiling.",
+     "Faces seem to form and fade in its bark.",
+     "Its fruit glows with an inner light.",
+     "Silver dew gathers on its leaves and never dries.",
+     "Its scent is sweet and dizzying."
+    ],
+    "quirks": [
+     "Its scent lulls; DC {dc} Wisdom save or fall asleep for 1 minute or until hurt.",
+     "It can uproot itself and creep after prey at 10 feet per round.",
+     "Its fruit restores 2d4 hit points and grants darkvision for an hour.",
+     "Its vines can grapple two creatures at once.",
+     "Lost branches regrow within an hour.",
+     "It talks with every other plant in the space and always knows where the party is.",
+     "Its petals can be brewed into a minor healing draught.",
+     "It sings softly at night, and the song carries hints about the space.",
+     "Its vines grapple creatures within 15 feet as a bonus action (escape DC {dc}).",
+     "Its pollen causes sleep (DC {dc} Constitution save).",
+     "It regrows lost vines at the start of each turn.",
+     "It speaks through rustling leaves.",
+     "It moves slowly through the soil, leaving trails of wilted plants.",
+     "Its wood is valued by bowyers.",
+     "It's protecting a seed that will grow into something greater."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Goldbloom",
+     "Sunleaf",
+     "Elder-Root",
+     "Kingvine",
+     "Dawnflower",
+     "Heartwood",
+     "Thousand-Thorn",
+     "Gilt-Bark",
+     "Lifebloom",
+     "Crownroot"
+    ],
+    "looks": [
+     "Its leaves are gold and glow like sunlight through a window.",
+     "Its canopy spreads across the whole ceiling of the room.",
+     "Its flowers are the size of shields, with burning golden centres.",
+     "Runes carved into its bark by no hand glow when it moves.",
+     "Its roots run through the walls of the space like veins.",
+     "Golden pollen fills the air around it in a lazy haze.",
+     "It bears fruit with skins of pure gold.",
+     "Small creatures shelter in its branches, protected from everything else in the space.",
+     "A broad, kindly face is grown into its trunk, and its mouth moves when it speaks.",
+     "It sheds golden leaves that never rot."
+    ],
+    "quirks": [
+     "It can command every plant in the space.",
+     "Its pollen charms; DC {dc} Wisdom save or regard it as a friend for 1 hour.",
+     "In sunlight it regains 10 hit points at the start of its turn.",
+     "Its fruit cures any disease, but it gives fruit only to friends.",
+     "As an action, it raises a 30-foot wall of thorns that deals {half} piercing damage to anything pushing through.",
+     "It is ancient and patient, and answers three questions for anyone who tends its roots.",
+     "Its golden leaves are worth 10 spirit coins each.",
+     "Its roots can drag a creature underground; DC {dc} Strength save or be restrained and buried to the waist.",
+     "It controls all plants within 60 feet.",
+     "Its roots run beneath a whole village.",
+     "It is the heart of a forest, and the forest fights for it.",
+     "It drains life from the soil, and the land around it is dying.",
+     "It can spread to new ground by seed overnight.",
+     "Its sap is a cure for one specific disease.",
+     "It was planted by someone, deliberately."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Worldroot",
+     "Diamondbloom",
+     "First-Seed",
+     "Eternal-Grove",
+     "Starroot",
+     "Forest-Heart",
+     "Crystal-Canopy",
+     "Everbloom",
+     "Elder-Grove",
+     "Lifeshaper"
+    ],
+    "looks": [
+     "Its leaves are thin diamond and shimmer with rainbows in every breeze.",
+     "It is colossal, and its roots form the very floor of the space.",
+     "Its flowers shine with a light that never fades.",
+     "Its bark is crystal, and its sap can be seen flowing inside like liquid starlight.",
+     "Its canopy is so vast it forms the sky of the space.",
+     "Its fruit glows like hanging stars.",
+     "Its roots twist into tunnels and whole rooms.",
+     "It hums with life, a feeling of warmth in the chest of everyone nearby.",
+     "The faces of all who died near it are grown into its trunk, peaceful and sleeping.",
+     "Spring, summer, autumn and winter all exist at once in different branches."
+    ],
+    "quirks": [
+     "It is the space's heart; killing it ends the space within a day.",
+     "Once ever, its fruit can return a creature dead less than a day to life.",
+     "It can grow a forest across a whole region of the space in an hour.",
+     "Its roots reach every room, letting it attack anywhere in the space.",
+     "It speaks every language and remembers the whole history of the space.",
+     "A single cup of its sap heals all wounds and ends all diseases.",
+     "Once per encounter it calls up two Silver-rank plant guardians.",
+     "It offers a gift to any party that defends it from the space's other monsters.",
+     "It is a world tree's offshoot.",
+     "Its roots reach an astral space.",
+     "It can grow a whole forest in a night.",
+     "Druids across the region feel its pain.",
+     "Its fruit grants a vision of the future.",
+     "Burning it would poison the air for miles.",
+     "It's old enough to remember the world's first spring."
+    ]
+   }
+  },
+  "undead": {
+   "Bronze": {
+    "prefixes": [
+     "Gravecold",
+     "Bone-Bare",
+     "Mouldering",
+     "Ashen",
+     "Cryptborn",
+     "Grave-Dirt",
+     "Rattling",
+     "Wailing",
+     "Ghoulish",
+     "Pale-Shrouded"
+    ],
+    "looks": [
+     "Its bones have turned a dull bronze, as if stained by old blood.",
+     "Pale green light burns in its empty eye sockets.",
+     "Larger than its kind, it has extra bones fused onto its frame.",
+     "Its grey skin is stretched so tight that every bone shows.",
+     "Rotting cloth hangs from it, embroidered with a forgotten crest.",
+     "A cold mist pours from its mouth.",
+     "Its fingers have grown into long, sharp claws.",
+     "Chains wrap its body and rattle as it moves.",
+     "Grave dirt clings to it, smelling of wet earth.",
+     "Faint whispers come from its mouth, though its jaw does not move."
+    ],
+    "quirks": [
+     "Its touch chills; DC {dc} Constitution save or the target's speed drops by 10 feet until the end of its next turn.",
+     "It returns to its grave at dusk and rises again the next night unless finished with radiant damage.",
+     "It carries a token from its life that hints at its story.",
+     "It hates light and attacks whoever holds the brightest torch first.",
+     "It wails when it sees the living, alerting other undead in the space.",
+     "It cannot cross running water.",
+     "Necromancers want its bones, but selling them in Greenstone is a crime.",
+     "It remembers its name if told, and may pause to listen.",
+     "It repeats the last thing it did in life, over and over.",
+     "It flees from holy symbols.",
+     "It's guarding something it loved in life.",
+     "It speaks a single word over and over: a name.",
+     "It can't cross a threshold without invitation.",
+     "It leaves frost on everything it touches.",
+     "It rises again at night unless its bones are buried properly."
+    ]
+   },
+   "Silver": {
+    "prefixes": [
+     "Wraithbound",
+     "Silver-Boned",
+     "Soulhungry",
+     "Mournshade",
+     "Deathless",
+     "Spectral",
+     "Frostgrave",
+     "Cryptlord",
+     "Shadowmourn",
+     "Hollowsoul"
+    ],
+    "looks": [
+     "Its bones gleam silver, and silver light leaks from its joints.",
+     "It is translucent in places, showing a ghostly shape beneath.",
+     "Its eyes burn with cold silver fire.",
+     "Frost forms on everything it touches.",
+     "It wears armour of an ancient design, tarnished silver.",
+     "Its shadow is darker than night and moves on its own.",
+     "Its face is frozen in a scream of grief.",
+     "It drifts a hand's breadth above the ground.",
+     "Broken silver chains still hang from its limbs.",
+     "Its voice echoes as if from very far away."
+    ],
+    "quirks": [
+     "On a hit, it regains hit points equal to half the damage dealt.",
+     "It can move through walls and solid objects, ending its turn outside them.",
+     "Once per encounter, it raises the dead within 30 feet as Iron-rank zombies.",
+     "Its wail forces creatures within 30 feet to make a DC {dc} Wisdom save or be frightened for 1 minute.",
+     "It is bound to an object in the space, and destroying the object destroys it.",
+     "It remembers its past and may bargain for a proper burial.",
+     "Radiant damage against it is doubled.",
+     "A church will pay to have its silver bones laid to rest.",
+     "Its touch drains life; it heals for half the damage it deals.",
+     "It can command lesser undead within 60 feet.",
+     "It possesses a living body for a round when reduced to 0 hit points (DC {dc} Charisma save).",
+     "It can pass through walls.",
+     "Its wail frightens all who hear it (DC {dc} Wisdom save).",
+     "It has unfinished business and can be laid to rest by finishing it.",
+     "It was raised by a necromancer who's nearby."
+    ]
+   },
+   "Gold": {
+    "prefixes": [
+     "Deathlord",
+     "Goldbone",
+     "Lichcrowned",
+     "Soulreaver",
+     "Gravemaster",
+     "Endless-Night",
+     "Plaguebringer",
+     "Bone-King",
+     "Duskthrone",
+     "Sorrowborn"
+    ],
+    "looks": [
+     "Its bones are gilded, and gold light burns inside its skull.",
+     "A tarnished gold crown sits on its head, fused to the bone.",
+     "It is huge, made from many bodies fused together.",
+     "The room grows cold enough to freeze breath when it enters.",
+     "A cloak of living shadow swirls around it.",
+     "Golden fire burns in its eyes.",
+     "Wailing spirits orbit it in a slow ring.",
+     "Plants wither and metal rusts wherever it touches.",
+     "Its voice is the grinding of a tomb door opening.",
+     "Gold runes are carved deep into its bones."
+    ],
+    "quirks": [
+     "Every undead creature in the space obeys it.",
+     "Living creatures that end their turn within 10 feet of it take {half} necrotic damage.",
+     "If destroyed, it re-forms in a day unless the vessel holding its soul is found and broken.",
+     "It casts spells as a 5th-level spellcaster.",
+     "It knows the names of the dead in the space and can call them to its side.",
+     "Its touch paralyses; DC {dc} Constitution save or be paralysed until the end of the target's next turn.",
+     "It still guards the treasure it owned in life.",
+     "It may bargain for its freedom from the space.",
+     "Its phylactery or anchor is hidden somewhere else.",
+     "It raises the dead it kills as its servants.",
+     "Its presence makes the dead within a mile restless.",
+     "It remembers its life clearly and wants it back.",
+     "Healing magic hurts it, and harming magic heals it.",
+     "It leads a cult of the living who serve it for promised immortality.",
+     "Its grave is a famous site, and pilgrims come to it."
+    ]
+   },
+   "Diamond": {
+    "prefixes": [
+     "Deathless-King",
+     "Diamondskull",
+     "Worldgrave",
+     "Starless-Night",
+     "Soul-Eater",
+     "Eclipse-Lord",
+     "Last-Breath",
+     "Gravewyrm",
+     "Doomcrown",
+     "Undying"
+    ],
+    "looks": [
+     "Its bones are diamond and glitter with a cold light.",
+     "It is enormous, a walking hill of bones.",
+     "The whole space dims when it wakes.",
+     "Its eyes are pits of darkness that drink in torchlight.",
+     "A storm of spirits howls around it.",
+     "Its crown is made from diamond skulls.",
+     "When it speaks, every other sound stops.",
+     "Living grass turns to dust beneath its feet.",
+     "Its shadow is the shape of a great beast that does not exist.",
+     "Ancient grave bindings wrap its body, still covered in prayers."
+    ],
+    "quirks": [
+     "Small animals and plants die within a mile of where it rests.",
+     "Once per day it can raise every corpse in the space.",
+     "It cannot be destroyed while its heart, hidden in another room, still beats.",
+     "Its gaze drains life; DC {dc} Constitution save or take {half} necrotic damage and have maximum hit points reduced by the same amount until a long rest.",
+     "It remembers the world before the first cities were built.",
+     "Its death frees every soul trapped in the space.",
+     "Once per day it can return a fallen ally to unlife at full hit points.",
+     "Its treasure vault is the stuff of old songs.",
+     "It was once a great king and still rules its land in death.",
+     "Its death would release a thousand trapped souls.",
+     "It can raise a whole graveyard in a night.",
+     "The Church of Undeath worships it as a saint.",
+     "It can't be destroyed while its name is remembered.",
+     "It was once a god's chosen and fell.",
+     "It is old enough to remember the founding of the Church of Death."
+    ]
+   }
+  }
+ },
+ "byAffinity": {
+  "Blood": {
+   "prefixes": [
+    "Bloodsoaked",
+    "Crimsonvein",
+    "Redfang",
+    "Gorehide",
+    "Scarletmaw",
+    "Clotborn",
+    "Heartdrinker",
+    "Vein-Marked",
+    "Hemoclaw",
+    "Gorebound",
+    "Vein-Crowned",
+    "Redmist",
+    "Bloodsworn",
+    "Leechmaw",
+    "Sanguine",
+    "Rubyhide"
+   ],
+   "looks": [
+    "Its fur or skin is stained deep red, and it smells of iron.",
+    "Veins glow crimson beneath its hide, pulsing with each heartbeat.",
+    "Droplets of blood bead on its skin and drift upward instead of falling.",
+    "Its eyes are entirely red, with no white at all.",
+    "Old wounds on it never close, but weep slowly without weakening it.",
+    "Everything it touches is left with a faint red print.",
+    "Its breath leaves a fine red mist that tastes of copper.",
+    "Scabs cover it like armour plates.",
+    "Fresh wounds on its foes bleed toward it, little red threads in the air.",
+    "Its shadow is the colour of a bruise.",
+    "It bleeds when it's happy.",
+    "Flies follow it in a buzzing cloud and never land."
+   ]
+  },
+  "Dark": {
+   "prefixes": [
+    "Shadowhide",
+    "Nightborn",
+    "Gloomfang",
+    "Duskpelt",
+    "Voidmaw",
+    "Inkshade",
+    "Moonless",
+    "Umbral",
+    "Starless",
+    "Eclipse",
+    "Hollow-Eyed",
+    "Gravecloak",
+    "Nightmaw",
+    "Sablefang",
+    "Dimhide",
+    "Blackheart"
+   ],
+   "looks": [
+    "Its body is so black that it looks like a hole cut in the room.",
+    "Shadows cling to it like smoke and drag behind it as it moves.",
+    "Pinpoints of violet light serve as its eyes in a darkened face.",
+    "Torches near it gutter and dim.",
+    "Its outline bleeds into any nearby darkness.",
+    "Pale stars glimmer faintly in its dark hide.",
+    "Its eyes reflect no light at all.",
+    "Its silhouette is visible only out of the corner of the eye.",
+    "Candles near it burn with black flames.",
+    "The dark around it feels cold and wet.",
+    "Its breath is a thin stream of shadow.",
+    "It makes no sound at all, even when it roars."
+   ]
+  },
+  "Earth": {
+   "prefixes": [
+    "Stonehide",
+    "Graniteback",
+    "Mossborn",
+    "Craggy",
+    "Ironroot",
+    "Slateclaw",
+    "Boulderhide",
+    "Deepdelve",
+    "Bedrock",
+    "Quarry-Born",
+    "Ironclad",
+    "Claybound",
+    "Shalehide",
+    "Cairn",
+    "Rootbound",
+    "Orefang"
+   ],
+   "looks": [
+    "Its hide is crusted with stone plates and gravel.",
+    "Moss and small ferns grow along its back.",
+    "Crystals jut from its shoulders like cracked geodes.",
+    "It is heavier than it looks and leaves deep prints in solid rock.",
+    "Its colouring matches the surrounding stone, grey and brown and speckled.",
+    "Dust trickles from it with every movement.",
+    "Veins of ore glint along its flanks.",
+    "It sheds pebbles like a dog sheds hair.",
+    "Its teeth are chips of flint.",
+    "Lichen grows in the cracks of its skin.",
+    "The ground hums faintly when it rests.",
+    "Its tracks are shaped like old runes in the soil."
+   ]
+  },
+  "Fire": {
+   "prefixes": [
+    "Emberback",
+    "Cinderfang",
+    "Flamemane",
+    "Ashborn",
+    "Scorchclaw",
+    "Blazehide",
+    "Smoulder-Eyed",
+    "Pyreheart",
+    "Kilnborn",
+    "Brandmark",
+    "Furnace",
+    "Flarehide",
+    "Coalheart",
+    "Searfang",
+    "Wildfire",
+    "Charmane"
+   ],
+   "looks": [
+    "Its fur smoulders, and sparks fly when it shakes.",
+    "Cracks of orange light glow across its skin like cooling lava.",
+    "Its breath is a haze of heat and smoke.",
+    "Its eyes burn like coals in a forge.",
+    "The ground blackens wherever it stands for long.",
+    "Flames lick along its spine and tail.",
+    "Its blood boils when spilled.",
+    "Rain hisses into steam on its back.",
+    "Its shadow flickers like firelight.",
+    "A smell of burnt sugar follows it.",
+    "Its claws glow cherry-red after each strike.",
+    "It sheds its skin in flakes of ash."
+   ]
+  },
+  "Life": {
+   "prefixes": [
+    "Greenblood",
+    "Bloomhide",
+    "Verdant",
+    "Thriving",
+    "Sapling-Crowned",
+    "Lifebound",
+    "Springborn",
+    "Vinewrapped",
+    "Evergreen",
+    "Blossomfang",
+    "Rootheart",
+    "Seedborn",
+    "Wildgrowth",
+    "Leafmane",
+    "Mossheart",
+    "Greenwarden"
+   ],
+   "looks": [
+    "Flowers bloom in its fur and close when it is wounded.",
+    "Its wounds knit shut as you watch, leaving fresh pink skin.",
+    "It smells of spring grass and rain.",
+    "Small green shoots sprout in its footprints.",
+    "A healthy green glow lies just beneath its skin.",
+    "Bees and butterflies follow it everywhere.",
+    "Its wounds bloom with tiny flowers instead of scabs.",
+    "Fruit grows on its antlers or spines.",
+    "It smells of cut grass after rain.",
+    "Birds nest in its fur.",
+    "Dead leaves turn green as it passes.",
+    "Its heartbeat can be heard as a soft rustle of leaves."
+   ]
+  },
+  "Light": {
+   "prefixes": [
+    "Brightscale",
+    "Sunhide",
+    "Dawnfur",
+    "Radiant",
+    "Glowing",
+    "Shining",
+    "Haloed",
+    "Gleaming",
+    "Daybreak",
+    "Lumen",
+    "Prismhide",
+    "Goldlight",
+    "Brightmaw",
+    "Morningstar",
+    "Clearsight",
+    "Sunflare"
+   ],
+   "looks": [
+    "It glows softly, shedding dim light in a 10-foot radius.",
+    "Its eyes are lanterns of white-gold light.",
+    "Its hide shimmers like sun on water.",
+    "A faint halo flickers above its head.",
+    "Shadows shrink away from it.",
+    "Rainbows dance across its body whenever it moves.",
+    "Its teeth shine like polished pearls.",
+    "It casts no shadow.",
+    "Looking at it too long leaves spots in your eyes.",
+    "Its fur sparkles like frost in sunlight.",
+    "Moths circle it endlessly.",
+    "Its blood glows like a lantern."
+   ]
+  },
+  "Magic": {
+   "prefixes": [
+    "Runehide",
+    "Arcane",
+    "Spellscar",
+    "Glyphmarked",
+    "Starwoven",
+    "Manabright",
+    "Sigilborn",
+    "Spellbound",
+    "Spellhide",
+    "Wardborn",
+    "Runefang",
+    "Arcmane",
+    "Hexbound",
+    "Mystic",
+    "Glimmerscale",
+    "Charmed"
+   ],
+   "looks": [
+    "Glowing runes crawl across its body and rearrange themselves.",
+    "Motes of blue light orbit it slowly.",
+    "Its eyes are glowing glyphs instead of pupils.",
+    "The air near it crackles and tastes of metal.",
+    "It leaves faint arcane symbols on the ground where it steps.",
+    "Its outline flickers as if it is not quite solid.",
+    "Spells cast near it come out in its colours.",
+    "Its whiskers or antennae spark with blue static.",
+    "Floating sigils mark where it has slept.",
+    "It smells of old books and lightning.",
+    "Its eyes show tiny turning circles.",
+    "Small objects near it float an inch off the ground."
+   ]
+  },
+  "Might": {
+   "prefixes": [
+    "Ironbrawn",
+    "Bulwark",
+    "Mountainthew",
+    "Heavyhand",
+    "Bonebreaker",
+    "Thickhide",
+    "Warborn",
+    "Steelsinew",
+    "Ironjaw",
+    "Rampart",
+    "Oxblood",
+    "Thunderchest",
+    "Brawnhide",
+    "Crusher",
+    "Siegebreaker",
+    "Gravelfist"
+   ],
+   "looks": [
+    "It is unnaturally muscled, its body straining with power.",
+    "Its knuckles or claws are thick and scarred from many fights.",
+    "Its hide is tough and seamed, like old leather armour.",
+    "Veins stand out on its neck and limbs like cords.",
+    "It is bigger than its kind, and every step shakes the ground.",
+    "Its breathing is slow and heavy, like a forge bellows.",
+    "Its every breath is a growl.",
+    "Its neck is as thick as its head.",
+    "Old broken weapons are lodged in its hide, ignored.",
+    "It leaves cracks in the ground when it stamps.",
+    "Its muscles ripple even at rest.",
+    "Trees it brushes against snap."
+   ]
+  },
+  "Sin": {
+   "prefixes": [
+    "Sinmarked",
+    "Wickedhorn",
+    "Greedmaw",
+    "Envy-Eyed",
+    "Wrathborn",
+    "Gluttonous",
+    "Prideful",
+    "Vileblood",
+    "Covetous",
+    "Spiteful",
+    "Slothhide",
+    "Lustmaw",
+    "Avarice",
+    "Mocking",
+    "Grudgeborn",
+    "Wantonfang"
+   ],
+   "looks": [
+    "Its eyes gleam with greed whenever coins are near.",
+    "Dark, oily stains spread across its body like ink in water.",
+    "It smells of rot and sweet spice.",
+    "Its grin is wide and cruel, showing too many teeth.",
+    "Small symbols of vice are branded into its skin.",
+    "Those who look at it feel a sudden flash of jealousy or anger.",
+    "Its smile looks almost human.",
+    "It stares at whatever the party values most.",
+    "Its hide shows mocking faces in the mottling.",
+    "It wears trinkets taken from victims.",
+    "Coins stick to its fur as if drawn by greed.",
+    "It laughs when it's hurt."
+   ]
+  },
+  "Swift": {
+   "prefixes": [
+    "Quickfoot",
+    "Fleetwing",
+    "Swiftclaw",
+    "Dartback",
+    "Flickerfang",
+    "Windrunner",
+    "Blinkstep",
+    "Racing",
+    "Quicksilver",
+    "Lightfoot",
+    "Arrowtail",
+    "Gustfang",
+    "Blur",
+    "Hareborn",
+    "Nimble",
+    "Skitter"
+   ],
+   "looks": [
+    "Its body is lean and long, built for speed.",
+    "A faint blur trails behind it when it moves.",
+    "Its legs are longer than usual, with springy joints.",
+    "Its eyes dart constantly, tracking every movement.",
+    "Its sleek fur lies flat against its skin.",
+    "It twitches and fidgets, never still for a moment.",
+    "It is never quite where you looked a moment ago.",
+    "Its feet barely touch the ground.",
+    "Its heartbeat is so fast it hums.",
+    "It twitches its head like a bird.",
+    "It leaves a trail of displaced dust.",
+    "Its shape stretches when it turns quickly."
+   ]
+  },
+  "Water": {
+   "prefixes": [
+    "Tidehide",
+    "Brineback",
+    "Deepscale",
+    "Rainfur",
+    "Mistborn",
+    "Wavecrest",
+    "Coralfang",
+    "Marshborn",
+    "Saltfang",
+    "Undertow",
+    "Kelpmane",
+    "Driftborn",
+    "Floodhide",
+    "Pearlback",
+    "Seaglass",
+    "Riptide"
+   ],
+   "looks": [
+    "Its skin is slick and wet, dripping constantly.",
+    "Fins or webbing have grown between its limbs.",
+    "Its colour is the blue-green of deep water.",
+    "Barnacles and shells cling to its hide.",
+    "A fine mist surrounds it and beads on nearby surfaces.",
+    "Its eyes are large and dark, like a deep-water fish's.",
+    "Water runs uphill toward it.",
+    "Its scales are the green of shallow seas.",
+    "It smells of salt and seaweed.",
+    "Puddles form where it stands.",
+    "Small fish swim in a bubble around its head.",
+    "Its voice sounds like waves on shingle."
+   ]
+  },
+  "Wind": {
+   "prefixes": [
+    "Galeborn",
+    "Stormwing",
+    "Skyrender",
+    "Featherlight",
+    "Whirlwind",
+    "Breezefur",
+    "Cloudhide",
+    "Howling",
+    "Squall",
+    "Gustback",
+    "Skyhide",
+    "Tempest",
+    "Zephyr",
+    "Updraft",
+    "Thunderwing",
+    "Kitefang"
+   ],
+   "looks": [
+    "Its fur ripples constantly as if in a strong wind.",
+    "It is lighter than it looks and seems to float with each step.",
+    "Small dust devils swirl around its feet.",
+    "Its eyes are pale grey like storm clouds.",
+    "Feathers or fine tufts sprout along its body.",
+    "A faint whistle follows it wherever it goes.",
+    "Leaves swirl around it in a constant spiral.",
+    "Its cry sounds like wind in a chimney.",
+    "It is surrounded by a faint smell of rain.",
+    "Its fur stands up as if charged with static.",
+    "Its tracks blow away as soon as it lifts its feet.",
+    "Clouds gather over it when it is angry."
+   ]
+  }
+ },
+ "_upgrades": {
+  "2": {
+   "add": [
+    [
+     "byType",
+     "aberration",
+     "Bronze",
+     "quirks",
+     [
+      "Its gaze makes teeth ache; creatures that start their turn within 10 feet of it have disadvantage on Concentration saves.",
+      "It whispers in the voices of people the party has lost; the first time each creature hears it, DC {dc} Wisdom save or it can't take reactions until its next turn.",
+      "Its blood is ink-black and stains permanently; anyone who hits it in melee is marked and easy to track for a day.",
+      "It can squeeze through any gap an inch wide, given a minute.",
+      "Light bends around it; attacks against it from more than 30 feet away have disadvantage.",
+      "It eats memories rather than flesh; a creature it kills can't be identified by anyone who knew them for a day.",
+      "Its core is pale and soft, and the Magic Society pays extra for it unbroken."
+     ]
+    ],
+    [
+     "byType",
+     "aberration",
+     "Silver",
+     "quirks",
+     [
+      "Once per encounter it swaps places with any creature it can see within 60 feet.",
+      "It thinks in several directions at once and can't be flanked or surprised.",
+      "A creature that touches it takes {dmg} psychic damage as unwanted thoughts pour in.",
+      "It speaks every language badly, and uses them to sow doubt between allies.",
+      "Its tentacles or limbs reach 10 feet further than they look like they should.",
+      "When it takes damage, it may teleport 15 feet as a reaction, leaving a smear in the air.",
+      "Its lair is a knot of wrong angles; distances inside it are half again as long as they look."
+     ]
+    ],
+    [
+     "byType",
+     "aberration",
+     "Gold",
+     "quirks",
+     [
+      "Any creature that reduces it to half hit points makes a DC {dc} Wisdom save or forgets the last minute.",
+      "It reads surface thoughts within 60 feet and always knows what the party plans to do next turn.",
+      "Its presence warps spells: the first spell cast within 60 feet of it each round has a random target among those in range.",
+      "As a bonus action it makes one creature within 30 feet see its allies as enemies until the end of that creature's next turn (DC {dc} Wisdom negates).",
+      "It regrows a lost limb at the start of each turn unless the stump is burned.",
+      "Its death leaves a tear in the air that whispers for a tenday; scholars come from far away to listen.",
+      "It was once a person; fragments of their memories surface in its speech."
+     ]
+    ],
+    [
+     "byType",
+     "aberration",
+     "Diamond",
+     "quirks",
+     [
+      "It exists partly elsewhere; half of any damage it takes is sent somewhere else entirely.",
+      "Its gaze can unmake a single magic item each day, unless its owner succeeds on a DC {dc} Charisma save.",
+      "Those who look upon it dream of it for a month; a long rest in those nights restores only half hit points.",
+      "It understands the astral space's rules better than the space does, and can rewrite one of them once a day.",
+      "It cannot be killed in the place where it was born; it must be lured out first.",
+      "Its voice is heard by every thinking creature within a mile, and it is always making offers.",
+      "Its core is a lens; looking through it shows things that are true but should not be seen."
+     ]
+    ],
+    [
+     "byType",
+     "beast",
+     "Bronze",
+     "quirks",
+     [
+      "It is a cunning hunter and drags its kills up into trees out of reach.",
+      "It pretends to be dead when badly hurt, then bolts the moment anyone turns away.",
+      "Its bite carries a fever; a creature it hits makes a DC {dc} Constitution save or has the poisoned condition for an hour.",
+      "It hunts from water and can hold its breath for an hour.",
+      "It marks its territory with scratches on trees at head height, warning anyone who knows what to look for.",
+      "Its young follow at a distance and attack anyone who harms it.",
+      "Its hide makes a fine leather armour, worth half again as much as normal."
+     ]
+    ],
+    [
+     "byType",
+     "beast",
+     "Silver",
+     "quirks",
+     [
+      "It can mimic the call of any animal or a child crying, and uses it to lure prey.",
+      "It ignores difficult terrain from mud, snow or undergrowth.",
+      "When it hits a creature, the creature can't regain hit points until the end of its next turn; the wound keeps bleeding.",
+      "It knows when it's being tracked and leads hunters into the territory of something worse.",
+      "Its tail or horns sweep everything in a 10-foot arc once per round as a bonus action.",
+      "It steals a weapon or pack from a creature it hits on a roll of 18 or higher, and runs.",
+      "It sheds its winter coat in clumps that local weavers pay well for."
+     ]
+    ],
+    [
+     "byType",
+     "beast",
+     "Gold",
+     "quirks",
+     [
+      "It is followed by smaller beasts that take the first blows; it fights only once they fall.",
+      "Each time it's hit by the same creature twice in a round, its next attack against that creature has advantage.",
+      "Its call can be heard for miles, and it calls when hurt.",
+      "It swims, climbs and runs at the same speed.",
+      "Its bite breaks bones: a creature it hits for {dmg} or more has its speed halved until it rests.",
+      "It has learned to avoid fire, and stays well clear of torches and fire spells.",
+      "Villages bring it offerings to keep it away, and it has come to expect them."
+     ]
+    ],
+    [
+     "byType",
+     "beast",
+     "Diamond",
+     "quirks",
+     [
+      "It has lived so long its name is in old songs, and it remembers the singers.",
+      "Its tread causes small earthquakes; the ground within 30 feet of it is difficult terrain.",
+      "When it dies, every beast within ten miles flees in a single rush, trampling anything in the way.",
+      "Its gaze calms any animal, including the party's mounts, which will not attack it.",
+      "It is the mother of half the beasts in the region, and they all know its scent.",
+      "Once per day it shrugs off all conditions affecting it.",
+      "Druids say it is the land's own answer to a wound, and killing it may wake something worse."
+     ]
+    ],
+    [
+     "byType",
+     "celestial",
+     "Bronze",
+     "quirks",
+     [
+      "It sheds dim light, and shadows within 10 feet of it vanish.",
+      "It refuses to strike first and offers parley to anyone who lowers their weapon.",
+      "Its feathers or scales fall when it's hit and heal 1d4 hit points to whoever picks them up.",
+      "It can tell if a creature has broken an oath, and attacks oath-breakers first.",
+      "It sings, and the song gives its allies advantage on saves against fear.",
+      "It is lost and confused, sent from an astral space it doesn't understand.",
+      "Undead within 30 feet of it have disadvantage on attack rolls."
+     ]
+    ],
+    [
+     "byType",
+     "celestial",
+     "Silver",
+     "quirks",
+     [
+      "Its radiance blinds: a creature that hits it in melee makes a DC {dc} Constitution save or is blinded until the end of its next turn.",
+      "It judges the party by their deeds and fights harder against those with blood on their hands.",
+      "Once per encounter it heals an ally within 30 feet for {dmg} hit points.",
+      "It can't lie, and won't stop telling the party uncomfortable truths.",
+      "Its weapons deal radiant damage that ignores resistance.",
+      "Its wings beat up a wind that pushes creatures within 15 feet back 10 feet.",
+      "It carries a message for someone in the party and won't say who until the fight is over."
+     ]
+    ],
+    [
+     "byType",
+     "celestial",
+     "Gold",
+     "quirks",
+     [
+      "It is served by a choir of lesser lights that blind and distract.",
+      "Divine essences near it glow, and their bearers feel their god watching.",
+      "Any creature that dies within 30 feet of it rises at the end of the fight with 1 hit point, unless it chooses otherwise.",
+      "It speaks for a great astral being, and its words carry that being's weight.",
+      "Its blood is liquid light; a vial of it cures any disease.",
+      "Its presence makes lies hurt; a creature that lies within 60 feet takes {half} radiant damage.",
+      "It can't be harmed by a creature that has never killed."
+     ]
+    ],
+    [
+     "byType",
+     "celestial",
+     "Diamond",
+     "quirks",
+     [
+      "It is a fragment of a great astral being, and killing it angers the whole.",
+      "Its light reveals all things: invisible creatures, illusions and disguises fail within 120 feet.",
+      "Once per day it can restore a creature to life that died within the last minute.",
+      "It cannot be harmed by a creature it has forgiven, and forgives easily.",
+      "Its voice compels honesty; no creature within 60 feet can knowingly lie.",
+      "Its death causes dawn to break over the area, whatever the hour, for a full day.",
+      "It knows the name of everyone it meets, including their true one."
+     ]
+    ],
+    [
+     "byType",
+     "construct",
+     "Bronze",
+     "quirks",
+     [
+      "Its joints squeal loudly; it can't surprise anyone.",
+      "It follows old orders and will stop if told the right password.",
+      "Its core is set in a cage that can be pried out with a DC {dc} Strength check while it's grappled or prone.",
+      "It repairs itself slowly, regaining 5 hit points at the start of each turn unless it took lightning damage.",
+      "It ignores anyone not carrying a weapon.",
+      "Its plating hides a compartment holding its maker's notes.",
+      "Its maker's mark is on its chest, and the maker still lives."
+     ]
+    ],
+    [
+     "byType",
+     "construct",
+     "Silver",
+     "quirks",
+     [
+      "It learns: after it's hit by a damage type twice, it gains resistance to that type for the rest of the fight.",
+      "It can detach a limb to keep fighting on its own.",
+      "When reduced to 0 hit points it explodes, dealing {dmg} fire damage to all within 10 feet (DC {dc} Dexterity save for half).",
+      "Its eyes record everything it sees, and its maker can watch later.",
+      "It is immune to being knocked prone, pushed or pulled.",
+      "It guards one specific thing and will chase anyone who takes it to the ends of the earth.",
+      "It hums a tune its maker loved; anyone who knew them recognises it."
+     ]
+    ],
+    [
+     "byType",
+     "construct",
+     "Gold",
+     "quirks",
+     [
+      "It can reshape its body once per encounter, gaining a reach of 15 feet or a speed of 60 feet.",
+      "It shuts down any magic item within 10 feet of it, for as long as it stands.",
+      "It rebuilds itself from the parts of other constructs in its lair.",
+      "It has a second core; destroying the first only makes it angrier.",
+      "It speaks in its maker's voice, pleading to be left alone.",
+      "Its steps sink into stone; it can't be moved against its will.",
+      "Its body is made of a metal no smith has seen before."
+     ]
+    ],
+    [
+     "byType",
+     "construct",
+     "Diamond",
+     "quirks",
+     [
+      "It is older than any kingdom and still follows the orders of a dead empire.",
+      "It can absorb a spell aimed at it once per round and recast it on its next turn.",
+      "Any construct within a mile obeys it.",
+      "It is building something, and it's almost finished.",
+      "It knows the true name of every essence and is trying to collect them.",
+      "Destroying it releases a flood of stored magic that changes the land around it.",
+      "It once served a great astral being and still waits for its master's return."
+     ]
+    ],
+    [
+     "byType",
+     "dragon",
+     "Bronze",
+     "quirks",
+     [
+      "It hoards one thing (bells, books, swords) and will trade for more of it.",
+      "It is young and vain, and flattery buys a round's pause.",
+      "Its scales are loose; a hit of 18 or higher knocks one free, worth 2d10 spirit coins.",
+      "It breathes once, then fights in the air out of reach.",
+      "It speaks only to the strongest-looking member of the party.",
+      "It has a nest of eggs nearby and fights to the death to defend it.",
+      "Its blood is hot enough to burn: a creature that hits it in melee takes 1d4 fire damage."
+     ]
+    ],
+    [
+     "byType",
+     "dragon",
+     "Silver",
+     "quirks",
+     [
+      "It recharges its breath on a 4-6, not just a 5-6.",
+      "It claims the land around it as its own and demands tribute from travellers.",
+      "Its roar shakes loose rocks from cliffs; creatures below make a DC {dc} Dexterity save or take {dmg} bludgeoning damage.",
+      "It knows the names of local nobles and their secrets, and uses both.",
+      "Its scales reflect magic: the first spell attack against it each round has disadvantage.",
+      "It has bargained with a local noble house and is under their protection.",
+      "It is curious about outworlders and will stop fighting to ask one questions."
+     ]
+    ],
+    [
+     "byType",
+     "dragon",
+     "Gold",
+     "quirks",
+     [
+      "Its wingbeats knock creatures within 15 feet prone (DC {dc} Strength save).",
+      "It hoards spirit coins and can sense them within a mile.",
+      "Its lair heats or chills to match its breath, and anyone without resistance gains a level of exhaustion each hour.",
+      "Lesser dragons serve it and bring it news.",
+      "It has outlived three adventuring teams that came for it, and keeps their gear on display.",
+      "Its scales are worth a fortune, and the Magic Society wants every one.",
+      "It never fights fairly; it knows the battlefield and uses every feature."
+     ]
+    ],
+    [
+     "byType",
+     "dragon",
+     "Diamond",
+     "quirks",
+     [
+      "It is old enough to remember the world before the current churches.",
+      "Its breath changes the land permanently: grass never grows where it burned.",
+      "It has a legendary action pool one larger than its stat block shows.",
+      "It speaks with the authority of a ruler, and some cities still pay it tribute.",
+      "Its hoard includes an awakening stone of every affinity.",
+      "It knows how to unmake essences, and threatens to.",
+      "Killing it is the work of a generation, and the Society keeps a file on it."
+     ]
+    ],
+    [
+     "byType",
+     "elemental",
+     "Bronze",
+     "quirks",
+     [
+      "Its element seeps into the ground: the area within 10 feet of it becomes difficult terrain after it stays there a round.",
+      "It is bound to a place and can't move more than 300 feet from it.",
+      "It flickers between solid and not; nonmagical weapons deal half damage to it.",
+      "It is drawn to its own element and grows stronger near it.",
+      "It speaks only in its element's language, and a druid can calm it.",
+      "It was summoned and abandoned; whoever summoned it is nearby.",
+      "Its core holds a little of its element and can be used as a bomb once."
+     ]
+    ],
+    [
+     "byType",
+     "elemental",
+     "Silver",
+     "quirks",
+     [
+      "It splits in two when bloodied, each half with half its remaining hit points.",
+      "It absorbs damage of its own element, healing instead.",
+      "Its aura of element deals {half} damage to any creature that starts its turn within 5 feet.",
+      "It moves through its element as if it were air.",
+      "It can turn into a cloud or puddle of its element, becoming hard to see and hit.",
+      "It changes the weather in a mile around it while it lives.",
+      "It is angry about a wrong done to its place, and a fix will end the fight."
+     ]
+    ],
+    [
+     "byType",
+     "elemental",
+     "Gold",
+     "quirks",
+     [
+      "It summons 1d4 lesser elementals of its kind once per encounter.",
+      "Its element bursts out when it's hit hard: any hit of 20 or more creates a 10-foot-radius burst of {dmg} damage.",
+      "It is the heart of a natural wonder and the wonder fades if it dies.",
+      "It can't be harmed while touching its element.",
+      "Its voice is a storm, an earthquake or a wildfire, and it speaks often.",
+      "It holds a grudge against the Magic Society for binding its kin.",
+      "It will bargain for its freedom from a bond."
+     ]
+    ],
+    [
+     "byType",
+     "elemental",
+     "Diamond",
+     "quirks",
+     [
+      "It is an elemental lord's lieutenant, and its master is watching.",
+      "It turns the land around it into its element for a mile.",
+      "It regenerates fully unless its element is cut off from it.",
+      "Killing it releases its element in a disaster: a flood, quake, firestorm or gale.",
+      "It can reshape the terrain each round as a bonus action.",
+      "It remembers the world's making and has opinions about it.",
+      "It can grant a person a trace of its element as a blessing, if pleased."
+     ]
+    ],
+    [
+     "byType",
+     "fey",
+     "Bronze",
+     "quirks",
+     [
+      "It plays tricks rather than kills: stealing boots, swapping weapons, tying laces together.",
+      "It must answer any question asked three times in a row.",
+      "It can't cross running water or a line of salt.",
+      "It's bound to honour a bargain if one is offered and accepted.",
+      "Iron weapons deal an extra 1d4 damage to it.",
+      "It knows the party's names and uses them to mock.",
+      "It leaves a gift if it is treated with courtesy."
+     ]
+    ],
+    [
+     "byType",
+     "fey",
+     "Silver",
+     "quirks",
+     [
+      "Once per encounter it charms a creature for a minute (DC {dc} Wisdom negates); the charmed creature thinks it is a lost friend.",
+      "It can turn invisible until it attacks.",
+      "It steals a memory with each hit, and gives them back if paid.",
+      "Its dance forces those who watch to join in (DC {dc} Wisdom save).",
+      "Time runs differently near it; each minute in its circle is an hour outside.",
+      "It can swap shapes with a nearby animal.",
+      "It owes a debt to someone in the party's past."
+     ]
+    ],
+    [
+     "byType",
+     "fey",
+     "Gold",
+     "quirks",
+     [
+      "It rules a small court of lesser fey, all of whom will defend it.",
+      "It can only be harmed by a creature who has spoken its true name.",
+      "It traps creatures in illusions; the first time each creature is hit, DC {dc} Intelligence save or believes it is somewhere else for a round.",
+      "It grants wishes, badly.",
+      "Its kiss puts a creature to sleep for a hundred years, unless woken.",
+      "It can curse a whole bloodline.",
+      "Its wings scatter dust that makes creatures float 10 feet into the air."
+     ]
+    ],
+    [
+     "byType",
+     "fey",
+     "Diamond",
+     "quirks",
+     [
+      "It is a ruler of a fey realm, and harming it is an act of war.",
+      "It can steal a person's face, name or voice permanently.",
+      "It can turn a season inside out across a whole region.",
+      "Its bargains bind gods.",
+      "It can bring the party into its realm with a word, and out again only on its terms.",
+      "It has been watching the party for a long time and has plans for them.",
+      "It cannot die, only be banished for a century."
+     ]
+    ],
+    [
+     "byType",
+     "fiend",
+     "Bronze",
+     "quirks",
+     [
+      "It offers a deal before it fights, and the deal is almost fair.",
+      "It smells of sulphur and leaves scorched hoofprints.",
+      "Holy water burns it for 2d6 radiant damage.",
+      "It feeds on anger; it gains advantage against creatures that hit it in a rage.",
+      "It knows one secret about each party member.",
+      "It was summoned by a cultist who's still nearby.",
+      "It can't enter a home without being invited."
+     ]
+    ],
+    [
+     "byType",
+     "fiend",
+     "Silver",
+     "quirks",
+     [
+      "Its wounds spray burning blood; any creature that hits it in melee takes {half} fire damage.",
+      "It possesses a fallen foe's body when reduced to 0 hit points (DC {dc} Charisma save to resist for a creature still alive).",
+      "It speaks in the voice of a lost loved one.",
+      "It can't be harmed by a creature it has made a bargain with.",
+      "It summons a lesser fiend when bloodied.",
+      "Its presence spoils food and turns milk.",
+      "It's bound by a contract and is looking for a loophole."
+     ]
+    ],
+    [
+     "byType",
+     "fiend",
+     "Gold",
+     "quirks",
+     [
+      "It corrupts divine essences: a creature with one that it hits makes a DC {dc} Wisdom save or loses access to its divine powers for a day.",
+      "It returns to life a tenday after death unless its name is struck from its contract.",
+      "Its lair is a pocket of another place where fire falls as rain.",
+      "It can see through the eyes of anyone who has made a deal with it.",
+      "It has a cult in the nearest city.",
+      "It can only be truly killed with a blessed weapon.",
+      "It whispers to the weakest party member each night."
+     ]
+    ],
+    [
+     "byType",
+     "fiend",
+     "Diamond",
+     "quirks",
+     [
+      "It is a power in its own right, served by cults across the world.",
+      "Its true name could bind it, if anyone could find it.",
+      "It owns the soul of someone important.",
+      "Killing it frees a thousand bound spirits at once, and some are dangerous.",
+      "It can corrupt a whole town's water, food or wine.",
+      "It walks unseen among mortals as a respected figure.",
+      "It's been bargaining with an astral power, and the bargain is nearly complete."
+     ]
+    ],
+    [
+     "byType",
+     "giant",
+     "Bronze",
+     "quirks",
+     [
+      "It throws whatever is to hand: rocks, trees, cows.",
+      "It is slow-witted and can be tricked with a riddle.",
+      "It's after food, and a big enough meal will send it away.",
+      "Its club is an old ship's mast.",
+      "It's young and away from home for the first time.",
+      "Its footfalls give it away a mile off.",
+      "It collects shiny buttons and trades favours for them."
+     ]
+    ],
+    [
+     "byType",
+     "giant",
+     "Silver",
+     "quirks",
+     [
+      "Its blows knock creatures 15 feet back (DC {dc} Strength save).",
+      "It has a pet: a bear, a boar or a monstrous dog.",
+      "It speaks the common tongue and drives a hard bargain.",
+      "It tears up the ground around it, leaving difficult terrain.",
+      "It takes no damage from falling rocks or small avalanches.",
+      "It keeps humans as servants in its hall.",
+      "It's been exiled from its clan and is bitter about it."
+     ]
+    ],
+    [
+     "byType",
+     "giant",
+     "Gold",
+     "quirks",
+     [
+      "It can grab and throw a Medium creature 60 feet.",
+      "Its war cry calls other giants within a mile.",
+      "It wears armour made from a whole ship's hull.",
+      "It carries a magic weapon taken from a dead adventurer.",
+      "It's a chief, and others obey it.",
+      "It knows an old road through the mountains no one else does.",
+      "It's dying of an old wound and wants to die in battle."
+     ]
+    ],
+    [
+     "byType",
+     "giant",
+     "Diamond",
+     "quirks",
+     [
+      "It is the size of a hill and the land shakes as it walks.",
+      "It is one of the oldest giants alive and remembers a giant empire.",
+      "It can call down storms or quakes once a day.",
+      "Its hall is a mountain with a road inside it.",
+      "It is waiting for a prophecy to be fulfilled.",
+      "It holds a grudge against a city and has finally come for it.",
+      "Its bones would be a fortune to the Magic Society."
+     ]
+    ],
+    [
+     "byType",
+     "humanoid",
+     "Bronze",
+     "quirks",
+     [
+      "It fights dirty: sand in the eyes, a knee where it hurts.",
+      "It surrenders when bloodied and has useful information.",
+      "It carries a letter that explains why it's here.",
+      "It's a deserter, and its old unit is looking for it.",
+      "It has a family who depend on it.",
+      "It knows a member of the party by reputation.",
+      "It carries a dose of poison and uses it on its blade."
+     ]
+    ],
+    [
+     "byType",
+     "humanoid",
+     "Silver",
+     "quirks",
+     [
+      "It has a monster core in its chest, and it's not natural.",
+      "It reads the party's tactics and adapts after the first round.",
+      "It has allies hidden nearby who join on the second round.",
+      "It takes a hostage at the first chance.",
+      "It's under a geas and can't stop fighting.",
+      "It wears a badge from another adventuring society.",
+      "It's been paid by someone the party knows."
+     ]
+    ],
+    [
+     "byType",
+     "humanoid",
+     "Gold",
+     "quirks",
+     [
+      "It is a famous fighter with a name that makes guards nervous.",
+      "It has a ring of escape and vanishes at a quarter of its hit points.",
+      "Its voice commands obedience from lower-ranked soldiers.",
+      "It knows the party's weaknesses from a spy.",
+      "It's the leader of a cult or a gang, with followers everywhere.",
+      "It owes a life debt to someone in the party.",
+      "It's dying and wants a worthy successor."
+     ]
+    ],
+    [
+     "byType",
+     "humanoid",
+     "Diamond",
+     "quirks",
+     [
+      "It is a legend, a name parents use to frighten children.",
+      "It cannot be harmed by any weapon made in this world.",
+      "It's the head of a hidden order that spans continents.",
+      "It's an outworlder from long ago, with knowledge no one else has.",
+      "Its death would topple a throne.",
+      "It is a former Diamond-rank adventurer gone rogue.",
+      "It has made a pact with a great astral being."
+     ]
+    ],
+    [
+     "byType",
+     "monstrosity",
+     "Bronze",
+     "quirks",
+     [
+      "It hunts by sound alone and is blind to silent creatures.",
+      "Its lair is full of the bones of its prey, and some still have coin purses.",
+      "It shrieks when hurt, deafening those within 10 feet for a round (DC {dc} Constitution save).",
+      "It has young in its nest.",
+      "It eats metal and goes for weapons and armour first.",
+      "Its hide is prized by tanners.",
+      "It can be distracted with fresh meat."
+     ]
+    ],
+    [
+     "byType",
+     "monstrosity",
+     "Silver",
+     "quirks",
+     [
+      "Its venom paralyses for a round (DC {dc} Constitution save).",
+      "It regrows severed parts within an hour.",
+      "It changes colour to match its surroundings.",
+      "It lays eggs in its victims.",
+      "It is smarter than it looks and lays traps.",
+      "Its spines fly off in a burst when bloodied, dealing {dmg} piercing damage to all within 10 feet.",
+      "It hates fire and flees from it."
+     ]
+    ],
+    [
+     "byType",
+     "monstrosity",
+     "Gold",
+     "quirks",
+     [
+      "It is the alpha of its kind and others follow it.",
+      "Its gaze petrifies slowly over a minute.",
+      "It can burrow and emerge anywhere within 60 feet.",
+      "It devours magic items for strength.",
+      "Its blood corrodes nonmagical weapons.",
+      "Its death cry draws every monstrosity within a mile.",
+      "It was bred by the Magic Society and escaped."
+     ]
+    ],
+    [
+     "byType",
+     "monstrosity",
+     "Diamond",
+     "quirks",
+     [
+      "It is the original of its kind, and all others descend from it.",
+      "It feeds on essences and grows stronger with each it consumes.",
+      "Its lair is a whole valley.",
+      "It can't be killed by any single blow.",
+      "It changes the creatures around it to resemble itself.",
+      "Cults worship it as a god.",
+      "Its core contains a sleeping astral space."
+     ]
+    ],
+    [
+     "byType",
+     "ooze",
+     "Bronze",
+     "quirks",
+     [
+      "It dissolves organic material, eating holes in clothing and leather.",
+      "It hides in plain sight as a puddle or wet stone.",
+      "It splits when struck by slashing damage.",
+      "It carries the undigested remains of a previous adventurer, including gear.",
+      "It's drawn to warmth and sleeps by fires.",
+      "Its residue is used in alchemy.",
+      "It's harmless to the dead and only eats the living."
+     ]
+    ],
+    [
+     "byType",
+     "ooze",
+     "Silver",
+     "quirks",
+     [
+      "It absorbs weapons that hit it; a creature must succeed on a DC {dc} Strength check to pull its weapon free.",
+      "It can climb walls and ceilings and drops on prey.",
+      "Its acid damage ignores resistance.",
+      "It can squeeze through any crack.",
+      "It mimics the shape of whatever it last ate.",
+      "It reforms an hour after death unless burned.",
+      "It glows faintly when hungry."
+     ]
+    ],
+    [
+     "byType",
+     "ooze",
+     "Gold",
+     "quirks",
+     [
+      "It contains a whole digested monster core, worth a fortune.",
+      "It engulfs Large creatures.",
+      "It can split into four smaller oozes at will.",
+      "It thinks, slowly, and remembers everyone who has hurt it.",
+      "Its acid eats magic as well as matter.",
+      "It flows underground and emerges from drains and wells.",
+      "It's spreading, and every piece that breaks off grows."
+     ]
+    ],
+    [
+     "byType",
+     "ooze",
+     "Diamond",
+     "quirks",
+     [
+      "It is the size of a lake.",
+      "It has absorbed the minds of everything it ate and speaks with many voices.",
+      "It can dissolve stone walls in a round.",
+      "It cannot be destroyed, only contained.",
+      "It feeds on spells cast near it.",
+      "It holds a whole town's worth of digested treasure.",
+      "It is the source of every ooze in the region."
+     ]
+    ],
+    [
+     "byType",
+     "plant",
+     "Bronze",
+     "quirks",
+     [
+      "It is rooted, and burning its roots kills it slowly.",
+      "It smells sweet and lures prey with scent.",
+      "Its thorns carry a mild poison.",
+      "It feeds on blood and grows red when fed.",
+      "Its seeds stick to clothing and sprout a day later.",
+      "It is protected by a local druid.",
+      "Its fruit heals 1d4 hit points, eaten."
+     ]
+    ],
+    [
+     "byType",
+     "plant",
+     "Silver",
+     "quirks",
+     [
+      "Its vines grapple creatures within 15 feet as a bonus action (escape DC {dc}).",
+      "Its pollen causes sleep (DC {dc} Constitution save).",
+      "It regrows lost vines at the start of each turn.",
+      "It speaks through rustling leaves.",
+      "It moves slowly through the soil, leaving trails of wilted plants.",
+      "Its wood is valued by bowyers.",
+      "It's protecting a seed that will grow into something greater."
+     ]
+    ],
+    [
+     "byType",
+     "plant",
+     "Gold",
+     "quirks",
+     [
+      "It controls all plants within 60 feet.",
+      "Its roots run beneath a whole village.",
+      "It is the heart of a forest, and the forest fights for it.",
+      "It drains life from the soil, and the land around it is dying.",
+      "It can spread to new ground by seed overnight.",
+      "Its sap is a cure for one specific disease.",
+      "It was planted by someone, deliberately."
+     ]
+    ],
+    [
+     "byType",
+     "plant",
+     "Diamond",
+     "quirks",
+     [
+      "It is a world tree's offshoot.",
+      "Its roots reach an astral space.",
+      "It can grow a whole forest in a night.",
+      "Druids across the region feel its pain.",
+      "Its fruit grants a vision of the future.",
+      "Burning it would poison the air for miles.",
+      "It's old enough to remember the world's first spring."
+     ]
+    ],
+    [
+     "byType",
+     "undead",
+     "Bronze",
+     "quirks",
+     [
+      "It repeats the last thing it did in life, over and over.",
+      "It flees from holy symbols.",
+      "It's guarding something it loved in life.",
+      "It speaks a single word over and over: a name.",
+      "It can't cross a threshold without invitation.",
+      "It leaves frost on everything it touches.",
+      "It rises again at night unless its bones are buried properly."
+     ]
+    ],
+    [
+     "byType",
+     "undead",
+     "Silver",
+     "quirks",
+     [
+      "Its touch drains life; it heals for half the damage it deals.",
+      "It can command lesser undead within 60 feet.",
+      "It possesses a living body for a round when reduced to 0 hit points (DC {dc} Charisma save).",
+      "It can pass through walls.",
+      "Its wail frightens all who hear it (DC {dc} Wisdom save).",
+      "It has unfinished business and can be laid to rest by finishing it.",
+      "It was raised by a necromancer who's nearby."
+     ]
+    ],
+    [
+     "byType",
+     "undead",
+     "Gold",
+     "quirks",
+     [
+      "Its phylactery or anchor is hidden somewhere else.",
+      "It raises the dead it kills as its servants.",
+      "Its presence makes the dead within a mile restless.",
+      "It remembers its life clearly and wants it back.",
+      "Healing magic hurts it, and harming magic heals it.",
+      "It leads a cult of the living who serve it for promised immortality.",
+      "Its grave is a famous site, and pilgrims come to it."
+     ]
+    ],
+    [
+     "byType",
+     "undead",
+     "Diamond",
+     "quirks",
+     [
+      "It was once a great king and still rules its land in death.",
+      "Its death would release a thousand trapped souls.",
+      "It can raise a whole graveyard in a night.",
+      "The Church of Undeath worships it as a saint.",
+      "It can't be destroyed while its name is remembered.",
+      "It was once a god's chosen and fell.",
+      "It is old enough to remember the founding of the Church of Death."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Blood",
+     "prefixes",
+     [
+      "Hemoclaw",
+      "Gorebound",
+      "Vein-Crowned",
+      "Redmist",
+      "Bloodsworn",
+      "Leechmaw",
+      "Sanguine",
+      "Rubyhide"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Blood",
+     "looks",
+     [
+      "Its breath leaves a fine red mist that tastes of copper.",
+      "Scabs cover it like armour plates.",
+      "Fresh wounds on its foes bleed toward it, little red threads in the air.",
+      "Its shadow is the colour of a bruise.",
+      "It bleeds when it's happy.",
+      "Flies follow it in a buzzing cloud and never land."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Dark",
+     "prefixes",
+     [
+      "Starless",
+      "Eclipse",
+      "Hollow-Eyed",
+      "Gravecloak",
+      "Nightmaw",
+      "Sablefang",
+      "Dimhide",
+      "Blackheart"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Dark",
+     "looks",
+     [
+      "Its eyes reflect no light at all.",
+      "Its silhouette is visible only out of the corner of the eye.",
+      "Candles near it burn with black flames.",
+      "The dark around it feels cold and wet.",
+      "Its breath is a thin stream of shadow.",
+      "It makes no sound at all, even when it roars."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Earth",
+     "prefixes",
+     [
+      "Bedrock",
+      "Quarry-Born",
+      "Ironclad",
+      "Claybound",
+      "Shalehide",
+      "Cairn",
+      "Rootbound",
+      "Orefang"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Earth",
+     "looks",
+     [
+      "Veins of ore glint along its flanks.",
+      "It sheds pebbles like a dog sheds hair.",
+      "Its teeth are chips of flint.",
+      "Lichen grows in the cracks of its skin.",
+      "The ground hums faintly when it rests.",
+      "Its tracks are shaped like old runes in the soil."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Fire",
+     "prefixes",
+     [
+      "Kilnborn",
+      "Brandmark",
+      "Furnace",
+      "Flarehide",
+      "Coalheart",
+      "Searfang",
+      "Wildfire",
+      "Charmane"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Fire",
+     "looks",
+     [
+      "Its blood boils when spilled.",
+      "Rain hisses into steam on its back.",
+      "Its shadow flickers like firelight.",
+      "A smell of burnt sugar follows it.",
+      "Its claws glow cherry-red after each strike.",
+      "It sheds its skin in flakes of ash."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Life",
+     "prefixes",
+     [
+      "Evergreen",
+      "Blossomfang",
+      "Rootheart",
+      "Seedborn",
+      "Wildgrowth",
+      "Leafmane",
+      "Mossheart",
+      "Greenwarden"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Life",
+     "looks",
+     [
+      "Its wounds bloom with tiny flowers instead of scabs.",
+      "Fruit grows on its antlers or spines.",
+      "It smells of cut grass after rain.",
+      "Birds nest in its fur.",
+      "Dead leaves turn green as it passes.",
+      "Its heartbeat can be heard as a soft rustle of leaves."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Light",
+     "prefixes",
+     [
+      "Daybreak",
+      "Lumen",
+      "Prismhide",
+      "Goldlight",
+      "Brightmaw",
+      "Morningstar",
+      "Clearsight",
+      "Sunflare"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Light",
+     "looks",
+     [
+      "Its teeth shine like polished pearls.",
+      "It casts no shadow.",
+      "Looking at it too long leaves spots in your eyes.",
+      "Its fur sparkles like frost in sunlight.",
+      "Moths circle it endlessly.",
+      "Its blood glows like a lantern."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Magic",
+     "prefixes",
+     [
+      "Spellhide",
+      "Wardborn",
+      "Runefang",
+      "Arcmane",
+      "Hexbound",
+      "Mystic",
+      "Glimmerscale",
+      "Charmed"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Magic",
+     "looks",
+     [
+      "Spells cast near it come out in its colours.",
+      "Its whiskers or antennae spark with blue static.",
+      "Floating sigils mark where it has slept.",
+      "It smells of old books and lightning.",
+      "Its eyes show tiny turning circles.",
+      "Small objects near it float an inch off the ground."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Might",
+     "prefixes",
+     [
+      "Ironjaw",
+      "Rampart",
+      "Oxblood",
+      "Thunderchest",
+      "Brawnhide",
+      "Crusher",
+      "Siegebreaker",
+      "Gravelfist"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Might",
+     "looks",
+     [
+      "Its every breath is a growl.",
+      "Its neck is as thick as its head.",
+      "Old broken weapons are lodged in its hide, ignored.",
+      "It leaves cracks in the ground when it stamps.",
+      "Its muscles ripple even at rest.",
+      "Trees it brushes against snap."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Sin",
+     "prefixes",
+     [
+      "Covetous",
+      "Spiteful",
+      "Slothhide",
+      "Lustmaw",
+      "Avarice",
+      "Mocking",
+      "Grudgeborn",
+      "Wantonfang"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Sin",
+     "looks",
+     [
+      "Its smile looks almost human.",
+      "It stares at whatever the party values most.",
+      "Its hide shows mocking faces in the mottling.",
+      "It wears trinkets taken from victims.",
+      "Coins stick to its fur as if drawn by greed.",
+      "It laughs when it's hurt."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Swift",
+     "prefixes",
+     [
+      "Quicksilver",
+      "Lightfoot",
+      "Arrowtail",
+      "Gustfang",
+      "Blur",
+      "Hareborn",
+      "Nimble",
+      "Skitter"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Swift",
+     "looks",
+     [
+      "It is never quite where you looked a moment ago.",
+      "Its feet barely touch the ground.",
+      "Its heartbeat is so fast it hums.",
+      "It twitches its head like a bird.",
+      "It leaves a trail of displaced dust.",
+      "Its shape stretches when it turns quickly."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Water",
+     "prefixes",
+     [
+      "Saltfang",
+      "Undertow",
+      "Kelpmane",
+      "Driftborn",
+      "Floodhide",
+      "Pearlback",
+      "Seaglass",
+      "Riptide"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Water",
+     "looks",
+     [
+      "Water runs uphill toward it.",
+      "Its scales are the green of shallow seas.",
+      "It smells of salt and seaweed.",
+      "Puddles form where it stands.",
+      "Small fish swim in a bubble around its head.",
+      "Its voice sounds like waves on shingle."
+     ]
+    ],
+    [
+     "byAffinity",
+     "Wind",
+     "prefixes",
+     [
+      "Squall",
+      "Gustback",
+      "Skyhide",
+      "Tempest",
+      "Zephyr",
+      "Updraft",
+      "Thunderwing",
+      "Kitefang"
+     ]
+    ],
+    [
+     "byAffinity",
+     "Wind",
+     "looks",
+     [
+      "Leaves swirl around it in a constant spiral.",
+      "Its cry sounds like wind in a chimney.",
+      "It is surrounded by a faint smell of rain.",
+      "Its fur stands up as if charged with static.",
+      "Its tracks blow away as soon as it lifts its feet.",
+      "Clouds gather over it when it is angry."
+     ]
+    ]
+   ]
+  }
+ }
+}

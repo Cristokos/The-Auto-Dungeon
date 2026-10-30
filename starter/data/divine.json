@@ -1,0 +1,2077 @@
+{
+ "_about": "Divine essences: one for each god, granted by the god to those who worship it and taken back whenever the god chooses. A divine essence fills one of a person's three essence slots. Used by the NPC generator, the party sheets and the church pages.",
+ "version": 2,
+ "_upgrades": {
+  "2": {
+   "set": [
+    [
+     "essences",
+     "Death (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Threshold",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on death saving throws, and undead creatures can't regain hit points while within 10 feet of one. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Undeath (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Unending",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature drops to 0 hit points, it can drop to 1 hit point instead. Each creature can benefit from this once per long rest. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Purity (divine)",
+     "aura",
+     {
+      "name": "Blessing of Purity",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on saving throws against poison, disease, being charmed and being possessed. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Healer (divine)",
+     "aura",
+     {
+      "name": "Blessing of Mending",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Whenever a blessed creature regains hit points, it regains extra hit points equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Knowledge (divine)",
+     "aura",
+     {
+      "name": "Blessing of Insight",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures add your Wisdom modifier (minimum +1) to Intelligence checks. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Truth (divine)",
+     "aura",
+     {
+      "name": "Blessing of Candour",
+      "text": "As a bonus action, you call down the truth on one creature you can see within 30 feet for 2 rounds (12 seconds). It can't speak a deliberate lie unless it succeeds on a Charisma save against your stone spell DC, which it repeats at the start of each of its turns. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Justice (divine)",
+     "aura",
+     {
+      "name": "Blessing of Reckoning",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a creature hits a blessed creature with an attack, you can use your reaction to make one weapon attack against the attacker if it is within your reach. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Dominion (divine)",
+     "aura",
+     {
+      "name": "Blessing of Command",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures add your Charisma modifier (minimum +1) to Wisdom saving throws. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Liberty (divine)",
+     "aura",
+     {
+      "name": "Blessing of Freedom",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be charmed, and their speed can't be reduced by magic. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "War (divine)",
+     "aura",
+     {
+      "name": "Blessing of Courage",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be frightened, and a blessed creature that is already frightened stops being frightened. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Hero (divine)",
+     "aura",
+     {
+      "name": "Blessing of Inspiration",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). At the start of each of their turns, blessed creatures gain temporary hit points equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Journey (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Road",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures ignore nonmagical difficult terrain and their speed increases by 10 feet. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Trade (divine)",
+     "aura",
+     {
+      "name": "Blessing of Fair Exchange",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature takes damage, you can use your reaction to take half of that damage instead. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Revels (divine)",
+     "aura",
+     {
+      "name": "Blessing of Merriment",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on saving throws against being frightened and against despair. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Hearth (divine)",
+     "aura",
+     {
+      "name": "Blessing of Home",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be moved against their will, and have advantage on checks and saves to avoid being grappled or carried off. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Disguise (divine)",
+     "aura",
+     {
+      "name": "Blessing of Obscurity",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be targeted by divination magic or perceived through magical scrying, and have advantage on Stealth checks. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Destruction (divine)",
+     "aura",
+     {
+      "name": "Blessing of Ruin",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature hits with an attack, the target takes extra force damage equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Earth (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Mountain",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be knocked prone or pushed. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Ocean (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Deep",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can breathe water and have resistance to cold damage. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "essences",
+     "Storm (divine)",
+     "aura",
+     {
+      "name": "Blessing of the Storm",
+      "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have resistance to lightning and thunder damage, and ranged weapon attacks against them have disadvantage. You can do this once per short rest, or twice per short rest from Gold rank."
+     }
+    ],
+    [
+     "rule",
+     "A divine essence is granted by a god, never found or bought. It gives an essence trait, a Sense (uses equal to 1 + your Wisdom modifier, minimum 1, per long rest), a Channel (uses equal to your proficiency bonus per long rest unless it says otherwise), a Blessing from Bronze rank (a bonus action lasting 2 rounds, once per short rest, twice from Gold rank), and awakening stones from its own spell list. If the god takes it back, all of that is lost, including every awakening stone ability on it. Each god also has a divine confluence, which forms only from one of its exact recipes; otherwise the divine essence counts by its affinity like any other."
+    ]
+   ]
+  }
+ },
+ "rule": "A divine essence is granted by a god, never found or bought. It gives an essence trait, a Sense (uses equal to 1 + your Wisdom modifier, minimum 1, per long rest), a Channel (uses equal to your proficiency bonus per long rest unless it says otherwise), a Blessing from Bronze rank (a bonus action lasting 2 rounds, once per short rest, twice from Gold rank), and awakening stones from its own spell list. If the god takes it back, all of that is lost, including every awakening stone ability on it. Each god also has a divine confluence, which forms only from one of its exact recipes; otherwise the divine essence counts by its affinity like any other.",
+ "story": [
+  "{name} knelt at the temple of {god} for three nights before the god answered, and walked out with a divine essence.",
+  "{name} was too poor to dream of buying an essence, so {name} prayed to {god} instead, and {god} answered.",
+  "{name} was granted a divine essence by {god} on the day {name} took the church's vows.",
+  "{name} was the first person in {their} village that {god} chose to bless, and the village has expected great things ever since.",
+  "{name} was dying when a priest of {god} prayed over {them}, and woke with the god's essence in {their} soul and a debt that can never be repaid.",
+  "{name} took the essence of {god} to protect {their} family, and has kept every one of the god's demands since. So far."
+ ],
+ "essences": [
+  {
+   "name": "Death (divine)",
+   "god": "Death",
+   "called": "Death",
+   "church": "Church of Death",
+   "affinity": "Dark",
+   "theme": "The end of life and the passage of souls",
+   "look": "Bearers are very still, their eyes hold a faint grey light, and candles gutter when they pass.",
+   "grant": {
+    "type": "quirk",
+    "name": "Deathsight",
+    "text": "You know whether any creature you can see is dead, undead, or dying (at 0 hit points)."
+   },
+   "sense": {
+    "name": "Death's Eye",
+    "text": "As an action, you sense every undead creature and every creature at 0 hit points within 60 feet until the end of your next turn."
+   },
+   "channel": {
+    "name": "Final Rest",
+    "text": "When you hit a creature with an attack, you can deal an extra 2d8 necrotic damage (3d8 from Silver rank). An undead creature hit this way can't regain hit points until the start of your next turn."
+   },
+   "aura": {
+    "name": "Blessing of the Threshold",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on death saving throws, and undead creatures can't regain hit points while within 10 feet of one. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "false life",
+     "inflict wounds",
+     "protection from evil and good"
+    ],
+    "2": [
+     "gentle repose",
+     "ray of enfeeblement",
+     "silence"
+    ],
+    "3": [
+     "speak with dead",
+     "spirit guardians",
+     "bestow curse"
+    ],
+    "4": [
+     "death ward",
+     "blight"
+    ],
+    "5": [
+     "antilife shell",
+     "contagion"
+    ]
+   },
+   "demands": [
+    "Give the dead their rites, whoever they were.",
+    "Destroy the undead wherever you find them.",
+    "Never bind a soul or hold one back from passing on."
+   ],
+   "revoked": [
+    "Raising, binding or keeping a soul from passing on.",
+    "Sparing an undead creature you could have destroyed."
+   ]
+  },
+  {
+   "name": "Undeath (divine)",
+   "god": "Undeath",
+   "called": "Undeath",
+   "church": "Church of Undeath",
+   "affinity": "Dark",
+   "theme": "Existence that refuses to end",
+   "look": "Bearers are cold to the touch, their wounds bleed slowly and darkly, and animals shy away from them.",
+   "grant": {
+    "type": "quirk",
+    "name": "Deathless",
+    "text": "You have advantage on saving throws against poison and disease, and you don't need to sleep, only to rest."
+   },
+   "sense": {
+    "name": "Sense the Grave",
+    "text": "As an action, you sense every corpse and every undead creature within 60 feet until the end of your next turn."
+   },
+   "channel": {
+    "name": "Raise",
+    "text": "As an action, you touch a corpse and it rises as a zombie or skeleton under your command until the next dawn. You can control one raised creature at a time (two from Silver rank)."
+   },
+   "aura": {
+    "name": "Blessing of the Unending",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature drops to 0 hit points, it can drop to 1 hit point instead. Each creature can benefit from this once per long rest. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "false life",
+     "ray of sickness",
+     "cause fear"
+    ],
+    "2": [
+     "gentle repose",
+     "ray of enfeeblement",
+     "blindness/deafness"
+    ],
+    "3": [
+     "animate dead",
+     "vampiric touch",
+     "feign death"
+    ],
+    "4": [
+     "blight",
+     "death ward"
+    ],
+    "5": [
+     "danse macabre",
+     "enervation"
+    ]
+   },
+   "demands": [
+    "Never let a useful body go to waste.",
+    "Keep the faith hidden from the law and the other churches.",
+    "Preserve yourself, whatever it costs others."
+   ],
+   "revoked": [
+    "Destroying the god's undead servants.",
+    "Choosing final rest for someone you could have kept."
+   ]
+  },
+  {
+   "name": "Purity (divine)",
+   "god": "Purity",
+   "called": "Purity",
+   "church": "Church of Purity",
+   "affinity": "Light",
+   "theme": "Cleanliness of body, soul and magic",
+   "look": "Bearers are spotless whatever they have been through, smell faintly of clean linen, and their magic burns white.",
+   "grant": {
+    "type": "quirk",
+    "name": "Pure Blood",
+    "text": "You are immune to disease and have advantage on saving throws against poison."
+   },
+   "sense": {
+    "name": "Sense Taint",
+    "text": "As an action, you sense undead, fiends, curses, poison, disease, and the soul residue of core users within 60 feet until the end of your next turn."
+   },
+   "channel": {
+    "name": "Cleansing Fire",
+    "text": "When you hit a creature with an attack, you can deal an extra 2d8 radiant damage (3d8 against undead, fiends, and creatures with a Dark, Blood or Sin essence). Alternatively, as an action, you touch a creature and end one poison, disease or curse on it."
+   },
+   "aura": {
+    "name": "Blessing of Purity",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on saving throws against poison, disease, being charmed and being possessed. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "detect poison and disease",
+     "protection from evil and good",
+     "searing smite"
+    ],
+    "2": [
+     "lesser restoration",
+     "branding smite",
+     "see invisibility"
+    ],
+    "3": [
+     "remove curse",
+     "dispel magic",
+     "blinding smite"
+    ],
+    "4": [
+     "banishment",
+     "aura of purity"
+    ],
+    "5": [
+     "dispel evil and good",
+     "flame strike"
+    ]
+   },
+   "demands": [
+    "Cleanse the corruption you find.",
+    "Never absorb a monster core.",
+    "Never take a Dark, Blood or Sin essence."
+   ],
+   "revoked": [
+    "Absorbing a monster core, or a Dark, Blood or Sin essence.",
+    "Showing mercy to corruption."
+   ]
+  },
+  {
+   "name": "Healer (divine)",
+   "god": "Healer",
+   "called": "the Healer",
+   "church": "Church of the Healer",
+   "affinity": "Life",
+   "theme": "Healing, and everything that makes healing necessary",
+   "look": "Bearers have warm, steady hands, a faint green light shows when they touch a wound, and they smell of clean herbs.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Medicine or with herbalism kits."
+   },
+   "sense": {
+    "name": "Sense Wounds",
+    "text": "As an action, you learn how hurt every creature within 60 feet is, and whether any of them is poisoned or diseased, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Lay on Hands",
+    "text": "You have a pool of healing equal to five times your level, which refills when you finish a long rest. As an action, you touch a creature and restore any number of hit points from the pool, or spend 5 points to end one disease or poison."
+   },
+   "aura": {
+    "name": "Blessing of Mending",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Whenever a blessed creature regains hit points, it regains extra hit points equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "cure wounds",
+     "healing word",
+     "inflict wounds"
+    ],
+    "2": [
+     "aid",
+     "lesser restoration",
+     "prayer of healing"
+    ],
+    "3": [
+     "revivify",
+     "mass healing word",
+     "aura of vitality"
+    ],
+    "4": [
+     "death ward",
+     "aura of life"
+    ],
+    "5": [
+     "mass cure wounds",
+     "greater restoration"
+    ]
+   },
+   "demands": [
+    "Heal whoever comes to you.",
+    "Give the church its share of what your healing earns.",
+    "Go where the wounded are."
+   ],
+   "revoked": [
+    "Letting someone die in front of you when you could have healed them.",
+    "Making a wound that can never heal."
+   ]
+  },
+  {
+   "name": "Knowledge (divine)",
+   "god": "Knowledge",
+   "called": "Knowledge",
+   "church": "Church of Knowledge",
+   "affinity": "Magic",
+   "theme": "Learning, memory and everything that is known",
+   "look": "Bearers' eyes flick as if reading invisible text, ink never smudges under their hands, and they forget nothing.",
+   "grant": {
+    "type": "quirk",
+    "name": "Perfect Recall",
+    "text": "You can recall anything you have seen or heard in the past month exactly, and you have proficiency in History."
+   },
+   "sense": {
+    "name": "Sense Secrets",
+    "text": "As an action, you learn which objects within 30 feet are magical, and whether any writing within 30 feet is hidden or encoded, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Revelation",
+    "text": "As an action, you ask the DM one question about a creature, object or place you can see. The answer is true, but may be no more than a few words."
+   },
+   "aura": {
+    "name": "Blessing of Insight",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures add your Wisdom modifier (minimum +1) to Intelligence checks. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "identify",
+     "comprehend languages",
+     "detect magic"
+    ],
+    "2": [
+     "detect thoughts",
+     "locate object",
+     "augury"
+    ],
+    "3": [
+     "clairvoyance",
+     "tongues",
+     "speak with dead"
+    ],
+    "4": [
+     "divination",
+     "locate creature"
+    ],
+    "5": [
+     "legend lore",
+     "scrying"
+    ]
+   },
+   "demands": [
+    "Record what you learn, and give the church a copy.",
+    "Never destroy a book or record.",
+    "Answer honest questions honestly."
+   ],
+   "revoked": [
+    "Destroying knowledge, such as burning books or killing a scholar to silence them.",
+    "Hiding what you know from the church."
+   ]
+  },
+  {
+   "name": "Truth (divine)",
+   "god": "Truth",
+   "called": "Truth",
+   "church": "Church of Truth",
+   "affinity": "Light",
+   "theme": "Honesty, and the revealing of what is hidden",
+   "look": "Bearers have clear, uncomfortable gazes, illusions waver around them, and their voices carry.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Insight or Investigation."
+   },
+   "sense": {
+    "name": "Sense Lies",
+    "text": "As an action, for the next minute you know whenever a creature you can hear deliberately speaks a lie. Careful evasions and half-truths don't count."
+   },
+   "channel": {
+    "name": "Unveil",
+    "text": "As an action, everything within 30 feet is laid bare until the end of your next turn: illusions look obviously false, invisible creatures are outlined in light, and a shapechanged or disguised creature must succeed on a Charisma save against your stone spell DC or have its true form glimpsed."
+   },
+   "aura": {
+    "name": "Blessing of Candour",
+    "text": "As a bonus action, you call down the truth on one creature you can see within 30 feet for 2 rounds (12 seconds). It can't speak a deliberate lie unless it succeeds on a Charisma save against your stone spell DC, which it repeats at the start of each of its turns. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "detect magic",
+     "command",
+     "faerie fire"
+    ],
+    "2": [
+     "zone of truth",
+     "see invisibility",
+     "detect thoughts"
+    ],
+    "3": [
+     "daylight",
+     "clairvoyance",
+     "dispel magic"
+    ],
+    "4": [
+     "divination",
+     "locate creature"
+    ],
+    "5": [
+     "legend lore",
+     "dispel evil and good"
+    ]
+   },
+   "demands": [
+    "Never tell a deliberate lie.",
+    "Reveal the hidden wrongs you discover.",
+    "Give honest testimony when asked."
+   ],
+   "revoked": [
+    "Telling a deliberate lie.",
+    "Knowingly protecting a falsehood."
+   ]
+  },
+  {
+   "name": "Justice (divine)",
+   "god": "Justice",
+   "called": "Justice",
+   "church": "Church of Justice",
+   "affinity": "Light",
+   "theme": "Every wrong answered, every debt paid",
+   "look": "Bearers stand very straight, a faint scale-shaped mark glows on their palm when they are wronged, and their gaze weighs people.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Insight or Intimidation."
+   },
+   "sense": {
+    "name": "Sense Guilt",
+    "text": "As an action, you learn whether any creature you can see within 30 feet has killed a person in the past week."
+   },
+   "channel": {
+    "name": "Judgement",
+    "text": "As a bonus action, you mark a creature that has harmed you or an ally within the past minute. For 1 minute, your attacks against it deal an extra 1d8 radiant damage, and it has disadvantage on attacks against anyone but you."
+   },
+   "aura": {
+    "name": "Blessing of Reckoning",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a creature hits a blessed creature with an attack, you can use your reaction to make one weapon attack against the attacker if it is within your reach. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "wrathful smite",
+     "hunter's mark",
+     "command"
+    ],
+    "2": [
+     "zone of truth",
+     "hold person",
+     "branding smite"
+    ],
+    "3": [
+     "bestow curse",
+     "blinding smite",
+     "crusader's mantle"
+    ],
+    "4": [
+     "banishment",
+     "compulsion"
+    ],
+    "5": [
+     "geas",
+     "hold monster"
+    ]
+   },
+   "demands": [
+    "See wrongs answered.",
+    "Keep your word and your lawful oaths.",
+    "Never punish someone you know to be innocent."
+   ],
+   "revoked": [
+    "Letting a guilty party escape in exchange for gain.",
+    "Punishing someone you know to be innocent."
+   ]
+  },
+  {
+   "name": "Dominion (divine)",
+   "god": "Dominion",
+   "called": "Dominion",
+   "church": "Church of Dominion",
+   "affinity": "Might",
+   "theme": "Rule, command and ownership",
+   "look": "Bearers' voices carry an edge of command, people step aside without knowing why, and a faint crown of light shows when they give orders.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Persuasion or Intimidation."
+   },
+   "sense": {
+    "name": "Sense Authority",
+    "text": "As an action, you learn which creatures within 60 feet hold command over others, and which are bound to another's will (slaves, the charmed, and those under a magical contract), until the end of your next turn."
+   },
+   "channel": {
+    "name": "Command",
+    "text": "As an action, you speak a one-word command to a creature within 30 feet that can hear you. It must succeed on a Wisdom save against your stone spell DC or obey on its next turn, as the *command* spell."
+   },
+   "aura": {
+    "name": "Blessing of Command",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures add your Charisma modifier (minimum +1) to Wisdom saving throws. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "command",
+     "compelled duel",
+     "heroism"
+    ],
+    "2": [
+     "hold person",
+     "enthrall",
+     "suggestion"
+    ],
+    "3": [
+     "fear",
+     "crusader's mantle",
+     "bestow curse"
+    ],
+    "4": [
+     "compulsion",
+     "dominate beast"
+    ],
+    "5": [
+     "dominate person",
+     "geas"
+    ]
+   },
+   "demands": [
+    "Obey those above you, and command those below.",
+    "Keep what you hold, whether land, people or position.",
+    "Serve the house or crown you are sworn to."
+   ],
+   "revoked": [
+    "Rebelling against a rightful master.",
+    "Freeing what you own, or breaking an oath of service."
+   ]
+  },
+  {
+   "name": "Liberty (divine)",
+   "god": "Liberty",
+   "called": "Liberty",
+   "church": "Church of Liberty",
+   "affinity": "Wind",
+   "theme": "Freedom, and the breaking of chains",
+   "look": "Bearers are restless, locks click open when they lean on doors, and a breeze follows them indoors.",
+   "grant": {
+    "type": "quirk",
+    "name": "Unbound",
+    "text": "You have advantage on checks and saving throws to escape a grapple, restraints or manacles."
+   },
+   "sense": {
+    "name": "Sense Chains",
+    "text": "As an action, you sense every creature within 60 feet that is restrained, imprisoned, charmed or enslaved, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Break the Chain",
+    "text": "As an action, you touch a creature and end one of the grappled, restrained, paralysed or charmed conditions on it, and any lock or manacle holding it opens."
+   },
+   "aura": {
+    "name": "Blessing of Freedom",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be charmed, and their speed can't be reduced by magic. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "expeditious retreat",
+     "sanctuary",
+     "feather fall"
+    ],
+    "2": [
+     "knock",
+     "misty step",
+     "calm emotions"
+    ],
+    "3": [
+     "haste",
+     "remove curse",
+     "dispel magic"
+    ],
+    "4": [
+     "freedom of movement",
+     "dimension door"
+    ],
+    "5": [
+     "passwall",
+     "dispel evil and good"
+    ]
+   },
+   "demands": [
+    "Free those held against their will.",
+    "Never own or sell another person.",
+    "Help anyone who flees."
+   ],
+   "revoked": [
+    "Owning, buying or selling a person.",
+    "Handing a fugitive back to their master."
+   ]
+  },
+  {
+   "name": "War (divine)",
+   "god": "War",
+   "called": "War",
+   "church": "Church of War",
+   "affinity": "Might",
+   "theme": "Armed conflict, discipline and victory",
+   "look": "Bearers carry old scars that never fade, their weapons hum before a fight, and they stand as if always on parade.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency with martial weapons or with heavy armour."
+   },
+   "sense": {
+    "name": "Battle Sense",
+    "text": "As an action, you learn the number and positions of hostile creatures within 60 feet, even behind cover, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Divine Smite",
+    "text": "When you hit a creature with a weapon attack, you can deal an extra 2d8 radiant damage (3d8 from Silver rank)."
+   },
+   "aura": {
+    "name": "Blessing of Courage",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be frightened, and a blessed creature that is already frightened stops being frightened. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "divine favor",
+     "searing smite",
+     "heroism"
+    ],
+    "2": [
+     "magic weapon",
+     "enhance ability",
+     "branding smite"
+    ],
+    "3": [
+     "crusader's mantle",
+     "haste",
+     "spirit guardians"
+    ],
+    "4": [
+     "staggering smite",
+     "stoneskin"
+    ],
+    "5": [
+     "banishing smite",
+     "circle of power"
+    ]
+   },
+   "demands": [
+    "Answer a call to arms.",
+    "Never desert your company.",
+    "Honour a worthy enemy."
+   ],
+   "revoked": [
+    "Fleeing a battle you swore to fight.",
+    "Betraying your own company."
+   ]
+  },
+  {
+   "name": "Hero (divine)",
+   "god": "Hero",
+   "called": "the Hero",
+   "church": "Church of the Hero",
+   "affinity": "Light",
+   "theme": "Great deeds, courage and glory",
+   "look": "Bearers seem a little taller than they are, light catches them at the right moments, and people remember their names.",
+   "grant": {
+    "type": "quirk",
+    "name": "Heroic Presence",
+    "text": "Once per long rest, when you or a friendly creature within 30 feet fails a saving throw against being frightened, you can turn it into a success."
+   },
+   "sense": {
+    "name": "Sense Peril",
+    "text": "As an action, for the next minute you know the direction of the most dangerous creature within a mile, and of any person within 300 feet who is in mortal danger."
+   },
+   "channel": {
+    "name": "Heroic Stand",
+    "text": "As a bonus action, for 1 minute you have advantage on saving throws and deal an extra 1d8 radiant damage once on each of your turns. It ends early if no ally or innocent within 30 feet is in danger."
+   },
+   "aura": {
+    "name": "Blessing of Inspiration",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). At the start of each of their turns, blessed creatures gain temporary hit points equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "heroism",
+     "bless",
+     "compelled duel"
+    ],
+    "2": [
+     "aid",
+     "enhance ability",
+     "warding bond"
+    ],
+    "3": [
+     "crusader's mantle",
+     "beacon of hope",
+     "haste"
+    ],
+    "4": [
+     "freedom of movement",
+     "death ward"
+    ],
+    "5": [
+     "circle of power",
+     "holy weapon"
+    ]
+   },
+   "demands": [
+    "Stand where others run.",
+    "Never refuse a worthy challenge.",
+    "Let your deeds be known."
+   ],
+   "revoked": [
+    "Abandoning someone you could have saved.",
+    "Taking credit for another's deed."
+   ]
+  },
+  {
+   "name": "Journey (divine)",
+   "god": "Journey",
+   "called": "Journey",
+   "church": "Church of the Journey",
+   "affinity": "Swift",
+   "theme": "Travel, roads and the change they bring",
+   "look": "Bearers never seem dusty from the road, always know which way is north, and grow restless indoors.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Survival or with navigator's tools."
+   },
+   "sense": {
+    "name": "Sense the Way",
+    "text": "As an action, you learn the safest route to any place you have been before and the direction of the nearest road or path, and you always know which way is north."
+   },
+   "channel": {
+    "name": "Swift Feet",
+    "text": "As a bonus action, for 1 minute your speed increases by 20 feet and you ignore difficult terrain. Friendly creatures within 10 feet of you when you use this gain 10 feet of speed for the same time."
+   },
+   "aura": {
+    "name": "Blessing of the Road",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures ignore nonmagical difficult terrain and their speed increases by 10 feet. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "longstrider",
+     "expeditious retreat",
+     "goodberry"
+    ],
+    "2": [
+     "find steed",
+     "misty step",
+     "pass without trace"
+    ],
+    "3": [
+     "leomund's tiny hut",
+     "haste",
+     "water walk"
+    ],
+    "4": [
+     "dimension door",
+     "freedom of movement"
+    ],
+    "5": [
+     "teleportation circle",
+     "commune with nature"
+    ]
+   },
+   "demands": [
+    "Shelter travellers who ask.",
+    "Walk a pilgrimage at least once a year.",
+    "Never close a road."
+   ],
+   "revoked": [
+    "Refusing shelter to a traveller in need.",
+    "Closing or blocking a road."
+   ]
+  },
+  {
+   "name": "Trade (divine)",
+   "god": "Trade",
+   "called": "Trade",
+   "church": "Church of Trade",
+   "affinity": "Magic",
+   "theme": "Exchange, contracts and fair dealing",
+   "look": "Bearers can weigh a coin by touch, a faint ledger of light flickers when they shake hands, and they hear the clink of coin in quiet rooms.",
+   "grant": {
+    "type": "quirk",
+    "name": "Appraiser's Eye",
+    "text": "You know the fair market value of any object you handle, and you can tell a forged coin or document by touch."
+   },
+   "sense": {
+    "name": "Sense Value",
+    "text": "As an action, you learn which objects within 30 feet are valuable or magical, and roughly what each is worth."
+   },
+   "channel": {
+    "name": "Sealed Bargain",
+    "text": "As an action, you seal a deal made in front of you between two willing creatures. A creature that knowingly breaks the deal takes 4d8 psychic damage, and you know it happened."
+   },
+   "aura": {
+    "name": "Blessing of Fair Exchange",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature takes damage, you can use your reaction to take half of that damage instead. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "identify",
+     "comprehend languages",
+     "charm person"
+    ],
+    "2": [
+     "suggestion",
+     "locate object",
+     "zone of truth"
+    ],
+    "3": [
+     "tongues",
+     "glyph of warding",
+     "sending"
+    ],
+    "4": [
+     "fabricate",
+     "leomund's secret chest"
+    ],
+    "5": [
+     "geas",
+     "planar binding"
+    ]
+   },
+   "demands": [
+    "Honour every contract.",
+    "Give the church a tithe of your profit.",
+    "Deal fairly with strangers."
+   ],
+   "revoked": [
+    "Breaking a contract.",
+    "Cheating with false weights or forged coin."
+   ]
+  },
+  {
+   "name": "Revels (divine)",
+   "god": "Revels",
+   "called": "Revels",
+   "church": "Church of the Revels",
+   "affinity": "Life",
+   "theme": "Joy, wine, music and desire",
+   "look": "Bearers have flushed cheeks and easy laughs, music seems to start near them, and they smell faintly of wine.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Performance or with brewer's supplies."
+   },
+   "sense": {
+    "name": "Sense Desire",
+    "text": "As an action, you learn what each creature you can see within 30 feet wants most right now, such as food, rest, love, a drink, or escape."
+   },
+   "channel": {
+    "name": "Revel",
+    "text": "As an action, choose any number of creatures within 30 feet: each gains temporary hit points equal to 1d8 plus your level and is no longer frightened. Alternatively, one hostile creature must succeed on a Wisdom save against your stone spell DC or fall into helpless laughter until the end of its next turn."
+   },
+   "aura": {
+    "name": "Blessing of Merriment",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have advantage on saving throws against being frightened and against despair. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "tasha's hideous laughter",
+     "charm person",
+     "purify food and drink"
+    ],
+    "2": [
+     "calm emotions",
+     "enthrall",
+     "suggestion"
+    ],
+    "3": [
+     "hypnotic pattern",
+     "create food and water",
+     "beacon of hope"
+    ],
+    "4": [
+     "confusion",
+     "charm monster"
+    ],
+    "5": [
+     "modify memory",
+     "dream"
+    ]
+   },
+   "demands": [
+    "Celebrate the god's festivals.",
+    "Share your wine and your table.",
+    "Never deny a guest their joy."
+   ],
+   "revoked": [
+    "Forbidding pleasure to others.",
+    "Swearing off joy with a vow of abstinence."
+   ]
+  },
+  {
+   "name": "Hearth (divine)",
+   "god": "Hearth",
+   "called": "Hearth",
+   "church": "Church of the Hearth",
+   "affinity": "Fire",
+   "theme": "Home, family, sanctuary and new life",
+   "look": "Bearers are warm to stand beside, smell of woodsmoke and bread, and every room they sit in feels like a kitchen.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Animal Handling or with cook's utensils."
+   },
+   "sense": {
+    "name": "Sense Kin",
+    "text": "As an action, you learn whether any member of your family or household is in danger, and in which direction, if they are within a mile."
+   },
+   "channel": {
+    "name": "Sanctuary of the Hearth",
+    "text": "As an action, you touch a fire or doorway, and the area within 15 feet of it becomes a sanctuary for 1 hour. A hostile creature must succeed on a Wisdom save against your stone spell DC to enter it, and creatures who rest there regain an extra hit die."
+   },
+   "aura": {
+    "name": "Blessing of Home",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be moved against their will, and have advantage on checks and saves to avoid being grappled or carried off. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "sanctuary",
+     "goodberry",
+     "create or destroy water"
+    ],
+    "2": [
+     "warding bond",
+     "prayer of healing",
+     "arcane lock"
+    ],
+    "3": [
+     "leomund's tiny hut",
+     "plant growth",
+     "glyph of warding"
+    ],
+    "4": [
+     "mordenkainen's private sanctum",
+     "guardian of faith"
+    ],
+    "5": [
+     "hallow",
+     "greater restoration"
+    ]
+   },
+   "demands": [
+    "Keep a hearth shrine in your home.",
+    "Give refuge to anyone who asks for it at your fire.",
+    "Keep your vows."
+   ],
+   "revoked": [
+    "Breaking a marriage vow or abandoning your family.",
+    "Turning away someone who asked for refuge."
+   ]
+  },
+  {
+   "name": "Disguise (divine)",
+   "god": "Disguise",
+   "called": "Disguise",
+   "church": "Church of Disguise",
+   "affinity": "Dark",
+   "theme": "Concealment: masks, lies and the unseen hand",
+   "look": "Bearers are hard to describe afterwards, their faces seem slightly different in every light, and mirrors show them a heartbeat late.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Deception or with disguise kits."
+   },
+   "sense": {
+    "name": "Sense Masks",
+    "text": "As an action, you learn whether any creature within 30 feet is disguised, shapechanged, possessed or invisible, though not who they really are."
+   },
+   "channel": {
+    "name": "Borrowed Face",
+    "text": "As an action, you take on the appearance and voice of a creature you have seen, for 1 hour. The disguise holds up to touch, and seeing through it takes an Investigation check against your stone spell DC."
+   },
+   "aura": {
+    "name": "Blessing of Obscurity",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be targeted by divination magic or perceived through magical scrying, and have advantage on Stealth checks. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "disguise self",
+     "silent image",
+     "charm person"
+    ],
+    "2": [
+     "invisibility",
+     "alter self",
+     "pass without trace"
+    ],
+    "3": [
+     "nondetection",
+     "major image",
+     "clairvoyance"
+    ],
+    "4": [
+     "greater invisibility",
+     "polymorph"
+    ],
+    "5": [
+     "mislead",
+     "seeming"
+    ]
+   },
+   "demands": [
+    "Keep every secret entrusted to you.",
+    "Never ask who is behind a mask.",
+    "Never reveal the faith."
+   ],
+   "revoked": [
+    "Unmasking another of the faithful.",
+    "Betraying a secret the god entrusted to you."
+   ]
+  },
+  {
+   "name": "Destruction (divine)",
+   "god": "Destruction",
+   "called": "Destruction",
+   "church": "Church of Destruction",
+   "affinity": "Fire",
+   "theme": "Ruin, strife and pain",
+   "look": "Bearers leave hairline cracks where they lean, food spoils a little faster near them, and their magic tears rather than burns.",
+   "grant": {
+    "type": "quirk",
+    "name": "Ruinous Touch",
+    "text": "Your weapon attacks and spells deal double damage to objects and structures."
+   },
+   "sense": {
+    "name": "Sense Weakness",
+    "text": "As an action, you learn the weakest point of a structure, and which creature within 60 feet is closest to breaking, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Unmaking",
+    "text": "When you hit a creature or object with an attack, you can deal an extra 2d8 force damage (3d8 from Silver rank). A nonmagical object or a 5-foot section of wall hit this way is destroyed."
+   },
+   "aura": {
+    "name": "Blessing of Ruin",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). When a blessed creature hits with an attack, the target takes extra force damage equal to your proficiency bonus. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "thunderwave",
+     "burning hands",
+     "cause fear"
+    ],
+    "2": [
+     "shatter",
+     "scorching ray",
+     "heat metal"
+    ],
+    "3": [
+     "fireball",
+     "erupting earth",
+     "fear"
+    ],
+    "4": [
+     "blight",
+     "wall of fire"
+    ],
+    "5": [
+     "destructive wave",
+     "contagion"
+    ]
+   },
+   "demands": [
+    "Tear down what is rotten.",
+    "Never rebuild what you have destroyed.",
+    "Let what must fall, fall."
+   ],
+   "revoked": [
+    "Saving something the god wanted to fall.",
+    "Rebuilding what you destroyed."
+   ]
+  },
+  {
+   "name": "Earth (divine)",
+   "god": "Earth",
+   "called": "Earth",
+   "church": "Church of the Earth",
+   "affinity": "Earth",
+   "theme": "Soil, stone and the deep places",
+   "look": "Bearers are heavy-footed and hard to move, their skin has a faint grain like granite, and dust settles around them.",
+   "grant": {
+    "type": "proficiency",
+    "text": "Proficiency in Athletics or with mason's tools."
+   },
+   "sense": {
+    "name": "Tremorsense",
+    "text": "As an action, for 1 minute you gain tremorsense out to 30 feet: you know where any creature touching the ground within range is."
+   },
+   "channel": {
+    "name": "Stone Hide",
+    "text": "As a bonus action, for 1 minute you have resistance to bludgeoning, piercing and slashing damage, and you can't be moved against your will."
+   },
+   "aura": {
+    "name": "Blessing of the Mountain",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can't be knocked prone or pushed. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "earth tremor",
+     "shield",
+     "longstrider"
+    ],
+    "2": [
+     "spike growth",
+     "shatter",
+     "barkskin"
+    ],
+    "3": [
+     "meld into stone",
+     "erupting earth",
+     "wall of sand"
+    ],
+    "4": [
+     "stoneskin",
+     "stone shape"
+    ],
+    "5": [
+     "wall of stone",
+     "passwall"
+    ]
+   },
+   "demands": [
+    "Bless every foundation you are asked to bless.",
+    "Respect the deep, and go down only with the god's leave.",
+    "Hold your ground."
+   ],
+   "revoked": [
+    "Desecrating a shrine of the Earth.",
+    "Breaking stone in spite."
+   ]
+  },
+  {
+   "name": "Ocean (divine)",
+   "god": "Ocean",
+   "called": "Ocean",
+   "church": "Church of the Ocean",
+   "affinity": "Water",
+   "theme": "The sea and every water that flows to it",
+   "look": "Bearers smell of salt, their hair is always slightly damp, and their voices sound like the tide.",
+   "grant": {
+    "type": "quirk",
+    "name": "Child of the Water",
+    "text": "You have a swimming speed equal to your walking speed, and you can hold your breath ten times longer than normal."
+   },
+   "sense": {
+    "name": "Sense the Current",
+    "text": "As an action, you learn the depth, currents and dangers of any water within 300 feet, and sense every creature in it, until the end of your next turn."
+   },
+   "channel": {
+    "name": "Tidal Surge",
+    "text": "As an action, a wave bursts from you in a 15-foot cone. Each creature in it must succeed on a Strength save against your stone spell DC or take 2d8 bludgeoning damage (3d8 from Silver rank) and be pushed 15 feet. The wave puts out nonmagical fires."
+   },
+   "aura": {
+    "name": "Blessing of the Deep",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures can breathe water and have resistance to cold damage. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "create or destroy water",
+     "fog cloud",
+     "ice knife"
+    ],
+    "2": [
+     "misty step",
+     "blur",
+     "hold person"
+    ],
+    "3": [
+     "water breathing",
+     "water walk",
+     "tidal wave"
+    ],
+    "4": [
+     "control water",
+     "watery sphere"
+    ],
+    "5": [
+     "maelstrom",
+     "cone of cold"
+    ]
+   },
+   "demands": [
+    "Give the water its due: a coin at every crossing.",
+    "Never foul a river or a well.",
+    "Save the drowning when you can."
+   ],
+   "revoked": [
+    "Fouling water on purpose.",
+    "Damming a river."
+   ]
+  },
+  {
+   "name": "Storm (divine)",
+   "god": "Storm",
+   "called": "Storm",
+   "church": "Church of the Storm",
+   "affinity": "Wind",
+   "theme": "Weather, wind and the fury of the sky",
+   "look": "Bearers' hair lifts in still air, static crackles at their fingertips, and their eyes flash like distant lightning.",
+   "grant": {
+    "type": "quirk",
+    "name": "Weather Eye",
+    "text": "You always know what the weather will do in the next 24 hours within a mile of you."
+   },
+   "sense": {
+    "name": "Sense the Sky",
+    "text": "As an action, for 1 minute you sense every flying creature within 300 feet, and any storm or weather coming your way."
+   },
+   "channel": {
+    "name": "Thunder Strike",
+    "text": "When you hit a creature with an attack, you can deal an extra 2d8 thunder damage (3d8 from Silver rank), and it must succeed on a Strength save against your stone spell DC or be pushed 10 feet and knocked prone."
+   },
+   "aura": {
+    "name": "Blessing of the Storm",
+    "text": "As a bonus action, you bless yourself and friendly creatures you can see within 30 feet, up to your proficiency bonus in number, for 2 rounds (12 seconds). Blessed creatures have resistance to lightning and thunder damage, and ranged weapon attacks against them have disadvantage. You can do this once per short rest, or twice per short rest from Gold rank."
+   },
+   "stoneSpells": {
+    "1": [
+     "thunderwave",
+     "witch bolt",
+     "feather fall"
+    ],
+    "2": [
+     "gust of wind",
+     "levitate",
+     "shatter"
+    ],
+    "3": [
+     "call lightning",
+     "lightning bolt",
+     "wind wall"
+    ],
+    "4": [
+     "storm sphere",
+     "ice storm"
+    ],
+    "5": [
+     "control winds",
+     "cone of cold"
+    ]
+   },
+   "demands": [
+    "Give thanks to the god on stormy nights.",
+    "Never hide from a storm you were called to face.",
+    "Serve the crown that bears the god's name."
+   ],
+   "revoked": [
+    "Cursing the god for a storm.",
+    "Trying to chain the weather for your own profit."
+   ]
+  }
+ ],
+ "confluences": [
+  {
+   "name": "Psychopomp",
+   "god": "Death",
+   "divine": true,
+   "theme": "Guide of souls to what lies beyond",
+   "description": "A Psychopomp walks souls to Death's door. Bearers hear the last words of the dying, the recently dead linger near them as if waiting to be led, and their magic falls like a soft grey dusk.",
+   "grant": {
+    "type": "quirk",
+    "name": "Last Words",
+    "text": "You can speak with a creature that died within the last minute, as if it were alive, for up to one minute. It answers truthfully, but only what it knew in life."
+   },
+   "recipes": [
+    [
+     "Death (divine)",
+     "Reaper",
+     "Requiem"
+    ],
+    [
+     "Death (divine)",
+     "Gallows",
+     "Shroud"
+    ],
+    [
+     "Death (divine)",
+     "Grief",
+     "Silence"
+    ]
+   ],
+   "affinities": [
+    "Dark",
+    "Dark",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Undying",
+   "god": "Undeath",
+   "divine": true,
+   "theme": "Existence that has refused its ending",
+   "description": "The Undying have stepped halfway out of death and stayed there. Bearers do not age, their hearts beat slowly or not at all, and their magic tastes of grave dirt.",
+   "grant": {
+    "type": "quirk",
+    "name": "Not Yet",
+    "text": "Once per long rest, when you drop to 0 hit points, you drop to 1 hit point instead and gain temporary hit points equal to your level."
+   },
+   "recipes": [
+    [
+     "Undeath (divine)",
+     "Lich",
+     "Revenant"
+    ],
+    [
+     "Undeath (divine)",
+     "Wraith",
+     "Hunger"
+    ],
+    [
+     "Undeath (divine)",
+     "Rot",
+     "Eternity"
+    ]
+   ],
+   "affinities": [
+    "Blood",
+    "Dark",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Inquisitor",
+   "god": "Purity",
+   "divine": true,
+   "theme": "The hunter of corruption",
+   "description": "An Inquisitor sees taint the way others see dirt. Bearers' eyes burn white when they look at the corrupted, nothing impure can hide in their presence, and their magic leaves the air scrubbed clean.",
+   "grant": {
+    "type": "quirk",
+    "name": "Purging Gaze",
+    "text": "You can always see the soul residue of core users and the taint of Dark, Blood and Sin essences on anyone within 30 feet, and creatures with them have disadvantage on Deception checks against you."
+   },
+   "recipes": [
+    [
+     "Purity (divine)",
+     "Light",
+     "Verdict"
+    ],
+    [
+     "Purity (divine)",
+     "Fire",
+     "Crucible"
+    ],
+    [
+     "Purity (divine)",
+     "Vigil",
+     "Glass"
+    ]
+   ],
+   "affinities": [
+    "Light",
+    "Light",
+    "Light"
+   ]
+  },
+  {
+   "name": "Saint",
+   "god": "Healer",
+   "divine": true,
+   "theme": "Healing beyond what mortals should be able to do",
+   "description": "A Saint of the Healer closes wounds that should not close. Bearers are surrounded by a faint green warmth, flowers turn toward them, and the sick feel better just for being near them.",
+   "grant": {
+    "type": "quirk",
+    "name": "Miracle",
+    "text": "Once per long rest, you can restore a creature that died within the last minute to life with 1 hit point, as long as its body is mostly whole."
+   },
+   "recipes": [
+    [
+     "Healer (divine)",
+     "Mercy",
+     "Renewal"
+    ],
+    [
+     "Healer (divine)",
+     "Growth",
+     "Soul"
+    ],
+    [
+     "Healer (divine)",
+     "Bread",
+     "Shepherd"
+    ]
+   ],
+   "affinities": [
+    "Life",
+    "Life",
+    "Light"
+   ]
+  },
+  {
+   "name": "Loremaster",
+   "god": "Knowledge",
+   "divine": true,
+   "theme": "Everything recorded, nothing forgotten",
+   "description": "A Loremaster knows a little about everything and a lot about most things. Bearers murmur half-remembered quotations, ink appears on their fingertips when they think hard, and their magic arrives as sudden understanding.",
+   "grant": {
+    "type": "quirk",
+    "name": "Font of Lore",
+    "text": "You add your proficiency bonus to any Intelligence check that doesn't already include it, and once per day you can ask the DM what the church's archives say about a subject."
+   },
+   "recipes": [
+    [
+     "Knowledge (divine)",
+     "Archive",
+     "Ink"
+    ],
+    [
+     "Knowledge (divine)",
+     "Memory",
+     "Cipher"
+    ],
+    [
+     "Knowledge (divine)",
+     "Owl",
+     "Prophecy"
+    ]
+   ],
+   "affinities": [
+    "Magic",
+    "Magic",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Witness",
+   "god": "Truth",
+   "divine": true,
+   "theme": "The one who sees what really happened",
+   "description": "A Witness cannot be lied to for long. Bearers' gazes are uncomfortably steady, illusions crack around them like thin ice, and their magic shows things as they are.",
+   "grant": {
+    "type": "quirk",
+    "name": "True Witness",
+    "text": "You can't be deceived by illusions of 3rd level or lower, and you have advantage on Insight checks to tell whether someone is lying."
+   },
+   "recipes": [
+    [
+     "Truth (divine)",
+     "Lantern",
+     "Mirror"
+    ],
+    [
+     "Truth (divine)",
+     "Verdict",
+     "Echo"
+    ],
+    [
+     "Truth (divine)",
+     "Sun",
+     "Prism"
+    ]
+   ],
+   "affinities": [
+    "Light",
+    "Light",
+    "Light"
+   ]
+  },
+  {
+   "name": "Arbiter",
+   "god": "Justice",
+   "divine": true,
+   "theme": "Judgement given form",
+   "description": "An Arbiter weighs every deed and answers it. Bearers carry an air of quiet authority, scales of light hover behind them when they pass judgement, and their magic strikes the guilty harder.",
+   "grant": {
+    "type": "quirk",
+    "name": "Scales of Judgement",
+    "text": "Your attacks deal an extra 1d6 radiant damage to a creature that has harmed you or an ally within the past minute."
+   },
+   "recipes": [
+    [
+     "Justice (divine)",
+     "Balance",
+     "Verdict"
+    ],
+    [
+     "Justice (divine)",
+     "Sword",
+     "Oath"
+    ],
+    [
+     "Justice (divine)",
+     "Gallows",
+     "Debt"
+    ]
+   ],
+   "affinities": [
+    "Light",
+    "Light",
+    "Light"
+   ]
+  },
+  {
+   "name": "Overlord",
+   "god": "Dominion",
+   "divine": true,
+   "theme": "Rule absolute",
+   "description": "An Overlord commands, and is obeyed. Bearers' voices land like orders even when they ask questions, lesser people find themselves kneeling, and their magic settles over others like a collar.",
+   "grant": {
+    "type": "quirk",
+    "name": "Word of Command",
+    "text": "Once per short rest, you can cast *command* without a spell slot, targeting up to three creatures, using your stone spell DC."
+   },
+   "recipes": [
+    [
+     "Dominion (divine)",
+     "Crown",
+     "Pride"
+    ],
+    [
+     "Dominion (divine)",
+     "Marionette",
+     "Debt"
+    ],
+    [
+     "Dominion (divine)",
+     "Whip",
+     "Oath"
+    ]
+   ],
+   "affinities": [
+    "Might",
+    "Might",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Liberator",
+   "god": "Liberty",
+   "divine": true,
+   "theme": "The breaker of every chain",
+   "description": "A Liberator cannot be held. Bearers slip bonds without thinking, doors tend to stand open around them, and their magic blows through like a wind that cannot be caught.",
+   "grant": {
+    "type": "quirk",
+    "name": "Unchained",
+    "text": "You are under the effect of *freedom of movement* at all times, and once per long rest you can free every creature you choose within 30 feet from being grappled, restrained or charmed."
+   },
+   "recipes": [
+    [
+     "Liberty (divine)",
+     "Key",
+     "Wind"
+    ],
+    [
+     "Liberty (divine)",
+     "Wing",
+     "Rope"
+    ],
+    [
+     "Liberty (divine)",
+     "Swift",
+     "Herald"
+    ]
+   ],
+   "affinities": [
+    "Swift",
+    "Wind",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Crusader",
+   "god": "War",
+   "divine": true,
+   "theme": "The god of war's sword in the world",
+   "description": "A Crusader is a soldier of War itself. Bearers wear their scars like medals, banners seem to snap in a wind around them, and their magic lands like a cavalry charge.",
+   "grant": {
+    "type": "quirk",
+    "name": "Holy Charge",
+    "text": "If you move at least 20 feet straight toward a creature and hit it with a weapon attack on the same turn, the attack deals an extra 2d8 radiant damage and the creature must succeed on a Strength save against your stone spell DC or be knocked prone."
+   },
+   "recipes": [
+    [
+     "War (divine)",
+     "Sword",
+     "Valour"
+    ],
+    [
+     "War (divine)",
+     "Shield",
+     "Oath"
+    ],
+    [
+     "War (divine)",
+     "Onslaught",
+     "Fury"
+    ]
+   ],
+   "affinities": [
+    "Might",
+    "Might",
+    "Might"
+   ]
+  },
+  {
+   "name": "Paragon",
+   "god": "Hero",
+   "divine": true,
+   "theme": "The hero the stories are about",
+   "description": "A Paragon is what every child imagines when they hear the word hero. Bearers draw eyes in any room, light finds them at the decisive moment, and their magic rises with the stakes.",
+   "grant": {
+    "type": "quirk",
+    "name": "Against All Odds",
+    "text": "When you make an attack roll or saving throw while you are below half your hit points, you can add 1d6 to it. You can do this a number of times equal to your proficiency bonus per long rest."
+   },
+   "recipes": [
+    [
+     "Hero (divine)",
+     "Legend",
+     "Valour"
+    ],
+    [
+     "Hero (divine)",
+     "Star",
+     "Sword"
+    ],
+    [
+     "Hero (divine)",
+     "Avatar",
+     "Dawn"
+    ]
+   ],
+   "affinities": [
+    "Light",
+    "Might",
+    "Might"
+   ]
+  },
+  {
+   "name": "Wayfarer",
+   "god": "Journey",
+   "divine": true,
+   "theme": "The road walked to its end",
+   "description": "A Wayfarer has walked further than anyone. Bearers are never lost and never tired, roads seem shorter under their feet, and their magic carries them from place to place.",
+   "grant": {
+    "type": "quirk",
+    "name": "Road Never Ends",
+    "text": "You and up to six companions travelling with you cover twice the normal distance when travelling overland, without becoming exhausted."
+   },
+   "recipes": [
+    [
+     "Journey (divine)",
+     "Pilgrim",
+     "Crossroads"
+    ],
+    [
+     "Journey (divine)",
+     "Horse",
+     "Wind"
+    ],
+    [
+     "Journey (divine)",
+     "Swift",
+     "Herald"
+    ]
+   ],
+   "affinities": [
+    "Swift",
+    "Swift",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Merchant Prince",
+   "god": "Trade",
+   "divine": true,
+   "theme": "Wealth that moves the world",
+   "description": "A Merchant Prince can buy anything and sell anyone on the idea. Bearers dress well whatever their means, coins seem to find them, and their magic works like a well-made contract.",
+   "grant": {
+    "type": "quirk",
+    "name": "Golden Tongue",
+    "text": "You have advantage on Persuasion checks made while bargaining, and once per day you can buy or sell one item at a price 25 percent better than the market would give."
+   },
+   "recipes": [
+    [
+     "Trade (divine)",
+     "Coin",
+     "Market"
+    ],
+    [
+     "Trade (divine)",
+     "Debt",
+     "Wager"
+    ],
+    [
+     "Trade (divine)",
+     "Harbour",
+     "Smuggler"
+    ]
+   ],
+   "affinities": [
+    "Magic",
+    "Sin",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Bacchant",
+   "god": "Revels",
+   "divine": true,
+   "theme": "The feast that never ends",
+   "description": "A Bacchant is the party, wherever they go. Bearers are flushed with good cheer, music starts when they walk in, and their magic is giddy, warm and very hard to resist.",
+   "grant": {
+    "type": "quirk",
+    "name": "Endless Feast",
+    "text": "Once per long rest, you can spend 10 minutes hosting a meal or celebration. Up to six creatures who share it gain temporary hit points equal to twice your level and advantage on saving throws against being frightened for 8 hours."
+   },
+   "recipes": [
+    [
+     "Revels (divine)",
+     "Feast",
+     "Mirth"
+    ],
+    [
+     "Revels (divine)",
+     "Ferment",
+     "Perfume"
+    ],
+    [
+     "Revels (divine)",
+     "Bell",
+     "Lullaby"
+    ]
+   ],
+   "affinities": [
+    "Life",
+    "Life",
+    "Life"
+   ]
+  },
+  {
+   "name": "Homeward",
+   "god": "Hearth",
+   "divine": true,
+   "theme": "The home that is always waiting",
+   "description": "Homeward is the god of the hearth carried in a person. Bearers are warm and solid company, a room becomes a home when they sleep in it, and their magic feels like a fire on a cold night.",
+   "grant": {
+    "type": "quirk",
+    "name": "Safe at Home",
+    "text": "When you and your companions take a long rest in a place you have warded with a small shrine, you each regain all your spent hit dice, and the first creature to approach with hostile intent wakes you."
+   },
+   "recipes": [
+    [
+     "Hearth (divine)",
+     "Hearth",
+     "Bread"
+    ],
+    [
+     "Hearth (divine)",
+     "Loom",
+     "Shepherd"
+    ],
+    [
+     "Hearth (divine)",
+     "Shield",
+     "Patience"
+    ]
+   ],
+   "affinities": [
+    "Fire",
+    "Fire",
+    "Life"
+   ]
+  },
+  {
+   "name": "Faceless",
+   "god": "Disguise",
+   "divine": true,
+   "theme": "A self that can be anyone",
+   "description": "The Faceless have no single face. Bearers are forgotten as soon as they leave a room, their features never settle, and their magic hides more than it reveals.",
+   "grant": {
+    "type": "quirk",
+    "name": "No True Face",
+    "text": "You can cast *disguise self* at will without a spell slot, and divination magic that would reveal your identity or true form fails unless its caster succeeds on a check against your stone spell DC."
+   },
+   "recipes": [
+    [
+     "Disguise (divine)",
+     "Mask",
+     "Mimic"
+    ],
+    [
+     "Disguise (divine)",
+     "Secret",
+     "Mirage"
+    ],
+    [
+     "Disguise (divine)",
+     "Kitsune",
+     "Silk"
+    ]
+   ],
+   "affinities": [
+    "Blood",
+    "Dark",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Ruinbringer",
+   "god": "Destruction",
+   "divine": true,
+   "theme": "The end of all things, in one person",
+   "description": "A Ruinbringer breaks everything they touch, eventually. Bearers leave cracks in stone and rust on iron, people quarrel when they are near, and their magic tears and shatters.",
+   "grant": {
+    "type": "quirk",
+    "name": "Unmake",
+    "text": "Your attacks and spells ignore resistance to force, fire and thunder damage, and deal double damage to constructs and structures."
+   },
+   "recipes": [
+    [
+     "Destruction (divine)",
+     "Cataclysm",
+     "Fury"
+    ],
+    [
+     "Destruction (divine)",
+     "Desolate",
+     "Rust"
+    ],
+    [
+     "Destruction (divine)",
+     "Hammer",
+     "Nova"
+    ]
+   ],
+   "affinities": [
+    "Fire",
+    "Fire",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Mountainheart",
+   "god": "Earth",
+   "divine": true,
+   "theme": "The patience and weight of the world",
+   "description": "A Mountainheart is as hard to move as the hills. Bearers are heavy and unhurried, the ground steadies under them, and their magic grinds like tectonic stone.",
+   "grant": {
+    "type": "quirk",
+    "name": "Rooted",
+    "text": "You have resistance to bludgeoning damage, can't be moved against your will while standing on earth or stone, and have tremorsense out to 15 feet."
+   },
+   "recipes": [
+    [
+     "Earth (divine)",
+     "Earth",
+     "Quarry"
+    ],
+    [
+     "Earth (divine)",
+     "Fossil",
+     "Patience"
+    ],
+    [
+     "Earth (divine)",
+     "Abyss",
+     "Gravity"
+    ]
+   ],
+   "affinities": [
+    "Earth",
+    "Earth",
+    "Earth"
+   ]
+  },
+  {
+   "name": "Tidelord",
+   "god": "Ocean",
+   "divine": true,
+   "theme": "The sea in human shape",
+   "description": "A Tidelord carries the ocean with them. Bearers smell of salt and storms, water rises to meet their hands, and their magic comes in waves that do not stop.",
+   "grant": {
+    "type": "quirk",
+    "name": "Master of Tides",
+    "text": "You can breathe water, have a swimming speed of 60 feet, and once per short rest can cast *tidal wave* without a spell slot."
+   },
+   "recipes": [
+    [
+     "Ocean (divine)",
+     "Leviathan",
+     "Brine"
+    ],
+    [
+     "Ocean (divine)",
+     "Water",
+     "Pearl"
+    ],
+    [
+     "Ocean (divine)",
+     "Ferryman",
+     "Harbour"
+    ]
+   ],
+   "affinities": [
+    "Water",
+    "Water",
+    "Water"
+   ]
+  },
+  {
+   "name": "Thunderborn",
+   "god": "Storm",
+   "divine": true,
+   "theme": "The storm walking",
+   "description": "The Thunderborn are storms that learned to walk. Bearers' hair stands on end, thunder rolls when they lose their temper, and their magic strikes like lightning.",
+   "grant": {
+    "type": "quirk",
+    "name": "Living Storm",
+    "text": "You have resistance to lightning and thunder damage, and when a creature within 5 feet hits you with a melee attack, it takes lightning damage equal to your proficiency bonus."
+   },
+   "recipes": [
+    [
+     "Storm (divine)",
+     "Wind",
+     "Spark"
+    ],
+    [
+     "Storm (divine)",
+     "Firmament",
+     "Bell"
+    ],
+    [
+     "Storm (divine)",
+     "Garuda",
+     "Weathervane"
+    ]
+   ],
+   "affinities": [
+    "Fire",
+    "Wind",
+    "Wind"
+   ]
+  }
+ ]
+}

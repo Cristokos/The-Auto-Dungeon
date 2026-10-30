@@ -1,0 +1,320 @@
+{
+  "_about": "The world calendar: twelve 30-day months of three tendays, five holy days between months, and a leap day every fourth year. Festivals are dated by month and day; 'days' is how long one lasts and 'every' repeats it inside that span. 'where' is \"Everywhere\" or a list of place titles. Approved by Austin (2026-10-20).",
+  "version": 1,
+  "monthDays": 30,
+  "weekLength": 10,
+  "start": {
+    "year": 1,
+    "month": "Ches",
+    "day": 1
+  },
+  "months": [
+    {
+      "name": "Deepfrost",
+      "season": "Deep winter"
+    },
+    {
+      "name": "Alturiak",
+      "season": "Late winter"
+    },
+    {
+      "name": "Ches",
+      "season": "Early spring"
+    },
+    {
+      "name": "Tarsakh",
+      "season": "Spring"
+    },
+    {
+      "name": "Mirtul",
+      "season": "Late spring"
+    },
+    {
+      "name": "Kythorn",
+      "season": "Early summer"
+    },
+    {
+      "name": "Flamerule",
+      "season": "High summer"
+    },
+    {
+      "name": "Eleasis",
+      "season": "Late summer"
+    },
+    {
+      "name": "Eleint",
+      "season": "Early autumn"
+    },
+    {
+      "name": "Marpenoth",
+      "season": "Autumn"
+    },
+    {
+      "name": "Uktar",
+      "season": "Late autumn"
+    },
+    {
+      "name": "Nightal",
+      "season": "Early winter"
+    }
+  ],
+  "holyDays": [
+    {
+      "name": "Hearthnight",
+      "after": "Deepfrost",
+      "by": "Church of the Hearth",
+      "where": "Everywhere",
+      "text": "Midwinter. Families gather at the fire, every Hearth temple opens as a refuge, and no door may be shut on a traveller."
+    },
+    {
+      "name": "First Furrow",
+      "after": "Tarsakh",
+      "by": "Church of the Hearth, Church of the Earth",
+      "where": "Everywhere",
+      "text": "Hearth and Earth priests bless the fields and the first ploughing. Weddings held today are lucky."
+    },
+    {
+      "name": "Midsummer",
+      "after": "Flamerule",
+      "by": "Church of the Hero",
+      "where": "Everywhere",
+      "text": "The Day of Heroes. The Church of the Hero names the year's honoured champions, and at the Salt Mirror the reflection and the sky change places for an hour."
+    },
+    {
+      "name": "The Pressing",
+      "after": "Eleint",
+      "by": "Church of the Revels",
+      "where": "Everywhere",
+      "text": "The Revels' harvest and wine festival, the biggest feast of the year in most of the realm."
+    },
+    {
+      "name": "Night of Names",
+      "after": "Uktar",
+      "by": "Church of Death",
+      "where": "Everywhere",
+      "text": "The Church of Death reads aloud the names of the year's dead, and every town reads the names it lost to monster surges."
+    }
+  ],
+  "leapDay": {
+    "name": "Concord Day",
+    "after": "Midsummer",
+    "every": 4,
+    "by": "Church of Trade, Church of Justice",
+    "where": "Everywhere",
+    "text": "Trade and Justice witness the renewal of treaties, charters and long contracts. Oaths sworn today are said to bind twice as hard."
+  },
+  "events": [
+    {
+      "name": "New Year's Reckoning",
+      "month": "Deepfrost",
+      "day": 1,
+      "by": "Church of Trade",
+      "where": "Everywhere",
+      "text": "Debts fall due, ledgers close and guild fees are paid. Moneylenders are busy and tempers short."
+    },
+    {
+      "name": "Stormcall",
+      "month": "Alturiak",
+      "day": 15,
+      "by": "Church of the Storm, Church of the Ocean",
+      "where": [
+        "Rimaros",
+        "Yaresh",
+        "Dragonback Bay"
+      ],
+      "text": "Sailors pray for a kind season before the shipping lanes reopen. Bad omens keep ships in harbour."
+    },
+    {
+      "name": "Roadopening",
+      "month": "Ches",
+      "day": 1,
+      "days": 3,
+      "by": "Church of the Journey",
+      "where": "Everywhere",
+      "text": "Caravans are blessed at the gates and pilgrims set out on their year-and-a-day walk. Escort contracts are everywhere."
+    },
+    {
+      "name": "Mending Day",
+      "month": "Ches",
+      "day": 19,
+      "by": "Church of the Healer",
+      "where": "Everywhere",
+      "text": "Healing at the temples is free from dawn to dusk, and the queues are long."
+    },
+    {
+      "name": "Crown Day",
+      "month": "Tarsakh",
+      "day": 1,
+      "by": "Church of Dominion, the Crown",
+      "where": [
+        "Greenstone",
+        "Rimaros"
+      ],
+      "text": "Oaths of fealty are renewed and new titles granted. Petitioners flood the court."
+    },
+    {
+      "name": "Chainbreaking",
+      "month": "Tarsakh",
+      "day": 10,
+      "by": "Church of Liberty",
+      "where": "Everywhere",
+      "text": "Debtors and bonded servants may be bought free. Followers of Liberty and Dominion often clash in the street."
+    },
+    {
+      "name": "Society Trials",
+      "month": "Mirtul",
+      "day": 10,
+      "days": 6,
+      "by": "Adventure Society",
+      "where": "Everywhere",
+      "text": "New adventurers are licensed and rank assessments are held in public. Teams recruit."
+    },
+    {
+      "name": "Convocation",
+      "month": "Kythorn",
+      "day": 12,
+      "by": "Magic Society",
+      "where": [
+        "Greenstone",
+        "Rimaros",
+        "Vitesse"
+      ],
+      "text": "Open demonstrations of new magic and new astral finds. Rivals sabotage each other."
+    },
+    {
+      "name": "Blessing of the Waters",
+      "month": "Kythorn",
+      "day": 21,
+      "by": "Church of the Ocean",
+      "where": [
+        "Rimaros",
+        "Yaresh",
+        "Dragonback Bay",
+        "Vitesse"
+      ],
+      "text": "Fleets and river barges are blessed, and offerings are thrown into the water."
+    },
+    {
+      "name": "The Great Fair",
+      "month": "Flamerule",
+      "day": 1,
+      "days": 10,
+      "by": "Church of Trade",
+      "where": [
+        "Greenstone",
+        "Yaresh"
+      ],
+      "text": "A tenday market with merchants from far away. Rare goods appear and prices drop."
+    },
+    {
+      "name": "Masked ball",
+      "month": "Eleasis",
+      "day": 5,
+      "days": 86,
+      "every": 10,
+      "by": "Church of the Revels",
+      "where": [
+        "Vitesse",
+        "Rimaros"
+      ],
+      "text": "One of the season's masked balls. Perfect for intrigue, disguises and assassinations."
+    },
+    {
+      "name": "Flower Wine Festival",
+      "month": "Eleasis",
+      "day": 20,
+      "by": "Church of the Revels",
+      "where": [
+        "Vitesse"
+      ],
+      "text": "The event of Vitesse's year, held on the river terraces. The great houses all attend."
+    },
+    {
+      "name": "Sheaf Day",
+      "month": "Eleint",
+      "day": 5,
+      "by": "Church of the Hearth",
+      "where": "Everywhere",
+      "text": "The first sheaf of the harvest is cut and carried to the Hearth shrine, and the first loaf from it is shared by the whole village."
+    },
+    {
+      "name": "Orchard Fair",
+      "month": "Eleint",
+      "day": 15,
+      "days": 3,
+      "by": "Church of Trade, Church of the Revels",
+      "where": [
+        "Vitesse"
+      ],
+      "text": "Three days of fruit, cider and pie-judging on the farmland around Vitesse. Buyers come from every city to bid on the crop."
+    },
+    {
+      "name": "Scarecrow Judging",
+      "month": "Eleint",
+      "day": 25,
+      "by": "Harvest custom",
+      "where": [
+        "Harrowfield"
+      ],
+      "text": "Scarecrows dressed as famous adventurers are judged, far too seriously."
+    },
+    {
+      "name": "Lamplighting",
+      "month": "Marpenoth",
+      "day": 1,
+      "by": "Church of Knowledge, Church of Truth",
+      "where": "Everywhere",
+      "text": "Libraries and archives open to all for a day, and old secrets sometimes come out."
+    },
+    {
+      "name": "Reedharvest",
+      "month": "Marpenoth",
+      "day": 10,
+      "by": "Church of the Ocean, harvest custom",
+      "where": [
+        "Greenstone"
+      ],
+      "text": "The delta's reed and rice harvest. Boats are hung with lanterns and the flats are lit all night."
+    },
+    {
+      "name": "Granary Sealing",
+      "month": "Marpenoth",
+      "day": 20,
+      "by": "Church of the Earth",
+      "where": "Everywhere",
+      "text": "Granaries are sealed for the winter, and offerings are buried at the edge of every field. A short count now means a hungry winter."
+    },
+    {
+      "name": "Night of Masks",
+      "month": "Marpenoth",
+      "day": 30,
+      "by": "Church of Disguise, Church of the Revels",
+      "where": "Everywhere",
+      "text": "Everyone goes masked from dusk to dawn, and nothing done in a mask is spoken of."
+    },
+    {
+      "name": "Hunters' Feast",
+      "month": "Uktar",
+      "day": 5,
+      "by": "Church of the Hero, harvest custom",
+      "where": "Everywhere",
+      "text": "The last harvest of the year: game and monster meat. Hunters and adventurers sell their kills, and the biggest trophy wins a cask."
+    },
+    {
+      "name": "The Muster",
+      "month": "Uktar",
+      "day": 15,
+      "by": "Church of War",
+      "where": "Everywhere",
+      "text": "Garrisons and house guards parade, and the year's recruits swear in. Duels are fought."
+    },
+    {
+      "name": "The Longest Night",
+      "month": "Nightal",
+      "day": 20,
+      "by": "Church of Purity",
+      "where": "Everywhere",
+      "text": "Bonfires burn the old year's things, and Purity preachers hunt for corruption."
+    }
+  ]
+}

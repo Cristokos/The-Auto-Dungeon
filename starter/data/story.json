@@ -1,0 +1,1429 @@
+{
+  "_about": "The story engine's slow world. drift: how place numbers (prosperity and safety 0 to 100, population) move each tenday near the party and each month far away. minor: small events that happen on their own as time passes, near the party; each can be rerolled or undone later. Conditions: safetyBelow/Above, prosperityBelow/Above, settlements, seasons (words matched against the season name), trouble (an active trouble reaches the place). Effects add to the place's numbers; population is a percentage. Tokens: {place}, {name}, {name2}, {goods}, {church}, {trouble}. reputation: standing tiers (min value, price and pay changes in percent), scale (how much an outcome is worth per point of drama), and what solving a trouble earns. A minor card's econ makes the place short of (kind short) or rich in (kind plenty) a good for some days: good names it, otherwise {goods} is used, drawn from what the place needs (short) or makes (plenty). A minor card's tie (spouse, rival...) ties {name} and {name2} together when the DM makes one of them an NPC page; dies names the slot ({name}) of someone the event kills. A minor card's then: what it may lead to, each a followups (or minor) card id with after [min, max] days and a chance; the follow-up keeps the same people and goods. followups: cards that only happen that way. recurChance: how often a small event names one of the town's familiar strangers instead of someone new. drift.exodus: a place that stays below safetyBelow or prosperityBelow (or under a trouble or shortage) for months months in a row loses loss percent of its people, who go to the nearest place within refugeeMiles. Pages for NPCs never move.",
+  "version": 6,
+  "wordMilesPerDay": 30,
+  "focusMiles": 200,
+  "minorPerTenday": [
+    0,
+    2
+  ],
+  "farPerMonth": 0.5,
+  "defaults": {
+    "hamlet": {
+      "prosperity": 40,
+      "safety": 45,
+      "population": 80
+    },
+    "village": {
+      "prosperity": 45,
+      "safety": 50,
+      "population": 400
+    },
+    "town": {
+      "prosperity": 55,
+      "safety": 60,
+      "population": 3000
+    },
+    "city": {
+      "prosperity": 60,
+      "safety": 65,
+      "population": 30000
+    },
+    "great city": {
+      "prosperity": 65,
+      "safety": 70,
+      "population": 90000
+    },
+    "capital": {
+      "prosperity": 70,
+      "safety": 75,
+      "population": 150000
+    }
+  },
+  "drift": {
+    "troubleSafety": -2,
+    "troubleProsperity": -1,
+    "recover": 1,
+    "noise": 0.3,
+    "growthPerMonth": 0.4,
+    "declinePerMonth": -0.6,
+    "thresholds": [
+      {
+        "stat": "safety",
+        "below": 30,
+        "text": "The roads around {place} are no longer safe, and people stop travelling after dark."
+      },
+      {
+        "stat": "safety",
+        "above": 45,
+        "text": "{place} feels safe again. The night watch is cut back and the gates stay open later."
+      },
+      {
+        "stat": "prosperity",
+        "below": 30,
+        "text": "Hard times in {place}: shops are shuttered and families are leaving."
+      },
+      {
+        "stat": "prosperity",
+        "above": 75,
+        "text": "{place} is booming. New houses are going up and prices are climbing."
+      }
+    ],
+    "exodus": {
+      "safetyBelow": 25,
+      "prosperityBelow": 20,
+      "months": 3,
+      "loss": [
+        5,
+        12
+      ],
+      "refugeeMiles": 80,
+      "text": "Families are leaving {place} in numbers after months of {why}. Carts of belongings crowd the road to {to}.",
+      "alone": "Families are leaving {place} in numbers after months of {why}, and the empty houses are being boarded up.",
+      "refugees": "Refugees from {from} have come to {place}, and the {church} is struggling to feed them."
+    }
+  },
+  "goods": [
+    "grain",
+    "salt",
+    "lamp oil",
+    "timber",
+    "cloth",
+    "wine",
+    "iron",
+    "healing potions",
+    "fish",
+    "horses",
+    "rope",
+    "paper"
+  ],
+  "minor": [
+    {
+      "id": "death-old",
+      "name": "A death in the community",
+      "weight": 3,
+      "text": "{name}, a well-known figure in {place}, has died after a long life. Everyone who could turned out for the funeral.",
+      "dm": "Their will leaves something to someone unexpected, and the family is already arguing.",
+      "effects": {},
+      "tags": [
+        "death",
+        "society"
+      ],
+      "then": [
+        {
+          "card": "inheritance",
+          "after": [
+            15,
+            50
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "death-accident",
+      "name": "A fatal accident",
+      "weight": 2,
+      "text": "{name} of {place} was killed in an accident at work. The {church} is collecting for the family.",
+      "dm": "It may not have been an accident: {name2} was seen near the place just before.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "death"
+      ],
+      "dies": "name",
+      "then": [
+        {
+          "card": "no-accident",
+          "after": [
+            5,
+            20
+          ],
+          "chance": 0.3
+        },
+        {
+          "card": "inheritance",
+          "after": [
+            20,
+            60
+          ],
+          "chance": 0.25
+        }
+      ]
+    },
+    {
+      "id": "wedding",
+      "name": "A wedding",
+      "weight": 3,
+      "text": "{name} and {name2} were married in {place}, and the feast went on until dawn.",
+      "dm": "One family is far from happy about it.",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "society",
+        "family"
+      ],
+      "tie": "spouse",
+      "then": [
+        {
+          "card": "wedding-child",
+          "after": [
+            280,
+            420
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "birth",
+      "name": "A birth",
+      "weight": 2,
+      "text": "Twins were born to {name} of {place}, the first in years. The midwife calls it a good omen.",
+      "effects": {},
+      "tags": [
+        "family"
+      ]
+    },
+    {
+      "id": "feud",
+      "name": "A local feud",
+      "weight": 3,
+      "text": "{name} and {name2} of {place} have fallen out over a boundary stone, and their families no longer speak.",
+      "dm": "Either side would pay well for proof the other moved the stone.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "feud",
+        "society"
+      ],
+      "tie": "rival",
+      "then": [
+        {
+          "card": "feud-blood",
+          "after": [
+            15,
+            60
+          ],
+          "chance": 0.35
+        },
+        {
+          "card": "feud-settled",
+          "after": [
+            30,
+            120
+          ],
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "brawl",
+      "name": "A tavern brawl",
+      "weight": 2,
+      "text": "A brawl in {place}'s busiest tavern left a dozen people hurt and the common room in pieces.",
+      "dm": "It was started deliberately, to cover a theft upstairs.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "id": "theft",
+      "name": "A theft",
+      "weight": 3,
+      "text": "Thieves broke into {name}'s shop in {place} and made off with a season's takings.",
+      "dm": "The thief is someone the owner trusts.",
+      "effects": {
+        "safety": -1,
+        "prosperity": -1
+      },
+      "tags": [
+        "crime"
+      ],
+      "then": [
+        {
+          "card": "thief-caught",
+          "after": [
+            5,
+            30
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "shortage",
+      "name": "A shortage",
+      "weight": 3,
+      "text": "{place} has run short of {goods}. Prices have doubled and tempers are fraying.",
+      "dm": "A merchant is hoarding it to drive the price up.",
+      "effects": {
+        "prosperity": -2
+      },
+      "tags": [
+        "economy",
+        "shortage"
+      ],
+      "econ": {
+        "kind": "short",
+        "days": 45
+      },
+      "then": [
+        {
+          "card": "riot",
+          "after": [
+            7,
+            25
+          ],
+          "chance": 0.35
+        },
+        {
+          "card": "relief",
+          "after": [
+            10,
+            30
+          ],
+          "chance": 0.35
+        }
+      ]
+    },
+    {
+      "id": "glut",
+      "name": "A glut",
+      "weight": 2,
+      "prosperityAbove": 40,
+      "text": "A good season means {place} is awash with {goods}, and it is selling cheap.",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "economy"
+      ],
+      "econ": {
+        "kind": "plenty",
+        "days": 30,
+        "from": "makes"
+      }
+    },
+    {
+      "id": "caravan",
+      "name": "A caravan arrives",
+      "weight": 3,
+      "text": "A large caravan reached {place}, bringing {goods}, news from far away and a few strangers who mean to stay.",
+      "dm": "One of the strangers is running from something.",
+      "effects": {
+        "prosperity": 2
+      },
+      "tags": [
+        "economy",
+        "travel"
+      ],
+      "econ": {
+        "kind": "plenty",
+        "days": 20
+      }
+    },
+    {
+      "id": "caravan-late",
+      "name": "A caravan is overdue",
+      "weight": 2,
+      "safetyBelow": 55,
+      "text": "The caravan from {place} is three days overdue, and families are gathering at the gate each evening.",
+      "dm": "It was ambushed on the road; some survivors are hiding nearby.",
+      "effects": {
+        "prosperity": -1
+      },
+      "tags": [
+        "travel",
+        "danger"
+      ],
+      "then": [
+        {
+          "card": "caravan-lost",
+          "after": [
+            3,
+            12
+          ],
+          "chance": 0.4
+        },
+        {
+          "card": "caravan-limps-in",
+          "after": [
+            2,
+            10
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "name": "A fire",
+      "weight": 2,
+      "text": "Fire gutted a row of houses in {place} before the bucket chain could stop it. No one died, but many are homeless.",
+      "dm": "Someone saw a figure running from the first house to burn.",
+      "effects": {
+        "prosperity": -2
+      },
+      "tags": [
+        "disaster"
+      ],
+      "then": [
+        {
+          "card": "rebuilding",
+          "after": [
+            20,
+            60
+          ],
+          "chance": 0.55
+        },
+        {
+          "card": "arson",
+          "after": [
+            5,
+            20
+          ],
+          "chance": 0.15
+        }
+      ]
+    },
+    {
+      "id": "flood",
+      "name": "A flash flood",
+      "weight": 1,
+      "seasons": [
+        "spring",
+        "autumn"
+      ],
+      "text": "Heavy rain sent a flood through the low ground of {place}, ruining stores of {goods}.",
+      "effects": {
+        "prosperity": -2
+      },
+      "tags": [
+        "disaster"
+      ],
+      "econ": {
+        "kind": "short",
+        "days": 30
+      }
+    },
+    {
+      "id": "frost",
+      "name": "A hard frost",
+      "weight": 2,
+      "seasons": [
+        "winter"
+      ],
+      "text": "A hard frost has gripped {place}. The old and the poor are suffering, and firewood is scarce.",
+      "effects": {
+        "prosperity": -1
+      },
+      "tags": [
+        "weather"
+      ]
+    },
+    {
+      "id": "drought",
+      "name": "A dry spell",
+      "weight": 1,
+      "seasons": [
+        "summer"
+      ],
+      "text": "Weeks without rain have left the wells around {place} low and the fields brown.",
+      "effects": {
+        "prosperity": -2
+      },
+      "tags": [
+        "weather",
+        "shortage"
+      ],
+      "econ": {
+        "kind": "short",
+        "good": "grain",
+        "days": 60
+      },
+      "then": [
+        {
+          "card": "wells-fight",
+          "after": [
+            10,
+            30
+          ],
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "sickness",
+      "name": "A sickness",
+      "weight": 2,
+      "text": "A coughing sickness is spreading in {place}. The {church} has opened its doors to the sick.",
+      "dm": "It started at the well near {name}'s house.",
+      "effects": {
+        "prosperity": -1,
+        "population": -0.2
+      },
+      "tags": [
+        "disease"
+      ],
+      "then": [
+        {
+          "card": "sickness-spreads",
+          "after": [
+            7,
+            20
+          ],
+          "chance": 0.35
+        },
+        {
+          "card": "sickness-passes",
+          "after": [
+            25,
+            45
+          ],
+          "chance": 0.45
+        }
+      ]
+    },
+    {
+      "id": "spawn",
+      "name": "A monster in the fields",
+      "weight": 3,
+      "text": "A monster spawned in the fields outside {place} and killed livestock before the watch drove it off.",
+      "dm": "It came back the next night, and the next.",
+      "effects": {
+        "safety": -2
+      },
+      "tags": [
+        "monster"
+      ],
+      "then": [
+        {
+          "card": "spawn-returns",
+          "after": [
+            10,
+            40
+          ],
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "spawn-killed",
+      "name": "A local hero",
+      "weight": 2,
+      "text": "{name}, an Iron-rank adventurer from {place}, killed a monster that had been troubling the roads. Everyone is buying their drinks for a month.",
+      "effects": {
+        "safety": 2
+      },
+      "tags": [
+        "monster",
+        "hero"
+      ]
+    },
+    {
+      "id": "trouble-victim",
+      "name": "A victim of the trouble",
+      "weight": 4,
+      "trouble": true,
+      "text": "{trouble} claimed another victim near {place}: {name} went out and did not come back.",
+      "dm": "{name2} saw what happened and is too frightened to say.",
+      "effects": {
+        "safety": -2,
+        "population": -0.1
+      },
+      "tags": [
+        "trouble",
+        "death"
+      ],
+      "dies": "name",
+      "then": [
+        {
+          "card": "search",
+          "after": [
+            2,
+            8
+          ],
+          "chance": 0.5
+        }
+      ]
+    },
+    {
+      "id": "trouble-flee",
+      "name": "Families leave",
+      "weight": 2,
+      "trouble": true,
+      "safetyBelow": 45,
+      "text": "Several families have left {place} because of {trouble}, taking what they could carry.",
+      "effects": {
+        "population": -1,
+        "prosperity": -1
+      },
+      "tags": [
+        "trouble"
+      ]
+    },
+    {
+      "id": "militia",
+      "name": "A militia forms",
+      "weight": 2,
+      "safetyBelow": 45,
+      "text": "The people of {place} have formed a militia under {name}, armed with whatever they could find.",
+      "dm": "{name} is enjoying the power more than they should.",
+      "effects": {
+        "safety": 2
+      },
+      "tags": [
+        "society",
+        "defence"
+      ],
+      "then": [
+        {
+          "card": "militia-clash",
+          "after": [
+            10,
+            40
+          ],
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "bandits",
+      "name": "Bandits on the road",
+      "weight": 2,
+      "safetyBelow": 50,
+      "text": "Travellers on the road near {place} were robbed by masked riders.",
+      "dm": "The riders are locals, and the reeve knows it.",
+      "effects": {
+        "safety": -2,
+        "prosperity": -1
+      },
+      "tags": [
+        "crime",
+        "travel"
+      ],
+      "then": [
+        {
+          "card": "bandit-raid",
+          "after": [
+            10,
+            40
+          ],
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "smuggling",
+      "name": "Smugglers caught",
+      "weight": 1,
+      "text": "The watch in {place} caught smugglers moving {goods} by night.",
+      "dm": "The goods were only a cover. Something else was in the false bottoms.",
+      "effects": {},
+      "tags": [
+        "crime"
+      ],
+      "econ": {
+        "kind": "plenty",
+        "days": 15
+      }
+    },
+    {
+      "id": "debt",
+      "name": "A family ruined",
+      "weight": 2,
+      "text": "{name}'s family in {place} lost everything to debt, and their house is to be sold.",
+      "dm": "The lender is one of the great houses, buying up the street quietly.",
+      "effects": {},
+      "tags": [
+        "economy",
+        "family"
+      ],
+      "then": [
+        {
+          "card": "debt-revenge",
+          "after": [
+            20,
+            80
+          ],
+          "chance": 0.2
+        }
+      ]
+    },
+    {
+      "id": "new-shop",
+      "name": "A new business",
+      "weight": 2,
+      "prosperityAbove": 40,
+      "text": "{name} has opened a new shop in {place}, selling {goods} at prices that undercut everyone.",
+      "dm": "The money behind it comes from somewhere shady.",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "economy"
+      ],
+      "econ": {
+        "kind": "plenty",
+        "days": 30
+      },
+      "then": [
+        {
+          "card": "shop-war",
+          "after": [
+            20,
+            60
+          ],
+          "chance": 0.35
+        }
+      ]
+    },
+    {
+      "id": "priest",
+      "name": "A new priest",
+      "weight": 2,
+      "text": "A new priest of the {church} has arrived in {place}, and their sermons are drawing crowds.",
+      "dm": "They were sent here to keep an eye on someone.",
+      "effects": {},
+      "tags": [
+        "church"
+      ]
+    },
+    {
+      "id": "sign",
+      "name": "A divine sign",
+      "weight": 1,
+      "text": "Folk in {place} swear the shrine of the {church} glowed at midnight. Pilgrims have started arriving.",
+      "dm": "It was an astral power passing close, not a god.",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "magic",
+        "church"
+      ]
+    },
+    {
+      "id": "astral",
+      "name": "A strange door",
+      "weight": 1,
+      "text": "Children near {place} found a shimmering door in an old ruin. The Adventure Society has put a guard on it.",
+      "dm": "It is a small astral space, ripe for a low-rank team.",
+      "effects": {},
+      "tags": [
+        "magic",
+        "astral"
+      ]
+    },
+    {
+      "id": "stranger",
+      "name": "An odd stranger",
+      "weight": 2,
+      "text": "A stranger in odd clothes was found wandering near {place}, speaking a language no one knows.",
+      "dm": "They may be an outworlder, newly arrived.",
+      "effects": {},
+      "tags": [
+        "magic",
+        "outworlder"
+      ],
+      "then": [
+        {
+          "card": "stranger-gone",
+          "after": [
+            5,
+            25
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "festival-trouble",
+      "name": "A festival scandal",
+      "weight": 1,
+      "text": "The last celebration in {place} ended in scandal when {name} was caught with {name2}'s spouse.",
+      "effects": {},
+      "tags": [
+        "society",
+        "scandal"
+      ],
+      "then": [
+        {
+          "card": "duel-honour",
+          "after": [
+            3,
+            20
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "elder",
+      "name": "A new headman",
+      "weight": 1,
+      "settlements": [
+        "hamlet",
+        "village"
+      ],
+      "text": "{place} has a new headman: {name}, after the old one stepped down.",
+      "dm": "The old headman did not step down willingly.",
+      "effects": {},
+      "tags": [
+        "politics"
+      ],
+      "then": [
+        {
+          "card": "elder-challenged",
+          "after": [
+            30,
+            120
+          ],
+          "chance": 0.2
+        }
+      ]
+    },
+    {
+      "id": "council",
+      "name": "A council quarrel",
+      "weight": 1,
+      "settlements": [
+        "town",
+        "city",
+        "great city",
+        "capital"
+      ],
+      "text": "The council of {place} is deadlocked over new taxes on {goods}, and the merchants are threatening to leave.",
+      "effects": {
+        "prosperity": -1
+      },
+      "tags": [
+        "politics",
+        "economy"
+      ],
+      "then": [
+        {
+          "card": "tax-protest",
+          "after": [
+            10,
+            40
+          ],
+          "chance": 0.35
+        }
+      ]
+    },
+    {
+      "id": "harvest",
+      "name": "A fine harvest",
+      "weight": 2,
+      "seasons": [
+        "autumn"
+      ],
+      "text": "The harvest around {place} is the best in years, and the granaries are full.",
+      "effects": {
+        "prosperity": 3
+      },
+      "tags": [
+        "economy",
+        "harvest"
+      ],
+      "econ": {
+        "kind": "plenty",
+        "good": "grain",
+        "days": 60
+      }
+    },
+    {
+      "id": "blight",
+      "name": "Crop blight",
+      "weight": 1,
+      "seasons": [
+        "summer",
+        "autumn"
+      ],
+      "text": "A blight has struck the fields around {place}. Farmers are burning whole crops to stop it spreading.",
+      "dm": "It began where a monster core was buried.",
+      "effects": {
+        "prosperity": -3
+      },
+      "tags": [
+        "disaster",
+        "shortage"
+      ],
+      "econ": {
+        "kind": "short",
+        "good": "grain",
+        "days": 90
+      },
+      "then": [
+        {
+          "card": "hunger",
+          "after": [
+            20,
+            45
+          ],
+          "chance": 0.35
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "name": "A missing child",
+      "weight": 1,
+      "text": "{name}'s youngest has gone missing in {place}. Search parties are out in the woods and fields.",
+      "dm": "The child is safe, and hiding something they found.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "danger",
+        "family"
+      ],
+      "then": [
+        {
+          "card": "child-found",
+          "after": [
+            2,
+            14
+          ],
+          "chance": 0.55
+        },
+        {
+          "card": "child-lost",
+          "after": [
+            15,
+            30
+          ],
+          "chance": 0.25
+        }
+      ]
+    },
+    {
+      "id": "recruit",
+      "name": "The Society recruits",
+      "weight": 1,
+      "text": "An Adventure Society recruiter visited {place}, and three young people left with them for Iron-rank training.",
+      "effects": {},
+      "tags": [
+        "society",
+        "adventurers"
+      ]
+    }
+  ],
+  "reputation": {
+    "scale": 2,
+    "troubleNear": 10,
+    "troubleFar": 5,
+    "troubleRenown": 4,
+    "tiers": [
+      {
+        "min": 60,
+        "name": "Honoured",
+        "price": -10,
+        "pay": 10,
+        "text": "Doors open everywhere. Prices drop and the best contracts come to the party first."
+      },
+      {
+        "min": 20,
+        "name": "Liked",
+        "price": -5,
+        "pay": 5,
+        "text": "People are glad to see the party and give them the benefit of the doubt."
+      },
+      {
+        "min": -19,
+        "name": "Neutral",
+        "price": 0,
+        "pay": 0,
+        "text": "Just another band of adventurers."
+      },
+      {
+        "min": -59,
+        "name": "Disliked",
+        "price": 10,
+        "pay": -5,
+        "text": "Prices go up, doors close, and some contracts go to other teams."
+      },
+      {
+        "min": -100,
+        "name": "Hated",
+        "price": 25,
+        "pay": -10,
+        "text": "People refuse to deal with the party, and someone may come looking for them."
+      }
+    ]
+  },
+  "_upgrades": {
+    "4": {
+      "set": [
+        [
+          "minor",
+          "A wedding",
+          "tie",
+          "spouse"
+        ],
+        [
+          "minor",
+          "A local feud",
+          "tie",
+          "rival"
+        ],
+        [
+          "minor",
+          "A fatal accident",
+          "dies",
+          "name"
+        ],
+        [
+          "minor",
+          "A victim of the trouble",
+          "dies",
+          "name"
+        ]
+      ]
+    }
+  },
+  "followups": [
+    {
+      "id": "feud-blood",
+      "name": "The feud turns bloody",
+      "text": "The feud in {place} came to blows: {name} beat {name2} badly in the market square.",
+      "dm": "{name2}'s kin are talking about taking it further.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "feud",
+        "crime"
+      ],
+      "tie": "enemy",
+      "then": [
+        {
+          "card": "feud-death",
+          "after": [
+            5,
+            30
+          ],
+          "chance": 0.3
+        },
+        {
+          "card": "feud-trial",
+          "after": [
+            5,
+            20
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "feud-death",
+      "name": "A death in the feud",
+      "text": "{name2} died of the beating, and {name} has fled {place}.",
+      "dm": "{name} is hiding with relatives a day's ride away.",
+      "effects": {
+        "safety": -2
+      },
+      "tags": [
+        "feud",
+        "death"
+      ],
+      "dies": "name2"
+    },
+    {
+      "id": "feud-trial",
+      "name": "A trial in the feud",
+      "text": "{name} stood before the elders of {place} for the beating of {name2}, and was fined heavily.",
+      "dm": "{name} blames {name2}'s family for every coin of it.",
+      "effects": {},
+      "tags": [
+        "feud",
+        "politics"
+      ]
+    },
+    {
+      "id": "feud-settled",
+      "name": "The feud is settled",
+      "text": "{name} and {name2} shook hands before the {church}, and the boundary stone is back where it belongs.",
+      "dm": "",
+      "effects": {
+        "safety": 1
+      },
+      "tags": [
+        "feud",
+        "society"
+      ],
+      "tie": "friend"
+    },
+    {
+      "id": "wedding-child",
+      "name": "A child of the marriage",
+      "text": "{name} and {name2} of {place} have a newborn, and the whole street brought gifts.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "family"
+      ]
+    },
+    {
+      "id": "no-accident",
+      "name": "It was no accident",
+      "text": "The watch in {place} has arrested {name2} for the death of {name}. It was no accident after all.",
+      "dm": "{name2} swears someone paid them to look the other way.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "crime",
+        "death"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "name": "An inheritance quarrel",
+      "text": "{name}'s family in {place} is tearing itself apart over the estate, and {name2} has claimed a share no one expected.",
+      "dm": "{name2} has a will that may be forged.",
+      "effects": {},
+      "tags": [
+        "family",
+        "society"
+      ]
+    },
+    {
+      "id": "riot",
+      "name": "A riot",
+      "text": "A crowd in {place} broke into the stores when the {goods} ran out. The watch had to clear the streets.",
+      "dm": "Someone was handing out drink to the crowd beforehand.",
+      "effects": {
+        "safety": -3,
+        "prosperity": -2
+      },
+      "tags": [
+        "crime",
+        "economy"
+      ],
+      "then": [
+        {
+          "card": "crackdown",
+          "after": [
+            2,
+            10
+          ],
+          "chance": 0.5
+        }
+      ]
+    },
+    {
+      "id": "crackdown",
+      "name": "The watch cracks down",
+      "text": "After the riot, {place} has a curfew, and the watch is stopping anyone out after dark.",
+      "dm": "",
+      "effects": {
+        "safety": 2,
+        "prosperity": -1
+      },
+      "tags": [
+        "politics",
+        "defence"
+      ]
+    },
+    {
+      "id": "relief",
+      "name": "Relief arrives",
+      "text": "Wagons of {goods} from a neighbouring town reached {place}, and the worst of the shortage is over.",
+      "dm": "",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "economy",
+        "travel"
+      ]
+    },
+    {
+      "id": "hunger",
+      "name": "Hunger",
+      "text": "With the crops lost, families in {place} are going hungry, and the {church} is handing out bread.",
+      "dm": "",
+      "effects": {
+        "prosperity": -2,
+        "population": -0.2
+      },
+      "tags": [
+        "disaster",
+        "shortage"
+      ],
+      "econ": {
+        "kind": "short",
+        "good": "grain",
+        "days": 45
+      }
+    },
+    {
+      "id": "wells-fight",
+      "name": "A fight at the well",
+      "text": "{name} and {name2} came to blows over the last good well in {place}.",
+      "dm": "",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "feud",
+        "weather"
+      ],
+      "tie": "rival"
+    },
+    {
+      "id": "search",
+      "name": "A search party",
+      "text": "{name2} led a search party out of {place} looking for {name}, and came back with nothing but a torn cloak.",
+      "dm": "{name2} saw more than they say.",
+      "effects": {},
+      "tags": [
+        "danger",
+        "trouble"
+      ]
+    },
+    {
+      "id": "child-found",
+      "name": "The missing child is found",
+      "text": "{name}'s youngest was found safe in an old barn outside {place}, cold and hungry but unharmed.",
+      "dm": "The child says a kind lady kept them company.",
+      "effects": {
+        "safety": 1
+      },
+      "tags": [
+        "family"
+      ]
+    },
+    {
+      "id": "child-lost",
+      "name": "No sign of the child",
+      "text": "The searches have stopped. There is still no sign of {name}'s youngest, and {place} has gone quiet.",
+      "dm": "",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "danger",
+        "family"
+      ]
+    },
+    {
+      "id": "thief-caught",
+      "name": "The thief is caught",
+      "text": "{name2} was caught in {place} trying to sell goods stolen from {name}'s shop.",
+      "dm": "{name2} was only the lookout.",
+      "effects": {
+        "safety": 1
+      },
+      "tags": [
+        "crime"
+      ],
+      "tie": "rival"
+    },
+    {
+      "id": "bandit-raid",
+      "name": "Bandits raid a farm",
+      "text": "The bandits near {place} have grown bold enough to raid a farm on the edge of town.",
+      "dm": "",
+      "effects": {
+        "safety": -2
+      },
+      "tags": [
+        "crime",
+        "danger"
+      ],
+      "then": [
+        {
+          "card": "militia",
+          "after": [
+            3,
+            15
+          ],
+          "chance": 0.4
+        }
+      ]
+    },
+    {
+      "id": "sickness-spreads",
+      "name": "The sickness spreads",
+      "text": "The sickness in {place} has spread to the next street, and the {church} has run out of beds.",
+      "dm": "",
+      "effects": {
+        "population": -0.3,
+        "prosperity": -1
+      },
+      "tags": [
+        "disease"
+      ]
+    },
+    {
+      "id": "sickness-passes",
+      "name": "The sickness passes",
+      "text": "The sickness in {place} has passed. The {church} rang its bells for those it took.",
+      "dm": "",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "disease",
+        "church"
+      ]
+    },
+    {
+      "id": "rebuilding",
+      "name": "Rebuilding after the fire",
+      "text": "{name} is leading the rebuilding of the burned houses in {place}, and half the town has turned out to help.",
+      "dm": "",
+      "effects": {
+        "prosperity": 1
+      },
+      "tags": [
+        "society"
+      ]
+    },
+    {
+      "id": "arson",
+      "name": "The fire was set",
+      "text": "Word in {place} is that the fire was set on purpose, and people are pointing at {name2}.",
+      "dm": "{name2} is innocent, and knows who did it.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "id": "shop-war",
+      "name": "A shop war",
+      "text": "{name}'s new shop and {name2}'s old one are at war in {place}: price cuts, smashed windows and worse.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "economy",
+        "feud"
+      ],
+      "tie": "rival"
+    },
+    {
+      "id": "duel-honour",
+      "name": "A duel of honour",
+      "text": "{name2} challenged {name} to a duel over the festival scandal in {place}. Both walked away, barely.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "feud",
+        "scandal"
+      ],
+      "tie": "enemy"
+    },
+    {
+      "id": "caravan-lost",
+      "name": "The caravan is lost",
+      "text": "Riders found the overdue caravan's wagons burned on the road from {place}. There is no sign of the drivers.",
+      "dm": "",
+      "effects": {
+        "prosperity": -2,
+        "safety": -1
+      },
+      "tags": [
+        "danger",
+        "travel"
+      ]
+    },
+    {
+      "id": "caravan-limps-in",
+      "name": "The caravan limps in",
+      "text": "The overdue caravan reached {place} at last, short two wagons and with a story no one quite believes.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "tax-protest",
+      "name": "A tax protest",
+      "text": "Merchants in {place} shut their shops for a day to protest the council's new taxes on {goods}.",
+      "dm": "",
+      "effects": {
+        "prosperity": -1
+      },
+      "tags": [
+        "politics",
+        "economy"
+      ]
+    },
+    {
+      "id": "spawn-returns",
+      "name": "The monster returns",
+      "text": "The monster in the fields outside {place} is back, and this time it took a shepherd.",
+      "dm": "",
+      "effects": {
+        "safety": -2
+      },
+      "tags": [
+        "monster",
+        "danger"
+      ]
+    },
+    {
+      "id": "stranger-gone",
+      "name": "The stranger vanishes",
+      "text": "The odd stranger found near {place} has vanished from the room the {church} gave them, leaving drawings no one understands.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "magic",
+        "outworlder"
+      ]
+    },
+    {
+      "id": "militia-clash",
+      "name": "The militia clashes with the watch",
+      "text": "{name}'s militia and the watch of {place} came close to blows over who keeps the peace.",
+      "dm": "",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "politics",
+        "defence"
+      ]
+    },
+    {
+      "id": "debt-revenge",
+      "name": "A debt repaid in blood",
+      "text": "The moneylender who ruined {name}'s family was found beaten in an alley in {place}.",
+      "dm": "{name} did it, and their family is covering for them.",
+      "effects": {
+        "safety": -1
+      },
+      "tags": [
+        "crime",
+        "family"
+      ]
+    },
+    {
+      "id": "elder-challenged",
+      "name": "The headman is challenged",
+      "text": "{name2} has called for {name} to step down as headman of {place}, and the town is taking sides.",
+      "dm": "",
+      "effects": {},
+      "tags": [
+        "politics"
+      ],
+      "tie": "rival"
+    }
+  ],
+  "recurChance": 0.4
+}

@@ -1,0 +1,20 @@
+{
+  "_about": "Confluence suggestions. The DM chooses the confluence to fit the set; the generator checks combos first (order does not matter), then combos sharing two essences, then a random fallback. Only Dark + Blood + Sin = Doom comes from the primer; the rest are drafts to keep or replace.",
+  "combos": [
+    {"essences": ["Dark", "Blood", "Sin"], "result": "Doom"},
+    {"essences": ["Fire", "Wind", "Might"], "result": "Storm"},
+    {"essences": ["Water", "Earth", "Wind"], "result": "Tide"},
+    {"essences": ["Light", "Water", "Earth"], "result": "Verdant"},
+    {"essences": ["Light", "Fire", "Magic"], "result": "Radiance"},
+    {"essences": ["Dark", "Swift", "Wind"], "result": "Phantom"},
+    {"essences": ["Might", "Earth", "Blood"], "result": "Mountain"},
+    {"essences": ["Magic", "Dark", "Sin"], "result": "Void"},
+    {"essences": ["Swift", "Might", "Blood"], "result": "Hunt"},
+    {"essences": ["Light", "Blood", "Water"], "result": "Renewal"},
+    {"essences": ["Magic", "Swift", "Wind"], "result": "Echo"},
+    {"essences": ["Fire", "Earth", "Might"], "result": "Volcano"},
+    {"essences": ["Dark", "Light", "Magic"], "result": "Eclipse"},
+    {"essences": ["Sin", "Fire", "Blood"], "result": "Wrath"}
+  ],
+  "fallback": ["Doom", "Storm", "Void", "Radiance", "Tide", "Mountain", "Verdant", "Hunt", "Plague", "Rune", "Echo", "Eclipse", "Wrath", "Phantom", "Renewal", "Bastion", "Omen", "Vessel"]
+}

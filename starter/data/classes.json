@@ -1,0 +1,18 @@
+{
+  "_about": "Vanilla 5e classes. primary: ability priority. style picks the base stat block family. essences: essences this class tends toward (weighted, not required).",
+  "classes": [
+    {"name": "Artificer", "hitDie": 8, "primary": ["INT", "CON"], "armor": "medium", "style": "caster", "castingAbility": "INT", "essences": ["Magic", "Earth", "Fire", "Might"]},
+    {"name": "Barbarian", "hitDie": 12, "primary": ["STR", "CON"], "armor": "medium", "style": "martial", "essences": ["Might", "Blood", "Fire", "Earth"]},
+    {"name": "Bard", "hitDie": 8, "primary": ["CHA", "DEX"], "armor": "light", "style": "caster", "castingAbility": "CHA", "essences": ["Swift", "Magic", "Sin", "Light", "Wind"]},
+    {"name": "Cleric", "hitDie": 8, "primary": ["WIS", "CON"], "armor": "medium", "style": "divine", "castingAbility": "WIS", "essences": ["Light", "Water", "Earth", "Blood"]},
+    {"name": "Druid", "hitDie": 8, "primary": ["WIS", "CON"], "armor": "medium", "style": "divine", "castingAbility": "WIS", "essences": ["Water", "Earth", "Wind", "Fire"]},
+    {"name": "Fighter", "hitDie": 10, "primary": ["STR", "CON"], "armor": "heavy", "style": "martial", "essences": ["Might", "Earth", "Swift", "Fire"]},
+    {"name": "Monk", "hitDie": 8, "primary": ["DEX", "WIS"], "armor": "none", "style": "skirmisher", "essences": ["Swift", "Wind", "Might", "Water"]},
+    {"name": "Paladin", "hitDie": 10, "primary": ["STR", "CHA"], "armor": "heavy", "style": "martial", "castingAbility": "CHA", "essences": ["Light", "Might", "Fire", "Earth"]},
+    {"name": "Ranger", "hitDie": 10, "primary": ["DEX", "WIS"], "armor": "medium", "style": "skirmisher", "castingAbility": "WIS", "essences": ["Swift", "Wind", "Dark", "Earth"]},
+    {"name": "Rogue", "hitDie": 8, "primary": ["DEX", "INT"], "armor": "light", "style": "skirmisher", "essences": ["Dark", "Swift", "Sin", "Wind"]},
+    {"name": "Sorcerer", "hitDie": 6, "primary": ["CHA", "CON"], "armor": "none", "style": "caster", "castingAbility": "CHA", "essences": ["Magic", "Fire", "Wind", "Dark"]},
+    {"name": "Warlock", "hitDie": 8, "primary": ["CHA", "CON"], "armor": "light", "style": "caster", "castingAbility": "CHA", "essences": ["Sin", "Dark", "Blood", "Magic"]},
+    {"name": "Wizard", "hitDie": 6, "primary": ["INT", "CON"], "armor": "none", "style": "caster", "castingAbility": "INT", "essences": ["Magic", "Fire", "Water", "Light"]}
+  ]
+}

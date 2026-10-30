@@ -1,0 +1,978 @@
+{
+ "_about": "Starter wiki pages that changed in a newer version. A campaign page whose body still matches one of the old versions listed under 'pages' has not been edited, so it is replaced with the new version. Pages under 'retired' were folded into others and are moved to the campaign's .trash if unedited. 'meta' adds details (like which page a page sits under) once, where a page has none.",
+ "pages": {
+  "the-gods": [
+   "e63b6a7f08b5258799ba20e217410296768ec59a50c65305840af3e5acbfe0e6",
+   "8288209714c87da5f16dbcfe35cc603f2d87d5d0c1c89c0a470b657439dd93c3"
+  ],
+  "the-churches": [
+   "3183d0497c9b4c12b2a76a7d64a32386cd6ade2d1cb0bbb1d895dfa0d075590f",
+   "49f0b66297af07faa293343402119c1729aca9e2862bf349525f526d73d3cec0",
+   "1eaf531288c67f3e77cfdc68588178dccc5fcf42d0de11fac493917e3450d928",
+   "79b8da6e585918ff44eefc675b2362183044f2cbe64a8c03f04e4032289d828d",
+   "5cceb4c74286e68626315a9f73565417e6495838c7b8f1df63add3d04864c885"
+  ],
+  "church-of-purity": [
+   "290a067fad7142f8ebdcdacde9d490bbdcd6c56924ab32b298a7f15ff3d00bea",
+   "310d5380de23f006e25359edb98ac2bbc4b84928a1b9e624b7367192f963ea8b",
+   "d7a9e0d63c0e35e319535ef61581f2a9a54db45a7884c0bcb9714d11a707bef2",
+   "64d052ceda47e2efa85ce1a88ee777d52f2b6d4097ccf4a6c988f57fdef797a8",
+   "c576ac54938670e0ed8d05f7db9f47066b09ded96a36397cdada901fa8ab681a",
+   "1d0de114a5460c33f06007a63b3ead5cba5cb0f3f6c7b598b37e87c47eb533e5",
+   "dcda3a7355e6c60bc0be1bcc5efeda89b38d479540042738a1a75635ecb4f072"
+  ],
+  "essences": [
+   "0f594348e4bd44c90156193a1fcb2537f81d62747479f0dfb6852340bed5dd0c",
+   "2d6bc1c4a2cae1aa3c07d6dc4c03b629ebe4e058ccf0b01a2a3ef25482081482",
+   "a80087be617525435bdb7af64f7ef661ba683de824f1371e0d7837ee52a935f9",
+   "3344d9845c1421cf5a75f14c415c7a6deb360834572f1698f9b72877ee92fbf8"
+  ],
+  "confluence": [
+   "28e54c4a2814bdb8af74735ea108ab0d69da58ce3237b4a343512d994dc5ee3c",
+   "47291d14d58c06e1a86031da48054d700f1bdd6a2b09e5ae43d5271d9c162ebf",
+   "2e3b7212aec9ed7561eb6475c52307104032b4508e5cb7991a48a6720234799c"
+  ],
+  "markets-and-prices": [
+   "06ef1d55170c01c25ba22dbf1962ee3932824719dd037077ceb854c636fb4b97",
+   "906709f0a2010390b575e5108f368b5a9eaec5512a516b10f01721ee772f3a3e",
+   "f155f4afb9f5798ae37f12ff1458e609c43a5ca0228e53ce51f873ff098d3715",
+   "ed5af2874f4a7d244716cd9aad71fe06b52cec6cf2573006488b66bd93c0276d"
+  ],
+  "two-paths-to-rank": [
+   "41dfa92b153d51faacaf0c81707f8b34e9abd4a003f4649e573c71a605ba981a",
+   "8a9eedb0d1af8c7c6f89e8b6ce69bac61d3779fcae1586f506050d45b20760bb"
+  ],
+  "peoples-of-pallimustus": [
+   "508c12af86b6468d042bb3d28945f175ee63386aa7306692b66a6a672a57a6fc",
+   "125a82b7826a9b12f5a3d46444f69c09e441b44236c6e8523fb1ce16eaeb57ae"
+  ],
+  "greenstone": [
+   "33b53c0aa9a58134c298404c744b0bb8d8d66c4865a51956fe731d3aed5aa65b",
+   "5a9ae468d6c242a9ab298ba469da1a94a135db0600b7d8b9fcb40f5684f17fe7",
+   "2964e9d5302d0a304d8066aad35e1f3cc463013a8eb0ef3c144b4bb6afc117cc",
+   "c64324c07d5d281ebccb45e02d9c549f9b691a0dee980f75680e9d0b469dbb99",
+   "c6d86a3495abe38c52917c83ac60fe44e8ee49b4a01794615434ed08ab3acded",
+   "dd7795550a1b771053f68b1820db60145a1dbffffd29fb14fe77b7a55a0b5ab9"
+  ],
+  "astral-powers": [
+   "c8c874b627769aad8f7223ad5ee8bec7ba08688dfe55480014387d48474be6ac",
+   "3da23afc4f98e9837c66c40a154c966c8124f03576b278adb7d592c6db27cc77"
+  ],
+  "cults": [
+   "68fcde784e3f72f783b3454b90f5e6ac731c8d1a3b5d5b480865c30e6f97d9f7",
+   "eef464474d83907dc07c5c6fd33721c79eb1e6f46d0c070079c39145450d67e9"
+  ],
+  "noble-and-adventuring-houses": [
+   "553c902d3b9e06bc2d2c28cad8d8e35739fe978399ad604abe595b7ae57765bd",
+   "42be30e3d18c22094f15eac8741c6337bdb6139611781b6bf117307876802b0c",
+   "04ceac726a438e45445b6118cae80dd8923e4a1647de64d6b4e02c03f220d43a",
+   "01ab9ad086bd0e0591b688c06d7d07419ca218f043699b0e2cf1022d85c21b30",
+   "2501c43c66e1e065e571d2c1a96121130e774c1dd229a6b22e97fd7bdc1d1ac8"
+  ],
+  "items-and-equipment": [
+   "2c51a01457fa37350bb8d65a44225ca26472c0ee42628c785e8f5245592c1071"
+  ],
+  "spirit-coins": [
+   "d0f33581ea0260c8118ef948f7558cb96abf8c0ad8e5605255639a02589b6ceb"
+  ],
+  "monster-cores": [
+   "2bb8bc580e96679cea28095c7a670033b663da83ab39e2f45b6d14919c81270a",
+   "e633ceacf83974c034167b11a34411113d29866b1a7a0ecf96329c1ae5c1acdf"
+  ],
+  "church-of-dominion": [
+   "e856be56a53b3fc4c9d9b61aaf6386f637887152d09a7c256a6a8a1f76eb8b55",
+   "495675c65ba173e416220a12c90b626c0d2012f5176bb5b367ca1b787bb63a8e",
+   "6e85eed6865e10607fb1f61188ad7f5d02e91511d3237fa87220552b6e4641cf",
+   "c0b07ccb5fe1792fd4819de4ad75b77485af0d7f866e36068536f29dba4f04e1",
+   "79793adc24dc5ae354fa849aae7749998e882bfed64efe35851a093c6fb4d0d9",
+   "946a3c1a9d4bf4c2f14355a2c9545a97777bae1ce36b182054b9dc5671adcf28",
+   "148023161be1cf880f6b9fc3138e2e9ced4952a58235ba50564c05466d519a7f"
+  ],
+  "the-storm-kingdom": [
+   "ac3aba3827aec69fb881906b0ff1af12140645031078ecacbdd867ff837a050a",
+   "7ce66ee1226652dcbfa788429f8406d0ab34cab76cdde9002beaa77a2fba5b42",
+   "9d1df96dac181cd9b767fb3d1f6e9cba45634c28fc99f25cbe84aeaa9439fc22",
+   "446e2725494e0a006fa21f077a1f520dcb9157f3cc985d8712bca7e3e15b8972"
+  ],
+  "adventure-society": [
+   "8e18d63f3386b28c736ea77e7d44a6c312aeff3df14fe351b3ee4d38ae9cf92a",
+   "e92dc8c9047fe06d7a6f6983d69612599cd0722e732ee09a3aa1a4ad489cc3df"
+  ],
+  "key-npcs": [
+   "9e727ce3516f2d08d70dddb1880fc7e9cc0b93e592c41d653bbf1a0fa9205a9e",
+   "fc55d502cc5dec00962cad15f4f09f1c3145dbdb73885ab099e9694bb56a68af",
+   "6d2841cd5cc66ed860ccfa3b9e2cf7b464f49012f3aba4d79bb9f51e7ab88844",
+   "940846b5ca8a951d76288bd36aba4790f58ae1f3ab9c46e814aea8c84b07aa26",
+   "08ef8213468e326d9bf41d3822b37c6353cf6a2badbc499800fe51937cc894ae",
+   "c4ec5fb351b4507c44976469afdb0e6a287b7bfd1cb37c5e21bdfabee847b59a"
+  ],
+  "ranks": [
+   "0ef81e987627815c766768812c95a0d4a6383390542dc0ac705b97040e46d8cf",
+   "42b37c3641e6ea055dfd7cc4a0d3ba247f5c645f874ae80d63c6e38ce380f631",
+   "d169e59b946393d08875d8295675f24657ff285fe2a6c356296401fe022bcf73"
+  ],
+  "home": [
+   "d9ce8fed35aa293f4f750db2f5d601b67e131698dd13bc86e3844b6877d551bc",
+   "c62e795dbd4c434438a3379daf588328b783076da00a0381bf82d7ddf21ec5c9",
+   "ded4125e39e32bfa27f7414f5fae3e3fcda549b9253eb8bf28445c129576cdc6",
+   "77c9c3dd8f0b6fef6b1df1a4c0e40b8a46cc3dd4a831e9f01a55df56b607f3b2",
+   "52170d816fff9ee70ba14a8bee285a15d031d23f01eb4b0e9e2bb88ca80d3023"
+  ],
+  "lantern-ford": [
+   "bc48f36faf6ae828fa4edbff6a9ff3fc2b367dec486bfae6f3f013baa6f1f4d2",
+   "f005c47279180a1d4595cc6aad33f13ed67b985c2be219814b5850dac65f4c42"
+  ],
+  "church-of-the-journey": [
+   "e98e9a5c95a04163a0f89d3db3983dcb2a870bd50d8213e16f1cae552b7831b4",
+   "83df260896004f1e6087822afc4c7f93652ea030c9b9589c713601f5d77cde99",
+   "0a3bc5ae841efec460f13245dc3871280dc3d2de28204421b37e443285da680a",
+   "81ff202498540a7e83af424879c0613b3bd9b92d249681d56d887c0256c0a687",
+   "cfbd282ea62cbf1de7d34d2c9438fa818055e7d0c3a9bccd1121ffe7b25707b0"
+  ],
+  "player-primer": [
+   "4310bcd9bdd0616b8d83a88a4150bd75f921a222694d517e623064f37fcc05d2",
+   "641381309f6c13c811148831e2508bef0bca090920ab0e7f4540f34a7ba5767d",
+   "9e6fb1bec886d0db219cd4daacf62c431ee6ae36aa356dcba48af4f704f8954b",
+   "6502be719575aaee1be50bb3200c5ecaff9f0871e111b4cc5bdb2bbfc8edee95"
+  ],
+  "the-crown": [
+   "18764cb1f925c7adad979ef8d755eaebfb3ae9699517b4c7e551a31906d472ef",
+   "59953c76c099d004e56704ca8e9dd418cd29479bf5abadd3db1ccbef3080df19",
+   "ca76f1df13e2dad0bacb141d307d80dc855ca45c6e1bdccf4ad2a8b7d1824a78"
+  ],
+  "church-of-destruction": [
+   "d925da61f23d14f4c45d1ec5387b625a23a2ebac4e8271fa1372ffe1c0dbcc93",
+   "c05d8bd6cb4337a08304ec2a6dff15b549b27d742cee0e4e01363eada5e2375c",
+   "6997e1fe0d4274fc902fe1ed7a1752bbfed1671f2dd4834d32216a466f373a1e",
+   "5992f201bad225d6508de0c6925298d4c6a183bb120325a2bead6bfb2ad04769",
+   "87973a89f4dbdda7a6e84216d18a0e2811155e885ade9962fdd0642dea57ec5f",
+   "201084f0b1e98e971dfe54834f66b6712c1aeb6eb5ba4a327406f19a989da9b2"
+  ],
+  "church-of-justice": [
+   "3e551168138d87dc83e52decbc0eefcd42302571ac1258cd1ef033e5a5c46eed",
+   "4459b58544efe38f2fe45454bf13164a0930992cf5cae937f1968d4be432aecb",
+   "4e10f483ea58c4c603b564911d36e7d74d2e12d393ad399aabb246c0e4273c01",
+   "44bbb77853fb970864002afaf4f2ad3d6b03720542ddb5306f2c41001fa80611",
+   "35019d8542e066a4677a6791ee262dc8ad13db884dcc566af29f6184c8ee1a8a",
+   "1b932474f7d04806ae852ae88b484c1dc0c9b484ed00409a2034cf537f00c1b5",
+   "7b7ab75563599753da3defc44ae24906a65f6720af329359e000ed02b7fca073",
+   "47180cf1a4a983c42d11ee026ddf62232daf52bca6a0b5aa40bdf82a674fdc4a",
+   "83dd05246ecd7ac1e6584066cd81f43a2e4dba991e50e24c614acc61ce45e99d"
+  ],
+  "church-of-liberty": [
+   "7f496f78feb121226c8df7fbff5cbcd55d7cb8f3e1bf34d78ced6b0a8823f2c2",
+   "b722ebc011d14a1a1d84f0f77076b61aefb0203059e26762394f37435527d78b",
+   "1eadeb59d374def915143ad592066f25c918e3bb8cbd7040675fb6688dde9b5b",
+   "3f1c5af0023bef5863e050cc9131a46693a13d71ce573b91314c431223957ec5",
+   "6381075f7e84d8caab75785e2c925c4b516ccf5cd390e6c4c6587c1df7ee04c4",
+   "87c7345a92b9a994c58d5987089d1a0bf43cce2bb58113c067634e6cd9e7c829"
+  ],
+  "church-of-the-healer": [
+   "cddd00d4edb9cc2bb62550b204b41bfa2d0646c8cd58c2654fe5531fa07f1a74",
+   "8c11c76ddc8966904acc03a27836281233a5f73195423165b2e11f8402dfec4c",
+   "f008349e967d2d310890db8d101d775d3a4846a859d8ac2364a732bbef0bcb58",
+   "94ff2b51a1853200a812d469da7a37be61abc19b71b89ad5ce8c1e66c4b23fab",
+   "4fc7106a09858351728d75822fab4e9a3647bd1db08f9d411001f83f9e03e82f"
+  ],
+  "church-of-the-storm": [
+   "dd236635155e342b7a55b8539f451e906b97ae6e9e688c282b58b98855b0ebdf",
+   "493094db663c7367fb07df139d417789254de2dcedb44b14df88734c8112fbf4",
+   "0bf527fde2fbf04683909db896eff3ce0b887514207abfffb1ae0e17cb72367e",
+   "1c917850846580e654163c651fdb5e1dfcacc106adef18e54b54a7881d307cd1",
+   "083bfa6f209cf943fbbe7a9df80af669381aa0d0abeaae5bd8d708345ead4073"
+  ],
+  "church-of-truth": [
+   "6510d7711f56d87754d11c2563b9d6660ad2a4cf91494e366e59329d0463a7ec",
+   "05deebc083dc075170ea269133ee77e15202928abf4d181adfe26d3939599969",
+   "5568ab59c3347c9282964bdd9685611d6f027c4aa702cac02a17b06700dea9d3",
+   "b18523750b20c99f33a42b69af4bef5fa6ff6725b4c8d402745e07939b98a54e",
+   "91173aba1ea8eef51610ee3d7c8d33ead87274be4c5c83a520d1917ceb915b3e",
+   "a442c49536490f1cd9c43480da79b5358a0dd39b0700ff5c5550f012f1312688"
+  ],
+  "church-of-war": [
+   "a90f72db7575d7c5468c1fa9b3dce676083b809b72b10de0d38737211e4f9c32",
+   "38662ca3f7efbc8974a0ff7339ec2f8164a8078fde142082dd5f7dc69cc8e81d",
+   "a8a11edd58e272e7acb928e9d75f95da27f59659a75f27fcdbb8d9d90cdee33c",
+   "9676b0a69c58f6a8e04132af5ee16882e85d9ba8544d1e623a9feb3a27479e18",
+   "103ffb95169dba8b54bf64a170f446592df40dd35c1147446951cb7abb03dae7",
+   "08b7fcf79201e0f8b1725cce46178251457a2761e320a9aeac9bc8e12c1c1bf3"
+  ],
+  "factions": [
+   "bee179154c999b08bfecf973e9663294c670522559181270f4b5eb4030e2a7ce",
+   "bdf28f95de9da1972801fe55b718c539a50a61eb7249ecc643cefff1d0fd636b",
+   "e5490014b07fca9d687142a36c2cddd30f6b34ba86e59e3bbca57a83bd158b9f",
+   "60e2b8acd98e9354524cb705db43db94c971f72102128de1954dc54602a7538b"
+  ],
+  "house-geller": [
+   "19e43d1491f378d6c8e96928b56363952664329bab8f1a68fcc45e57e4bdfd9b",
+   "572dbfc928e90907792de624b2ae2cc25e7e60c5580f72f3c226adbefc2e1d05",
+   "552717eae393a34652ac86f98e7914bd0932aa27b22df470ac38646f13479458",
+   "533a05d7a9985a832fe5f89d502efb4b5eed920656651e0e10227bbc6c717ebe"
+  ],
+  "house-remore": [
+   "cf6e0859af785449e7831a68a33742db3bd1bdeb10fd633eea2fc8786b425b2f",
+   "1da2533e500717b247469f382fc31961d4e207f38f12b999b67284cb5c251cb2",
+   "8a053605daa4d7015d765aa17291c73a7c6eedc6d8eb7f329c18a946db7ef83e",
+   "2f7a484ea43cf325b19972d16d4aa713404e73352125e1f02ba3237ec94b4f60"
+  ],
+  "political-dials": [
+   "42fe6bed0aea859e2d2ce9f6d814d957da6a1dc2130a7b5a8cb01644457063d3",
+   "88a082d490c495234a0f73479eb121dc6f0581d3844b3c14b6651d9f8be789ae",
+   "5a26f13fda1ac103a56ca8505418ed033ae89f276af34ea65ddcce3f20109132"
+  ],
+  "vitesse": [
+   "3c4b596d4e8a7cff7cb1b93820d27607441a0d6feb76408e2c3ec308c25c2c14",
+   "c42c3f5cae0b07325785e8a51c0f9e862f59d354bea3f19cda43700123414d10"
+  ],
+  "running-the-campaign": [
+   "6f19ebe1aa307aa784f1d0b83b73bcf7099013869740823b97703121b5ae94ad",
+   "f28317089eb7edbf96efcc336dd953209a9d85ebb9572af77e95df99ed9f8a37"
+  ],
+  "the-drift-hosts": [
+   "63daeeb465fa4ac5f6ae9d52d7c116a97518e94dd28a313dad82961aca9bf762"
+  ],
+  "yaresh": [
+   "098a9e3d2680c137dcdc7afc22254385dcb64d14abcf0b4ae6e7d2b51d7d7d35"
+  ],
+  "the-old-city": [
+   "7c8743edb26189d5de553d7852c9d5bcfda5d516444639b99868fb0b3f26a192",
+   "d59c837de493faf1e45d579a4bb1bd40d546f3549106907aa0726409a27b18bb"
+  ],
+  "rimaros": [
+   "a056ad049ecd2f4df2f7590196b1128c44542eb26927e020faeada4b9f699057"
+  ],
+  "the-builder-cult": [
+   "441c09e0de360352aa6473897359aaad3f53475e8149cc844ee32a9cca403548",
+   "d5857bb841cdec4197ec4372b8ed5fb63e40b61dd4f716c1b7b2e0ede70a7ee5"
+  ],
+  "the-delta-and-marshes": [
+   "627fe41c51c102aea6dd80eda0ad55bbed2a398a70d6ed378459df88c284e04a",
+   "187b5c847b8949acd53cde2c0d52a89320ebfe74e64e39666d4a0949f5fa3a50"
+  ],
+  "monster-surges": [
+   "d76b20a0728b8c81573debe489a11ad1af0832df86e7de3c96eb5d18342bc0e0"
+  ],
+  "cosmology": [
+   "1e13dded81ad221e994c0974d69cc47130b4a29cfe34aa2b519075a69d808c40"
+  ],
+  "magic-society": [
+   "45a0d466661629d5c793e231bfc0e9daad346967ab51b842c2b5df5d0b3d8585"
+  ],
+  "belinda": [
+   "fe89f59d9bbc0e1a3016e740f5502f289bfc48ee80a01be72540223d14c2b48a",
+   "febea2931ca7e9eb1afcfa136fdce98687858d8556ee7dc30c87bc71e64dda6f",
+   "960e39cd30f43236722bd286bb49b8d30a85bf12b5054862283d920cfe548704",
+   "2a4ba6bf07690a131ce2c0912a8a081d3f1de919a08243127663a6a14666f181"
+  ],
+  "neil-davone": [
+   "996fd0e676d487fb5817fbbc081d69e03a769089cbc30b7392fc6c58e60157a7",
+   "2d103d9187b989e0225cb087bd806b4a307b1da52f324e1a8d58645a583aba35",
+   "990654435210a416f165a300d9012be3608d15b32ff64bc50295ffde85068e8d",
+   "c48ac3b1f68cecf5cead668a4a8fc21debcd39d65e07f1b0ff62fd91b601689c",
+   "5188749d7b6bace1fc9665230ff62e87a7eeebe38d155bda8824c57062365aa0"
+  ],
+  "sophie-wexler": [
+   "5b7f7ab0492e17976bed5b4d70e9a78ee2d6a60d7f87c48639a239a1561a302b",
+   "edca50eb5b07aa807a557f84795652b3335b5a55ae51a617f29ff207ef4d116b",
+   "865be4a94e223c3d41eb4e4c57c5ebaa53c90f86c5ea8245461c957bf827ded0",
+   "13ed0a2652f4c066e4bc2602563cb0b8495155ec3b01c54c7599dadfd4ca4cc8"
+  ],
+  "clive-standish": [
+   "0a98a7c986f38ad7f962a9212128caa204cdba35093426ea0eacb54a0aec88fb",
+   "3e30681368b323d8761fe25723619defc0341c8ed0f76cf634149a5777b2f9ee",
+   "98212f5ec5580f42c0705e05e055822caeefad7be0c9e5abbeb15d38e46403cf",
+   "6290deb41047f21c873b51109db0a7b1dda0ca5e286972cc1eaecf749d1cd0c5",
+   "4d11259050c12e6b1f7cfcc5e96754ec4e7aa62197da72746203341cecaad0cc"
+  ],
+  "farrah-hurin": [
+   "de0c78b44c450595f344312b09078b1a5ae4d68555dd544da6a1597c95e3d8fb",
+   "a1c51dc09de9148ca53c35a5ca3adba26b1cf75ec6e1ea4f2d236fabe4c0a820",
+   "aba455a36f26db799858b8f380da280580cea660f4f13291d1703ac18356c81b",
+   "71292fd6f6675f454cd1f3deb3912d07e3c0f14d3a85ce4307f3fcd270f50d6d",
+   "7c0a10e5b265bad9915c8cfee7618441c433888453e53d6a4f970f02c8494754"
+  ],
+  "gary": [
+   "a388c351beb042f68aedddbb5d3557cdc42a7abff71acb88bb93e4d065b47558",
+   "7b3df81e47f886fd4b87d183d7b88bbaa8cfc5ab702161e573ade485dbe1195b",
+   "ecf26ac7747716269a63a2e9f0272e4f85e3461b584ac56e92edc8fdddbb4fbd",
+   "1e4d616942dbc6e229a1ddc5294c2d8a5acbfbaf145141fc74c156bd4983707b"
+  ],
+  "arash": [
+   "f47b955f00e3e07244a4cae62e9487f4fdcaadaa04d663f8152fdf1ee2259bdf",
+   "fa08b250bcd9cec37c0ed4faf7cd51994054a2d8d2133af3d4f1dd9e076031c7",
+   "179b63b3a14fcba0c7e00cd5b6c875336081f815863bb4e90770d87f47f6a327",
+   "15d95e11b0a3f02e23eda2a0ddc61c38520cc99e883b44f8f8c6627b36bb690a"
+  ],
+  "humphrey-geller": [
+   "52372633591a4db690829b8827d16b1124e63b6fd06b719ab6e740fe9166522c",
+   "53fea125e53dff03d3af4f096b5c2f850e1ec06c9a75e4af0e7df25b9f2d61a1",
+   "8918e09589d42ac98cd5d1d77b7fb6c591f0ce97becdb089d8376d001969e888",
+   "6ce434440d691fa2617262f985aaa4d2def7e8bfb3eff77be98cd1ca8a9b5706",
+   "b00680fb0ad323e8dc942446c02b500e0aa441b03e9c6de0a3cb8e59e2c74e8e"
+  ],
+  "mosswater": [
+   "efc4dbdccfa886a16b3cb3afb71fa7a5ccb2463cacc62a011f0d146d5718dddc"
+  ],
+  "harrowfield": [
+   "92eb3dfef365f533330e3ef5af43b19fa0488a520a3bdb08b968b7427fc95b6d"
+  ],
+  "the-bleak-spires": [
+   "109b1317b3b9bc0e6d8b1b08b91d1b67396a107ad7e1b80f8bcafd26669565a3"
+  ],
+  "the-salt-mirror": [
+   "a559a6c33385ba9dd949a0dc46c75a9495f9d783364628b1b2135f2b2216d862"
+  ],
+  "wonders-of-the-world": [
+   "0e8a487d3d40acb8cb427f9867e344b4151a9cf98d35b74433f636bfb774f464"
+  ],
+  "greenstone-adventure-society-branch": [
+   "0c237dfa49857477c555b1b9c1323ee232d8498cfb010190c5fb8d1cab33bb82"
+  ],
+  "isolde-varrick": [
+   "fed3d160bcd12f005636fd06749f9fd8fd49142aec5fc0f0b96609545c21cbae",
+   "73b2c978ee58c7d5915cb7550c60be4f239253c1251d834a040c81d82771985a",
+   "fad0fb089b4791563639d7a64787525a71ee24492580ae1bb3941e16fa0eaf2e"
+  ],
+  "astral-spaces": [
+   "43bce4eb27aeabb494ee4d5edb5c8bf1ec78ff18e7bcafd2d273dc981aa745c6",
+   "240b7bd4733dd0f27115d3a1674d0f42748cdb9cb8e19d54b119eb9e96b21a58"
+  ],
+  "outworlders": [
+   "aac3498082c6cd63d04099ff9b5351be17f4a21b846e288bfee18bc514db87af"
+  ],
+  "rufus-remore": [
+   "6bb4ac816f4cdb4cdbb87725c9444d853aa3f39833e1ef422e6a81b68418b56d",
+   "f9d1452208dbdb1db357582d274de175034831f07f786c1ca3f7ec105d9572ca",
+   "6d2a3865797c9b33effec6c3a82ec6125749411a275a646915e5678a58b40311",
+   "3e10a3f536c3b9aa335f64ea4b23da8ce5ee2dc1d2cb7f0b7aa62d23429f7138"
+  ],
+  "nessa-quill": [
+   "9def1b45245261e01b539b6684e066ebdde06b04a2e5467068d385033c5e8f14",
+   "cbd750b7c8cf74ca17c6978872a0515add7a48cb4da24c2e99969952254e6296",
+   "b0b48f3e2ef4e0c95deccecc8cbd63a444c504bef0981a1482a5cb134e9c5231"
+  ],
+  "danielle-geller": [
+   "85197afe0a64a2aa759028186f8618a80ece2a46b3a92ee17088f44c1d202d88",
+   "a321473683088f2982667ef049a7cfee061f13526b2d64c5c2fc8a2c23525391",
+   "86b44e87585a5a349ce3131cc1434faf330ecd070641650b9ac778bb38e9be19",
+   "1edb27fb338669b82317836731cec442a46389b73840adc2194b78258ebc670a"
+  ],
+  "emir-bahadir": [
+   "f75faa467f278d0ce793dbea5f2d847d3d7b9d64ed528cdf2aaf5a6fa1e4ada6",
+   "910f103eca5d9245372df52f041b61eb5564d80d3836e3b5c61468079932482c",
+   "26efd00a078df03677d2e63f9f6d86721f05507066e51a54cfa8d5b1cf5646ad",
+   "b44069d70c40d82119c888ebc9124483de425d41dc674ab764bbe6c3bd8b7274"
+  ],
+  "whispers": [
+   "7e6f1618527b1e55d333ee19799ee0e3640f09b41c126da4eb3b28cbc3afba29"
+  ],
+  "divine-essences": [
+   "463bf6fd925eb4f0d8f09e04b444a91dc05394213dac9055d4c53fed160c955c"
+  ],
+  "church-of-death": [
+   "8fd80af53cf933bbb72cb1c4d8dbf5cbf817d3ea879585b4fbd6bd9d8d20c5e1"
+  ],
+  "magic-and-monsters": [
+   "094660759ef45bda8109034a053174f6f8f0026dc1a2fd9adbeabd6a0d7e5a53"
+  ],
+  "church-of-the-hero": [
+   "0e9745281df9a5ecddd8ad1633f10e978ebaba24c8a16b0fc1a46fe91c30753e"
+  ],
+  "elspeth-arella": [
+   "5d536bc3452f6f887bcbd9f07328c6515b54b89579213135e8309fa19bb6fea0",
+   "d02a6c1e3ce74f1221850403e481940825720e18f0de2fe3853182a11dba5c36",
+   "de5b7c3650494100209b9c23082b64fb56bb5be07e5e580b40c1d87ec056e14d",
+   "2e3dd7d917d557f2901ccd8b50cabff384cc9ce35c9de9051411a5bafa8c3224"
+  ],
+  "lucian-lamprey": [
+   "99db0776da2830a1ac665cb1237e531fceedc507ddb8915d6caf74f2dd576680",
+   "01faf468288f7422df484879da5c418d044f460e8d051d36247d116e54d235d6",
+   "07ce9401ea4a74c3aef25ddd5d380ef575a6e605216718326dd41590ad27929b",
+   "7a1291b7219e71931d7ebd18289ea895c91a0b68cf459b4f3dee4221631e356c",
+   "1b54d54318711174373044261007510394a37aec67a8ab0af1b2be1b684f663c"
+  ],
+  "house-mercer": [
+   "ed9303f30567785f8a80b65863aaea4ccd1adff6278581dea71257ac820c43b9"
+  ],
+  "house-cavendish": [
+   "6b70003469b087b020b1127d951779f552ea56e1cf6a0e45acaac143a6beed1e"
+  ],
+  "house-vane": [
+   "c54533b4f7df04a6aece8f92d2b8a644ff5e2f9fd0c7d22c9ef524883645e71f",
+   "9382e93ab604c9e3f3686ae433622c969d40f6410000ac64fbf8c6377eaa43fb"
+  ],
+  "cressida-vane": [
+   "8bdedd36bd4697ecde5cf7d219ed8530ebdd0a277e43931752f1817423208278",
+   "bc2c856bb019c67c6264baedad24f1cf8aec4fcc3c07beb5bbf17c797f1a0758",
+   "7b241f36d6f309776955e6310de16fdf39487e52bd3ff14bbbe631d399d79352"
+  ],
+  "alicia-vane": [
+   "dd822fe78fca19b013a1b47277501c581f5ba0af3250d22fc155308008019a14",
+   "c91b56c2a98ee541f75fa6ec15c81eeeb9cf84e2cc03de129580b2aec7ab0d58",
+   "f004c41298444008726e94c3e140a03daac9a44c6fdbb8e09b89dd3ff5c58f7c"
+  ],
+  "arabelle-remore": [
+   "6593f6652b899b7380d5792ed6b2809d0aee93a5c638dcda67570c60ccb0fa2b",
+   "b622c9c2fac503cdd0f95357a761488d500d6a250d95f9ebfc9beb16e1ec40c0"
+  ],
+  "beaufort-mercer": [
+   "bf1dc333222a9b5aae224178420ea09de9d6e9c0d7aa08a37f49782e10dfb0c2",
+   "3973a8971037e5256ce1971ade56ca66069295214dc1ac1d2ed4678ced016b3d"
+  ],
+  "beth-cavendish": [
+   "2b92c1a21266b3e799b9ea4bbcf7267e8468328b405dda268b51ccb7def8c18f",
+   "547ad4a96c7ede07e7824fdfd0431d628350d86f7fee6e1cc789606a77884d7e"
+  ],
+  "brother-ilian-marsh": [
+   "2b665f220da4d883acd32248cf616ddea3914cc77c6089b28ff43f140197fcb0",
+   "220e12e5288c6ac04fd068104ec79f6b9309e27bf58c12e172b11406c190dbb5"
+  ],
+  "captain-reyna-holt": [
+   "ecc0ad230f7e164cd73fa430c317a497f2985ac99123c4007b9be4bd7f5ad712",
+   "00dfb7118135024e6174e4ccaf098994831c649efd63bc7034d28a58d70553ff"
+  ],
+  "cassandra-mercer": [
+   "ebb93dc5768aa341a0eac036684e425c7c608217a8c3407104166d196ff89f6f",
+   "f1c84e03eb33b0e3b08c0f5fa55ae3a13ce9d262198ac2b9282962fa8b0d61ba"
+  ],
+  "dobbs": [
+   "4230870b300fd4fc87c8e23fcc565fd2ac870cd08cb095f7256967629810a5d3",
+   "7296bc4dd24a67c5f4be9b2ecbb5d09ddc823a0a3bcff1baf3b1c4f8e439b76f"
+  ],
+  "dustin-kettering": [
+   "e046ef3b1af7966511a36b3fe5ab93deb6194c98ea88847c4b7a1db707964c81",
+   "389b99f9b0473f07ea74f05524aab2d3921f90c34195243f52fc923d2cd67ef8"
+  ],
+  "ephraim-cavendish": [
+   "fa4aa52e77513f1cd45c82bdaa66db6bfe524494d09fc3da1250fbf911330296",
+   "7b6e49b817be252ea7344bb5cb46c1f2dda7c63dffd69fbe72832a02cf99a15c"
+  ],
+  "gabriel-remore": [
+   "f78ecfb8fca703534fb6c07e71455d64412b22d357721ed8416d2ac84050b22b",
+   "a866c3016593e319628307417b29411e49c932c93e3d05c0559115c77867ae01"
+  ],
+  "henrietta-geller": [
+   "4f6be9e0a7f77bfbd7ce2e22f4a460159e1a6d6de07fe4607bf648a689f58fa1",
+   "5679062e7fa77ae3f4341fe8a82fe65315b4aea2c47eca5765474295ae6af630"
+  ],
+  "henry-geller": [
+   "015aea5e00669fd66cb29c03d653a20a5e06528b3a8e7fab862c6adb792d04d4",
+   "5e4ae80520f7d7884560c1fced04378518666fdf1850cb52eca29d9e5d763e4d"
+  ],
+  "isadora-cavendish": [
+   "f6667efa7ab122292ac4928af701012cefbd361a1982a93ece5ed2b56d4835bb",
+   "b5b89dea828be6ba1486fbfeb44868c7bc1dbe156c273d5450de5a94edeb987f"
+  ],
+  "jonah-geller": [
+   "316f7ba9af60fc11274697ebd2d9e71ecc3f14eda348ef1385f7dac854b3eaa3",
+   "cb93f70e1723fb2c8c37fcfb563feeb10e3aba2ca1c897a656b5b020381897f8"
+  ],
+  "keith-geller": [
+   "3e12cf4560fbd66570467c40367f00b234e43dc063c9c3b8586ffc8c3efedfdb",
+   "7d99ab7e4e26fb3468cd440950e4b2a1633d4d092b07dce72fbdb7c044c6e3f8"
+  ],
+  "landemere-vane": [
+   "d38aa95d32ac82841ce2aa177abb80ea9f79de67c169084823863c8c0b35a9ed",
+   "4e80dc7769658eaad41ddb8f8300541f77f9d186398ab2c9e402331569cf5ee8"
+  ],
+  "magda-fenn": [
+   "9e9c62c8d303c1684b29c2f102f8e457367cf9c0d58884680721430aaed0d99f",
+   "3fae7a903d1a53d4a538ec2e3e51d630832395378797b600183d0f315baefa10"
+  ],
+  "mose-cavendish": [
+   "5865aabceced0bf384ad6be0578ff0f5c0fa4a91d917737dc63c0db7b29e3f56",
+   "d1d9c079f274690f634da860afc8be7813ec4d49685cb9f15d6d6f5e7bf508cb"
+  ],
+  "pell-hobbard": [
+   "27dd1c92779ae54a7d667e19ff42bcac8657f3d67deb38793371de114fe3366f",
+   "8a4b7323b725a3003d68aa04faf8df29baab359e64c3b1765635746c7f14d5fe"
+  ],
+  "phoebe-geller": [
+   "cac5123f64506df8a7522082d0db0c89514bf4e83052b956947081df3f1cfe28",
+   "7756994fac30c1000f04e93c9f00ad87198d6b2f137349559bbb55288de8f279"
+  ],
+  "rick-geller": [
+   "a99b357a6b8dd4f01cd8887ddc2635062288f36e45d579ea972feaaab0f10e28",
+   "cba11faa0fb927b535853c8ca6e75859329a986cbb1447089d39fa1ba6e458b3"
+  ],
+  "roland-remore": [
+   "1af69ef785ff656cb9292887b5af8fa02df693aa0796133248b3542b10e64ea7",
+   "118ae72dfd3e0bda2d26557ec02b21bb1149dcceb35f11a3be963b6199e0f744",
+   "425ee016d40695778fff7c928eadf5d701d9ad7ebdeac0afd7128332721878ac"
+  ],
+  "thadwick-mercer": [
+   "4ea8c575f2908fd68a1426471bb0b8cbadf1288292bd5f126074cacb5aad537b",
+   "9b8484acd45c43b1acd2d2aedbba3a581026aa5b8409f73848cb52769fe77a5c"
+  ],
+  "thalia-mercer": [
+   "46fe93a1454882f8dbe093832cd3d725e70c5ff6f74546932cf6185fce41ab60",
+   "a2e981f4d96bc69a474e3a2e3c47a34045982256b5fd8fbe7b3ef652bf75e3d2",
+   "fc4c1accc610f43bb07e3c96a941aa03cfd2dd30c433dc44b3c9f18307a75fe7"
+  ],
+  "tobias-wren": [
+   "3a6f26aee207c04f985a49aa7117e1a336e1e7bc789a86ba74b017438c4a4d08",
+   "da596f5919c5bcdc7e1a3c40c371e9a2e9a592d315b5ba420ec40ff1ce95ffb2"
+  ],
+  "ulric-stane": [
+   "17ad8a8406370b5cde8a060b9a8d5f4da33266bf0ed5118b7d974fb311b3e9d5",
+   "9739d384de4b82ded56118c93bbb2064cfa3acddf2bad69c764d619b88a8fb0b"
+  ],
+  "church-of-disguise": [
+   "51b13efacb21966d903f8c428124c44791457d5776d1bc08f22536c5943392f5"
+  ],
+  "church-of-knowledge": [
+   "7af2ad174b1172095c93f60b6c6e3d33b4a1ecde7c0862a97185e712ed849ea3"
+  ],
+  "church-of-the-earth": [
+   "598a8b4ccdcd0b42aaefa7fddefb78a83047560d86757ac84e1d36d9ad47bf2b"
+  ],
+  "church-of-the-hearth": [
+   "4a509fca888be84743cfbb0dcd6c772cfbfcd939b86effdc0f4b43d7447f3997"
+  ],
+  "church-of-the-ocean": [
+   "292073e41f373528152d789629e3735c359aad3b0002ff7c57632947d769037b"
+  ],
+  "church-of-the-revels": [
+   "6f1f80e74af910c555ab7acc13e57abd78018fca4dad84271cf3c462841c36c0"
+  ],
+  "church-of-trade": [
+   "ba1f5713fb5ade6be6ccf326834256ae023681769fa94d06667ee276e92dbb41"
+  ],
+  "church-of-undeath": [
+   "5039b7d53f6bf46a998a24351bba9eeb15bb782735c1f5a2f4f9dde054f84878"
+  ],
+  "sailors-watch-inn": [
+   "8286241c42e37c5da81001d9ba9708b7182ca7967b2b5bedfdcca801b97c72fc"
+  ],
+  "gwydion-remore": [
+   "82b006e8e6505c1b21827af59cc8dbbfc6600713f7d87e107061f88d4d52ca08"
+  ],
+  "the-ladder": [
+   "82759ea07fa6032da5dd0ac67c0a83c3a80a4e99f02ff2b27b0b74b5cd97c992"
+  ],
+  "the-rock-keepers": [
+   "d00739e9aba509c8f2edad4d40788ff85bed2176110d753c57dafe958dd1cd86"
+  ],
+  "the-night-supper": [
+   "34bbf4911f68c4b1c0550138e14663791a94e2e2a791bb34e703d55e8e142bad"
+  ],
+  "legion": [
+   "b77fa670c6f658ae21a0519540e065f73fff7cf82f9c4a78a8b1d5ecb4c92ff0"
+  ],
+  "the-all-devouring-eye": [
+   "6cb958701dbfa213df6eaccd105bfa82d6d5b12be94bd7924f8a9747c4286bea"
+  ],
+  "the-keeper-of-moments": [
+   "34a10207c338a29557d4e053f23426ddbd6cbaf74f5ba1bf6b509bfb896d358e"
+  ],
+  "the-celestial-book": [
+   "c661598906eefd91000d00c402fdfec1f0e7bd9fef72f895e8791feb32f5d945"
+  ],
+  "awakening-stones": [
+   "12d82c8eaea5a4c745dc25b837c4b7d8f45d5e39ce679ce8861aab1e234f3cb8"
+  ],
+  "artificer": [
+   "08f3fb9609dcd71363cd904bf05dd5a3c51e702e5490dd281c23216e0e6a7775"
+  ],
+  "barbarian": [
+   "b54e38cc2359b636b38ddb828f07932f91d67a4471435d0f01aa08e10460d6f3"
+  ],
+  "bard": [
+   "9c356afd88392858dca031885a2b85ffade149fa1b5a9792d63b1b8aaf40918e"
+  ],
+  "cleric": [
+   "37afb644f516202bcc93089c53e11289e4e0173de9f1cdb350543e6c9cb7adfd"
+  ],
+  "druid": [
+   "a673c45ba23a09754e7f0058c78c2800aa53807822b4b65b0f5f4377b8ffb06c"
+  ],
+  "fighter": [
+   "5fc108029560ffef168f9aaefd0c6904153839fb75b2ff3268054f2ee36ddec9"
+  ],
+  "monk": [
+   "c08d08fffe892530e92f24b908cde0a64d084925dd2c74b51c3e1e1131ca5cd5"
+  ],
+  "paladin": [
+   "413aa2af9433eaabac2de1fe111a6d71aaa69d51e4a65140320a9cd9c8f88f0b"
+  ],
+  "ranger": [
+   "d1bc678ed77f3e96d4e72b3120913f2dad0b7b958f09f47ea8a6669597d2d931"
+  ],
+  "rogue": [
+   "04409ff890da847e89aaf11dcda4e0f9b6541ffec03a98298795aa66adacc0e0"
+  ],
+  "sorcerer": [
+   "a77fdfe17318a44e1a8db7112202f6a287f2505bcbc9485c8e4b4968569ee110"
+  ],
+  "warlock": [
+   "b12210c5dbf1f891c33320aa065f5ddad2ef66b3bac79b546eb0f448e5f556ec"
+  ],
+  "wizard": [
+   "56f5db38866dd19f7e92a8cc31c80229e15e8accede676f8377ba0fd427346a1"
+  ]
+ },
+ "retired": {
+  "blood-essence": [
+   "518ca6583ad9286de5e0f7a39000cf345ecc2248b2b9467f4a3a4fc6e35aa328"
+  ],
+  "dark-essence": [
+   "5b57739089cc264456a7a4cc547abdbbed002de2facf7817634d73eba9a23ec4"
+  ],
+  "earth-essence": [
+   "2d60e6cffd448f0e1838ed5f93911df2a7eafc119392d304587c520fb96a787d"
+  ],
+  "fire-essence": [
+   "37985aa55b55be9e052b847f88c54d1957e480da1e464a81e9fd4f63b4b95046"
+  ],
+  "light-essence": [
+   "fbbc063b7f053d50db154db2a3dddb07ff812fa4b7228c7b56ad59b6ab469ab4"
+  ],
+  "magic-essence": [
+   "73f0f78049e0ebbe9c47bf1f88a84bc43ea0435de14509fab9694769e6d66d76"
+  ],
+  "might-essence": [
+   "a1f973fcae24a9ad860ffd613ed8e8e92dfd03025c45e08ef7263e6ba792ec01"
+  ],
+  "sin-essence": [
+   "9bb30b0b2d6b81c67325843df26ddee9f98d7376e2dcb2b01fdef72332df2560"
+  ],
+  "swift-essence": [
+   "a3ae4d5d683f2a1da74d209819c24f6b5bd50fa1266ee241390e7237a5a8adef"
+  ],
+  "water-essence": [
+   "b1f8dd52d4439374a6ec068a2f61f72600dd46ceaaa3434d9b766b9511f59639"
+  ],
+  "wind-essence": [
+   "0a47f520bcb2350eefd6db9901b37cc0c05934759d1e7f5d85c2ed44991f7f0a"
+  ],
+  "humans": [
+   "c397533de4dab82e87249f978fa91c43f17908be327909a77415de302191c4f0"
+  ],
+  "elves": [
+   "e6f0edf8ed6220a618ce3d93eef42ba67a76f1534df36db3d752faf3fb14496a"
+  ],
+  "leonids": [
+   "08ee2d81d91848e64f805ab5311dd10880499bd4c3d0c93d619b1c2f271fc366"
+  ],
+  "runics": [
+   "bc1886999cddc49201be5a5dea01875a53ae93887fd14acf834541fcac9ef45a"
+  ],
+  "celestines": [
+   "257357a32a37bb28ab48e2764084c3d727cd5b4c8570ca1fe3721db4e188925b"
+  ],
+  "draconians": [
+   "2a485459c71f24228953866c74cfe40990744aa93b569bdd373980f8bb10ab71"
+  ],
+  "smoulders": [
+   "09c72d8050f0631875aa825d4c589274ab01985c575a2a70e1afbf009b67b4ed"
+  ],
+  "goblins": [
+   "ded8fc4a9c8a70f566e4e1b030040e4a5cd57c923a8509b783a154bc13d2b250"
+  ],
+  "merfolk": [
+   "f04e91237a7f7e906635ab1ad4ed53154cbc23f7e4bf15c5731781a96400ea0d"
+  ],
+  "the-mayor-of-greenstone": [
+   "f531d04ba9385bb4fe7af01be85d710da16e7658531636640a72ae889ebf8699"
+  ],
+  "corvin-ashdown": [
+   "143bfdb5c08ec882db3ace16271a2f3a62a031d00888a2267da264b686dd88e2"
+  ]
+ },
+ "meta": {
+  "church-of-death": {
+   "parent": "The Churches"
+  },
+  "church-of-destruction": {
+   "parent": "The Churches"
+  },
+  "church-of-disguise": {
+   "parent": "The Churches"
+  },
+  "church-of-dominion": {
+   "parent": "The Churches"
+  },
+  "church-of-justice": {
+   "parent": "The Churches"
+  },
+  "church-of-knowledge": {
+   "parent": "The Churches"
+  },
+  "church-of-liberty": {
+   "parent": "The Churches"
+  },
+  "church-of-purity": {
+   "parent": "The Churches"
+  },
+  "church-of-the-earth": {
+   "parent": "The Churches"
+  },
+  "church-of-the-healer": {
+   "parent": "The Churches"
+  },
+  "church-of-the-hearth": {
+   "parent": "The Churches"
+  },
+  "church-of-the-hero": {
+   "parent": "The Churches"
+  },
+  "church-of-the-journey": {
+   "parent": "The Churches"
+  },
+  "church-of-the-ocean": {
+   "parent": "The Churches"
+  },
+  "church-of-the-revels": {
+   "parent": "The Churches"
+  },
+  "church-of-the-storm": {
+   "parent": "The Churches"
+  },
+  "church-of-trade": {
+   "parent": "The Churches"
+  },
+  "church-of-truth": {
+   "parent": "The Churches"
+  },
+  "church-of-undeath": {
+   "parent": "The Churches"
+  },
+  "church-of-war": {
+   "parent": "The Churches"
+  },
+  "house-geller": {
+   "parent": "Noble Houses"
+  },
+  "house-remore": {
+   "parent": "Noble Houses"
+  },
+  "the-old-city": {
+   "parent": "Greenstone"
+  },
+  "the-delta-and-marshes": {
+   "parent": "Greenstone"
+  },
+  "greenstone": {
+   "map": [
+    53.05,
+    67.65
+   ]
+  },
+  "harrowfield": {
+   "map": [
+    52.45,
+    67.4
+   ]
+  },
+  "mosswater": {
+   "map": [
+    53.75,
+    68.1
+   ]
+  },
+  "lantern-ford": {
+   "map": [
+    53.35,
+    67.25
+   ]
+  },
+  "the-delta-and-marshes#map": {
+   "map": [
+    53.95,
+    68.3
+   ]
+  },
+  "rimaros": {
+   "map": [
+    -82.37,
+    23.12
+   ]
+  },
+  "the-storm-kingdom": {
+   "map": [
+    -78,
+    14
+   ],
+   "border": [
+    [
+     -85.1,
+     21.9
+    ],
+    [
+     -84.4,
+     22.9
+    ],
+    [
+     -83,
+     23.4
+    ],
+    [
+     -81,
+     23.5
+    ],
+    [
+     -79.5,
+     23
+    ],
+    [
+     -77.5,
+     22.3
+    ],
+    [
+     -75.6,
+     21.2
+    ],
+    [
+     -74,
+     20.3
+    ],
+    [
+     -74.4,
+     19.8
+    ],
+    [
+     -77.8,
+     19.7
+    ],
+    [
+     -78.4,
+     20.6
+    ],
+    [
+     -80.6,
+     21.6
+    ],
+    [
+     -82.4,
+     21.4
+    ],
+    [
+     -84,
+     21.6
+    ]
+   ],
+   "color": "#3f7fbf"
+  },
+  "vitesse": {
+   "map": [
+    44.4,
+    33.3
+   ]
+  },
+  "yaresh": {
+   "map": [
+    -0.2,
+    5.6
+   ]
+  },
+  "vitesse#2": {
+   "settlement": "great city",
+   "magic": "high",
+   "aliases": [
+    "City of Flowers",
+    "The City of Flowers"
+   ]
+  },
+  "yaresh#2": {
+   "settlement": "great city",
+   "magic": "moderate"
+  },
+  "arash": {
+   "parent": "Key NPCs"
+  },
+  "belinda": {
+   "parent": "Key NPCs"
+  },
+  "danielle-geller": {
+   "parent": "Key NPCs"
+  },
+  "emir-bahadir": {
+   "parent": "Key NPCs"
+  },
+  "farrah-hurin": {
+   "parent": "Key NPCs"
+  },
+  "gary": {
+   "parent": "Key NPCs"
+  },
+  "humphrey-geller": {
+   "parent": "Key NPCs"
+  },
+  "rufus-remore": {
+   "parent": "Key NPCs"
+  },
+  "sophie-wexler": {
+   "parent": "Key NPCs"
+  },
+  "greenstone#places": {
+   "terrain": [
+    "desert",
+    "delta",
+    "marsh",
+    "coast",
+    "river"
+   ],
+   "nameStyle": "greenstone"
+  },
+  "the-delta-and-marshes#places": {
+   "terrain": [
+    "delta",
+    "marsh",
+    "river"
+   ],
+   "nameStyle": "greenstone"
+  },
+  "vitesse#places": {
+   "terrain": [
+    "plains",
+    "farmland",
+    "river",
+    "forest",
+    "hills"
+   ],
+   "nameStyle": "vitesse"
+  },
+  "yaresh#places": {
+   "terrain": [
+    "coast",
+    "forest",
+    "jungle",
+    "river",
+    "lake"
+   ],
+   "nameStyle": "yaresh"
+  },
+  "rimaros#places": {
+   "terrain": [
+    "coast",
+    "hills",
+    "farmland",
+    "jungle"
+   ],
+   "nameStyle": "rimaros"
+  },
+  "the-storm-kingdom#places": {
+   "terrain": [
+    "coast",
+    "jungle",
+    "mountains"
+   ],
+   "nameStyle": "rimaros"
+  },
+  "the-cloud-clans#places": {
+   "terrain": [
+    "mountains",
+    "hills",
+    "forest"
+   ]
+  },
+  "the-drift-hosts#places": {
+   "terrain": [
+    "grassland",
+    "plains",
+    "desert"
+   ],
+   "nameStyle": "steppe"
+  }
+ }
+}

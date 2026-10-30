@@ -1,0 +1,518 @@
+{
+ "_about": "Banks for the auction house generator. Auction houses are found only in settlements with 'auction' set in items.json. Estimates are in gp and shown in spirit coins (1 iron = 1 gp, 1 bronze = 100 gp, 1 silver = 10,000 gp). 'stock' sets what each settlement's auctions offer: magic item rarities, essence rarities, awakening stone levels, core ranks and how many lots. 'exotica' are one-of-a-kind lots of the world's own. Edit freely; {place}, {faction}, {npc} and {church} are filled from your wiki.",
+ "version": 2,
+ "premium": 0.1,
+ "stock": {
+  "city": {
+   "rarities": [
+    "rare",
+    "very rare"
+   ],
+   "essences": [
+    "uncommon",
+    "rare"
+   ],
+   "stones": [
+    2,
+    3,
+    4
+   ],
+   "cores": [
+    "Bronze"
+   ],
+   "lots": [
+    6,
+    8
+   ],
+   "gemMin": 500
+  },
+  "great city": {
+   "rarities": [
+    "rare",
+    "very rare",
+    "legendary"
+   ],
+   "essences": [
+    "rare",
+    "legendary"
+   ],
+   "stones": [
+    3,
+    4,
+    5
+   ],
+   "cores": [
+    "Bronze",
+    "Silver"
+   ],
+   "lots": [
+    7,
+    10
+   ],
+   "gemMin": 1000
+  }
+ },
+ "lotKinds": {
+  "magic": 6,
+  "essence": 3,
+  "stone": 2,
+  "core": 1,
+  "gem": 1,
+  "exotic": 2
+ },
+ "names": [
+  "The {place} Auction House",
+  "The Gavel and Crown",
+  "The Hall of Lots",
+  "The Silver Hammer",
+  "The Merchant Guild Sale Rooms",
+  "The Consignment Hall",
+  "The Lantern Gallery Auctions",
+  "The Old Customs House Sales",
+  "The Hammer and Hall",
+  "The Gilded Lot",
+  "The Bidding Room",
+  "The Silver Gavel",
+  "The Merchant's Rotunda",
+  "{place} Sale Rooms",
+  "The Last Bid",
+  "The Crown Lots"
+ ],
+ "looks": [
+  "Rows of velvet chairs face a raised stage where each lot is carried out on a cushion by gloved porters.",
+  "A domed hall of white stone, with private boxes on a gallery for buyers who would rather not be seen bidding.",
+  "A converted warehouse by the docks, smelling of tar and money, with lots displayed in iron cages before the sale.",
+  "A hushed gallery where every lot sits behind glass for a week before the sale, guarded by Bronze-rankers who never smile.",
+  "An old temple bought by a merchant house, the altar now the auctioneer's podium and the pews full of bidders.",
+  "A sale held on a barge moored in the harbour, so that no city ward has any say over what is sold.",
+  "A converted chapel with pews for bidders and lots displayed on the altar.",
+  "An open courtyard with a canvas roof, lots shown on carts wheeled through the crowd.",
+  "A cellar under a bank, lit by candles, where only invited bidders may enter.",
+  "A grand ballroom with chandeliers, the lots shown on a rotating stage.",
+  "A ship's hold, moored in the harbour, so the house can sail if the law comes.",
+  "A garden pavilion where bidders sit at tables and servants bring wine between lots."
+ ],
+ "auctioneerStyles": [
+  "Talks so fast that newcomers miss their chance; regulars love it.",
+  "Slow, dry and theatrical, pausing so long before the hammer that people bid out of nerves.",
+  "Remembers every bidder's name and uses it, which makes it very hard to stop bidding.",
+  "Tells a short, possibly true story about each lot before opening it.",
+  "Never raises their voice and never needs to; the room goes silent when they lift the gavel.",
+  "Jokes with the crowd, flatters the rich and teases the cautious into one more bid.",
+  "Sings every bid, which is charming for one lot and maddening by the tenth.",
+  "A Runic woman whose marks glow brighter as the price climbs.",
+  "Insults low bidders by name, and the crowd loves it.",
+  "Speaks only in whispers, so the whole room leans in.",
+  "Tells a little story about each lot before the bidding, some of it true.",
+  "A retired adventurer who handles each weapon and armour piece as if testing it."
+ ],
+ "rules": [
+  "Bids are called in spirit coins. The hammer is final.",
+  "Every lot may be inspected the day before the sale. The house makes no promises beyond its written appraisal.",
+  "Payment is due by sundown on the day of sale; unpaid lots go back on the block and the bidder is banned.",
+  "Proxy bids may be left in a sealed letter with the clerk.",
+  "Fighting, spellcasting and the use of essence abilities in the hall are forbidden. The guards are Bronze rank.",
+  "A paddle is issued to each registered bidder for a deposit of 1 bronze spirit coin, returned at the end.",
+  "Sellers may set a hidden reserve; a lot that fails to reach it is withdrawn without comment.",
+  "Bidders may stay anonymous through a house agent, for a fee.",
+  "Buyers may send a proxy, who must carry a sealed letter of authority.",
+  "Any lot may be withdrawn by the seller up to the moment of the first bid.",
+  "Fighting in the hall bans the fighter and their whole team for life.",
+  "The house holds each lot for three days after sale; uncollected lots are resold.",
+  "No one may bid on their own consigned lots, and the house checks.",
+  "Lots of essence are sold only to those who show an Adventure Society badge or a noble seal."
+ ],
+ "provenance": [
+  "Recovered from an astral space by a Bronze-rank team who need the coins more than the item.",
+  "From the estate of a minor noble house, sold to cover gambling debts.",
+  "Seized by the Adventure Society from a cult's hideout and sold by order of the Society.",
+  "Consigned by {faction}, who will not say how they came by it.",
+  "Found in a monster's hoard after a surge was put down near {place}.",
+  "Brought in by a ship's captain from across the sea, with a story that changes each time it is told.",
+  "The last piece of a famous adventurer's collection, sold by grandchildren who never met them.",
+  "Comes with a sealed Magic Society appraisal, signed by three scholars.",
+  "Consigned anonymously through a house agent. The clerk will only say the seller is 'from out of town'.",
+  "Recovered from a wrecked caravan on the road; the house says the owners are 'presumed dead'.",
+  "Sold by {npc}, who needs money quickly and won't say why.",
+  "Said to have belonged to a priest of {church}, though the church has made no claim.",
+  "Found in the hold of a ship that came back with no crew.",
+  "Recovered from a monster's nest, where it had been for decades.",
+  "Sold by a Gold-rank adventurer retiring to the country.",
+  "Part of a dowry returned after a broken engagement.",
+  "Brought by a Storm Kingdom trader, with papers no one here can check.",
+  "Dug up by a farmer ploughing a new field.",
+  "Taken from a cult's shrine by the Church of Justice and sold to fund its work.",
+  "From the collection of a Magic Society scholar who died without heirs.",
+  "Won in a card game by the current seller, who'd rather have coin.",
+  "Smuggled out of a war zone across the sea.",
+  "From the vault of a noble house that fell from favour.",
+  "Recovered by divers from a sunken city off the coast."
+ ],
+ "rivals": [
+  "a veiled agent of {faction}, who bids by lifting one finger",
+  "a young noble spending their family's money far too fast",
+  "a Silver-rank adventurer who looks bored until the right lot comes up",
+  "a Magic Society scholar with a strict budget and a list",
+  "a merchant from across the sea who bids in round numbers only",
+  "a house agent bidding for someone who isn't in the room",
+  "a retired adventurer who wants back something they lost long ago",
+  "a priest of {church}, bidding on behalf of the temple",
+  "a collector who buys anything with a good story",
+  "a nervous clerk from {faction}, clearly told not to come back without it",
+  "a pair of Bronze-rank siblings pooling their coins and arguing in whispers",
+  "an elderly elf who never bids before the hammer is about to fall",
+  "an old woman in a shawl who bids huge sums and pays in gold bars",
+  "a Magic Society buyer with a list and a strict budget",
+  "a merchant from the steppes who bids by raising a horsewhip",
+  "a pair of twins bidding against each other, apparently by accident",
+  "a church treasurer who keeps praying before each bid",
+  "a masked buyer whose servant does all the talking",
+  "a drunk heir who bids on everything and pays for nothing",
+  "a Silver-rank team pooling their coins and arguing at each raise",
+  "an outworlder collector who wants anything from another world",
+  "a famous chef bidding on monster ingredients",
+  "a quiet Leonid who never bids until the hammer is about to fall",
+  "an agent of the duke, whose bids no one dares to top"
+ ],
+ "events": [
+  "Halfway through, a lot is withdrawn when someone stands and shouts that it was stolen from them.",
+  "A bidding war between two rivals turns personal, and the auctioneer has to call the guards.",
+  "One lot reacts to someone in the room: it glows, hums or grows cold as they pass.",
+  "The lights go out for a moment, and when they return the auctioneer counts the lots twice.",
+  "A latecomer sweeps in, bids on one lot only, and leaves without a word.",
+  "An outworlder in the crowd laughs out loud at a lot, then refuses to explain.",
+  "A Society inspector arrives and asks to see the paperwork for one lot.",
+  "The house adds a surprise lot at the end that isn't in the catalogue.",
+  "A bidder faints when the price passes what they can pay.",
+  "The lights go out for a few seconds; when they return, a lot is gone.",
+  "The auctioneer is bribed, mid-sale, in plain sight.",
+  "A lot turns out to be a monster in disguise, and the sale stops.",
+  "A noble accuses another of bidding with stolen money.",
+  "The house reveals a surprise lot, not in the catalogue.",
+  "A bidder's servant switches sides and bids against them.",
+  "The watch arrives with a warrant for one lot.",
+  "A lot speaks, and the auctioneer pretends it didn't.",
+  "The seller tries to buy their own item back.",
+  "A small fire starts in the storeroom and smoke fills the hall.",
+  "Someone pays for their lot with a cursed coin."
+ ],
+ "secrets": [
+  "One of the rivals is a shill paid by the house to push the prices up. They stop at once if bid against hard.",
+  "{npc} has arranged to buy the best lot whatever it costs, and will be very unhappy with whoever outbids them.",
+  "A thief plans to steal one lot from the winner on their way home tonight.",
+  "The auctioneer owes money to {faction} and is quietly steering one lot their way.",
+  "One lot was stolen from {place} last year, and its owner is in the room.",
+  "The house appraiser was bribed to overstate one lot's powers.",
+  "A rival bidder is an agent of a foreign crown, buying anything that could help an army.",
+  "The sale is being watched by {faction}, who are noting who buys what.",
+  "The best lot is a forgery, and the house knows.",
+  "The auctioneer is selling information about bidders to a crime boss.",
+  "One lot is wanted by a cult that will kill to get it.",
+  "The house is going bankrupt and this sale is its last chance.",
+  "A seller has consigned an item that belongs to the duke.",
+  "One of the porters is a thief who swaps lots for fakes.",
+  "The house's appraiser can't tell real essences from fakes and is too proud to admit it.",
+  "A buyer is an assassin, here to find their target, not to bid.",
+  "A lot contains a hidden map, sewn into its lining.",
+  "The seller of the top lot is dead, and the person who consigned it killed them.",
+  "Two rival houses have both promised the same lot to their patrons.",
+  "The house deliberately undervalues lots from poor sellers and resells them at a profit."
+ ],
+ "exotica": [
+  [
+   "A sealed Bronze-rank monster egg, warm to the touch",
+   6000,
+   "Hatches within a season if kept warm. What hatches imprints on the first person it sees, and it grows quickly."
+  ],
+  [
+   "A map to an unopened astral space",
+   3000,
+   "Hand-drawn by the last surviving member of the team that found it. The space has not yet been claimed by the Adventure Society."
+  ],
+  [
+   "The skull of a Gold-rank monster",
+   25000,
+   "Huge, polished and still faintly radiating magic. Alchemists and crafters prize the bone."
+  ],
+  [
+   "A Silver-rank monster core, still pulsing",
+   700000,
+   "A single core of extraordinary purity. Enough to train a Silver-ranker for weeks, or power a city ward for a year."
+  ],
+  [
+   "A shard of a broken god's statue",
+   15000,
+   "Cold, heavy and impossible to scratch. DM: it whispers at night to whoever holds it."
+  ],
+  [
+   "An outworlder's belongings",
+   800,
+   "Strange clothes, a flat glass slab that does nothing, and a book in an unknown script. The seller swears they came from another world."
+  ],
+  [
+   "A cloud-flask that unfolds into a cottage",
+   40000,
+   "Shaped cloud that becomes a small house with doors, rooms and a working hearth, for as long as it is needed."
+  ],
+  [
+   "A ship's figurehead carved from a living tree",
+   12000,
+   "It still grows leaves in spring, and sailors say a ship that carries it never sinks."
+  ],
+  [
+   "Scales of a Silver-rank sea serpent (a full set)",
+   30000,
+   "Enough for one suit of the finest scale armour, if a Silver-rank crafter can be found to work it."
+  ],
+  [
+   "A sealed letter from a dead queen",
+   2000,
+   "Never opened. The seal is still warded. Historians and at least one noble house want it badly."
+  ],
+  [
+   "A bottle of essence-grade wine, two centuries old",
+   5000,
+   "Brewed with monster fruit. A single glass restores an essence user as fully as a long rest."
+  ],
+  [
+   "A cage holding a live Iron-rank monster cub",
+   1500,
+   "Fierce, hungry and young enough to be raised. The Adventure Society has not been told."
+  ],
+  [
+   "The badge of a famous adventurer, Gold rank",
+   9000,
+   "A Gold-rank Adventure Society badge from a hero who died a generation ago. Not a working badge, but priceless to collectors."
+  ],
+  [
+   "A pristine awakening stone of unknown affinity",
+   20000,
+   "No appraiser can name the essence it would awaken. It hums in a chord no one recognises."
+  ],
+  [
+   "A jar of shadow that never empties, however much is poured out",
+   2500,
+   "Pours like ink and evaporates in sunlight. Useful for covering tracks, or a dark room."
+  ],
+  [
+   "A Silver-rank monster's skull, polished and set with a candle holder",
+   1500,
+   "The candle burns without smoke and never melts down. The skull's jaw moves when anyone lies near it."
+  ],
+  [
+   "A compass that points to the nearest astral space",
+   8000,
+   "Spins wildly in cities. In the wild it is uncannily accurate."
+  ],
+  [
+   "A cloak woven from a giant spider's silk",
+   3500,
+   "Weighs almost nothing, turns blades poorly and climbs walls well; the wearer feels very slightly hungry for flies."
+  ],
+  [
+   "A music box that plays a different song for every listener",
+   1200,
+   "Each listener hears the song they most need to hear. Nobody agrees on what it played."
+  ],
+  [
+   "A sealed letter from a dead king, never opened",
+   5000,
+   "Its seal is intact, and the Magic Society says it is magically warded. Everyone wants to know what it says."
+  ],
+  [
+   "A feather from a phoenix-touched bird, still warm",
+   6500,
+   "Warm forever. Placed on a corpse within a minute of death, it may buy a breath. May."
+  ],
+  [
+   "A set of dice carved from a monster's teeth",
+   900,
+   "Roll true for honest gamblers. Roll badly for cheats, with surprising accuracy."
+  ],
+  [
+   "A chessboard where the pieces move themselves at night",
+   2000,
+   "Plays a single, very slow game against whoever owns it. It's winning."
+  ],
+  [
+   "A bottle of seawater from the far side of the world",
+   700,
+   "Smells of a different ocean. Merfolk pay well for a single drop."
+  ]
+ ],
+ "_upgrades": {
+  "2": {
+   "add": [
+    [
+     "names",
+     [
+      "The Hammer and Hall",
+      "The Gilded Lot",
+      "The Bidding Room",
+      "The Silver Gavel",
+      "The Merchant's Rotunda",
+      "{place} Sale Rooms",
+      "The Last Bid",
+      "The Crown Lots"
+     ]
+    ],
+    [
+     "looks",
+     [
+      "A converted chapel with pews for bidders and lots displayed on the altar.",
+      "An open courtyard with a canvas roof, lots shown on carts wheeled through the crowd.",
+      "A cellar under a bank, lit by candles, where only invited bidders may enter.",
+      "A grand ballroom with chandeliers, the lots shown on a rotating stage.",
+      "A ship's hold, moored in the harbour, so the house can sail if the law comes.",
+      "A garden pavilion where bidders sit at tables and servants bring wine between lots."
+     ]
+    ],
+    [
+     "auctioneerStyles",
+     [
+      "Sings every bid, which is charming for one lot and maddening by the tenth.",
+      "A Runic woman whose marks glow brighter as the price climbs.",
+      "Insults low bidders by name, and the crowd loves it.",
+      "Speaks only in whispers, so the whole room leans in.",
+      "Tells a little story about each lot before the bidding, some of it true.",
+      "A retired adventurer who handles each weapon and armour piece as if testing it."
+     ]
+    ],
+    [
+     "rules",
+     [
+      "Buyers may send a proxy, who must carry a sealed letter of authority.",
+      "Any lot may be withdrawn by the seller up to the moment of the first bid.",
+      "Fighting in the hall bans the fighter and their whole team for life.",
+      "The house holds each lot for three days after sale; uncollected lots are resold.",
+      "No one may bid on their own consigned lots, and the house checks.",
+      "Lots of essence are sold only to those who show an Adventure Society badge or a noble seal."
+     ]
+    ],
+    [
+     "provenance",
+     [
+      "Found in the hold of a ship that came back with no crew.",
+      "Recovered from a monster's nest, where it had been for decades.",
+      "Sold by a Gold-rank adventurer retiring to the country.",
+      "Part of a dowry returned after a broken engagement.",
+      "Brought by a Storm Kingdom trader, with papers no one here can check.",
+      "Dug up by a farmer ploughing a new field.",
+      "Taken from a cult's shrine by the Church of Justice and sold to fund its work.",
+      "From the collection of a Magic Society scholar who died without heirs.",
+      "Won in a card game by the current seller, who'd rather have coin.",
+      "Smuggled out of a war zone across the sea.",
+      "From the vault of a noble house that fell from favour.",
+      "Recovered by divers from a sunken city off the coast."
+     ]
+    ],
+    [
+     "rivals",
+     [
+      "an old woman in a shawl who bids huge sums and pays in gold bars",
+      "a Magic Society buyer with a list and a strict budget",
+      "a merchant from the steppes who bids by raising a horsewhip",
+      "a pair of twins bidding against each other, apparently by accident",
+      "a church treasurer who keeps praying before each bid",
+      "a masked buyer whose servant does all the talking",
+      "a drunk heir who bids on everything and pays for nothing",
+      "a Silver-rank team pooling their coins and arguing at each raise",
+      "an outworlder collector who wants anything from another world",
+      "a famous chef bidding on monster ingredients",
+      "a quiet Leonid who never bids until the hammer is about to fall",
+      "an agent of the duke, whose bids no one dares to top"
+     ]
+    ],
+    [
+     "events",
+     [
+      "A bidder faints when the price passes what they can pay.",
+      "The lights go out for a few seconds; when they return, a lot is gone.",
+      "The auctioneer is bribed, mid-sale, in plain sight.",
+      "A lot turns out to be a monster in disguise, and the sale stops.",
+      "A noble accuses another of bidding with stolen money.",
+      "The house reveals a surprise lot, not in the catalogue.",
+      "A bidder's servant switches sides and bids against them.",
+      "The watch arrives with a warrant for one lot.",
+      "A lot speaks, and the auctioneer pretends it didn't.",
+      "The seller tries to buy their own item back.",
+      "A small fire starts in the storeroom and smoke fills the hall.",
+      "Someone pays for their lot with a cursed coin."
+     ]
+    ],
+    [
+     "secrets",
+     [
+      "The best lot is a forgery, and the house knows.",
+      "The auctioneer is selling information about bidders to a crime boss.",
+      "One lot is wanted by a cult that will kill to get it.",
+      "The house is going bankrupt and this sale is its last chance.",
+      "A seller has consigned an item that belongs to the duke.",
+      "One of the porters is a thief who swaps lots for fakes.",
+      "The house's appraiser can't tell real essences from fakes and is too proud to admit it.",
+      "A buyer is an assassin, here to find their target, not to bid.",
+      "A lot contains a hidden map, sewn into its lining.",
+      "The seller of the top lot is dead, and the person who consigned it killed them.",
+      "Two rival houses have both promised the same lot to their patrons.",
+      "The house deliberately undervalues lots from poor sellers and resells them at a profit."
+     ]
+    ],
+    [
+     "exotica",
+     [
+      [
+       "A jar of shadow that never empties, however much is poured out",
+       2500,
+       "Pours like ink and evaporates in sunlight. Useful for covering tracks, or a dark room."
+      ],
+      [
+       "A Silver-rank monster's skull, polished and set with a candle holder",
+       1500,
+       "The candle burns without smoke and never melts down. The skull's jaw moves when anyone lies near it."
+      ],
+      [
+       "A compass that points to the nearest astral space",
+       8000,
+       "Spins wildly in cities. In the wild it is uncannily accurate."
+      ],
+      [
+       "A cloak woven from a giant spider's silk",
+       3500,
+       "Weighs almost nothing, turns blades poorly and climbs walls well; the wearer feels very slightly hungry for flies."
+      ],
+      [
+       "A music box that plays a different song for every listener",
+       1200,
+       "Each listener hears the song they most need to hear. Nobody agrees on what it played."
+      ],
+      [
+       "A sealed letter from a dead king, never opened",
+       5000,
+       "Its seal is intact, and the Magic Society says it is magically warded. Everyone wants to know what it says."
+      ],
+      [
+       "A feather from a phoenix-touched bird, still warm",
+       6500,
+       "Warm forever. Placed on a corpse within a minute of death, it may buy a breath. May."
+      ],
+      [
+       "A set of dice carved from a monster's teeth",
+       900,
+       "Roll true for honest gamblers. Roll badly for cheats, with surprising accuracy."
+      ],
+      [
+       "A chessboard where the pieces move themselves at night",
+       2000,
+       "Plays a single, very slow game against whoever owns it. It's winning."
+      ],
+      [
+       "A bottle of seawater from the far side of the world",
+       700,
+       "Smells of a different ocean. Merfolk pay well for a single drop."
+      ]
+     ]
+    ]
+   ]
+  }
+ }
+}

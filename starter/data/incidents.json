@@ -1,0 +1,3857 @@
+{
+ "_about": "The storyteller's incident cards. Each is pitched with reasons from the world and only happens when the DM accepts it. drama 1 (small) to 5 (huge). when: conditions, as in story.json (plus festival: a festival within 12 days; follows: tags of a recent chronicle entry at the place; rankMin/rankMax: the party's rank; standingBelow/Above: the party's standing in the place; renownAbove: renown in its region; factionBelow/Above: the party's worst or best standing with a faction, which becomes {faction}; shortage: the place is short of something, which becomes {goods}). cast: the people it needs (role is an NPC generator role). effects: change to the place's numbers. trouble: starts a regional trouble. newPlace: 'site' or 'settlement' makes a new place nearby. scenes: the quest's scenes (default: scenes[kind]). Tokens: {place}, {lead}, {second}, {third}, {goods}, {church}, {trouble}, {festival}, {faction}, {monster}, {newplace}, {rank}.",
+ "version": 3,
+ "rewardByDrama": [
+  "50 spirit coins and goodwill",
+  "150 spirit coins",
+  "400 spirit coins and a favour",
+  "1,000 spirit coins and a debt of honour",
+  "A fortune in spirit coins, and the gratitude of a region"
+ ],
+ "factions": [
+  "a great house",
+  "the merchants' guild",
+  "a rival church",
+  "the Magic Society",
+  "a noble family from the capital"
+ ],
+ "monsters": {
+  "Normal": [
+   "a pack of feral dogs",
+   "a giant boar"
+  ],
+  "Iron": [
+   "a pack of shadow wolves",
+   "a mire troll",
+   "a swarm of razor-beaks",
+   "a stone-hide boar",
+   "a brood of cave crawlers"
+  ],
+  "Bronze": [
+   "a hill giant",
+   "a bone wyvern",
+   "a manticore",
+   "a hydra of the marsh",
+   "a flame-maned lion"
+  ],
+  "Silver": [
+   "a young dragon",
+   "a storm roc",
+   "a lich's servant",
+   "a siege beast"
+  ],
+  "Gold": [
+   "an elder drake",
+   "a titan of the deep"
+  ],
+  "Diamond": [
+   "something without a name"
+  ]
+ },
+ "scenes": {
+  "disaster": [
+   "See the damage for yourselves, and help where help is needed most.",
+   "Find out what really caused it.",
+   "Deal with the cause, before it happens again."
+  ],
+  "society": [
+   "Meet the people involved, each with their own story.",
+   "Dig into what really happened.",
+   "Bring it to a head, and live with the consequences."
+  ],
+  "faction": [
+   "Find out who is behind it, and what they want.",
+   "Gather proof or allies.",
+   "Confront the faction's agent, by deal, by law or by force."
+  ],
+  "economy": [
+   "Follow the money, or the missing goods.",
+   "Find who is profiting.",
+   "Put things right, or make a deal."
+  ],
+  "monster": [
+   "Gather what's known: sightings, survivors and tracks.",
+   "Track it to where it hunts or lairs.",
+   "Fight it on ground of your choosing, if you can."
+  ],
+  "personal": [
+   "Hear them out.",
+   "Find the truth behind what they asked.",
+   "Choose a side, and see it through."
+  ],
+  "magic": [
+   "Witness the strangeness for yourselves.",
+   "Find someone who understands it, or the place it comes from.",
+   "Face what is causing it."
+  ]
+ },
+ "cards": [
+  {
+   "id": "fire-quarter",
+   "kind": "disaster",
+   "name": "A district burns",
+   "drama": 3,
+   "text": "Fire swept through the poorest quarter of {place} overnight. Dozens are homeless, and the {church} has opened its doors to them.",
+   "dm": "It was set. {lead} paid a street gang to clear the land for a warehouse, and two people died in the blaze.",
+   "goal": "Find out who started the fire, and decide what to do about it.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who wanted the land"
+    },
+    {
+     "key": "second",
+     "role": "Street operator",
+     "label": "whose gang lit it"
+    }
+   ],
+   "effects": {
+    "prosperity": -4,
+    "population": -0.5
+   },
+   "rumour": "People in {place} are saying the fire was no accident.",
+   "tags": [
+    "fire",
+    "crime"
+   ]
+  },
+  {
+   "id": "fire-granary",
+   "kind": "disaster",
+   "name": "The granary burns",
+   "drama": 2,
+   "text": "The main granary in {place} burned to the ground, and the winter stores with it.",
+   "dm": "A monster core stored in the cellar by {lead} cracked and caught. They are hiding what happened.",
+   "goal": "Bring in food before the winter, or find who is to blame.",
+   "when": {
+    "seasons": [
+     "autumn",
+     "winter"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who stored the core"
+    }
+   ],
+   "effects": {
+    "prosperity": -4
+   },
+   "tags": [
+    "fire",
+    "shortage"
+   ]
+  },
+  {
+   "id": "flood-river",
+   "kind": "disaster",
+   "name": "The river breaks its banks",
+   "drama": 3,
+   "text": "Days of rain have sent the river over its banks at {place}. Low streets are underwater and families are trapped on rooftops.",
+   "dm": "Something in the flood is hunting the stranded: {monster}, washed down from upstream.",
+   "goal": "Help with the rescue, and deal with what came down with the water.",
+   "when": {
+    "seasons": [
+     "spring",
+     "autumn"
+    ]
+   },
+   "effects": {
+    "prosperity": -3,
+    "safety": -3,
+    "population": -0.3
+   },
+   "scenes": [
+    "Boats and ropes: pull families off the rooftops while the water keeps rising.",
+    "Bodies in the water have bite marks. Track the thing that is hunting the stranded.",
+    "Fight it in the flooded streets, where footing is bad and the current is strong.",
+    "The water falls back. The town counts its losses, and remembers who helped."
+   ],
+   "tags": [
+    "flood",
+    "monster"
+   ]
+  },
+  {
+   "id": "flood-dam",
+   "kind": "disaster",
+   "name": "The old dam cracks",
+   "drama": 4,
+   "text": "Engineers say the old dam above {place} is cracking, and could fail within the tenday. The town council can't agree whether to evacuate.",
+   "dm": "{lead} has been quarrying stone from the dam's base for years and selling it on. Sealing the crack needs earth magic, or a lot of hands and a brave plan.",
+   "goal": "Save {place} from the flood, by repairing the dam or getting everyone out in time.",
+   "when": {
+    "settlements": [
+     "village",
+     "town",
+     "city"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "who must decide"
+    },
+    {
+     "key": "second",
+     "role": "Crafter",
+     "label": "an engineer nobody listens to"
+    }
+   ],
+   "effects": {
+    "safety": -4
+   },
+   "tags": [
+    "flood"
+   ]
+  },
+  {
+   "id": "plague-cough",
+   "kind": "disaster",
+   "name": "A spreading sickness",
+   "drama": 3,
+   "text": "A wasting cough is spreading through {place}. The {church} cannot heal it fast enough, and neighbours are sealing their doors.",
+   "dm": "The sickness comes from a cursed relic {lead} brought back from a ruin and sold at market. Every buyer's household fell ill.",
+   "goal": "Find the source of the sickness before it spreads to the next town.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "who sold the relic"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "overwhelmed healer"
+    }
+   ],
+   "effects": {
+    "population": -1,
+    "prosperity": -3
+   },
+   "rumour": "Travellers from {place} are being turned away at other towns' gates.",
+   "tags": [
+    "disease"
+   ]
+  },
+  {
+   "id": "plague-quarantine",
+   "kind": "disaster",
+   "name": "Quarantine",
+   "drama": 4,
+   "text": "{place} has been sealed by order of the authorities. No one goes in or out until the sickness burns itself out.",
+   "dm": "Food is running out inside, and {lead} is smuggling people out through the old drains, sickness and all.",
+   "goal": "Get a cure, food or a way out to the people inside {place}, without spreading the sickness further.",
+   "when": {
+    "follows": [
+     "disease"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the smuggler"
+    },
+    {
+     "key": "second",
+     "role": "Guard or soldier",
+     "label": "captain of the cordon"
+    }
+   ],
+   "effects": {
+    "population": -1.5,
+    "prosperity": -5,
+    "safety": -3
+   },
+   "tags": [
+    "disease"
+   ]
+  },
+  {
+   "id": "quake",
+   "kind": "disaster",
+   "name": "The ground shakes",
+   "drama": 3,
+   "text": "An earthquake shook {place}. Walls fell, a temple tower collapsed, and a crack has opened in the hills nearby.",
+   "dm": "The crack leads down into an old sealed place, and something in it is awake now.",
+   "goal": "Help dig out the trapped, then find out what the crack opened.",
+   "effects": {
+    "prosperity": -3,
+    "population": -0.2
+   },
+   "newPlace": "site",
+   "tags": [
+    "disaster",
+    "ruin"
+   ]
+  },
+  {
+   "id": "storm-wreck",
+   "kind": "disaster",
+   "name": "A ship is wrecked",
+   "drama": 2,
+   "text": "A storm drove a merchant ship onto the rocks near {place}. Wreckers are already picking over the cargo.",
+   "dm": "The ship carried a sealed crate for {faction}. Whoever holds it now is in danger, and doesn't know it.",
+   "goal": "Recover the crate, or the survivors, before the wreckers or {faction} do.",
+   "when": {},
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the ship's owner"
+    }
+   ],
+   "effects": {
+    "prosperity": 1
+   },
+   "tags": [
+    "storm",
+    "sea"
+   ],
+   "weight": 0.8
+  },
+  {
+   "id": "hailstorm",
+   "kind": "disaster",
+   "name": "Hail flattens the crops",
+   "drama": 2,
+   "text": "A freak hailstorm flattened the fields around {place} days before harvest.",
+   "dm": "Storm priests whisper that it was sent. {lead} cursed the town after being thrown out of the council.",
+   "goal": "Help {place} through a hungry season, or find out if the storm was sent.",
+   "when": {
+    "seasons": [
+     "summer",
+     "autumn"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "who cursed them"
+    }
+   ],
+   "effects": {
+    "prosperity": -4
+   },
+   "tags": [
+    "storm",
+    "shortage"
+   ]
+  },
+  {
+   "id": "landslide",
+   "kind": "disaster",
+   "name": "The road is buried",
+   "drama": 2,
+   "text": "A landslide buried the only road out of {place} and a wagon train with it.",
+   "dm": "Bandits started it with blasting powder, and are waiting for the clear-up crews.",
+   "goal": "Dig out the road and the wagons, and deal with whoever is waiting.",
+   "effects": {
+    "prosperity": -2,
+    "safety": -2
+   },
+   "tags": [
+    "travel",
+    "crime"
+   ]
+  },
+  {
+   "id": "wildfire",
+   "kind": "disaster",
+   "name": "Wildfire",
+   "drama": 3,
+   "text": "A wildfire is sweeping toward {place} on a hot wind. The town is cutting firebreaks and praying for rain.",
+   "dm": "The fire has a heart: an elemental born of the summer's magic, feeding as it goes.",
+   "goal": "Stop the fire before it reaches {place}.",
+   "when": {
+    "seasons": [
+     "summer"
+    ]
+   },
+   "effects": {
+    "prosperity": -3,
+    "safety": -2
+   },
+   "tags": [
+    "fire",
+    "monster"
+   ]
+  },
+  {
+   "id": "drought-wells",
+   "kind": "disaster",
+   "name": "The wells run dry",
+   "drama": 2,
+   "text": "The wells in {place} are failing one after another. Water sellers are charging what they like.",
+   "dm": "{lead} has dammed the spring upstream to sell the water at their own price.",
+   "goal": "Get water flowing to {place} again.",
+   "when": {
+    "seasons": [
+     "summer"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who dammed the spring"
+    }
+   ],
+   "effects": {
+    "prosperity": -3
+   },
+   "tags": [
+    "shortage"
+   ]
+  },
+  {
+   "id": "blizzard",
+   "kind": "disaster",
+   "name": "Snowed in",
+   "drama": 2,
+   "text": "A blizzard has cut {place} off. Supplies are running low and a caravan is lost somewhere on the road.",
+   "dm": "The caravan carried {lead}, who is carrying something worth a great deal to {faction}.",
+   "goal": "Find the lost caravan in the snow.",
+   "when": {
+    "seasons": [
+     "winter"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the lost passenger"
+    }
+   ],
+   "effects": {
+    "prosperity": -2
+   },
+   "tags": [
+    "weather",
+    "travel"
+   ]
+  },
+  {
+   "id": "mine-collapse",
+   "kind": "disaster",
+   "name": "The mine collapses",
+   "drama": 3,
+   "text": "A mine near {place} has collapsed with forty workers inside. Tapping can still be heard from below.",
+   "dm": "The miners broke into a cavern full of spawned monsters, and the collapse was the only thing holding them back.",
+   "goal": "Get the miners out alive.",
+   "effects": {
+    "population": -0.3,
+    "prosperity": -3
+   },
+   "scenes": [
+    "Organise the rescue: digging, shoring timbers, and families crowding the entrance.",
+    "Below ground, the survivors are not alone. Something is digging toward them too.",
+    "Bring the miners up, and seal or clear what they found."
+   ],
+   "tags": [
+    "disaster",
+    "monster"
+   ]
+  },
+  {
+   "id": "surge-signs",
+   "kind": "disaster",
+   "name": "The magic thickens",
+   "drama": 4,
+   "text": "The magic around {place} is running thick. Spawns come more often and stronger, and old-timers have started counting.",
+   "dm": "A surge is building. If it isn't eased, it will peak within two months with something far stronger than {rank} rank.",
+   "goal": "Warn the Adventure Society, and find a way to ease the build before it peaks.",
+   "effects": {
+    "safety": -4
+   },
+   "trouble": {
+    "name": "A surge building",
+    "summary": "The magic is thickening and spawns are coming faster.",
+    "effect": "Expect more and stronger monsters on every road.",
+    "radius": 90
+   },
+   "rumour": "The Society's instruments around {place} are disagreeing with the calendar.",
+   "tags": [
+    "surge",
+    "monster"
+   ]
+  },
+  {
+   "id": "surge-peak",
+   "kind": "disaster",
+   "name": "The surge peaks",
+   "drama": 5,
+   "text": "The surge around {place} has peaked. The region is spawning more than it can kill, villages are evacuating, and every licensed adventurer is called up.",
+   "dm": "At the heart of it stands {monster}, carrying the region's gathered magic. Killing it ends the surge.",
+   "goal": "Hold the line, and kill what the surge has built.",
+   "when": {
+    "follows": [
+     "surge"
+    ],
+    "rankMin": "Iron"
+   },
+   "effects": {
+    "safety": -10,
+    "population": -2,
+    "prosperity": -6
+   },
+   "scenes": [
+    "The call-up: every team is given a sector, and refusing is misconduct.",
+    "Hold a village while its people get away, against wave after wave.",
+    "Track the surge's heart through ground thick with monsters.",
+    "Fight the peak creature. If it lives, the region bleeds for months."
+   ],
+   "tags": [
+    "surge",
+    "monster",
+    "war"
+   ]
+  },
+  {
+   "id": "sinkhole",
+   "kind": "disaster",
+   "name": "The street falls in",
+   "drama": 2,
+   "text": "A sinkhole opened in the middle of {place}, swallowing two houses. Old stonework can be seen far below.",
+   "dm": "It has opened into tunnels used by smugglers, and they want it filled fast, with or without the families who fell.",
+   "goal": "Rescue the fallen, and find out what is down there.",
+   "effects": {
+    "prosperity": -1
+   },
+   "newPlace": "site",
+   "tags": [
+    "ruin",
+    "crime"
+   ]
+  },
+  {
+   "id": "locusts",
+   "kind": "disaster",
+   "name": "A swarm",
+   "drama": 3,
+   "text": "A swarm of giant insects is stripping the fields around {place}, and it is moving toward the next valley.",
+   "dm": "The swarm is guarded by its queen, spawned in a hollow hill nearby.",
+   "goal": "Find and destroy the swarm's queen.",
+   "when": {
+    "seasons": [
+     "summer",
+     "autumn"
+    ]
+   },
+   "effects": {
+    "prosperity": -4
+   },
+   "newPlace": "site",
+   "tags": [
+    "monster",
+    "shortage"
+   ]
+  },
+  {
+   "id": "bridge-falls",
+   "kind": "disaster",
+   "name": "The bridge falls",
+   "drama": 2,
+   "text": "The great bridge at {place} collapsed, cutting the trade road in two. Ferrymen are getting rich.",
+   "dm": "The ferrymen's guild, led by {lead}, weakened the bridge's piers.",
+   "goal": "Get the road open again, and prove who brought the bridge down.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "head of the ferrymen"
+    }
+   ],
+   "effects": {
+    "prosperity": -3
+   },
+   "tags": [
+    "travel",
+    "crime"
+   ]
+  },
+  {
+   "id": "poisoned-well",
+   "kind": "disaster",
+   "name": "A poisoned well",
+   "drama": 3,
+   "text": "Half of {place} fell sick after drinking from the town well. Three have died.",
+   "dm": "{lead} poisoned it to drive families off land that {faction} wants to buy cheap.",
+   "goal": "Find the poisoner.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the poisoner"
+    }
+   ],
+   "effects": {
+    "population": -0.2,
+    "safety": -3
+   },
+   "tags": [
+    "crime",
+    "disease"
+   ]
+  },
+  {
+   "id": "cold-snap",
+   "kind": "disaster",
+   "name": "The killing frost",
+   "drama": 2,
+   "text": "A killing frost has gripped {place}. Firewood has run out, and the poorest are freezing in their homes.",
+   "dm": "A frost spirit took up residence in the old mill when its shrine was torn down.",
+   "goal": "Help {place} through the cold, and find what is making it.",
+   "when": {
+    "seasons": [
+     "winter"
+    ]
+   },
+   "effects": {
+    "population": -0.2,
+    "prosperity": -2
+   },
+   "tags": [
+    "weather",
+    "magic"
+   ]
+  },
+  {
+   "id": "wedding-feud",
+   "kind": "society",
+   "name": "A wedding between rivals",
+   "drama": 2,
+   "text": "{lead} and {second}, from two families who have feuded for a generation, are to marry in {place}. Half the town expects bloodshed at the feast.",
+   "dm": "An uncle on one side means to poison the wedding cup and blame the other family.",
+   "goal": "Keep the peace at the wedding.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the bride or groom"
+    },
+    {
+     "key": "second",
+     "role": "Merchant",
+     "label": "the other"
+    }
+   ],
+   "scenes": [
+    "Meet both families, each sure the other means harm.",
+    "The feast: music, toasts, and a cup that must not be drunk.",
+    "Unmask the poisoner before the families turn on each other."
+   ],
+   "reward": "A place of honour at both families' tables, and a purse from each",
+   "tags": [
+    "wedding",
+    "feud",
+    "family"
+   ]
+  },
+  {
+   "id": "feud-blood",
+   "kind": "society",
+   "name": "A feud turns bloody",
+   "drama": 3,
+   "text": "The quarrel between {lead} and {second} in {place} has turned bloody: a barn burned and a son beaten half to death.",
+   "dm": "Neither family did it. {third} is stoking the feud to buy both farms cheap when they ruin each other.",
+   "goal": "End the feud before someone dies.",
+   "when": {
+    "follows": [
+     "feud"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "head of one family"
+    },
+    {
+     "key": "second",
+     "role": "Merchant",
+     "label": "head of the other"
+    },
+    {
+     "key": "third",
+     "role": "Noble",
+     "label": "who profits"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "feud",
+    "crime"
+   ]
+  },
+  {
+   "id": "succession",
+   "kind": "society",
+   "name": "A disputed inheritance",
+   "drama": 3,
+   "text": "Old {lead} has died, and two claimants want the estate outside {place}: the eldest child and a stranger with a will that names them.",
+   "dm": "The will is real. The stranger is a child born outside the marriage, and the eldest knows it and has hired killers.",
+   "goal": "Settle the inheritance, one way or another.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "who died"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the eldest child"
+    },
+    {
+     "key": "third",
+     "role": "Adventurer",
+     "label": "the stranger with the will"
+    }
+   ],
+   "tags": [
+    "family",
+    "politics"
+   ]
+  },
+  {
+   "id": "festival-murder",
+   "kind": "society",
+   "name": "Death at the festival",
+   "drama": 4,
+   "text": "At {festival} in {place}, a well-known figure collapsed and died in front of a crowd.",
+   "dm": "{lead} was poisoned by someone in a mask. The masks make everyone a suspect, and the killer means to strike again before the festival ends.",
+   "goal": "Find the killer before the festival ends.",
+   "when": {
+    "festival": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the victim"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "a festival-master with secrets"
+    }
+   ],
+   "scenes": [
+    "The death in the crowd, and who was close enough.",
+    "Questioning masked revellers who have every reason to lie.",
+    "A second attempt, and a chase through the festival.",
+    "Unmask the killer."
+   ],
+   "tags": [
+    "festival",
+    "crime",
+    "death"
+   ]
+  },
+  {
+   "id": "festival-theft",
+   "kind": "society",
+   "name": "The festival prize is stolen",
+   "drama": 1,
+   "text": "The prize for {festival} in {place} has been stolen days before it is due to be awarded.",
+   "dm": "{lead} took it to pay off a debt, and is desperate to put it back before anyone notices.",
+   "goal": "Find the prize before {festival}.",
+   "when": {
+    "festival": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the thief"
+    }
+   ],
+   "tags": [
+    "festival",
+    "crime"
+   ]
+  },
+  {
+   "id": "riot-bread",
+   "kind": "society",
+   "name": "A bread riot",
+   "drama": 3,
+   "text": "Prices in {place} have pushed people too far. A crowd broke into the grain merchants' warehouses, and the guard has been called out.",
+   "dm": "{lead} is hoarding grain to drive the price up, and {second} is egging the crowd on for reasons of their own.",
+   "goal": "Stop the riot from becoming a massacre.",
+   "when": {
+    "prosperityBelow": 40
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the hoarder"
+    },
+    {
+     "key": "second",
+     "role": "Street operator",
+     "label": "the agitator"
+    }
+   ],
+   "effects": {
+    "safety": -4,
+    "prosperity": -2
+   },
+   "tags": [
+    "riot",
+    "shortage"
+   ]
+  },
+  {
+   "id": "crime-ring",
+   "kind": "society",
+   "name": "A ring of thieves",
+   "drama": 2,
+   "text": "Burglaries in {place} are coming every night, always at the houses of the well-off, always without a sound.",
+   "dm": "The thieves are children trained by {lead}, who uses a sound-dampening essence ability.",
+   "goal": "Catch the thieves.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "who trains them"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "crime"
+   ]
+  },
+  {
+   "id": "kidnap",
+   "kind": "society",
+   "name": "A kidnapping",
+   "drama": 3,
+   "text": "The child of {lead} has been taken from their home in {place}. A ransom note asks for more than the family can pay.",
+   "dm": "The kidnapper is a former servant, {second}, who believes the child is their own.",
+   "goal": "Bring the child home.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the parent"
+    },
+    {
+     "key": "second",
+     "role": "Crafter",
+     "label": "the kidnapper"
+    }
+   ],
+   "tags": [
+    "crime",
+    "family"
+   ]
+  },
+  {
+   "id": "missing-adventurers",
+   "kind": "society",
+   "name": "A team goes missing",
+   "drama": 3,
+   "text": "An Iron-rank team from {place} took a contract two weeks ago and hasn't come back.",
+   "dm": "They found something they shouldn't have, and {lead} of the local Society office buried their report.",
+   "goal": "Find out what happened to the missing team.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventure Society official",
+     "label": "who buried the report"
+    },
+    {
+     "key": "second",
+     "role": "Adventurer",
+     "label": "the team leader"
+    }
+   ],
+   "newPlace": "site",
+   "tags": [
+    "adventurers",
+    "missing"
+   ]
+  },
+  {
+   "id": "scandal-priest",
+   "kind": "society",
+   "name": "A priest's scandal",
+   "drama": 2,
+   "text": "A priest of the {church} in {place} has been accused of stealing from the temple poor box.",
+   "dm": "The accusation is true, but {lead} stole to pay a blackmailer who knows a far worse secret.",
+   "goal": "Find out what is really going on.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "the accused"
+    },
+    {
+     "key": "second",
+     "role": "Street operator",
+     "label": "the blackmailer"
+    }
+   ],
+   "tags": [
+    "church",
+    "scandal"
+   ]
+  },
+  {
+   "id": "duel",
+   "kind": "society",
+   "name": "A challenge to a duel",
+   "drama": 2,
+   "text": "{lead} has challenged {second} to a duel in {place} over an insult at a dinner. The town has taken sides.",
+   "dm": "{second} is a far better fighter and has been hired to provoke the duel and kill {lead}.",
+   "goal": "Stop the duel, or make it fair.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the challenger"
+    },
+    {
+     "key": "second",
+     "role": "Adventurer",
+     "label": "the challenged"
+    }
+   ],
+   "tags": [
+    "feud"
+   ]
+  },
+  {
+   "id": "trial",
+   "kind": "society",
+   "name": "A trial",
+   "drama": 2,
+   "text": "{lead} is on trial in {place} for a murder they swear they didn't commit, and the judge seems to have already decided.",
+   "dm": "The real killer is the judge's own relative.",
+   "goal": "Find the truth before sentence is passed.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the accused"
+    },
+    {
+     "key": "second",
+     "role": "City official",
+     "label": "the judge"
+    }
+   ],
+   "tags": [
+    "justice",
+    "crime"
+   ]
+  },
+  {
+   "id": "refugees",
+   "kind": "society",
+   "name": "Refugees arrive",
+   "drama": 2,
+   "text": "A column of refugees has arrived at {place}, driven from their villages by {trouble}. The town is divided over letting them in.",
+   "dm": "Among them is {lead}, who is not a refugee at all.",
+   "goal": "Help {place} decide what to do, and find out who is hiding in the column.",
+   "when": {
+    "trouble": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Cultist in disguise",
+     "label": "hiding among them"
+    }
+   ],
+   "effects": {
+    "population": 1,
+    "prosperity": -1
+   },
+   "tags": [
+    "refugees",
+    "trouble"
+   ]
+  },
+  {
+   "id": "election",
+   "kind": "society",
+   "name": "A council election",
+   "drama": 1,
+   "text": "{place} is choosing a new head of its council, and the vote is close between {lead} and {second}.",
+   "dm": "{second} is buying votes, and {lead} is being blackmailed.",
+   "goal": "Make sure the vote is honest, or decide whose side to take.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the honest candidate"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the other candidate"
+    }
+   ],
+   "tags": [
+    "politics"
+   ]
+  },
+  {
+   "id": "cult-signs",
+   "kind": "society",
+   "name": "Signs of a cult",
+   "drama": 3,
+   "text": "Strange symbols are appearing on doors in {place}, and people who ask about them go quiet.",
+   "dm": "A cult has taken root, led by {lead}, who is well liked and above suspicion.",
+   "goal": "Find the cult before it acts.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Cultist in disguise",
+     "label": "its secret leader"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "cult"
+   ]
+  },
+  {
+   "id": "cult-ritual",
+   "kind": "society",
+   "name": "A cult's ritual",
+   "drama": 4,
+   "text": "People have been vanishing from {place}, always on nights without a moon.",
+   "dm": "The cult led by {lead} is gathering sacrifices for a ritual on the next moonless night.",
+   "goal": "Stop the ritual.",
+   "when": {
+    "follows": [
+     "cult"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Cultist in disguise",
+     "label": "its leader"
+    }
+   ],
+   "effects": {
+    "safety": -4,
+    "population": -0.2
+   },
+   "scenes": [
+    "Follow the trail of the vanished.",
+    "Find the cult's meeting place, and who in town protects it.",
+    "Break up the ritual before it is finished."
+   ],
+   "tags": [
+    "cult"
+   ]
+  },
+  {
+   "id": "strike",
+   "kind": "society",
+   "name": "A strike",
+   "drama": 1,
+   "text": "The workers of {place}'s biggest workshop have put down their tools over unpaid wages.",
+   "dm": "{lead} owes {faction} a fortune and is about to vanish with the payroll.",
+   "goal": "Settle the strike, or stop the owner from running.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the owner"
+    }
+   ],
+   "effects": {
+    "prosperity": -2
+   },
+   "tags": [
+    "economy",
+    "society"
+   ]
+  },
+  {
+   "id": "haunting",
+   "kind": "society",
+   "name": "A haunted house",
+   "drama": 2,
+   "text": "A family in {place} has fled their house, swearing that the dead walk in it.",
+   "dm": "It isn't the dead. {lead} is scaring them off to get at something buried under the floor.",
+   "goal": "Clear the house, or catch the haunter.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the haunter"
+    }
+   ],
+   "tags": [
+    "mystery"
+   ]
+  },
+  {
+   "id": "bounty",
+   "kind": "society",
+   "name": "A bounty",
+   "drama": 2,
+   "text": "A bounty has been posted in {place} for {lead}, a killer who escaped the gallows.",
+   "dm": "{lead} was framed, and the bounty was posted by the person who framed them.",
+   "goal": "Bring in the fugitive, or find out why they ran.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the fugitive"
+    }
+   ],
+   "tags": [
+    "crime",
+    "justice"
+   ]
+  },
+  {
+   "id": "old-friend",
+   "kind": "society",
+   "name": "An old friend in trouble",
+   "drama": 1,
+   "text": "{lead}, an old acquaintance of the party, sends word from {place}: they need help, and can't say why in a letter.",
+   "dm": "{lead} has fallen in with dangerous people and owes them a favour that involves the party.",
+   "goal": "Answer the letter.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the old friend"
+    }
+   ],
+   "tags": [
+    "personal"
+   ]
+  },
+  {
+   "id": "tavern-war",
+   "kind": "society",
+   "name": "A tavern war",
+   "drama": 1,
+   "text": "Two taverns in {place} are at war over the town's custom: brawls, poisoned ale and a bard bought off.",
+   "dm": "{lead} of one tavern is sweet on the owner of the other, and the war is their families' doing.",
+   "goal": "End the tavern war.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "one tavern keeper"
+    },
+    {
+     "key": "second",
+     "role": "Merchant",
+     "label": "the other"
+    }
+   ],
+   "tags": [
+    "feud"
+   ]
+  },
+  {
+   "id": "takeover-council",
+   "kind": "faction",
+   "name": "A house takes the council",
+   "drama": 3,
+   "text": "{faction} has bought up the debts of half the council of {place}, and the next vote will go their way.",
+   "dm": "{faction} wants the town's water rights. {lead}, the one councillor they can't buy, has started receiving threats.",
+   "goal": "Protect the honest councillor, or decide which side to back.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "the honest councillor"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the house's agent"
+    }
+   ],
+   "effects": {
+    "prosperity": -1
+   },
+   "tags": [
+    "politics",
+    "faction"
+   ]
+  },
+  {
+   "id": "shrine-opens",
+   "kind": "faction",
+   "name": "A church opens a shrine",
+   "drama": 1,
+   "text": "The {church} is opening a new shrine in {place}, and not everyone is pleased.",
+   "dm": "A rival church has paid {lead} to make sure the opening goes badly.",
+   "goal": "Keep the opening peaceful.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the paid troublemaker"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "the new shrine keeper"
+    }
+   ],
+   "effects": {
+    "prosperity": 1
+   },
+   "tags": [
+    "church",
+    "faction"
+   ]
+  },
+  {
+   "id": "church-rivalry",
+   "kind": "faction",
+   "name": "Churches at odds",
+   "drama": 2,
+   "text": "Preachers of two churches are shouting each other down in the market at {place}, and their followers have started throwing stones.",
+   "dm": "{lead} is a provocateur working for neither church, hired to make both look bad.",
+   "goal": "Calm things down before a riot, and find who is stirring it.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the provocateur"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "church",
+    "riot"
+   ]
+  },
+  {
+   "id": "alliance",
+   "kind": "faction",
+   "name": "An alliance by marriage",
+   "drama": 2,
+   "text": "{faction} and another great house have announced an alliance in {place}, sealed by marriage.",
+   "dm": "The bride, {lead}, plans to run away on the night before the wedding, and asks the party for help.",
+   "goal": "Help the runaway, or see the alliance through.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the reluctant bride"
+    }
+   ],
+   "tags": [
+    "politics",
+    "wedding",
+    "faction"
+   ]
+  },
+  {
+   "id": "schism",
+   "kind": "faction",
+   "name": "A church splits",
+   "drama": 3,
+   "text": "The {church} in {place} has split over a new preacher, {lead}, who claims the god speaks to them directly.",
+   "dm": "The god does. {lead} carries a divine essence, and the church's elders would rather they were dead than proved right.",
+   "goal": "Protect the preacher, or the church's unity.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "the preacher"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "the elder"
+    }
+   ],
+   "tags": [
+    "church",
+    "faction"
+   ]
+  },
+  {
+   "id": "house-spy",
+   "kind": "faction",
+   "name": "A spy in the house",
+   "drama": 2,
+   "text": "{lead} of {faction} believes someone in their household is selling secrets, and wants the party to find them quietly.",
+   "dm": "The spy is {lead}'s own heir, selling secrets to pay a gambling debt.",
+   "goal": "Find the spy.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "who hires the party"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the heir"
+    }
+   ],
+   "tags": [
+    "faction",
+    "intrigue"
+   ]
+  },
+  {
+   "id": "guild-war",
+   "kind": "faction",
+   "name": "A guild war",
+   "drama": 3,
+   "text": "Two crafting guilds in {place} are at war: workshops burned, apprentices beaten, and a master found dead.",
+   "dm": "{faction} is arming both sides, to take over whichever is left.",
+   "goal": "End the guild war.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "one guildmaster"
+    },
+    {
+     "key": "second",
+     "role": "Crafter",
+     "label": "the other"
+    }
+   ],
+   "effects": {
+    "safety": -3,
+    "prosperity": -2
+   },
+   "tags": [
+    "faction",
+    "crime"
+   ]
+  },
+  {
+   "id": "trade-route",
+   "kind": "faction",
+   "name": "Who controls the road",
+   "drama": 3,
+   "text": "{faction} has put armed men on the trade road near {place} and is charging every wagon a toll.",
+   "dm": "The tolls are a test. If no one stops them, {faction} means to take the town next.",
+   "goal": "Get the road open, by law, by force or by deal.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Guard or soldier",
+     "label": "captain of the toll post"
+    }
+   ],
+   "effects": {
+    "prosperity": -3
+   },
+   "tags": [
+    "faction",
+    "travel"
+   ]
+  },
+  {
+   "id": "society-dispute",
+   "kind": "faction",
+   "name": "The Society and the town",
+   "drama": 2,
+   "text": "The Adventure Society branch near {place} and the local lord are at odds over who pays for monster clearance.",
+   "dm": "{lead} of the Society branch has been taking money from both sides.",
+   "goal": "Settle who pays, and expose the double-dealer.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventure Society official",
+     "label": "the double-dealer"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the lord"
+    }
+   ],
+   "tags": [
+    "adventurers",
+    "politics"
+   ]
+  },
+  {
+   "id": "magic-society",
+   "kind": "faction",
+   "name": "The Magic Society's experiment",
+   "drama": 3,
+   "text": "The Magic Society has set up instruments outside {place}, and since then the animals have been acting strangely.",
+   "dm": "{lead} is drawing ambient magic from the region into a crystal, which makes spawning worse elsewhere.",
+   "goal": "Find out what the Magic Society is doing, and whether it should stop.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Magic Society scholar",
+     "label": "who runs it"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "magic",
+    "faction"
+   ]
+  },
+  {
+   "id": "coup",
+   "kind": "faction",
+   "name": "A plot against the ruler",
+   "drama": 5,
+   "text": "Rumours in {place} say the ruler's guards have been replaced, one by one, with strangers.",
+   "dm": "{lead}, the ruler's trusted advisor, is behind it, backed by {faction}, and means to strike at the next public ceremony.",
+   "goal": "Stop the coup, or decide whether it should succeed.",
+   "when": {
+    "settlements": [
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "the advisor"
+    },
+    {
+     "key": "second",
+     "role": "Guard or soldier",
+     "label": "a guard who knows"
+    }
+   ],
+   "effects": {
+    "safety": -4
+   },
+   "scenes": [
+    "Notice the strangers in the guard, and the one who is afraid.",
+    "Follow the plot to the advisor's door.",
+    "The ceremony: stop the strike or step aside."
+   ],
+   "tags": [
+    "politics",
+    "faction",
+    "war"
+   ]
+  },
+  {
+   "id": "house-debt",
+   "kind": "faction",
+   "name": "A house in debt",
+   "drama": 2,
+   "text": "{faction} has run out of money, and its creditors are circling. Its servants in {place} haven't been paid for months.",
+   "dm": "{lead}, the house's steward, has been stealing for years and is about to blame the party's patron.",
+   "goal": "Find where the money went.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the steward"
+    }
+   ],
+   "tags": [
+    "faction",
+    "economy"
+   ]
+  },
+  {
+   "id": "cult-infiltrate",
+   "kind": "faction",
+   "name": "A cult in the house",
+   "drama": 4,
+   "text": "Members of {faction} in {place} have been seen at night where no one respectable goes.",
+   "dm": "A cult has taken over the household, starting with {lead}, the house's head.",
+   "goal": "Find out how deep the cult goes, and break its hold.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Cultist in disguise",
+     "label": "the head of the house"
+    }
+   ],
+   "tags": [
+    "cult",
+    "faction"
+   ]
+  },
+  {
+   "id": "bandit-lord",
+   "kind": "faction",
+   "name": "A bandit claims the hills",
+   "drama": 3,
+   "text": "The bandit {lead} has claimed the hills above {place} as a private domain and demands tribute.",
+   "dm": "{lead} is a former soldier of {faction}, and still takes their orders.",
+   "goal": "Deal with the self-made lord.",
+   "when": {
+    "safetyBelow": 60
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Guard or soldier",
+     "label": "the bandit lord"
+    }
+   ],
+   "effects": {
+    "safety": -4,
+    "prosperity": -2
+   },
+   "trouble": {
+    "name": "The bandit lord",
+    "summary": "Armed riders demand tribute from every farm and wagon.",
+    "effect": "Roads are watched, and travellers are robbed."
+   },
+   "tags": [
+    "crime",
+    "faction"
+   ]
+  },
+  {
+   "id": "house-feud",
+   "kind": "faction",
+   "name": "Two houses at war",
+   "drama": 4,
+   "text": "Two great houses have taken their quarrel to the streets of {place}. Retainers fight at night, and nobody walks alone.",
+   "dm": "The feud began with a murder that {lead} arranged to make each house blame the other.",
+   "goal": "End the house war before the city burns.",
+   "when": {
+    "settlements": [
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the one who started it"
+    }
+   ],
+   "effects": {
+    "safety": -5,
+    "prosperity": -2
+   },
+   "tags": [
+    "faction",
+    "feud",
+    "war"
+   ]
+  },
+  {
+   "id": "recruiting",
+   "kind": "faction",
+   "name": "A house recruits adventurers",
+   "drama": 1,
+   "text": "{faction} is hiring adventurers in {place} for a private expedition, with pay far above the Society's rates.",
+   "dm": "The expedition is to an astral space the Society has forbidden.",
+   "goal": "Take the job, or find out what it really is.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the house's recruiter"
+    }
+   ],
+   "tags": [
+    "faction",
+    "astral"
+   ]
+  },
+  {
+   "id": "merchant-cartel",
+   "kind": "faction",
+   "name": "A cartel",
+   "drama": 2,
+   "text": "Every merchant in {place} has raised their price for {goods} on the same day.",
+   "dm": "{lead} has formed a cartel, and threatens anyone who sells cheap.",
+   "goal": "Break the cartel.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the cartel's head"
+    }
+   ],
+   "effects": {
+    "prosperity": -2
+   },
+   "tags": [
+    "economy",
+    "faction"
+   ]
+  },
+  {
+   "id": "church-inquisition",
+   "kind": "faction",
+   "name": "An inquisition",
+   "drama": 3,
+   "text": "Inquisitors of the Church of Purity have come to {place} looking for corruption, and they are not gentle.",
+   "dm": "They are after {lead}, who carries an unusual essence. The inquisitors' leader has a grudge of their own.",
+   "goal": "Protect the innocent from the inquisition, or help it find the guilty.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the accused"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "the inquisitor"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "church",
+    "faction"
+   ]
+  },
+  {
+   "id": "envoy",
+   "kind": "faction",
+   "name": "An envoy arrives",
+   "drama": 1,
+   "text": "An envoy from a distant realm has arrived in {place}, asking for a meeting with the local ruler.",
+   "dm": "{lead} the envoy is an assassin with real papers.",
+   "goal": "Keep the envoy safe, or keep everyone safe from the envoy.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the envoy"
+    }
+   ],
+   "tags": [
+    "politics",
+    "intrigue"
+   ]
+  },
+  {
+   "id": "tax-revolt",
+   "kind": "faction",
+   "name": "A tax revolt",
+   "drama": 3,
+   "text": "The farms around {place} have refused to pay the new taxes, and soldiers are on their way.",
+   "dm": "The taxes were never ordered. {lead} has been collecting them for personal profit.",
+   "goal": "Stop the soldiers and the farmers from killing each other.",
+   "when": {
+    "prosperityBelow": 50
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "the false collector"
+    },
+    {
+     "key": "second",
+     "role": "Guard or soldier",
+     "label": "the soldiers' captain"
+    }
+   ],
+   "effects": {
+    "safety": -3
+   },
+   "tags": [
+    "politics",
+    "riot"
+   ]
+  },
+  {
+   "id": "outlawed-church",
+   "kind": "faction",
+   "name": "A forbidden church",
+   "drama": 4,
+   "text": "Graves have been opened outside {place}, and the dead were seen walking toward the hills.",
+   "dm": "An outlawed church has a hidden temple nearby, led by {lead}.",
+   "goal": "Find the temple and stop what it is doing.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "the hidden priest"
+    }
+   ],
+   "effects": {
+    "safety": -4
+   },
+   "newPlace": "site",
+   "tags": [
+    "church",
+    "undead"
+   ]
+  },
+  {
+   "id": "caravan-escort",
+   "kind": "economy",
+   "name": "A caravan needs guards",
+   "drama": 1,
+   "text": "A caravan of {goods} is leaving {place} and its guards have quit, scared off by talk of the road.",
+   "dm": "{lead}, the caravan master, is also carrying something they haven't declared.",
+   "goal": "Escort the caravan safely to the next town.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the caravan master"
+    }
+   ],
+   "reward": "Escort pay, and a share of the profit",
+   "tags": [
+    "travel",
+    "economy"
+   ]
+  },
+  {
+   "id": "shortage-food",
+   "kind": "economy",
+   "name": "Food runs short",
+   "drama": 2,
+   "text": "{place} is running out of food. Bread costs triple, and a food caravan is a week overdue.",
+   "dm": "The caravan was taken by {lead}'s gang, who are selling the food back to the town at a fortune.",
+   "goal": "Get food to {place}.",
+   "when": {
+    "prosperityBelow": 45
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the gang's leader"
+    }
+   ],
+   "effects": {
+    "prosperity": -2,
+    "safety": -2
+   },
+   "tags": [
+    "shortage"
+   ]
+  },
+  {
+   "id": "shortage-goods",
+   "kind": "economy",
+   "name": "A shortage of {goods}",
+   "drama": 1,
+   "text": "{place} has run out of {goods}, and the price is climbing every day.",
+   "dm": "A supplier upstream, {lead}, is holding back stock to drive the price up.",
+   "goal": "Find more {goods}, or break the hold-up.",
+   "when": {
+    "follows": [
+     "shortage",
+     "economy"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the supplier"
+    }
+   ],
+   "effects": {
+    "prosperity": -1
+   },
+   "tags": [
+    "shortage",
+    "economy"
+   ]
+  },
+  {
+   "id": "boom-mine",
+   "kind": "economy",
+   "name": "A strike in the hills",
+   "drama": 2,
+   "text": "A rich seam has been found near {place}, and prospectors are flooding in.",
+   "dm": "The seam runs under land {faction} claims, and they are sending people to take it.",
+   "goal": "Keep the peace between prospectors and {faction}, or stake a claim yourselves.",
+   "when": {
+    "prosperityAbove": 30
+   },
+   "effects": {
+    "prosperity": 3,
+    "population": 2,
+    "safety": -2
+   },
+   "newPlace": "settlement",
+   "tags": [
+    "economy",
+    "boom"
+   ]
+  },
+  {
+   "id": "boom-trade",
+   "kind": "economy",
+   "name": "Business is booming",
+   "drama": 1,
+   "text": "{place} is booming. New shops are opening, and merchants from far away are setting up.",
+   "dm": "One of the newcomers, {lead}, is laundering money for a criminal ring.",
+   "goal": "Make the most of the boom, or root out the dirty money.",
+   "when": {
+    "prosperityAbove": 65
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the newcomer"
+    }
+   ],
+   "effects": {
+    "prosperity": 1
+   },
+   "tags": [
+    "economy",
+    "boom"
+   ]
+  },
+  {
+   "id": "counterfeit",
+   "kind": "economy",
+   "name": "Bad coin",
+   "drama": 2,
+   "text": "False spirit coins are turning up in {place}'s markets, and merchants are refusing all coin.",
+   "dm": "{lead} is minting them with stolen core dust.",
+   "goal": "Find the counterfeiter.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the counterfeiter"
+    }
+   ],
+   "effects": {
+    "prosperity": -2
+   },
+   "tags": [
+    "crime",
+    "economy"
+   ]
+  },
+  {
+   "id": "auction-rigged",
+   "kind": "economy",
+   "name": "A rigged auction",
+   "drama": 2,
+   "text": "A great auction is coming to {place}, and a famous item is the prize lot.",
+   "dm": "{lead} has arranged for the lot to be swapped for a fake on the night.",
+   "goal": "Make sure the right buyer goes home with the real thing.",
+   "when": {
+    "settlements": [
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the auctioneer"
+    }
+   ],
+   "tags": [
+    "economy",
+    "intrigue"
+   ]
+  },
+  {
+   "id": "debt-collector",
+   "kind": "economy",
+   "name": "The moneylender's men",
+   "drama": 1,
+   "text": "Debt collectors working for {lead} are beating people in {place} who can't pay.",
+   "dm": "{lead} is collecting on loans {faction} sold to them, and the papers are forged.",
+   "goal": "Stop the beatings, and look into the papers.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the moneylender"
+    }
+   ],
+   "effects": {
+    "safety": -1
+   },
+   "tags": [
+    "crime",
+    "economy"
+   ]
+  },
+  {
+   "id": "smuggling-ring",
+   "kind": "economy",
+   "name": "A smuggling ring",
+   "drama": 2,
+   "text": "Goods are coming into {place} without paying tolls, and the town's coffers are hurting.",
+   "dm": "The smugglers use old tunnels, and {lead} of the town watch is in on it.",
+   "goal": "Break the smuggling ring.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Guard or soldier",
+     "label": "the watch captain"
+    }
+   ],
+   "tags": [
+    "crime",
+    "economy"
+   ]
+  },
+  {
+   "id": "new-market",
+   "kind": "economy",
+   "name": "A new market day",
+   "drama": 1,
+   "text": "{place} has been granted a weekly market, and traders from the whole region are coming.",
+   "dm": "{lead} wants the market for their own town and plans to wreck the first one.",
+   "goal": "Make sure the first market day goes well.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "from the rival town"
+    }
+   ],
+   "effects": {
+    "prosperity": 2
+   },
+   "tags": [
+    "economy"
+   ]
+  },
+  {
+   "id": "harvest-thieves",
+   "kind": "economy",
+   "name": "Harvest thieves",
+   "drama": 1,
+   "text": "Someone is stealing from the fields around {place} at night, just as the harvest comes in.",
+   "dm": "It is hungry refugees, hiding in the woods, led by {lead}.",
+   "goal": "Catch the thieves, and decide what to do about them.",
+   "when": {
+    "seasons": [
+     "autumn"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the refugees' leader"
+    }
+   ],
+   "tags": [
+    "crime",
+    "harvest"
+   ]
+  },
+  {
+   "id": "price-war",
+   "kind": "economy",
+   "name": "A price war",
+   "drama": 1,
+   "text": "Two merchants in {place} are selling {goods} at a loss to drive each other out.",
+   "dm": "{lead} is paying for it with money from {faction}, who want the trade once the other is ruined.",
+   "goal": "Find out who is backing the price war.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "one merchant"
+    }
+   ],
+   "tags": [
+    "economy",
+    "faction"
+   ]
+  },
+  {
+   "id": "core-trade",
+   "kind": "economy",
+   "name": "Monster cores go missing",
+   "drama": 2,
+   "text": "A shipment of monster cores bound for {place} has vanished on the road.",
+   "dm": "{lead}, the shipping agent, sold the cores to a cultist buyer.",
+   "goal": "Find the cores.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the shipping agent"
+    }
+   ],
+   "tags": [
+    "crime",
+    "economy",
+    "magic"
+   ]
+  },
+  {
+   "id": "workshop-fire",
+   "kind": "economy",
+   "name": "A crafter loses everything",
+   "drama": 1,
+   "text": "{lead}, the best crafter in {place}, has lost their workshop to fire, and with it a commission for {faction}.",
+   "dm": "The fire was set by a rival who wanted the commission.",
+   "goal": "Help the crafter finish the commission in time.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the crafter"
+    }
+   ],
+   "tags": [
+    "economy",
+    "fire"
+   ]
+  },
+  {
+   "id": "tolls",
+   "kind": "economy",
+   "name": "New tolls",
+   "drama": 1,
+   "text": "The lord of {place} has doubled the road tolls, and trade has slowed to a trickle.",
+   "dm": "{lead} needs the money to pay off a blackmailer.",
+   "goal": "Find out why the tolls went up, and get them down.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the lord"
+    }
+   ],
+   "effects": {
+    "prosperity": -2
+   },
+   "tags": [
+    "economy",
+    "politics"
+   ]
+  },
+  {
+   "id": "famine",
+   "kind": "economy",
+   "name": "Famine",
+   "drama": 4,
+   "text": "{place} is starving. The harvest failed, the stores are gone, and people are eating seed grain.",
+   "dm": "Food is only three days away, but {faction} has bought it all, and will sell only for the town's land deeds.",
+   "goal": "Save {place} from famine.",
+   "when": {
+    "prosperityBelow": 30
+   },
+   "effects": {
+    "population": -2,
+    "prosperity": -4
+   },
+   "scenes": [
+    "See the hunger in {place} for yourselves.",
+    "Follow the food to the warehouses of {faction}.",
+    "Get the food to the people, by deal, by law or by theft."
+   ],
+   "tags": [
+    "shortage",
+    "faction"
+   ]
+  },
+  {
+   "id": "lost-cargo",
+   "kind": "economy",
+   "name": "A cargo lost in the marsh",
+   "drama": 1,
+   "text": "A barge carrying {goods} sank in the marshes near {place}, and the owner offers a reward to recover it.",
+   "dm": "The barge didn't sink. It was taken by marsh-dwellers who are owed money by the owner.",
+   "goal": "Recover the cargo.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the owner"
+    }
+   ],
+   "tags": [
+    "travel",
+    "economy"
+   ]
+  },
+  {
+   "id": "guild-charter",
+   "kind": "economy",
+   "name": "A guild charter",
+   "drama": 1,
+   "text": "The crafters of {place} want a charter to form a guild, and the council wants a favour first.",
+   "dm": "The favour is to clear a ruin that {lead} has been using to hide stolen goods.",
+   "goal": "Earn the guild its charter.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "the councillor"
+    }
+   ],
+   "newPlace": "site",
+   "tags": [
+    "economy",
+    "ruin"
+   ]
+  },
+  {
+   "id": "bank-run",
+   "kind": "economy",
+   "name": "A run on the moneylenders",
+   "drama": 3,
+   "text": "Word has spread in {place} that the moneylenders are short of coin, and everyone wants their savings back at once.",
+   "dm": "{lead} started the rumour to buy up the moneylenders' notes for nothing.",
+   "goal": "Stop the panic before the town's moneylenders collapse.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who started the rumour"
+    }
+   ],
+   "effects": {
+    "prosperity": -3
+   },
+   "tags": [
+    "economy"
+   ]
+  },
+  {
+   "id": "horse-thieves",
+   "kind": "economy",
+   "name": "Horse thieves",
+   "drama": 1,
+   "text": "Horses are disappearing from the stables of {place}, a few each night.",
+   "dm": "{lead} is selling them to a dealer who sells them back in the next town.",
+   "goal": "Catch the horse thieves.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the thief"
+    }
+   ],
+   "tags": [
+    "crime"
+   ]
+  },
+  {
+   "id": "essence-market",
+   "kind": "economy",
+   "name": "A black market in essences",
+   "drama": 3,
+   "text": "Essences are being sold in {place} without the Magic Society's licence, some of them strange and dangerous.",
+   "dm": "{lead} is selling essences taken from dead adventurers, and some carry the curse of how they died.",
+   "goal": "Shut down the black market.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the seller"
+    }
+   ],
+   "tags": [
+    "crime",
+    "magic",
+    "economy"
+   ]
+  },
+  {
+   "id": "pack-hunts",
+   "kind": "monster",
+   "name": "The pack grows bold",
+   "drama": 2,
+   "text": "{trouble} near {place} has grown bolder, attacking travellers in daylight.",
+   "dm": "The pack is led by a creature stronger than the rest: {monster}.",
+   "goal": "Hunt down the pack's leader.",
+   "when": {
+    "trouble": true
+   },
+   "effects": {
+    "safety": -3
+   },
+   "scenes": [
+    "Talk to survivors and track the pack.",
+    "An ambush at dusk on a lonely road.",
+    "Find the lair and kill the leader. The pack scatters without it."
+   ],
+   "tags": [
+    "monster",
+    "trouble"
+   ]
+  },
+  {
+   "id": "lair-found",
+   "kind": "monster",
+   "name": "A lair is found",
+   "drama": 2,
+   "text": "A shepherd from {place} found a monster lair in the hills: bones, and something big sleeping.",
+   "dm": "It is {monster}, and it has young.",
+   "goal": "Clear the lair.",
+   "effects": {
+    "safety": -1
+   },
+   "newPlace": "site",
+   "tags": [
+    "monster",
+    "lair"
+   ]
+  },
+  {
+   "id": "migration",
+   "kind": "monster",
+   "name": "A migration",
+   "drama": 3,
+   "text": "Herds of monsters are moving across the land near {place}, driven by something behind them.",
+   "dm": "Something has woken in the deep places and is driving every creature before it.",
+   "goal": "Protect {place} from the migration, and find what is driving it.",
+   "effects": {
+    "safety": -4,
+    "prosperity": -2
+   },
+   "trouble": {
+    "name": "Monster migration",
+    "summary": "Herds of monsters are crossing the farmland, trampling everything.",
+    "effect": "Expect stampedes and hungry predators following the herds.",
+    "radius": 70
+   },
+   "tags": [
+    "monster",
+    "migration"
+   ]
+  },
+  {
+   "id": "silver-sighting",
+   "kind": "monster",
+   "name": "A Silver-rank sighting",
+   "drama": 4,
+   "text": "Hunters near {place} swear they saw a Silver-rank monster in the woods. The local Society branch has nobody strong enough.",
+   "dm": "It is real: {monster}, drawn by a surge building elsewhere.",
+   "goal": "Drive it off, kill it, or bring in someone who can.",
+   "when": {
+    "rankMin": "Bronze"
+   },
+   "effects": {
+    "safety": -5
+   },
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "livestock",
+   "kind": "monster",
+   "name": "Livestock slaughtered",
+   "drama": 1,
+   "text": "Something is killing livestock around {place}, a few beasts each night, with strange wounds.",
+   "dm": "It's a small spawn that has learned to hide, and a farmer's child is feeding it.",
+   "goal": "Find and deal with the killer.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the child's parent"
+    }
+   ],
+   "effects": {
+    "prosperity": -1
+   },
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "road-ambush",
+   "kind": "monster",
+   "name": "The road is dangerous",
+   "drama": 1,
+   "text": "Travellers on the road near {place} are being attacked by {monster}.",
+   "dm": "The attacks always happen near the same bridge, where something is nesting under the arches.",
+   "goal": "Make the road safe.",
+   "when": {
+    "safetyBelow": 70
+   },
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "monster",
+    "travel"
+   ]
+  },
+  {
+   "id": "river-beast",
+   "kind": "monster",
+   "name": "Something in the river",
+   "drama": 2,
+   "text": "Fishing boats near {place} have been capsized, and a fisherman dragged under.",
+   "dm": "A river beast has moved in, and {lead} has been feeding it to keep their rivals off the water.",
+   "goal": "Kill the beast, and expose who has been feeding it.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who feeds it"
+    }
+   ],
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "nest-sewers",
+   "kind": "monster",
+   "name": "A nest in the drains",
+   "drama": 2,
+   "text": "Children in {place} talk of eyes in the drains, and pets have been vanishing.",
+   "dm": "A nest of giant vermin has grown under the old town, with a brood mother at its heart.",
+   "goal": "Clear the nest.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "monster-tamer",
+   "kind": "monster",
+   "name": "A tamed monster",
+   "drama": 2,
+   "text": "{lead} has been seen in {place} with a monster on a leash, and the town is terrified.",
+   "dm": "The monster is tame, bound by an essence ability, and {lead} wants a licence to keep it.",
+   "goal": "Decide what happens to the tamer and their beast.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the tamer"
+    }
+   ],
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "giant-spawn",
+   "kind": "monster",
+   "name": "A giant spawns",
+   "drama": 3,
+   "text": "Something huge has spawned in the fields near {place}. It hasn't moved yet, but it is growing.",
+   "dm": "It is {monster}, and the longer it sits, the stronger it gets.",
+   "goal": "Kill it before it wakes fully.",
+   "effects": {
+    "safety": -3
+   },
+   "tags": [
+    "monster",
+    "surge"
+   ]
+  },
+  {
+   "id": "contract-flood",
+   "kind": "monster",
+   "name": "The Society calls for help",
+   "drama": 2,
+   "text": "The Adventure Society branch near {place} has posted more contracts than it can fill: every road has something on it.",
+   "dm": "Spawns are rising because a surge is building nearby, though the branch won't say so.",
+   "goal": "Take contracts, and find out why there are so many.",
+   "when": {
+    "safetyBelow": 60
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventure Society official",
+     "label": "the overworked clerk"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "monster",
+    "adventurers",
+    "surge"
+   ]
+  },
+  {
+   "id": "beast-hunt",
+   "kind": "monster",
+   "name": "A great hunt",
+   "drama": 1,
+   "text": "The lord of {place} is holding a great hunt for {monster}, and hiring adventurers to keep the nobles safe.",
+   "dm": "Someone means to use the hunt to arrange an accident for {lead}.",
+   "goal": "Keep the nobles alive and bring down the quarry.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the target"
+    }
+   ],
+   "tags": [
+    "monster",
+    "intrigue"
+   ]
+  },
+  {
+   "id": "undead-rising",
+   "kind": "monster",
+   "name": "The dead rise",
+   "drama": 3,
+   "text": "The dead are rising from the graveyard of {place}, and the Church of Death is calling for help.",
+   "dm": "{lead} is raising them, working for an outlawed church.",
+   "goal": "Put the dead back to rest, and find who raised them.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "the necromancer"
+    }
+   ],
+   "effects": {
+    "safety": -4
+   },
+   "tags": [
+    "undead",
+    "monster"
+   ]
+  },
+  {
+   "id": "wyvern",
+   "kind": "monster",
+   "name": "A flying terror",
+   "drama": 3,
+   "text": "Something with wings is taking cattle and children from {place}.",
+   "dm": "It is {monster}, nesting on a crag above the town.",
+   "goal": "Kill the flyer.",
+   "effects": {
+    "safety": -4
+   },
+   "newPlace": "site",
+   "tags": [
+    "monster",
+    "lair"
+   ]
+  },
+  {
+   "id": "monster-ally",
+   "kind": "monster",
+   "name": "A monster asks for help",
+   "drama": 2,
+   "text": "A monster that can talk has come to the edge of {place}, asking for the party by name.",
+   "dm": "It is fleeing something worse, and knows where the worse thing lairs.",
+   "goal": "Hear it out.",
+   "tags": [
+    "monster",
+    "mystery"
+   ]
+  },
+  {
+   "id": "core-poachers",
+   "kind": "monster",
+   "name": "Core poachers",
+   "drama": 2,
+   "text": "Poachers are killing monsters near {place} for their cores and leaving the bodies, which draws worse things.",
+   "dm": "The poachers sell to {lead}, who supplies {faction}.",
+   "goal": "Stop the poachers.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the buyer"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "monster",
+    "crime"
+   ]
+  },
+  {
+   "id": "tide-monsters",
+   "kind": "monster",
+   "name": "Things from the sea",
+   "drama": 3,
+   "text": "Monsters have crawled out of the sea near {place}, and the fishing fleet won't go out.",
+   "dm": "An underwater astral space has opened offshore and is spilling out.",
+   "goal": "Drive the monsters back, and close what let them out.",
+   "effects": {
+    "safety": -4,
+    "prosperity": -2
+   },
+   "tags": [
+    "monster",
+    "sea",
+    "astral"
+   ]
+  },
+  {
+   "id": "trouble-escalates",
+   "kind": "monster",
+   "name": "The trouble spreads",
+   "drama": 3,
+   "text": "{trouble} near {place} has spread. Farms are empty, and the next village is preparing to flee.",
+   "dm": "There is a reason it hasn't been stopped: {lead} is profiting from it.",
+   "goal": "Put an end to the trouble at last.",
+   "when": {
+    "trouble": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who profits"
+    }
+   ],
+   "effects": {
+    "safety": -4,
+    "population": -1
+   },
+   "tags": [
+    "trouble"
+   ]
+  },
+  {
+   "id": "trouble-lair",
+   "kind": "monster",
+   "name": "The trouble's source",
+   "drama": 2,
+   "text": "Hunters have tracked {trouble} near {place} to where it comes from.",
+   "dm": "The source is a lair hidden in a ruin nobody knew was there.",
+   "goal": "Strike at the source.",
+   "when": {
+    "trouble": true
+   },
+   "newPlace": "site",
+   "tags": [
+    "trouble",
+    "lair"
+   ]
+  },
+  {
+   "id": "escaped-beast",
+   "kind": "monster",
+   "name": "An escaped beast",
+   "drama": 2,
+   "text": "A monster has escaped from a collector's menagerie in {place} and is loose in the streets.",
+   "dm": "{lead} the collector kept it illegally and will pay for silence.",
+   "goal": "Recapture or kill the beast.",
+   "when": {
+    "settlements": [
+     "town",
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the collector"
+    }
+   ],
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "gold-rank",
+   "kind": "monster",
+   "name": "Something far above them",
+   "drama": 5,
+   "text": "A thing far beyond anything near {place} has been seen on the horizon, and the sky darkens where it goes.",
+   "dm": "It is passing through, not hunting. But anyone who gets in its way dies, and a village lies on its path.",
+   "goal": "Get the village out of the way in time.",
+   "when": {
+    "rankMin": "Iron"
+   },
+   "effects": {
+    "safety": -6,
+    "population": -1
+   },
+   "scenes": [
+    "The sighting, and the panic.",
+    "Race to the village on its path.",
+    "Get everyone out, and survive being close to it."
+   ],
+   "tags": [
+    "monster"
+   ]
+  },
+  {
+   "id": "npc-ambition",
+   "kind": "personal",
+   "name": "An ambition takes a step",
+   "drama": 1,
+   "text": "{lead} of {place} has announced their plan to stand for the council, and is asking for support.",
+   "dm": "They need a famous name to back them, and they think the party will do.",
+   "goal": "Help or hinder their ambition.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the ambitious one"
+    }
+   ],
+   "tags": [
+    "ambition",
+    "politics"
+   ]
+  },
+  {
+   "id": "revenge",
+   "kind": "personal",
+   "name": "Revenge",
+   "drama": 3,
+   "text": "{lead} has come to {place} to kill {second}, who they say murdered their parent.",
+   "dm": "{second} did it, years ago, and has since become a respected priest.",
+   "goal": "Decide where justice lies.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the avenger"
+    },
+    {
+     "key": "second",
+     "role": "Priest",
+     "label": "the killer"
+    }
+   ],
+   "tags": [
+    "revenge",
+    "death"
+   ]
+  },
+  {
+   "id": "love-rivals",
+   "kind": "personal",
+   "name": "Rivals in love",
+   "drama": 1,
+   "text": "{lead} and {second} are both courting the same person in {place}, and it's getting ugly.",
+   "dm": "The person they're courting loves someone else entirely.",
+   "goal": "Settle it, kindly or otherwise.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "one suitor"
+    },
+    {
+     "key": "second",
+     "role": "Noble",
+     "label": "the other"
+    }
+   ],
+   "tags": [
+    "love",
+    "feud"
+   ]
+  },
+  {
+   "id": "rank-up",
+   "kind": "personal",
+   "name": "A friend reaches Bronze",
+   "drama": 1,
+   "text": "{lead}, an adventurer from {place}, is close to reaching Bronze rank, and wants one last big hunt.",
+   "dm": "They are not as ready as they think, and their team is afraid to say so.",
+   "goal": "Help them rank up, or talk them out of the hunt.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the eager adventurer"
+    }
+   ],
+   "tags": [
+    "adventurers",
+    "ambition"
+   ]
+  },
+  {
+   "id": "death-mentor",
+   "kind": "personal",
+   "name": "A mentor dies",
+   "drama": 2,
+   "text": "{lead}, a well-loved veteran of {place}, has died, and left the party something in their will.",
+   "dm": "They didn't die naturally, and the will names their killer in a sealed letter.",
+   "goal": "Find out how they died.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the veteran"
+    }
+   ],
+   "tags": [
+    "death",
+    "mystery"
+   ]
+  },
+  {
+   "id": "birth-heir",
+   "kind": "personal",
+   "name": "An heir is born",
+   "drama": 1,
+   "text": "{lead} of {place} has a new child, and the whole town is celebrating.",
+   "dm": "The child carries a rare mark that {faction} has been searching for.",
+   "goal": "Protect the family.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the parent"
+    }
+   ],
+   "tags": [
+    "family"
+   ]
+  },
+  {
+   "id": "debt-favour",
+   "kind": "personal",
+   "name": "A favour called in",
+   "drama": 2,
+   "text": "{lead} sends word from {place}: the party owes them a favour, and they are calling it in.",
+   "dm": "The favour is something the party won't like.",
+   "goal": "Repay the favour, or find a way out of it.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "who is owed"
+    }
+   ],
+   "tags": [
+    "personal"
+   ]
+  },
+  {
+   "id": "runaway",
+   "kind": "personal",
+   "name": "A runaway",
+   "drama": 1,
+   "text": "{lead}'s teenage child has run away from {place} to become an adventurer.",
+   "dm": "They have joined a team that uses recruits as bait.",
+   "goal": "Bring the runaway home, or keep them alive out there.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the worried parent"
+    },
+    {
+     "key": "second",
+     "role": "Adventurer",
+     "label": "the runaway"
+    }
+   ],
+   "tags": [
+    "family",
+    "adventurers"
+   ]
+  },
+  {
+   "id": "goal-fails",
+   "kind": "personal",
+   "name": "A dream falls apart",
+   "drama": 1,
+   "text": "{lead}'s grand plan in {place} has collapsed, and they have lost everything.",
+   "dm": "Someone sabotaged them on purpose.",
+   "goal": "Find who ruined them.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the ruined one"
+    }
+   ],
+   "tags": [
+    "ambition"
+   ]
+  },
+  {
+   "id": "secret-out",
+   "kind": "personal",
+   "name": "A secret comes out",
+   "drama": 2,
+   "text": "Everyone in {place} is talking about {lead}'s secret, which someone has painted on the market wall.",
+   "dm": "Only three people knew it, and one of them is close to the party.",
+   "goal": "Find who told.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "whose secret it is"
+    }
+   ],
+   "tags": [
+    "scandal"
+   ]
+  },
+  {
+   "id": "old-enemy",
+   "kind": "personal",
+   "name": "An old enemy returns",
+   "drama": 3,
+   "text": "Someone who has reason to hate the party has been seen in {place}.",
+   "dm": "{lead} has spent months preparing, and has allies in the town.",
+   "goal": "Find out what they want before they strike.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the old enemy"
+    }
+   ],
+   "tags": [
+    "revenge"
+   ]
+  },
+  {
+   "id": "deathbed",
+   "kind": "personal",
+   "name": "A deathbed confession",
+   "drama": 2,
+   "text": "Old {lead} of {place} is dying and asks to see the party before the end.",
+   "dm": "They confess to a crime decades old, and the victim's family still lives in town.",
+   "goal": "Hear the confession, and decide what to do with it.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the dying one"
+    }
+   ],
+   "tags": [
+    "death",
+    "mystery"
+   ]
+  },
+  {
+   "id": "betrothal",
+   "kind": "personal",
+   "name": "A forced betrothal",
+   "drama": 2,
+   "text": "{lead} is being made to marry a stranger to pay their family's debts in {place}.",
+   "dm": "The stranger, {second}, wants out of it just as much.",
+   "goal": "Help them, or let it be.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the unwilling bride or groom"
+    },
+    {
+     "key": "second",
+     "role": "Merchant",
+     "label": "the stranger"
+    }
+   ],
+   "tags": [
+    "family",
+    "love"
+   ]
+  },
+  {
+   "id": "lost-sibling",
+   "kind": "personal",
+   "name": "A lost sibling",
+   "drama": 1,
+   "text": "{lead} asks the party to find their sibling, last seen in {place} years ago.",
+   "dm": "The sibling is alive, and under a new name, and doesn't want to be found.",
+   "goal": "Find the lost sibling.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "who is searching"
+    }
+   ],
+   "tags": [
+    "family",
+    "missing"
+   ]
+  },
+  {
+   "id": "fame",
+   "kind": "personal",
+   "name": "The party's fame spreads",
+   "drama": 1,
+   "text": "A bard in {place} has written a song about the party, and it is getting more popular, and less accurate, every day.",
+   "dm": "{lead} commissioned the song to use the party's name for their own scheme.",
+   "goal": "Set the record straight, or enjoy the fame.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who paid for the song"
+    }
+   ],
+   "tags": [
+    "fame"
+   ]
+  },
+  {
+   "id": "impostor",
+   "kind": "personal",
+   "name": "An impostor",
+   "drama": 2,
+   "text": "Someone claiming to be one of the party has been running up debts in {place}.",
+   "dm": "{lead} is an impostor with a disguise essence, and the debts are to dangerous people.",
+   "goal": "Catch the impostor.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the impostor"
+    }
+   ],
+   "tags": [
+    "crime",
+    "fame"
+   ]
+  },
+  {
+   "id": "apprentice",
+   "kind": "personal",
+   "name": "An apprentice asks",
+   "drama": 1,
+   "text": "{lead}, a young person from {place}, begs one of the party to take them as an apprentice.",
+   "dm": "They are running from something and need a strong protector.",
+   "goal": "Decide whether to take them on.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the would-be apprentice"
+    }
+   ],
+   "tags": [
+    "personal"
+   ]
+  },
+  {
+   "id": "illness-friend",
+   "kind": "personal",
+   "name": "A friend falls ill",
+   "drama": 2,
+   "text": "{lead} of {place}, a friend to the party, has fallen ill, and the healers can't help.",
+   "dm": "It's a curse, placed by someone who wants their property.",
+   "goal": "Find a cure.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the friend"
+    }
+   ],
+   "tags": [
+    "disease",
+    "magic"
+   ]
+  },
+  {
+   "id": "gambling",
+   "kind": "personal",
+   "name": "Gambling debts",
+   "drama": 1,
+   "text": "{lead} has lost far more than they had at a card table in {place}, and the house wants paying.",
+   "dm": "The game was rigged by a gambling-den owner with an essence that reads luck.",
+   "goal": "Get the debt cancelled, or win it back.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the gambler"
+    },
+    {
+     "key": "second",
+     "role": "Street operator",
+     "label": "the den owner"
+    }
+   ],
+   "tags": [
+    "crime"
+   ]
+  },
+  {
+   "id": "mourning",
+   "kind": "personal",
+   "name": "A town mourns",
+   "drama": 1,
+   "text": "{place} is in mourning after {lead} drowned. Their family asks the party to recover the body from the lake.",
+   "dm": "It wasn't a drowning, and the body isn't in the lake.",
+   "goal": "Recover the body, and find the truth.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the drowned"
+    }
+   ],
+   "tags": [
+    "death",
+    "mystery"
+   ]
+  },
+  {
+   "id": "grudge-npc",
+   "kind": "personal",
+   "name": "A grudge against the party",
+   "drama": 2,
+   "text": "{lead} of {place} has been telling everyone the party ruined their life, and people are listening.",
+   "dm": "They have a point: something the party did hurt them, without the party knowing.",
+   "goal": "Make amends, or answer the accusation.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who holds the grudge"
+    }
+   ],
+   "tags": [
+    "revenge",
+    "fame"
+   ]
+  },
+  {
+   "id": "astral-door",
+   "kind": "magic",
+   "name": "An astral space opens",
+   "drama": 2,
+   "text": "An astral space has opened near {place}, and the local Society branch is assigning teams to it.",
+   "dm": "It is more dangerous than its rank suggests, and the first team to enter hasn't come out.",
+   "goal": "Enter the astral space and bring the missing team out.",
+   "newPlace": "site",
+   "tags": [
+    "astral",
+    "magic",
+    "adventurers"
+   ]
+  },
+  {
+   "id": "outworlder",
+   "kind": "magic",
+   "name": "An outworlder arrives",
+   "drama": 2,
+   "text": "Someone has appeared near {place} out of nowhere, speaking a strange language and wearing stranger clothes.",
+   "dm": "{lead} is an outworlder, and {faction} wants them for what they know.",
+   "goal": "Find the outworlder before {faction} does.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the outworlder"
+    }
+   ],
+   "tags": [
+    "outworlder",
+    "magic"
+   ]
+  },
+  {
+   "id": "divine-sign",
+   "kind": "magic",
+   "name": "A divine sign",
+   "drama": 2,
+   "text": "A statue of the {church}'s god in {place} has begun to weep, and pilgrims are flooding in.",
+   "dm": "It is a real sign: the god wants something done, and it has to do with the party.",
+   "goal": "Find out what the god wants.",
+   "effects": {
+    "prosperity": 2
+   },
+   "tags": [
+    "church",
+    "magic"
+   ]
+  },
+  {
+   "id": "avatar",
+   "kind": "magic",
+   "name": "An avatar walks",
+   "drama": 5,
+   "text": "People in {place} say a god's avatar has been walking among them, asking questions.",
+   "dm": "It is true. The avatar is searching for someone who has offended its god, and it may not care who gets hurt.",
+   "goal": "Survive the avatar's attention, and help it or hinder it.",
+   "scenes": [
+    "Strange things in town: miracles, and people too frightened to speak.",
+    "Meet the avatar, who wants something.",
+    "Find who it is looking for, before it loses patience."
+   ],
+   "tags": [
+    "church",
+    "magic"
+   ]
+  },
+  {
+   "id": "essence-wild",
+   "kind": "magic",
+   "name": "A wild essence",
+   "drama": 2,
+   "text": "A child in {place} has absorbed an essence by accident, and strange things are happening around them.",
+   "dm": "The essence is a rare one, and {faction} wants it.",
+   "goal": "Protect the child, and teach them to control it.",
+   "tags": [
+    "magic",
+    "essence"
+   ]
+  },
+  {
+   "id": "magic-dead-zone",
+   "kind": "magic",
+   "name": "The magic fades",
+   "drama": 3,
+   "text": "In a ring around {place}, magic has stopped working. Essence abilities fail, and the healers' powers are gone.",
+   "dm": "A device buried by {lead} is drawing the magic into itself, and it is close to bursting.",
+   "goal": "Find the cause before it bursts.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Magic Society scholar",
+     "label": "who buried it"
+    }
+   ],
+   "effects": {
+    "safety": -2
+   },
+   "tags": [
+    "magic"
+   ]
+  },
+  {
+   "id": "ritual-gone-wrong",
+   "kind": "magic",
+   "name": "A ritual gone wrong",
+   "drama": 3,
+   "text": "A Magic Society ritual in {place} went wrong, and a building is now somewhere else.",
+   "dm": "The building and the scholars inside are in a pocket astral space, and the way in is closing.",
+   "goal": "Get the scholars back before the way closes.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Magic Society scholar",
+     "label": "who led the ritual"
+    }
+   ],
+   "tags": [
+    "magic",
+    "astral"
+   ]
+  },
+  {
+   "id": "cursed-item",
+   "kind": "magic",
+   "name": "A cursed treasure",
+   "drama": 2,
+   "text": "{lead} of {place} found a treasure and has been acting strangely since.",
+   "dm": "The treasure is cursed, and is making them into something else.",
+   "goal": "Break the curse.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "who found it"
+    }
+   ],
+   "tags": [
+    "magic",
+    "curse"
+   ]
+  },
+  {
+   "id": "stars-wrong",
+   "kind": "magic",
+   "name": "The stars are wrong",
+   "drama": 3,
+   "text": "Astrologers in {place} say the stars have moved. Dogs howl all night.",
+   "dm": "An astral king is passing close to the world, and its attention is falling on {place}.",
+   "goal": "Find out what the stars mean, and what is coming.",
+   "tags": [
+    "magic",
+    "astral"
+   ]
+  },
+  {
+   "id": "awakening-stone",
+   "kind": "magic",
+   "name": "A strange stone",
+   "drama": 1,
+   "text": "A merchant in {place} is selling an awakening stone no one can identify.",
+   "dm": "It's a fake, and {lead} has sold dozens.",
+   "goal": "Find out what the stone really is.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the seller"
+    }
+   ],
+   "tags": [
+    "magic",
+    "crime"
+   ]
+  },
+  {
+   "id": "portal-circle",
+   "kind": "magic",
+   "name": "The circle misfires",
+   "drama": 3,
+   "text": "The teleport circle at {place} misfired, and three travellers came out wrong.",
+   "dm": "Someone tampered with the circle to send a passenger elsewhere, and three innocents were caught in it.",
+   "goal": "Fix the circle and find out who tampered with it.",
+   "when": {
+    "settlements": [
+     "city",
+     "great city",
+     "capital"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Magic Society scholar",
+     "label": "the circle keeper"
+    }
+   ],
+   "tags": [
+    "magic",
+    "travel"
+   ]
+  },
+  {
+   "id": "ghost-light",
+   "kind": "magic",
+   "name": "Lights in the marsh",
+   "drama": 1,
+   "text": "Lights have been seen moving in the marsh near {place}, and those who follow them don't come back.",
+   "dm": "The lights are spirits leading people to a drowned temple.",
+   "goal": "Follow the lights safely.",
+   "newPlace": "site",
+   "tags": [
+    "magic",
+    "mystery"
+   ]
+  },
+  {
+   "id": "prophecy",
+   "kind": "magic",
+   "name": "A prophecy",
+   "drama": 2,
+   "text": "A seer in {place} has made a prophecy about the party, and the whole town has heard it.",
+   "dm": "The seer, {lead}, is a fraud, but the prophecy is true anyway.",
+   "goal": "Find out what the prophecy means.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "the seer"
+    }
+   ],
+   "tags": [
+    "magic",
+    "fame"
+   ]
+  },
+  {
+   "id": "monster-essence",
+   "kind": "magic",
+   "name": "A monster with essences",
+   "drama": 3,
+   "text": "A monster near {place} is using essence powers, which monsters shouldn't have.",
+   "dm": "It absorbed the essences of an adventurer it killed: {lead}.",
+   "goal": "Hunt it down.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "who it killed"
+    }
+   ],
+   "effects": {
+    "safety": -3
+   },
+   "tags": [
+    "magic",
+    "monster"
+   ]
+  },
+  {
+   "id": "dimension-rift",
+   "kind": "magic",
+   "name": "A rift",
+   "drama": 4,
+   "text": "A rift has torn open in the sky above {place}, and things are coming through.",
+   "dm": "The rift was opened by a cult in an old ruin, and they mean to widen it.",
+   "goal": "Close the rift.",
+   "effects": {
+    "safety": -5
+   },
+   "trouble": {
+    "name": "A rift in the sky",
+    "summary": "A tear in the sky lets strange creatures through.",
+    "effect": "Creatures from beyond appear without warning.",
+    "radius": 40
+   },
+   "newPlace": "site",
+   "tags": [
+    "magic",
+    "cult"
+   ]
+  },
+  {
+   "id": "divine-trial",
+   "kind": "magic",
+   "name": "A god's trial",
+   "drama": 3,
+   "text": "The {church} in {place} says its god has set a trial for anyone worthy, and the prize is a divine essence.",
+   "dm": "The trial is real, and dangerous, and one candidate, {lead}, is cheating.",
+   "goal": "Take the trial, or stop the cheat.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the cheat"
+    }
+   ],
+   "tags": [
+    "church",
+    "magic",
+    "essence"
+   ]
+  },
+  {
+   "id": "astral-collapse",
+   "kind": "magic",
+   "name": "An astral space collapses",
+   "drama": 4,
+   "text": "An astral space near {place} is collapsing, and the team inside is trapped.",
+   "dm": "The collapse will spill its creatures into the world when it ends.",
+   "goal": "Get the team out, and be ready for what spills out.",
+   "when": {
+    "follows": [
+     "astral"
+    ]
+   },
+   "effects": {
+    "safety": -3
+   },
+   "tags": [
+    "astral",
+    "magic"
+   ]
+  },
+  {
+   "id": "magic-surge-crafting",
+   "kind": "magic",
+   "name": "Magic runs rich",
+   "drama": 1,
+   "text": "The magic around {place} is running rich, and crafters are making things they never could before.",
+   "dm": "{lead} is using the surge to make something dangerous.",
+   "goal": "Find out what they're making.",
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "the crafter"
+    }
+   ],
+   "tags": [
+    "magic",
+    "surge"
+   ]
+  },
+  {
+   "id": "second-outworlder",
+   "kind": "magic",
+   "name": "More outworlders",
+   "drama": 3,
+   "text": "More outworlders have arrived near {place}, and they claim to know each other.",
+   "dm": "They are part of a group sent by something from their world, and one of them, {lead}, is not what they seem.",
+   "goal": "Find out why they have come.",
+   "when": {
+    "follows": [
+     "outworlder"
+    ]
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the outworlder"
+    }
+   ],
+   "tags": [
+    "outworlder"
+   ]
+  },
+  {
+   "id": "blessing",
+   "kind": "magic",
+   "name": "A blessing",
+   "drama": 1,
+   "text": "{place} has been blessed by the {church}: harvests are good and people are healthy.",
+   "dm": "The blessing has a price, and the bill is about to come due.",
+   "goal": "Find out what the price is.",
+   "effects": {
+    "prosperity": 2
+   },
+   "tags": [
+    "church",
+    "magic"
+   ]
+  },
+  {
+   "id": "cursed-town",
+   "kind": "magic",
+   "name": "A cursed town",
+   "drama": 4,
+   "text": "Since {festival}, nobody in {place} can sleep. They are wearing down, and tempers are fraying.",
+   "dm": "The town was cursed at the festival by {lead}, who was turned away at the gate.",
+   "goal": "Lift the curse before the town tears itself apart.",
+   "when": {
+    "festival": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Priest",
+     "label": "who cursed them"
+    }
+   ],
+   "effects": {
+    "safety": -3,
+    "prosperity": -2
+   },
+   "tags": [
+    "magic",
+    "curse",
+    "festival"
+   ]
+  },
+  {
+   "id": "grudge-ambush",
+   "kind": "faction",
+   "name": "A house strikes back",
+   "drama": 3,
+   "text": "Hired blades have been asking around {place} about the party: where they sleep, and who they drink with.",
+   "dm": "{faction} has not forgiven the party, and has hired {lead} to teach them a lesson.",
+   "goal": "Survive the ambush, and find out who paid for it.",
+   "when": {
+    "factionBelow": -30
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the hired blade"
+    }
+   ],
+   "scenes": [
+    "Notice the questions being asked about you.",
+    "The ambush, at the worst possible moment.",
+    "Follow the money back to {faction}, and decide how to answer."
+   ],
+   "tags": [
+    "revenge",
+    "faction"
+   ]
+  },
+  {
+   "id": "grudge-slander",
+   "kind": "faction",
+   "name": "A whispering campaign",
+   "drama": 2,
+   "text": "Stories about the party are spreading in {place}: that they rob the dead, and take bribes.",
+   "dm": "{faction} is paying {lead} to spread them, to ruin the party's name.",
+   "goal": "Clear the party's name.",
+   "when": {
+    "factionBelow": -20
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the whisperer"
+    }
+   ],
+   "tags": [
+    "fame",
+    "faction"
+   ]
+  },
+  {
+   "id": "grudge-contract",
+   "kind": "faction",
+   "name": "A rigged contract",
+   "drama": 2,
+   "text": "A contract in {place} pays far too well for the work it asks.",
+   "dm": "It is bait, set by {faction} to send the party somewhere they won't come back from.",
+   "goal": "Take the contract, or turn the trap on its makers.",
+   "when": {
+    "factionBelow": -20
+   },
+   "newPlace": "site",
+   "tags": [
+    "faction",
+    "revenge"
+   ]
+  },
+  {
+   "id": "patron-offer",
+   "kind": "faction",
+   "name": "A patron's offer",
+   "drama": 2,
+   "text": "{faction} sends word to the party in {place}: they have work, and they pay well.",
+   "dm": "The job is honest, but it will put the party on the wrong side of {faction}'s rivals.",
+   "goal": "Hear the offer.",
+   "when": {
+    "factionAbove": 30
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Noble",
+     "label": "the house's envoy"
+    }
+   ],
+   "tags": [
+    "faction",
+    "patron"
+   ]
+  },
+  {
+   "id": "patron-favour",
+   "kind": "faction",
+   "name": "A favour returned",
+   "drama": 1,
+   "text": "{faction} remembers what the party did for them, and offers a favour in {place}.",
+   "dm": "The favour is real, though it comes with an expectation.",
+   "goal": "Decide what to ask for.",
+   "when": {
+    "factionAbove": 40
+   },
+   "reward": "A favour from {faction}: a safe house, an introduction, or a door opened",
+   "tags": [
+    "faction",
+    "patron"
+   ]
+  },
+  {
+   "id": "honoured-feast",
+   "kind": "personal",
+   "name": "A feast in their honour",
+   "drama": 1,
+   "text": "{place} is holding a feast in the party's honour, and the whole town is coming.",
+   "dm": "Someone at the feast, {lead}, has a grievance with one of the party and means to air it in public.",
+   "goal": "Attend the feast.",
+   "when": {
+    "standingAbove": 40
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "with a grievance"
+    }
+   ],
+   "reward": "Free room and board in {place} for a season",
+   "tags": [
+    "fame"
+   ]
+  },
+  {
+   "id": "honoured-plea",
+   "kind": "personal",
+   "name": "A plea for help",
+   "drama": 2,
+   "text": "The people of {place} trust the party, and come to them first when {lead} goes missing.",
+   "dm": "{lead} went looking for the party's help and was taken on the way.",
+   "goal": "Find {lead}.",
+   "when": {
+    "standingAbove": 30
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Crafter",
+     "label": "who went missing"
+    }
+   ],
+   "tags": [
+    "missing"
+   ]
+  },
+  {
+   "id": "hated-closed",
+   "kind": "personal",
+   "name": "Doors close",
+   "drama": 1,
+   "text": "Innkeepers in {place} are turning the party away, and the market stalls have no stock for them.",
+   "dm": "{lead}, who was hurt by something the party did, is behind the cold shoulder.",
+   "goal": "Win back {place}, or find somewhere else to stay.",
+   "when": {
+    "standingBelow": -20
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "who turned the town against them"
+    }
+   ],
+   "tags": [
+    "fame",
+    "revenge"
+   ]
+  },
+  {
+   "id": "hated-mob",
+   "kind": "personal",
+   "name": "A mob",
+   "drama": 3,
+   "text": "A crowd has gathered outside where the party is staying in {place}, and it is turning ugly.",
+   "dm": "{lead} has stirred them up with a story that is half true.",
+   "goal": "Get out of {place} without bloodshed, or face the crowd.",
+   "when": {
+    "standingBelow": -50
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "who stirred the mob"
+    }
+   ],
+   "tags": [
+    "riot",
+    "revenge"
+   ]
+  },
+  {
+   "id": "fame-rival",
+   "kind": "personal",
+   "name": "A rival team",
+   "drama": 2,
+   "text": "A rival team of adventurers, led by {lead}, has arrived in {place}, and they want everything the party has.",
+   "dm": "{lead} is jealous of the party's name and will take their contracts by fair means or foul.",
+   "goal": "Deal with the rivals.",
+   "when": {
+    "renownAbove": 20
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the rival leader"
+    }
+   ],
+   "tags": [
+    "adventurers",
+    "fame"
+   ]
+  },
+  {
+   "id": "fame-challenger",
+   "kind": "personal",
+   "name": "A challenger",
+   "drama": 2,
+   "text": "A young fighter, {lead}, has come to {place} to challenge one of the party to a duel and make their own name.",
+   "dm": "{lead} is better than they look, and someone is betting heavily on them.",
+   "goal": "Accept the challenge, or talk them out of it.",
+   "when": {
+    "renownAbove": 25
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Adventurer",
+     "label": "the challenger"
+    }
+   ],
+   "tags": [
+    "fame",
+    "feud"
+   ]
+  },
+  {
+   "id": "fame-summons",
+   "kind": "personal",
+   "name": "A summons",
+   "drama": 3,
+   "text": "The party's name has reached the powerful. A messenger in {place} brings a summons from the ruler's court.",
+   "dm": "The court wants the party for a task no one else will touch, and refusing would be unwise.",
+   "goal": "Answer the summons.",
+   "when": {
+    "renownAbove": 40
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "City official",
+     "label": "the messenger"
+    }
+   ],
+   "tags": [
+    "fame",
+    "politics"
+   ]
+  },
+  {
+   "id": "shortage-escort",
+   "kind": "economy",
+   "name": "Escorts for the {goods}",
+   "drama": 2,
+   "text": "{place} is short of {goods}, and the only caravan bringing more needs guards through dangerous country.",
+   "dm": "{lead}, who owns the caravan, has also promised half of it to a hoarder in {place}.",
+   "goal": "Bring the caravan in safely.",
+   "when": {
+    "shortage": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the caravan master"
+    }
+   ],
+   "scenes": [
+    "Meet the caravan and its nervous drivers.",
+    "The road, and what waits on it.",
+    "Arrive in {place}, and find out who the {goods} is really for."
+   ],
+   "tags": [
+    "travel",
+    "economy"
+   ]
+  },
+  {
+   "id": "shortage-hoarder",
+   "kind": "economy",
+   "name": "A hoarder",
+   "drama": 2,
+   "text": "With {goods} short in {place}, someone is buying up what's left and selling it at five times the price.",
+   "dm": "{lead} is the hoarder, and the town watch has been paid to look away.",
+   "goal": "Find the hoard, and decide what to do with it.",
+   "when": {
+    "shortage": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Merchant",
+     "label": "the hoarder"
+    }
+   ],
+   "tags": [
+    "crime",
+    "economy"
+   ]
+  },
+  {
+   "id": "shortage-smugglers",
+   "kind": "economy",
+   "name": "Smuggled {goods}",
+   "drama": 1,
+   "text": "Smugglers are bringing {goods} into {place}, and nobody is asking questions while the shortage lasts.",
+   "dm": "{lead}'s smugglers are carrying something else under the {goods}.",
+   "goal": "Look into the smugglers.",
+   "when": {
+    "shortage": true
+   },
+   "cast": [
+    {
+     "key": "lead",
+     "role": "Street operator",
+     "label": "the smuggler"
+    }
+   ],
+   "tags": [
+    "crime",
+    "smuggling"
+   ]
+  }
+ ]
+}

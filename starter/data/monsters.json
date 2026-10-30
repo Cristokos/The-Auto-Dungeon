@@ -1,0 +1,2617 @@
+{
+ "_about": "Monsters for encounters, by CR. themes: essences they fit, plus tags like marsh, undead, astral. Every monster here has a full stat block in the bestiary list under the same name; add your own monsters to both.",
+ "monsters": [
+  {
+   "name": "Awakened Shrub",
+   "cr": 0,
+   "themes": [
+    "Life"
+   ]
+  },
+  {
+   "name": "Baboon",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Badger",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Bat",
+   "cr": 0,
+   "themes": [
+    "Blood",
+    "Might"
+   ]
+  },
+  {
+   "name": "Cat",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Commoner",
+   "cr": 0,
+   "themes": [
+    "Sin",
+    "humanoid",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Crab",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Deer",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Eagle",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Frog",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "marsh",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Giant Fire Beetle",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Goat",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Hawk",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Homunculus",
+   "cr": 0,
+   "themes": [
+    "Magic",
+    "Earth",
+    "construct"
+   ]
+  },
+  {
+   "name": "Hyena",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Jackal",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Lemure",
+   "cr": 0,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Lizard",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Octopus",
+   "cr": 0,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Owl",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Quipper",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Rat",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Raven",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Scorpion",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Sea Horse",
+   "cr": 0,
+   "themes": [
+    "Water",
+    "Swift",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Shrieker",
+   "cr": 0,
+   "themes": [
+    "Life"
+   ]
+  },
+  {
+   "name": "Spider",
+   "cr": 0,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Vulture",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Weasel",
+   "cr": 0,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Bandit",
+   "cr": 0.125,
+   "themes": [
+    "Sin",
+    "Swift",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Blood Hawk",
+   "cr": 0.125,
+   "themes": [
+    "Blood",
+    "Might"
+   ]
+  },
+  {
+   "name": "Camel",
+   "cr": 0.125,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Cultist",
+   "cr": 0.125,
+   "themes": [
+    "Sin",
+    "Dark",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Flying Snake",
+   "cr": 0.125,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Crab",
+   "cr": 0.125,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Rat",
+   "cr": 0.125,
+   "themes": [
+    "Blood",
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Giant Rat (Diseased)",
+   "cr": 0.125,
+   "themes": [
+    "Might",
+    "Water"
+   ]
+  },
+  {
+   "name": "Giant Weasel",
+   "cr": 0.125,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Guard",
+   "cr": 0.125,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Kobold",
+   "cr": 0.125,
+   "themes": [
+    "Earth",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Mastiff",
+   "cr": 0.125,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Merfolk",
+   "cr": 0.125,
+   "themes": [
+    "Water",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Mule",
+   "cr": 0.125,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Noble",
+   "cr": 0.125,
+   "themes": [
+    "Sin",
+    "humanoid",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Poisonous Snake",
+   "cr": 0.125,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Pony",
+   "cr": 0.125,
+   "themes": [
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Stirge",
+   "cr": 0.125,
+   "themes": [
+    "Blood",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Tribal Warrior",
+   "cr": 0.125,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Acolyte",
+   "cr": 0.25,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Axe Beak",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Blink Dog",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Magic",
+    "astral"
+   ]
+  },
+  {
+   "name": "Boar",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Constrictor Snake",
+   "cr": 0.25,
+   "themes": [
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Draft Horse",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Dretch",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Drow",
+   "cr": 0.25,
+   "themes": [
+    "Dark",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Elk",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Flying Sword",
+   "cr": 0.25,
+   "themes": [
+    "Earth",
+    "Magic",
+    "construct"
+   ]
+  },
+  {
+   "name": "Giant Badger",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Bat",
+   "cr": 0.25,
+   "themes": [
+    "Might",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Giant Centipede",
+   "cr": 0.25,
+   "themes": [
+    "Earth",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Giant Frog",
+   "cr": 0.25,
+   "themes": [
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Giant Lizard",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Owl",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Poisonous Snake",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Wolf Spider",
+   "cr": 0.25,
+   "themes": [
+    "Blood",
+    "Might"
+   ]
+  },
+  {
+   "name": "Goblin",
+   "cr": 0.25,
+   "themes": [
+    "Sin",
+    "Swift",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Grimlock",
+   "cr": 0.25,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Mud Mephit",
+   "cr": 0.25,
+   "themes": [
+    "Earth",
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Panther",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Might"
+   ]
+  },
+  {
+   "name": "Pseudodragon",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Riding Horse",
+   "cr": 0.25,
+   "themes": [
+    "Swift",
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Skeleton",
+   "cr": 0.25,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Smoke Mephit",
+   "cr": 0.25,
+   "themes": [
+    "Fire",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Sprite",
+   "cr": 0.25,
+   "themes": [
+    "Wind",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Steam Mephit",
+   "cr": 0.25,
+   "themes": [
+    "Fire",
+    "Water"
+   ]
+  },
+  {
+   "name": "Swarm of Bats",
+   "cr": 0.25,
+   "themes": [
+    "Dark",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Swarm of Rats",
+   "cr": 0.25,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Swarm of Ravens",
+   "cr": 0.25,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Violet Fungus",
+   "cr": 0.25,
+   "themes": [
+    "Life"
+   ]
+  },
+  {
+   "name": "Wolf",
+   "cr": 0.25,
+   "themes": [
+    "Might",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Zombie",
+   "cr": 0.25,
+   "themes": [
+    "Blood",
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Ape",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Black Bear",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Cockatrice",
+   "cr": 0.5,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Crocodile",
+   "cr": 0.5,
+   "themes": [
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Darkmantle",
+   "cr": 0.5,
+   "themes": [
+    "Dark",
+    "Might"
+   ]
+  },
+  {
+   "name": "Deep Gnome (Svirfneblin)",
+   "cr": 0.5,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Dust Mephit",
+   "cr": 0.5,
+   "themes": [
+    "Earth",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Giant Goat",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Sea Horse",
+   "cr": 0.5,
+   "themes": [
+    "Might",
+    "Water"
+   ]
+  },
+  {
+   "name": "Giant Wasp",
+   "cr": 0.5,
+   "themes": [
+    "Wind",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Gnoll",
+   "cr": 0.5,
+   "themes": [
+    "Earth",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Gray Ooze",
+   "cr": 0.5,
+   "themes": [
+    "Earth",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Hobgoblin",
+   "cr": 0.5,
+   "themes": [
+    "Sin",
+    "Might",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Ice Mephit",
+   "cr": 0.5,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Lizardfolk",
+   "cr": 0.5,
+   "themes": [
+    "Sin",
+    "humanoid",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Magma Mephit",
+   "cr": 0.5,
+   "themes": [
+    "Fire",
+    "Earth"
+   ]
+  },
+  {
+   "name": "Magmin",
+   "cr": 0.5,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Orc",
+   "cr": 0.5,
+   "themes": [
+    "Might",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Reef Shark",
+   "cr": 0.5,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Rust Monster",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Sahuagin",
+   "cr": 0.5,
+   "themes": [
+    "Water",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Satyr",
+   "cr": 0.5,
+   "themes": [
+    "Magic",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Scout",
+   "cr": 0.5,
+   "themes": [
+    "Swift",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Shadow",
+   "cr": 0.5,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Swarm of Beetles",
+   "cr": 0.5,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Swarm of Centipedes",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Swarm of Insects",
+   "cr": 0.5,
+   "themes": [
+    "Blood",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Swarm of Spiders",
+   "cr": 0.5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Swarm of Wasps",
+   "cr": 0.5,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Thug",
+   "cr": 0.5,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Warhorse",
+   "cr": 0.5,
+   "themes": [
+    "Swift",
+    "Might",
+    "peaceful"
+   ]
+  },
+  {
+   "name": "Warhorse Skeleton",
+   "cr": 0.5,
+   "themes": [
+    "Dark",
+    "Swift",
+    "undead"
+   ]
+  },
+  {
+   "name": "Worg",
+   "cr": 0.5,
+   "themes": [
+    "Dark",
+    "Might"
+   ]
+  },
+  {
+   "name": "Animated Armor",
+   "cr": 1,
+   "themes": [
+    "Magic",
+    "Might",
+    "construct"
+   ]
+  },
+  {
+   "name": "Brass Dragon Wyrmling",
+   "cr": 1,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Brown Bear",
+   "cr": 1,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Bugbear",
+   "cr": 1,
+   "themes": [
+    "Might",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Copper Dragon Wyrmling",
+   "cr": 1,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Death Dog",
+   "cr": 1,
+   "themes": [
+    "Dark",
+    "Might"
+   ]
+  },
+  {
+   "name": "Dire Wolf",
+   "cr": 1,
+   "themes": [
+    "Might",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Dryad",
+   "cr": 1,
+   "themes": [
+    "Life",
+    "Magic",
+    "astral"
+   ]
+  },
+  {
+   "name": "Duergar",
+   "cr": 1,
+   "themes": [
+    "Earth",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Ghoul",
+   "cr": 1,
+   "themes": [
+    "Blood",
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Giant Eagle",
+   "cr": 1,
+   "themes": [
+    "Might",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Giant Hyena",
+   "cr": 1,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Octopus",
+   "cr": 1,
+   "themes": [
+    "Might",
+    "Water"
+   ]
+  },
+  {
+   "name": "Giant Spider",
+   "cr": 1,
+   "themes": [
+    "Dark"
+   ]
+  },
+  {
+   "name": "Giant Toad",
+   "cr": 1,
+   "themes": [
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Giant Vulture",
+   "cr": 1,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Harpy",
+   "cr": 1,
+   "themes": [
+    "Wind",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Hippogriff",
+   "cr": 1,
+   "themes": [
+    "Wind",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Imp",
+   "cr": 1,
+   "themes": [
+    "Sin",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Lion",
+   "cr": 1,
+   "themes": [
+    "Swift",
+    "Might"
+   ]
+  },
+  {
+   "name": "Quasit",
+   "cr": 1,
+   "themes": [
+    "Sin",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Specter",
+   "cr": 1,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Spy",
+   "cr": 1,
+   "themes": [
+    "Sin",
+    "Swift",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Swarm of Quippers",
+   "cr": 1,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Tiger",
+   "cr": 1,
+   "themes": [
+    "Swift",
+    "Might"
+   ]
+  },
+  {
+   "name": "Ankheg",
+   "cr": 2,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Awakened Tree",
+   "cr": 2,
+   "themes": [
+    "Life"
+   ]
+  },
+  {
+   "name": "Azer",
+   "cr": 2,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Bandit Captain",
+   "cr": 2,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Berserker",
+   "cr": 2,
+   "themes": [
+    "Might",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Black Dragon Wyrmling",
+   "cr": 2,
+   "themes": [
+    "Dark",
+    "Earth",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Bronze Dragon Wyrmling",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Centaur",
+   "cr": 2,
+   "themes": [
+    "Life",
+    "Might"
+   ]
+  },
+  {
+   "name": "Cult Fanatic",
+   "cr": 2,
+   "themes": [
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Druid",
+   "cr": 2,
+   "themes": [
+    "Life",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Ettercap",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Gargoyle",
+   "cr": 2,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Gelatinous Cube",
+   "cr": 2,
+   "themes": [
+    "Magic"
+   ]
+  },
+  {
+   "name": "Ghast",
+   "cr": 2,
+   "themes": [
+    "Blood",
+    "undead"
+   ]
+  },
+  {
+   "name": "Giant Boar",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Constrictor Snake",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Elk",
+   "cr": 2,
+   "themes": [
+    "Might",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Gibbering Mouther",
+   "cr": 2,
+   "themes": [
+    "Magic",
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Green Dragon Wyrmling",
+   "cr": 2,
+   "themes": [
+    "Life",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Grick",
+   "cr": 2,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Griffon",
+   "cr": 2,
+   "themes": [
+    "Wind",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Hunter Shark",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Merrow",
+   "cr": 2,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Mimic",
+   "cr": 2,
+   "themes": [
+    "Magic",
+    "astral"
+   ]
+  },
+  {
+   "name": "Minotaur Skeleton",
+   "cr": 2,
+   "themes": [
+    "Dark",
+    "Might",
+    "undead"
+   ]
+  },
+  {
+   "name": "Nothic",
+   "cr": 2,
+   "themes": [
+    "Magic",
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Ochre Jelly",
+   "cr": 2,
+   "themes": [
+    "Blood",
+    "Water"
+   ]
+  },
+  {
+   "name": "Ogre",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Ogre Zombie",
+   "cr": 2,
+   "themes": [
+    "Dark",
+    "Earth",
+    "undead"
+   ]
+  },
+  {
+   "name": "Pegasus",
+   "cr": 2,
+   "themes": [
+    "Light",
+    "Wind",
+    "astral"
+   ]
+  },
+  {
+   "name": "Plesiosaurus",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Polar Bear",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Priest",
+   "cr": 2,
+   "themes": [
+    "Light",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Rhinoceros",
+   "cr": 2,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Rug of Smothering",
+   "cr": 2,
+   "themes": [
+    "Earth",
+    "Magic",
+    "construct"
+   ]
+  },
+  {
+   "name": "Saber-Toothed Tiger",
+   "cr": 2,
+   "themes": [
+    "Swift",
+    "Might"
+   ]
+  },
+  {
+   "name": "Sea Hag",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Silver Dragon Wyrmling",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Light"
+   ]
+  },
+  {
+   "name": "Swarm of Poisonous Snakes",
+   "cr": 2,
+   "themes": [
+    "Blood"
+   ]
+  },
+  {
+   "name": "Wererat",
+   "cr": 2,
+   "themes": [
+    "Blood",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "White Dragon Wyrmling",
+   "cr": 2,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Will-o'-Wisp",
+   "cr": 2,
+   "themes": [
+    "Light",
+    "Dark",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Basilisk",
+   "cr": 3,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Bearded Devil",
+   "cr": 3,
+   "themes": [
+    "Sin",
+    "Might",
+    "astral"
+   ]
+  },
+  {
+   "name": "Blue Dragon Wyrmling",
+   "cr": 3,
+   "themes": [
+    "Wind",
+    "Might"
+   ]
+  },
+  {
+   "name": "Displacer Beast",
+   "cr": 3,
+   "themes": [
+    "Dark",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Doppelganger",
+   "cr": 3,
+   "themes": [
+    "Sin",
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Scorpion",
+   "cr": 3,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Gold Dragon Wyrmling",
+   "cr": 3,
+   "themes": [
+    "Fire",
+    "Light"
+   ]
+  },
+  {
+   "name": "Green Hag",
+   "cr": 3,
+   "themes": [
+    "Sin",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Hell Hound",
+   "cr": 3,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Killer Whale",
+   "cr": 3,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Knight",
+   "cr": 3,
+   "themes": [
+    "Dark",
+    "Light",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Manticore",
+   "cr": 3,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Minotaur",
+   "cr": 3,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Mummy",
+   "cr": 3,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Nightmare",
+   "cr": 3,
+   "themes": [
+    "Dark",
+    "Fire",
+    "astral"
+   ]
+  },
+  {
+   "name": "Owlbear",
+   "cr": 3,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Phase Spider",
+   "cr": 3,
+   "themes": [
+    "Magic",
+    "Swift",
+    "astral"
+   ]
+  },
+  {
+   "name": "Veteran",
+   "cr": 3,
+   "themes": [
+    "Might",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Water Weird",
+   "cr": 3,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Werewolf",
+   "cr": 3,
+   "themes": [
+    "Blood",
+    "Might"
+   ]
+  },
+  {
+   "name": "Wight",
+   "cr": 3,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Winter Wolf",
+   "cr": 3,
+   "themes": [
+    "Water",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Banshee",
+   "cr": 4,
+   "themes": [
+    "Dark",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Black Pudding",
+   "cr": 4,
+   "themes": [
+    "Blood"
+   ]
+  },
+  {
+   "name": "Chuul",
+   "cr": 4,
+   "themes": [
+    "Magic",
+    "Dark",
+    "astral"
+   ]
+  },
+  {
+   "name": "Couatl",
+   "cr": 4,
+   "themes": [
+    "Light",
+    "Life",
+    "astral"
+   ]
+  },
+  {
+   "name": "Elephant",
+   "cr": 4,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Ettin",
+   "cr": 4,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Flameskull",
+   "cr": 4,
+   "themes": [
+    "Fire",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Ghost",
+   "cr": 4,
+   "themes": [
+    "Dark"
+   ]
+  },
+  {
+   "name": "Lamia",
+   "cr": 4,
+   "themes": [
+    "Sin"
+   ]
+  },
+  {
+   "name": "Red Dragon Wyrmling",
+   "cr": 4,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Succubus/Incubus",
+   "cr": 4,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Wereboar",
+   "cr": 4,
+   "themes": [
+    "Blood",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Weretiger",
+   "cr": 4,
+   "themes": [
+    "Blood",
+    "Swift",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Air Elemental",
+   "cr": 5,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Barbed Devil",
+   "cr": 5,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Bulette",
+   "cr": 5,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Earth Elemental",
+   "cr": 5,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Fire Elemental",
+   "cr": 5,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Flesh Golem",
+   "cr": 5,
+   "themes": [
+    "Earth",
+    "Magic",
+    "construct"
+   ]
+  },
+  {
+   "name": "Giant Crocodile",
+   "cr": 5,
+   "themes": [
+    "Might",
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Giant Shark",
+   "cr": 5,
+   "themes": [
+    "Might",
+    "Water"
+   ]
+  },
+  {
+   "name": "Gladiator",
+   "cr": 5,
+   "themes": [
+    "Might",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Gorgon",
+   "cr": 5,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Half-Red Dragon Veteran",
+   "cr": 5,
+   "themes": [
+    "Fire",
+    "Might",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Hill Giant",
+   "cr": 5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Night Hag",
+   "cr": 5,
+   "themes": [
+    "Sin",
+    "Blood",
+    "astral",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Otyugh",
+   "cr": 5,
+   "themes": [
+    "Magic",
+    "Dark",
+    "astral"
+   ]
+  },
+  {
+   "name": "Roper",
+   "cr": 5,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Salamander",
+   "cr": 5,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Shambling Mound",
+   "cr": 5,
+   "themes": [
+    "Water",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Triceratops",
+   "cr": 5,
+   "themes": [
+    "Might",
+    "Water"
+   ]
+  },
+  {
+   "name": "Troll",
+   "cr": 5,
+   "themes": [
+    "Blood",
+    "Might"
+   ]
+  },
+  {
+   "name": "Unicorn",
+   "cr": 5,
+   "themes": [
+    "Light"
+   ]
+  },
+  {
+   "name": "Vampire Spawn",
+   "cr": 5,
+   "themes": [
+    "Blood",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Water Elemental",
+   "cr": 5,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Werebear",
+   "cr": 5,
+   "themes": [
+    "Blood",
+    "Might",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Wraith",
+   "cr": 5,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Xorn",
+   "cr": 5,
+   "themes": [
+    "Earth",
+    "astral"
+   ]
+  },
+  {
+   "name": "Chimera",
+   "cr": 6,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Drider",
+   "cr": 6,
+   "themes": [
+    "Dark"
+   ]
+  },
+  {
+   "name": "Invisible Stalker",
+   "cr": 6,
+   "themes": [
+    "Wind",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Mage",
+   "cr": 6,
+   "themes": [
+    "Magic",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Mammoth",
+   "cr": 6,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Medusa",
+   "cr": 6,
+   "themes": [
+    "Earth",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Vrock",
+   "cr": 6,
+   "themes": [
+    "Wind",
+    "Earth",
+    "astral"
+   ]
+  },
+  {
+   "name": "Wyvern",
+   "cr": 6,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Young Brass Dragon",
+   "cr": 6,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Young White Dragon",
+   "cr": 6,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Giant Ape",
+   "cr": 7,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Oni",
+   "cr": 7,
+   "themes": [
+    "Sin",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Shield Guardian",
+   "cr": 7,
+   "themes": [
+    "Magic",
+    "Earth",
+    "construct"
+   ]
+  },
+  {
+   "name": "Stone Giant",
+   "cr": 7,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Young Black Dragon",
+   "cr": 7,
+   "themes": [
+    "Water",
+    "Dark",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Young Copper Dragon",
+   "cr": 7,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Assassin",
+   "cr": 8,
+   "themes": [
+    "Sin",
+    "Swift",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Chain Devil",
+   "cr": 8,
+   "themes": [
+    "Sin"
+   ]
+  },
+  {
+   "name": "Cloaker",
+   "cr": 8,
+   "themes": [
+    "Dark",
+    "Magic",
+    "astral"
+   ]
+  },
+  {
+   "name": "Frost Giant",
+   "cr": 8,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Hezrou",
+   "cr": 8,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Hydra",
+   "cr": 8,
+   "themes": [
+    "Water",
+    "Blood",
+    "marsh"
+   ]
+  },
+  {
+   "name": "Spirit Naga",
+   "cr": 8,
+   "themes": [
+    "Magic",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Tyrannosaurus Rex",
+   "cr": 8,
+   "themes": [
+    "Might"
+   ]
+  },
+  {
+   "name": "Young Bronze Dragon",
+   "cr": 8,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Young Green Dragon",
+   "cr": 8,
+   "themes": [
+    "Sin"
+   ]
+  },
+  {
+   "name": "Bone Devil",
+   "cr": 9,
+   "themes": [
+    "Sin"
+   ]
+  },
+  {
+   "name": "Clay Golem",
+   "cr": 9,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Cloud Giant",
+   "cr": 9,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Fire Giant",
+   "cr": 9,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Glabrezu",
+   "cr": 9,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Treant",
+   "cr": 9,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Young Blue Dragon",
+   "cr": 9,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Young Silver Dragon",
+   "cr": 9,
+   "themes": [
+    "Water",
+    "Light"
+   ]
+  },
+  {
+   "name": "Aboleth",
+   "cr": 10,
+   "themes": [
+    "Water",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Deva",
+   "cr": 10,
+   "themes": [
+    "Light",
+    "astral"
+   ]
+  },
+  {
+   "name": "Guardian Naga",
+   "cr": 10,
+   "themes": [
+    "Magic",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Stone Golem",
+   "cr": 10,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Young Gold Dragon",
+   "cr": 10,
+   "themes": [
+    "Fire",
+    "Light"
+   ]
+  },
+  {
+   "name": "Young Red Dragon",
+   "cr": 10,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Behir",
+   "cr": 11,
+   "themes": [
+    "Wind",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Djinni",
+   "cr": 11,
+   "themes": [
+    "Wind"
+   ]
+  },
+  {
+   "name": "Efreeti",
+   "cr": 11,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Gynosphinx",
+   "cr": 11,
+   "themes": [
+    "Magic",
+    "Might"
+   ]
+  },
+  {
+   "name": "Horned Devil",
+   "cr": 11,
+   "themes": [
+    "Sin",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Remorhaz",
+   "cr": 11,
+   "themes": [
+    "Fire",
+    "Earth"
+   ]
+  },
+  {
+   "name": "Roc",
+   "cr": 11,
+   "themes": [
+    "Wind",
+    "Might"
+   ]
+  },
+  {
+   "name": "Archmage",
+   "cr": 12,
+   "themes": [
+    "Magic",
+    "Sin",
+    "humanoid"
+   ]
+  },
+  {
+   "name": "Erinyes",
+   "cr": 12,
+   "themes": [
+    "Sin",
+    "Might"
+   ]
+  },
+  {
+   "name": "Adult Brass Dragon",
+   "cr": 13,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Adult White Dragon",
+   "cr": 13,
+   "themes": [
+    "Water",
+    "Might"
+   ]
+  },
+  {
+   "name": "Nalfeshnee",
+   "cr": 13,
+   "themes": [
+    "Sin",
+    "astral"
+   ]
+  },
+  {
+   "name": "Rakshasa",
+   "cr": 13,
+   "themes": [
+    "Sin",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Storm Giant",
+   "cr": 13,
+   "themes": [
+    "Wind",
+    "Water"
+   ]
+  },
+  {
+   "name": "Vampire",
+   "cr": 13,
+   "themes": [
+    "Blood",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Adult Black Dragon",
+   "cr": 14,
+   "themes": [
+    "Water",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Adult Copper Dragon",
+   "cr": 14,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Ice Devil",
+   "cr": 14,
+   "themes": [
+    "Water",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Adult Bronze Dragon",
+   "cr": 15,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Adult Green Dragon",
+   "cr": 15,
+   "themes": [
+    "Life",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Mummy Lord",
+   "cr": 15,
+   "themes": [
+    "Dark",
+    "undead"
+   ]
+  },
+  {
+   "name": "Purple Worm",
+   "cr": 15,
+   "themes": [
+    "Earth"
+   ]
+  },
+  {
+   "name": "Adult Blue Dragon",
+   "cr": 16,
+   "themes": [
+    "Wind",
+    "Might"
+   ]
+  },
+  {
+   "name": "Adult Silver Dragon",
+   "cr": 16,
+   "themes": [
+    "Water",
+    "Light"
+   ]
+  },
+  {
+   "name": "Iron Golem",
+   "cr": 16,
+   "themes": [
+    "Might",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Marilith",
+   "cr": 16,
+   "themes": [
+    "Sin",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Planetar",
+   "cr": 16,
+   "themes": [
+    "Light",
+    "astral"
+   ]
+  },
+  {
+   "name": "Adult Gold Dragon",
+   "cr": 17,
+   "themes": [
+    "Fire",
+    "Light"
+   ]
+  },
+  {
+   "name": "Adult Red Dragon",
+   "cr": 17,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Androsphinx",
+   "cr": 17,
+   "themes": [
+    "Light",
+    "Magic"
+   ]
+  },
+  {
+   "name": "Dragon Turtle",
+   "cr": 17,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Balor",
+   "cr": 19,
+   "themes": [
+    "Fire",
+    "Sin"
+   ]
+  },
+  {
+   "name": "Ancient Brass Dragon",
+   "cr": 20,
+   "themes": [
+    "Fire",
+    "Might"
+   ]
+  },
+  {
+   "name": "Ancient White Dragon",
+   "cr": 20,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Pit Fiend",
+   "cr": 20,
+   "themes": [
+    "Sin",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Ancient Black Dragon",
+   "cr": 21,
+   "themes": [
+    "Water",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Ancient Copper Dragon",
+   "cr": 21,
+   "themes": [
+    "Earth",
+    "Might"
+   ]
+  },
+  {
+   "name": "Lich",
+   "cr": 21,
+   "themes": [
+    "Magic",
+    "Dark"
+   ]
+  },
+  {
+   "name": "Solar",
+   "cr": 21,
+   "themes": [
+    "Light",
+    "astral"
+   ]
+  },
+  {
+   "name": "Ancient Bronze Dragon",
+   "cr": 22,
+   "themes": [
+    "Water",
+    "Wind"
+   ]
+  },
+  {
+   "name": "Ancient Green Dragon",
+   "cr": 22,
+   "themes": [
+    "Life",
+    "Blood"
+   ]
+  },
+  {
+   "name": "Ancient Blue Dragon",
+   "cr": 23,
+   "themes": [
+    "Wind",
+    "Might"
+   ]
+  },
+  {
+   "name": "Ancient Silver Dragon",
+   "cr": 23,
+   "themes": [
+    "Water",
+    "Light"
+   ]
+  },
+  {
+   "name": "Kraken",
+   "cr": 23,
+   "themes": [
+    "Water"
+   ]
+  },
+  {
+   "name": "Ancient Gold Dragon",
+   "cr": 24,
+   "themes": [
+    "Light",
+    "Fire"
+   ]
+  },
+  {
+   "name": "Ancient Red Dragon",
+   "cr": 24,
+   "themes": [
+    "Fire"
+   ]
+  },
+  {
+   "name": "Tarrasque",
+   "cr": 30,
+   "themes": [
+    "Might"
+   ]
+  }
+ ],
+ "version": 2
+}

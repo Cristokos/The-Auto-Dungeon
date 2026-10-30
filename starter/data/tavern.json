@@ -1,0 +1,1581 @@
+{
+ "_about": "Banks for the tavern generator. Prices are in gp (0.1 = 1 silver piece, 0.01 = 1 copper). Edit freely; {place}, {faction}, {npc}, {church} and {owner} are filled in when a tavern is generated.",
+ "version": 3,
+ "names": {
+  "patterns": [
+   "The {adj} {noun}",
+   "The {adj} {noun}",
+   "The {noun} and {noun2}",
+   "{owner}'s {noun}",
+   "The {noun}'s Rest",
+   "The Last {noun}",
+   "{noun} and {noun2}",
+   "The {noun} at the Crossing",
+   "The Old {noun}",
+   "The {adj} {noun}'s Arms",
+   "The {noun}'s Head",
+   "{owner}'s Place",
+   "The Sign of the {noun}",
+   "The House of the {adj} {noun}"
+  ],
+  "adj": [
+   "Drowned",
+   "Gilded",
+   "Rusty",
+   "Laughing",
+   "Sleeping",
+   "Crooked",
+   "Wandering",
+   "Third",
+   "Salted",
+   "Broken",
+   "Lucky",
+   "Weeping",
+   "Copper",
+   "Blind",
+   "Burning",
+   "Silver",
+   "Hungry",
+   "Patient",
+   "Painted",
+   "Fallen",
+   "Singing",
+   "Restless",
+   "Stubborn",
+   "Glass",
+   "Black",
+   "Red",
+   "Green",
+   "Golden",
+   "Jolly",
+   "Drunken",
+   "Silent",
+   "Howling",
+   "Grinning",
+   "Winking",
+   "Thirsty",
+   "Merry",
+   "Lost",
+   "Lame",
+   "Dancing",
+   "Leaping",
+   "Iron",
+   "Bronze",
+   "Velvet",
+   "Faithful",
+   "Wicked",
+   "Honest",
+   "Lonely",
+   "Proud",
+   "Shy",
+   "Sly",
+   "Tattered",
+   "Bold",
+   "Flying",
+   "Sunken",
+   "Hidden",
+   "Wild",
+   "Merry",
+   "Old",
+   "Bright",
+   "Grey",
+   "Crowned",
+   "Spotted",
+   "Sleepy",
+   "Hollow",
+   "Fat",
+   "Frozen",
+   "Sunlit",
+   "Moonlit",
+   "Salty",
+   "Twin",
+   "Bearded",
+   "Barefoot",
+   "Clever",
+   "Wooden",
+   "Ragged",
+   "Spiced",
+   "Lazy",
+   "Dusty",
+   "Blushing",
+   "Grim"
+  ],
+  "noun": [
+   "Kraken",
+   "Lantern",
+   "Anchor",
+   "Goat",
+   "Crown",
+   "Essence",
+   "Core",
+   "Gull",
+   "Heron",
+   "Oar",
+   "Spire",
+   "Barrel",
+   "Sword",
+   "Mermaid",
+   "Dragon",
+   "Shell",
+   "Mule",
+   "Compass",
+   "Kettle",
+   "Bell",
+   "Lotus",
+   "Crab",
+   "Wyvern",
+   "Delta",
+   "Ferryman",
+   "Stone",
+   "Fox",
+   "Hound",
+   "Stag",
+   "Boar",
+   "Bear",
+   "Hare",
+   "Owl",
+   "Raven",
+   "Swan",
+   "Ox",
+   "Ram",
+   "Horse",
+   "Lion",
+   "Cockerel",
+   "Pig",
+   "Fish",
+   "Eel",
+   "Whale",
+   "Ship",
+   "Cart",
+   "Wheel",
+   "Plough",
+   "Sickle",
+   "Hammer",
+   "Anvil",
+   "Bucket",
+   "Tankard",
+   "Flagon",
+   "Cup",
+   "Spoon",
+   "Ladle",
+   "Pipe",
+   "Fiddle",
+   "Drum",
+   "Harp",
+   "Lute",
+   "Candle",
+   "Key",
+   "Door",
+   "Gate",
+   "Bridge",
+   "Ford",
+   "Well",
+   "Mill",
+   "Oak",
+   "Thorn",
+   "Rose",
+   "Thistle",
+   "Pearl",
+   "Coin",
+   "Hand",
+   "Boot",
+   "Hat",
+   "Cloak",
+   "Monk",
+   "Bishop",
+   "Knight",
+   "Maiden",
+   "Pilgrim",
+   "Traveller",
+   "Fiddler",
+   "Piper",
+   "Moon",
+   "Star",
+   "Sun",
+   "Comet",
+   "Griffin",
+   "Basilisk",
+   "Manticore",
+   "Unicorn",
+   "Ape",
+   "Spider"
+  ]
+ },
+ "kinds": [
+  {
+   "name": "Dockside tavern",
+   "quality": "poor",
+   "weight": 3,
+   "outside": [
+    "A sagging timber building on stilts over the water, its sign a painted anchor.",
+    "Wedged between two warehouses, with a door so low everyone ducks.",
+    "A converted boathouse, the old slipway now a beer garden.",
+    "A tarred plank shack with an upturned boat for a roof.",
+    "A stone cellar under the fish market, reached by slimy steps.",
+    "A former customs house, its official sign painted over with a leaping fish.",
+    "A long, low shed hung with drying nets, its door propped open with an anchor.",
+    "A ship's hull hauled ashore and fitted with windows, still named for the ship."
+   ],
+   "inside": [
+    "Sawdust on the floor, nets on the ceiling, and a smell of tar and fried fish.",
+    "Long benches, scarred tables and a fire that smokes more than it warms.",
+    "Low beams hung with lanterns, and a floor that rocks slightly when the tide comes in.",
+    "Lanterns made from fish-oil jars throw greasy yellow light over a crowd of dockhands.",
+    "A bar made of a ship's mast laid on barrels, polished smooth by a thousand elbows.",
+    "Tables nailed to the floor, as if the room expects a storm.",
+    "A chalkboard of ships due in and out, and bets on which will be late.",
+    "Salt crusts the windows; inside it is warm, loud and smells of wet rope."
+   ],
+   "patrons": [
+    "dockhands",
+    "fishers",
+    "sailors on shore leave",
+    "smugglers pretending to be sailors",
+    "off-duty harbour guards",
+    "a cargo master counting coins under the table",
+    "pearl divers still wet from the harbour",
+    "a press gang looking for sailors who've had one too many"
+   ]
+  },
+  {
+   "name": "Roadside inn",
+   "quality": "modest",
+   "weight": 3,
+   "outside": [
+    "A long stone inn with stables, a well and a sign creaking in the wind.",
+    "A whitewashed coaching inn at a crossroads, its yard full of carts.",
+    "A fortified inn with a wooden palisade, built for monster country.",
+    "A coaching inn with a yard full of wagons and a farrier hammering at the side.",
+    "A fortified waystation with a ditch, a palisade and a very small door.",
+    "A rambling farmhouse that turned into an inn one room at a time.",
+    "A stone inn at a crossroads, its sign shot full of arrows by bored travellers.",
+    "A long thatched building beside a ford, with a bell to call the ferryman."
+   ],
+   "inside": [
+    "A wide common room with a hearth big enough to roast a pig, and usually does.",
+    "Clean rushes on the floor, polished tables and a cat on every windowsill.",
+    "A cosy room of dark wood, with a notice board crowded with travellers' messages.",
+    "A hearth big enough to roast an ox, and an ox roasting in it.",
+    "Benches packed with travellers trading road news over bowls of the same stew.",
+    "A common room with a map of the region painted on one wall, travellers' corrections scratched into it.",
+    "Low ceilings, smoked hams hanging from the beams, and a dog asleep under every table.",
+    "A quiet room upstairs for those who pay extra, and a noisy one downstairs for those who don't."
+   ],
+   "patrons": [
+    "merchants on the road",
+    "a caravan's guards",
+    "pilgrims",
+    "farmers come to sell at market",
+    "a courier changing horses",
+    "a tinker with a cart full of pots",
+    "a family moving house with everything they own",
+    "a Society courier eating standing up"
+   ]
+  },
+  {
+   "name": "Adventurers' haunt",
+   "quality": "modest",
+   "weight": 3,
+   "outside": [
+    "A rowdy hall across the street from the Adventure Society, its door propped open.",
+    "A tall building with a monster skull nailed above the door.",
+    "An old guardhouse turned tavern, still with arrow slits.",
+    "A squat stone hall beside the Society building, its door studded with old monster teeth.",
+    "A tavern with a mounted monster head over the door, its eyes replaced with lanterns.",
+    "A former armoury, the old weapon racks now holding patrons' gear.",
+    "A tall wooden building with a contract board of its own outside, for jobs too odd for the Society.",
+    "A hall with team banners hanging from every window."
+   ],
+   "inside": [
+    "Trophies on every wall, each with a bragging plaque.",
+    "A contract board by the bar, and a corner where teams recruit.",
+    "A sparring ring in the back where disagreements get settled.",
+    "Every wall holds a trophy, each with a brass plate naming the team and the day.",
+    "A ranking board behind the bar, with the house's own rules for who's best this season.",
+    "A healer's corner in the back where cuts are stitched between drinks.",
+    "Long tables claimed by teams, and a strict rule against sitting at another team's table.",
+    "A bell above the bar that's rung for every team that comes back from an astral space whole."
+   ],
+   "patrons": [
+    "Iron-rank adventurers celebrating their first contract",
+    "a Bronze-rank team arguing over loot",
+    "a Society official off duty",
+    "would-be adventurers looking for a team",
+    "a healer patching up a broken arm at the bar",
+    "a team celebrating their first Bronze contract",
+    "a retired Gold-ranker who drinks alone and listens",
+    "a nervous Normal-rank kid trying to join any team"
+   ]
+  },
+  {
+   "name": "Noble wine hall",
+   "quality": "wealthy",
+   "weight": 1,
+   "outside": [
+    "A marble frontage with a doorman who looks at your boots before your face.",
+    "A walled garden hall lit by floating lanterns.",
+    "A converted townhouse with stained glass windows bearing house crests.",
+    "A glasshouse full of orange trees, with tables set between them.",
+    "A townhouse with no sign at all; the right people know which door.",
+    "A riverside pavilion reached by a private jetty, lanterns on the water.",
+    "A tall house with liveried footmen who announce each guest by name.",
+    "An arcade of shops, and at its end a wine hall with a carved stone vine over the arch."
+   ],
+   "inside": [
+    "Velvet booths, a string quartet and wine poured by the thimble.",
+    "Private alcoves behind curtains, and a host who remembers every name.",
+    "Mirrored walls, gilded chairs and conversation kept at a polite murmur.",
+    "Silver bells on each table to summon a servant; nobody raises their voice.",
+    "Portraits of famous patrons, some of whom are in the room, ageing badly beside their pictures.",
+    "A gallery above where musicians play, unseen, so as not to distract from conversation.",
+    "Card tables in a side room where fortunes change hands under a painted ceiling.",
+    "A sommelier who describes each wine at length, and a guest who's clearly heard it before."
+   ],
+   "patrons": [
+    "minor nobles",
+    "wealthy merchants",
+    "a Silver-rank adventurer who is pretending not to be noticed",
+    "a Storm Kingdom envoy meeting someone in secret",
+    "a noble house's heir with too much money",
+    "a poet paid to be witty",
+    "a matchmaker working three tables at once",
+    "a magistrate who shouldn't be seen here"
+   ]
+  },
+  {
+   "name": "Dive",
+   "quality": "poor",
+   "weight": 2,
+   "outside": [
+    "A cellar bar under a pawnshop, reached by a stair that smells of old ale.",
+    "An unmarked door with a lantern hung beside it, and a bruiser who decides who enters.",
+    "A shack at the edge of the slums with a hand-painted sign.",
+    "A door in an alley with no sign, just a painted eye.",
+    "A cellar under a tannery; the smell is a feature, not a flaw.",
+    "A half-burned building that never closed during the fire.",
+    "A shack built against the city wall, its roof patched with stolen tiles.",
+    "A former chapel, its pews now benches and its altar a bar."
+   ],
+   "inside": [
+    "Dim, smoky and loud, with sticky tables and a dice game in every corner.",
+    "A single long bar and a lot of people trying not to be remembered.",
+    "Cramped, hot and cheerful, with a bard who plays for drinks.",
+    "One table, one barrel, one rule: no questions.",
+    "Sawdust over the stains and fresh stains over the sawdust.",
+    "A fighting pit in the middle of the room, with a bet board chalked on the wall.",
+    "A room so dark the barkeep hands out candles at the door.",
+    "Drinks served in chipped cups that don't match, from a barrel that has no label."
+   ],
+   "patrons": [
+    "dice players",
+    "thieves between jobs",
+    "labourers spending the day's wages",
+    "a fence doing business at the back table",
+    "someone hiding from {faction}",
+    "a fence with a coat full of pockets",
+    "an off-duty watchman pretending he isn't one",
+    "a fighter with fresh stitches looking for the man who caused them",
+    "a gang of dock thieves",
+    "a broke adventurer selling their last core"
+   ]
+  },
+  {
+   "name": "Temple hostel",
+   "quality": "modest",
+   "weight": 1,
+   "church": true,
+   "outside": [
+    "A plain hostel attached to a shrine of {church}, open to all travellers.",
+    "A walled courtyard with a fountain, run by acolytes of {church}.",
+    "A plain stone guesthouse beside the temple, with a bowl of water by the door for travellers' feet.",
+    "A cloister wing opened to pilgrims, with a quiet garden at its heart.",
+    "A long hall built from donated timber, each beam carved with a donor's name.",
+    "A wayhouse with the church's symbol painted bright over the door.",
+    "A converted granary, its upper floor lined with straw beds for pilgrims."
+   ],
+   "inside": [
+    "Simple wooden tables, a long communal meal and a prayer before eating.",
+    "Quiet halls, clean beds, and no drinking after the evening bell.",
+    "Long tables where everyone eats the same simple meal after a short prayer.",
+    "Quiet rules painted on the wall, and a novice who enforces them with a look.",
+    "A shrine in the corner where travellers leave small gifts for safe roads.",
+    "Shared dormitories, a curtain between each bed, and the smell of incense.",
+    "A healing room where priests tend the sick for whatever they can pay."
+   ],
+   "patrons": [
+    "pilgrims",
+    "the sick hoping for healing",
+    "acolytes of {church}",
+    "a penitent noble",
+    "travellers too poor for an inn"
+   ]
+  },
+  {
+   "name": "Village alehouse",
+   "quality": "poor",
+   "weight": 2,
+   "outside": [
+    "A thatched cottage with a bush tied over the door to show there's ale.",
+    "The front room of the miller's house, open in the evenings.",
+    "A cottage with a broom over the door to show the ale is ready.",
+    "A barn with its doors thrown open and benches set out on the green.",
+    "A mill house that brews on the side and doesn't tell the lord.",
+    "A small stone house by the well, the only building in the village with two floors.",
+    "A tumbledown cottage with a garden of hops climbing the walls."
+   ],
+   "inside": [
+    "One room, one fire, one barrel, and everyone in the village knows each other.",
+    "Benches by the fire, a dog asleep on someone's feet, and a slow game of cards.",
+    "One room, one fire, and everyone in the village in it by sunset.",
+    "A brewing vat in the corner, and the brewer's children asleep behind it.",
+    "Notices about lost sheep, a wedding and a wolf pinned to the door.",
+    "A single long table, where newcomers are expected to sit with strangers.",
+    "Walls hung with farm tools, and a fiddler who plays the same three tunes."
+   ],
+   "patrons": [
+    "farmers",
+    "the village elder",
+    "a hunter back from the woods",
+    "a travelling tinker",
+    "a nervous young person dreaming of becoming an adventurer"
+   ]
+  },
+  {
+   "name": "River barge",
+   "quality": "modest",
+   "weight": 1,
+   "outside": [
+    "A broad flat barge moored at the quay, with a painted awning over the deck.",
+    "A string of three barges lashed together, the middle one a kitchen.",
+    "A barge that travels the river and ties up at a different town each tenday.",
+    "A barge with a garden on its roof and a goat that lives there.",
+    "An old grain barge with lanterns strung from its mast."
+   ],
+   "inside": [
+    "A low cabin where the floor sways and the drinks slide.",
+    "Benches along the gunwales and a fire pit in an iron tub.",
+    "A deck open to the stars, with nets hung to stop drunks going overboard.",
+    "Cabins below for sleeping, each smaller than a wardrobe.",
+    "A captain who also cooks, and won't let anyone else near the stove."
+   ],
+   "patrons": [
+    "river traders",
+    "a family of fishers",
+    "a smuggler waiting for a signal from the bank",
+    "pilgrims heading downstream",
+    "a Magic Society scholar studying the river"
+   ]
+  },
+  {
+   "name": "Caravanserai",
+   "quality": "modest",
+   "weight": 1,
+   "outside": [
+    "A square fortress of mud brick around a courtyard, with one great gate shut at sunset.",
+    "A ring of stone arches around a well, with camels kneeling in the shade.",
+    "A walled compound with a watchtower and a banner showing which guild owns it.",
+    "A sprawling stable and inn at the edge of the desert road, its walls painted with route maps.",
+    "A domed building with wind towers that keep it cool in the heat."
+   ],
+   "inside": [
+    "Merchants from a dozen places trade around the well, haggling in three languages.",
+    "Upper rooms for travellers, lower rooms for animals and goods, and a guard on every stair.",
+    "Carpets on the floor, cushions instead of chairs, and mint tea poured from a great height.",
+    "A courtyard kitchen where every caravan cooks its own food, and everyone tastes everyone's.",
+    "A quiet hall where deals are sealed with a handshake and a witness."
+   ],
+   "patrons": [
+    "caravan masters",
+    "camel drivers",
+    "a spice merchant with sample jars",
+    "a steppe clan rider trading horses",
+    "a Society team guarding a caravan"
+   ]
+  },
+  {
+   "name": "Gambling den",
+   "quality": "comfortable",
+   "weight": 1,
+   "outside": [
+    "A respectable-looking teahouse with a back door that gets more use than the front.",
+    "A tall house with shuttered windows and the sound of dice through every shutter.",
+    "A floating hall on the river, lit with red lanterns.",
+    "A warehouse with a doorman who asks for a password and accepts any coin as one.",
+    "A dance hall upstairs and a card room downstairs."
+   ],
+   "inside": [
+    "Card tables, dice tables and a wheel that spins a little too freely.",
+    "A cage where coin is changed for chips, and a guard with a crossbow behind it.",
+    "Velvet curtains, cheap wine and a house that always wins.",
+    "A betting board for monster fights held in the yard behind.",
+    "A quiet room for high-stakes games, with its own door and its own guards."
+   ],
+   "patrons": [
+    "a noble's son losing his inheritance",
+    "a card sharp with too many aces",
+    "a debt collector watching the tables",
+    "a lucky farmer who can't stop winning",
+    "an adventurer betting on their own next contract"
+   ]
+  }
+ ],
+ "quality": {
+  "poor": {
+   "room": 0.1,
+   "meal": 0.03,
+   "ale": 0.02,
+   "wine": 0.1
+  },
+  "modest": {
+   "room": 0.5,
+   "meal": 0.1,
+   "ale": 0.04,
+   "wine": 0.2
+  },
+  "comfortable": {
+   "room": 0.8,
+   "meal": 0.3,
+   "ale": 0.05,
+   "wine": 0.5
+  },
+  "wealthy": {
+   "room": 2,
+   "meal": 0.8,
+   "ale": 0.1,
+   "wine": 2
+  }
+ },
+ "menu": {
+  "food": [
+   "Fish stew with too much pepper",
+   "Roast monster haunch (the cook won't say which monster)",
+   "Lentils and flatbread",
+   "Pork pie and pickles",
+   "Spiced rice with dates and almonds",
+   "Eel in green sauce",
+   "Bread, cheese and onions",
+   "Grilled river crab",
+   "Lamb and apricot stew",
+   "Fried dumplings with chilli oil",
+   "Mushroom pie from the deep forest",
+   "A whole roast bird for the table to share",
+   "Honey-glazed carrots and black bread",
+   "Clams in garlic broth"
+  ],
+  "drink": [
+   "Thin ale",
+   "Dark stout brewed on site",
+   "Delta rice wine",
+   "Mint tea, sweet and strong",
+   "Sour cider",
+   "Spiced red wine, warmed",
+   "Coconut toddy",
+   "Barley water for the sober",
+   "Watered wine",
+   "Dwarven-style lager from the hill country",
+   "Small beer for the children and the careful",
+   "Pale ale with honey",
+   "Black mead, thick as syrup",
+   "Pear brandy, home-distilled",
+   "Plum wine from the hills",
+   "Hot spiced milk with cinnamon",
+   "Ginger beer that bites back",
+   "Fermented mare's milk, steppe style",
+   "Green tea with roasted rice",
+   "Palm wine, tapped this morning",
+   "Cold hibiscus tea",
+   "Bitter herbal liqueur, said to settle the stomach",
+   "Rough red from the cask",
+   "Sparkling white for those who're paying",
+   "Barley wine that's stronger than it tastes",
+   "Smoked tea from the northern coasts",
+   "Cardamom coffee, thick and black",
+   "Watered-down rum, honestly labelled",
+   "Sweet cider with a cinnamon stick",
+   "Cherry ale, a local pride"
+  ],
+  "special": [
+   [
+    "Coinfire brandy, distilled with a crushed iron spirit coin. Essence users feel a warm buzz; anyone else gets a headache.",
+    3
+   ],
+   [
+    "Kraken ink rum. Turns your tongue black for a day.",
+    1
+   ],
+   [
+    "Astral honey mead, from bees kept near an astral space. Tastes of flowers that don't exist.",
+    5
+   ],
+   [
+    "The Widow-Maker, a chilli stew. Finishing it earns a free drink and your name on the wall.",
+    0.5
+   ],
+   [
+    "Glowcap ale, faintly luminous. Harmless, mostly.",
+    0.2
+   ],
+   [
+    "Monster-egg custard, from a nest the owner raided personally.",
+    1
+   ],
+   [
+    "A cup of something the house calls 'Liquid Courage'. Advantage on one save against fear in the next hour, then disadvantage on Wisdom checks until you sleep.",
+    4
+   ],
+   [
+    "Storm-cellar stout, aged in a barrel struck by lightning. Your hair stands up while you drink it.",
+    1
+   ],
+   [
+    "A plate of tiny pies, each with a different filling, and one with a lucky coin inside.",
+    0.5
+   ],
+   [
+    "Ice wine chilled with a sliver of a frost elemental's core. Breath steams for an hour.",
+    6
+   ],
+   [
+    "The owner's grandmother's soup. Nobody knows the recipe. Everybody comes back for it.",
+    0.2
+   ],
+   [
+    "Ember peppers stuffed with goat cheese. Fire affinity patrons swear they taste sweet.",
+    0.8
+   ],
+   [
+    "A glass of wine from a bottle older than the city. One glass only, per patron, per year.",
+    20
+   ],
+   [
+    "Salt-crusted fish cooked in a pit of coals in the yard, served whole for the table.",
+    2
+   ],
+   [
+    "A mug of 'Fresh Start', a sobering tea that clears the head in minutes and tastes of regret.",
+    0.5
+   ],
+   [
+    "Sweet rice dumplings in syrup, served at midnight only.",
+    0.3
+   ],
+   [
+    "Monster-jerky board: six kinds, labelled with the monster and the team that brought it in.",
+    3
+   ],
+   [
+    "Spirit-coin tea, steeped with a copper coin. Faintly restorative to essence users; useless to anyone else.",
+    2
+   ],
+   [
+    "A shared pot of chilli so hot the house keeps a healer on hand. Survivors drink free.",
+    0.5
+   ],
+   [
+    "Candied river eels, a delta delicacy.",
+    1
+   ]
+  ]
+ },
+ "staff": [
+  "a harried barkeep who never stops polishing the same mug",
+  "a cook who shouts from the kitchen but never comes out",
+  "a teenage server who knows every rumour in town",
+  "a bouncer with a monster-claw scar who speaks in a whisper",
+  "the owner's elderly parent, who sits by the fire and judges everyone",
+  "a bard on retainer who only knows sad songs",
+  "a server who is secretly an Iron-rank adventurer saving for gear",
+  "twins who run the bar and finish each other's sentences",
+  "a stable hand who sleeps in the hayloft and hears everything",
+  "a server who sings the orders instead of saying them",
+  "an owner who insists on shaking every patron's hand",
+  "a cellar keeper with a lantern and a nervous laugh",
+  "a retired soldier who keeps order with a look",
+  "a goblin cook who swears every dish is his grandmother's recipe",
+  "a quiet server who notices everything and writes it in a little book",
+  "a pot-boy who wants to be an adventurer and asks every team to take him",
+  "an elderly harpist who has played here for forty years",
+  "a doorman who insists on taking everyone's weapons and loses half of them",
+  "a barmaid with a divine essence who blesses the ale",
+  "a nervous new owner still learning the trade",
+  "a former noble's chef who looks down on everything she cooks"
+ ],
+ "patronDetails": [
+  "arguing loudly about {faction}",
+  "playing a dice game with suspiciously good luck",
+  "nursing one drink all night and watching the door",
+  "celebrating a birthday with too much noise",
+  "trying to sell a map to anyone who'll listen",
+  "asleep face-down on the table",
+  "telling a tall tale about a monster in {place}",
+  "writing a letter and crying a little",
+  "looking for a team to take a contract",
+  "comparing essence abilities and showing off",
+  "betting on an arm-wrestling match",
+  "quietly praying to {church} over their meal",
+  "complaining about the price of awakening stones",
+  "asking everyone if they've seen {npc}",
+  "sharpening a blade at the table",
+  "teaching a card game with rules that change every hand",
+  "loudly describing a surgery in detail",
+  "reading a Society notice aloud to friends who can't read",
+  "drawing everyone in the room in charcoal",
+  "quietly selling awakening stones from a pouch",
+  "insisting the party sit with them",
+  "swearing they saw the duke in disguise last night",
+  "telling a story about an outworlder they met",
+  "trying to start a song nobody joins",
+  "practising a speech under their breath",
+  "picking a fight with the bard",
+  "watching the party a little too closely",
+  "feeding scraps to a monster pup under the table",
+  "arguing about which god is best",
+  "recruiting for a team going somewhere dangerous"
+ ],
+ "entertainment": [
+  "A bard sings an old ballad about the founding of {place}.",
+  "Arm-wrestling contest, winner takes the pot.",
+  "A storyteller performs the tale of an adventure team that never came back.",
+  "Dice tournament in the back room.",
+  "A travelling troupe performs a comedy mocking {faction}.",
+  "Nothing tonight but the fire and the rain.",
+  "A dancer from the delta performs with lit torches.",
+  "A magic show by an Iron-rank illusionist who is very proud of their essence.",
+  "Open stage night. Anyone brave enough can perform.",
+  "A drinking contest that the owner very much regrets allowing.",
+  "Two bards are duelling in verse, each insulting the other's mother.",
+  "A puppet show retelling a famous monster hunt, with the monster played by a sock.",
+  "Card tournament with a pot of spirit coins.",
+  "A fortune teller reads palms at the corner table, and gets a few uncomfortably right.",
+  "An outworlder sings a song from their home world nobody understands but everyone enjoys.",
+  "A storytelling contest; the best lie wins a free room.",
+  "A drummer and a fiddler who can't agree on the tune.",
+  "A wrestling match between the cook and a farmer, for reasons nobody will explain.",
+  "A choir from the local church practising for the holy day, badly.",
+  "A monster-fighting demonstration by a Bronze-ranker with a stuffed dummy and a very real sword.",
+  "A traveller shows a magic lantern that throws pictures of far places on the wall.",
+  "Dancing, with the tables pushed back and everyone expected to join.",
+  "An Iron-rank team takes bets on whether their healer can heal a drunk faster than he can drink.",
+  "Quiet tonight: a funeral wake for a regular, and toasts in their memory."
+ ],
+ "events": [
+  "A brawl breaks out between two adventuring teams over a contract.",
+  "A stranger collapses at the door, wounded, clutching a monster core.",
+  "Guards arrive asking questions about someone who was here an hour ago.",
+  "The bard dedicates the next song to the party, and it is clearly about them. It is not flattering.",
+  "Someone pays for a round for the whole room, then slips out the back without paying.",
+  "A cat knocks a lantern into the straw, and the corner catches fire.",
+  "A messenger arrives with a letter addressed to one of the party by name.",
+  "The cellar door bangs from below, though the owner swears nobody is down there.",
+  "A noble's servant offers the party a job, with payment up front.",
+  "An adventurer's familiar escapes and starts stealing food from every table.",
+  "The floor trembles. A monster surge in the area, and everyone looks at the adventurers.",
+  "A drunk patron insists one of the party owes them money from a past they don't remember.",
+  "A Society clerk bursts in to say a surge has been sighted and every team must report.",
+  "The owner announces the place is closing for good tomorrow, and the room goes very quiet.",
+  "A pickpocket is caught in the act and begs the party for help.",
+  "A wedding party arrives, already drunk, and takes over the room.",
+  "The floor gives way under the bar, revealing a cellar no one knew about.",
+  "A famous adventurer walks in, and three people faint.",
+  "A child brings in a monster egg they found and asks what it is. It's starting to crack.",
+  "A noble insists on the party's table and offers coin to move.",
+  "The lanterns flicker blue for a moment, and every essence user feels a chill.",
+  "A messenger bird lands on the bar with a note tied to its leg, addressed to no one.",
+  "A drunk challenges the toughest-looking party member to a duel.",
+  "The rain turns to hail, and the whole street crams inside.",
+  "A man in chains bursts through the door, closely followed by the watch.",
+  "The owner's prize pig gets loose in the common room.",
+  "A priest arrives to bless the building, and finds something in it that doesn't want blessing.",
+  "Someone has spiked the ale with something that makes everyone tell the truth.",
+  "The bard plays a song and someone in the room starts crying, then runs out.",
+  "A group of masked figures enter, look around, and leave without a word.",
+  "Someone falls ill after eating the special. Was it the food or someone's poison?",
+  "A Silver-rank team stops by to recruit, and they're interested in the party.",
+  "An old woman insists a party member is her long-lost grandchild.",
+  "Every door in the building swings shut at once.",
+  "A monster core rolls across the floor from nowhere and stops at the party's feet.",
+  "The watch announces a curfew, starting now.",
+  "Two teams agree to settle a dispute with an arm-wrestling match and the room clears a table.",
+  "A visiting merchant offers to buy the tavern on the spot.",
+  "A mysterious stranger pays for the party's drinks and leaves before they can thank her.",
+  "The fire in the hearth turns green and starts to speak."
+ ],
+ "rumours": [
+  "A team from the Adventure Society went into an astral space near {place} three days ago and hasn't come out.",
+  "{npc} has been drinking here every night this week and leaving huge tips. Where's the money coming from?",
+  "The price of cores has doubled since {faction} started buying them up.",
+  "There's something big in the water past the harbour wall. The fishers won't go out.",
+  "A priest of {church} is offering divine essences to anyone who'll work their fields.",
+  "Someone's been selling fake awakening stones; they work once and then crumble.",
+  "A noble house is quietly hiring adventurers for a job they won't discuss in writing.",
+  "Strange lights have been seen over {place} at night, the kind that come before a surge.",
+  "The owner used to be an adventurer and still has their essence. Don't start trouble.",
+  "A cult is recruiting in the poor quarter, promising essences to anyone who joins.",
+  "The Magic Society paid a fortune for a dead monster last week and won't say why.",
+  "There's a reward for information on whoever robbed the coin farm outside {place}.",
+  "The Magic Society is quietly buying land around {place}. Nobody knows why.",
+  "There's a new astral space in the old quarry, and it's leaking cold air.",
+  "A merchant in {place} has been selling cores that aren't monster cores at all.",
+  "The duke's steward has a gambling problem and a lot of debts.",
+  "Someone saw a ship with black sails off the coast, flying no flag.",
+  "{npc} has been seen meeting with people from {faction} after dark.",
+  "A healer at the temple can cure anything, for a price no one will name.",
+  "The last team that went into the marsh came back with one more member than they left with.",
+  "There's going to be a new tax on essences, and the Society is furious.",
+  "A child in {place} was born with a mark that matches an old prophecy.",
+  "The well water's turned salty in three villages this month.",
+  "An outworlder turned up in {place} speaking a language no one understands.",
+  "{church} is quarrelling with {faction} over a plot of land and someone is going to get hurt.",
+  "A new cult is recruiting from the orphanages, offering food and a family.",
+  "The road north is safe now; something killed the bandits there. Something big.",
+  "A Gold-ranker is in town, and she's asking questions about an old contract.",
+  "There's a monster in the sewers that the watch won't admit exists.",
+  "Someone's been buying all the silver in {place}, in small amounts, from every smith.",
+  "The bridge at {place} is being torn down, and people are angry about it.",
+  "The noble houses are arranging a marriage that could change everything.",
+  "The harvest has failed upriver and prices are going to climb.",
+  "A ghost walks the old battlefield every full moon, looking for its sword.",
+  "Someone stole a whole statue from the temple square, overnight, without a sound.",
+  "The Adventure Society is going to raise the price of rank assessments.",
+  "A boatload of refugees arrived from across the sea with stories of a war.",
+  "A traveller paid for a room with a coin from no known mint.",
+  "The old lighthouse keeper says he saw a sea serpent, and nobody laughed this time.",
+  "There's a buyer in {place} who pays triple for monster eggs."
+ ],
+ "hooks": [
+  "The owner offers free rooms for a week if the party clears out whatever is living in the cellar.",
+  "A patron offers 3 bronze spirit coins to escort them to {place} at dawn, no questions.",
+  "A note under the party's tankard reads: 'Meet me at the docks at midnight. Come armed.'",
+  "The bard wants the party to take them on an adventure, for material.",
+  "A crying child asks the party to find their parent, who went to sell cores and didn't come home.",
+  "The owner owes money to {faction} and asks the party to negotiate on their behalf.",
+  "An old adventurer offers a map to an astral space in exchange for one last drink and a promise.",
+  "A server asks the party to deliver a package to {npc}, and not to open it.",
+  "A patron hands the party a key and dies before they can say what it opens.",
+  "The owner asks the party to find out who keeps stealing the silverware, one spoon a night.",
+  "A Society clerk off duty asks the party to look into a contract that went wrong, unofficially.",
+  "A widow wants to hire the party to find her husband's killer; the watch has given up.",
+  "A merchant offers to pay for the party's meal if they'll test his new monster-repellent.",
+  "A young noble wants lessons in being an adventurer, and will pay well.",
+  "A tired priest asks the party to escort a relic to a shrine, tomorrow.",
+  "An old map pinned behind the bar has an X on it that the owner swears is real.",
+  "The barkeep slides over a note: someone at the corner table wants the party dead.",
+  "A stranger offers a bet: spend one night in the haunted room upstairs and win a purse of coins.",
+  "Two teams want the party to settle their dispute, and both will pay for the 'right' verdict.",
+  "A child sells a 'magic' pebble that turns out to be an awakening stone.",
+  "A farmer asks for help with a monster nobody believes exists.",
+  "A traveller asks the party to deliver a letter to their sister in another city.",
+  "A Magic Society researcher wants volunteers for a harmless experiment. Probably harmless.",
+  "A notorious smuggler wants to hire guards for one night, no questions, very good money.",
+  "The cook's kitchen has a door that wasn't there yesterday.",
+  "The owner's daughter has run off with an adventurer; the owner wants her back, or at least a letter.",
+  "An outworlder recognises something on a party member and asks where they got it.",
+  "A local hero challenges the party to a contest of strength, with the town watching.",
+  "A cult symbol is carved under the party's table. It's fresh.",
+  "The bard is writing an epic and needs a dragon. The party knows where to find one.",
+  "A beggar offers information about a theft for the price of a meal.",
+  "A noble's lost dog has wandered in, and its collar holds a ransom note.",
+  "A scholar wants an escort to the ruins outside {place}, leaving at dawn.",
+  "A drunk insists he's the rightful heir to a noble house and has proof in a box he buried.",
+  "The owner needs supplies from a farm cut off by a monster, and will pay in free board.",
+  "A retired adventurer wants to sell the party their old team's equipment, cursed or not.",
+  "A merchant's caravan leaves tomorrow, and its guards just quit.",
+  "Someone at the bar is wearing a party member's stolen cloak.",
+  "A messenger has the wrong name but the right description: the party is wanted somewhere.",
+  "A woman asks the party to fake her death."
+ ],
+ "secrets": [
+  "The cellar connects to the smugglers' tunnels under {place}. The owner takes a cut.",
+  "The owner is an informant for {faction} and passes on anything adventurers let slip.",
+  "A cult meets in the back room every new moon, and the owner pretends not to know.",
+  "The house special contains a monster ingredient that is slowly addictive.",
+  "One of the staff is a fugitive outworlder hiding under a false name.",
+  "The owner's divine essence was granted by {church}, and the church expects favours in return.",
+  "The tavern was won in a card game, and the previous owner wants it back, badly.",
+  "A dead adventurer's essence is hidden in a loose stone behind the hearth. The owner doesn't know it's there.",
+  "The rooms upstairs are sometimes rented by the hour to people meeting in secret, and the owner keeps a ledger of who.",
+  "The ale is watered and the wine is worse, and the owner pays a priest to say nothing.",
+  "The owner was once a Silver-rank adventurer who faked their own death.",
+  "There's a body walled up in the cellar, and the cellar knows it.",
+  "The back room is a meeting place for {faction}, who pay well for discretion.",
+  "One of the regulars is a doppelganger who replaced the real one last winter.",
+  "The cook is poisoning one patron, slowly, at someone's request.",
+  "The tavern is built on top of an astral space that opens once a decade. The next opening is close.",
+  "The owner sells patrons' gossip to a gossip sheet.",
+  "The staircase hides a vault full of stolen essences.",
+  "The owner is heavily in debt and plans to burn the place down for the insurance.",
+  "A ghost lives in the attic, and the owner leaves it a drink every night.",
+  "The bard is a spy from the Storm Kingdom.",
+  "The tavern's sign is an awakening stone set in wood; nobody realises.",
+  "One of the rooms has a spyhole, and the owner rents it to a blackmailer.",
+  "The owner's spouse is a cultist who uses the tavern to choose recruits.",
+  "A noble house secretly owns the tavern and uses it to watch a rival.",
+  "The place was cursed by a wronged patron: no one born here can leave for long.",
+  "The well in the yard is connected to the river through a cave where smugglers hide goods.",
+  "The famous house special uses an ingredient that's illegal in the city.",
+  "The owner pays protection to a gang, and the gang wants more.",
+  "The staff are all ex-convicts, given a second chance, and loyal to the owner to a fault.",
+  "A child's room upstairs belongs to a child who disappeared years ago, and the owner keeps it ready.",
+  "The cellar holds a monster the owner is raising as a pet, and it's getting big."
+ ],
+ "_upgrades": {
+  "2": {
+   "replace": [
+    [
+     "a Crown official meeting someone in secret",
+     "a Storm Kingdom envoy meeting someone in secret"
+    ]
+   ]
+  },
+  "3": {
+   "add": [
+    [
+     "kinds",
+     "Dockside tavern",
+     "outside",
+     [
+      "A tarred plank shack with an upturned boat for a roof.",
+      "A stone cellar under the fish market, reached by slimy steps.",
+      "A former customs house, its official sign painted over with a leaping fish.",
+      "A long, low shed hung with drying nets, its door propped open with an anchor.",
+      "A ship's hull hauled ashore and fitted with windows, still named for the ship."
+     ]
+    ],
+    [
+     "kinds",
+     "Dockside tavern",
+     "inside",
+     [
+      "Lanterns made from fish-oil jars throw greasy yellow light over a crowd of dockhands.",
+      "A bar made of a ship's mast laid on barrels, polished smooth by a thousand elbows.",
+      "Tables nailed to the floor, as if the room expects a storm.",
+      "A chalkboard of ships due in and out, and bets on which will be late.",
+      "Salt crusts the windows; inside it is warm, loud and smells of wet rope."
+     ]
+    ],
+    [
+     "kinds",
+     "Dockside tavern",
+     "patrons",
+     [
+      "a cargo master counting coins under the table",
+      "pearl divers still wet from the harbour",
+      "a press gang looking for sailors who've had one too many"
+     ]
+    ],
+    [
+     "kinds",
+     "Roadside inn",
+     "outside",
+     [
+      "A coaching inn with a yard full of wagons and a farrier hammering at the side.",
+      "A fortified waystation with a ditch, a palisade and a very small door.",
+      "A rambling farmhouse that turned into an inn one room at a time.",
+      "A stone inn at a crossroads, its sign shot full of arrows by bored travellers.",
+      "A long thatched building beside a ford, with a bell to call the ferryman."
+     ]
+    ],
+    [
+     "kinds",
+     "Roadside inn",
+     "inside",
+     [
+      "A hearth big enough to roast an ox, and an ox roasting in it.",
+      "Benches packed with travellers trading road news over bowls of the same stew.",
+      "A common room with a map of the region painted on one wall, travellers' corrections scratched into it.",
+      "Low ceilings, smoked hams hanging from the beams, and a dog asleep under every table.",
+      "A quiet room upstairs for those who pay extra, and a noisy one downstairs for those who don't."
+     ]
+    ],
+    [
+     "kinds",
+     "Roadside inn",
+     "patrons",
+     [
+      "a tinker with a cart full of pots",
+      "a family moving house with everything they own",
+      "a Society courier eating standing up"
+     ]
+    ],
+    [
+     "kinds",
+     "Adventurers' haunt",
+     "outside",
+     [
+      "A squat stone hall beside the Society building, its door studded with old monster teeth.",
+      "A tavern with a mounted monster head over the door, its eyes replaced with lanterns.",
+      "A former armoury, the old weapon racks now holding patrons' gear.",
+      "A tall wooden building with a contract board of its own outside, for jobs too odd for the Society.",
+      "A hall with team banners hanging from every window."
+     ]
+    ],
+    [
+     "kinds",
+     "Adventurers' haunt",
+     "inside",
+     [
+      "Every wall holds a trophy, each with a brass plate naming the team and the day.",
+      "A ranking board behind the bar, with the house's own rules for who's best this season.",
+      "A healer's corner in the back where cuts are stitched between drinks.",
+      "Long tables claimed by teams, and a strict rule against sitting at another team's table.",
+      "A bell above the bar that's rung for every team that comes back from an astral space whole."
+     ]
+    ],
+    [
+     "kinds",
+     "Adventurers' haunt",
+     "patrons",
+     [
+      "a team celebrating their first Bronze contract",
+      "a retired Gold-ranker who drinks alone and listens",
+      "a nervous Normal-rank kid trying to join any team"
+     ]
+    ],
+    [
+     "kinds",
+     "Noble wine hall",
+     "outside",
+     [
+      "A glasshouse full of orange trees, with tables set between them.",
+      "A townhouse with no sign at all; the right people know which door.",
+      "A riverside pavilion reached by a private jetty, lanterns on the water.",
+      "A tall house with liveried footmen who announce each guest by name.",
+      "An arcade of shops, and at its end a wine hall with a carved stone vine over the arch."
+     ]
+    ],
+    [
+     "kinds",
+     "Noble wine hall",
+     "inside",
+     [
+      "Silver bells on each table to summon a servant; nobody raises their voice.",
+      "Portraits of famous patrons, some of whom are in the room, ageing badly beside their pictures.",
+      "A gallery above where musicians play, unseen, so as not to distract from conversation.",
+      "Card tables in a side room where fortunes change hands under a painted ceiling.",
+      "A sommelier who describes each wine at length, and a guest who's clearly heard it before."
+     ]
+    ],
+    [
+     "kinds",
+     "Noble wine hall",
+     "patrons",
+     [
+      "a poet paid to be witty",
+      "a matchmaker working three tables at once",
+      "a magistrate who shouldn't be seen here"
+     ]
+    ],
+    [
+     "kinds",
+     "Dive",
+     "outside",
+     [
+      "A door in an alley with no sign, just a painted eye.",
+      "A cellar under a tannery; the smell is a feature, not a flaw.",
+      "A half-burned building that never closed during the fire.",
+      "A shack built against the city wall, its roof patched with stolen tiles.",
+      "A former chapel, its pews now benches and its altar a bar."
+     ]
+    ],
+    [
+     "kinds",
+     "Dive",
+     "inside",
+     [
+      "One table, one barrel, one rule: no questions.",
+      "Sawdust over the stains and fresh stains over the sawdust.",
+      "A fighting pit in the middle of the room, with a bet board chalked on the wall.",
+      "A room so dark the barkeep hands out candles at the door.",
+      "Drinks served in chipped cups that don't match, from a barrel that has no label."
+     ]
+    ],
+    [
+     "kinds",
+     "Dive",
+     "patrons",
+     [
+      "a fence with a coat full of pockets",
+      "an off-duty watchman pretending he isn't one",
+      "a fighter with fresh stitches looking for the man who caused them",
+      "a gang of dock thieves",
+      "a broke adventurer selling their last core"
+     ]
+    ],
+    [
+     "kinds",
+     "Temple hostel",
+     "outside",
+     [
+      "A plain stone guesthouse beside the temple, with a bowl of water by the door for travellers' feet.",
+      "A cloister wing opened to pilgrims, with a quiet garden at its heart.",
+      "A long hall built from donated timber, each beam carved with a donor's name.",
+      "A wayhouse with the church's symbol painted bright over the door.",
+      "A converted granary, its upper floor lined with straw beds for pilgrims."
+     ]
+    ],
+    [
+     "kinds",
+     "Temple hostel",
+     "inside",
+     [
+      "Long tables where everyone eats the same simple meal after a short prayer.",
+      "Quiet rules painted on the wall, and a novice who enforces them with a look.",
+      "A shrine in the corner where travellers leave small gifts for safe roads.",
+      "Shared dormitories, a curtain between each bed, and the smell of incense.",
+      "A healing room where priests tend the sick for whatever they can pay."
+     ]
+    ],
+    [
+     "kinds",
+     "Village alehouse",
+     "outside",
+     [
+      "A cottage with a broom over the door to show the ale is ready.",
+      "A barn with its doors thrown open and benches set out on the green.",
+      "A mill house that brews on the side and doesn't tell the lord.",
+      "A small stone house by the well, the only building in the village with two floors.",
+      "A tumbledown cottage with a garden of hops climbing the walls."
+     ]
+    ],
+    [
+     "kinds",
+     "Village alehouse",
+     "inside",
+     [
+      "One room, one fire, and everyone in the village in it by sunset.",
+      "A brewing vat in the corner, and the brewer's children asleep behind it.",
+      "Notices about lost sheep, a wedding and a wolf pinned to the door.",
+      "A single long table, where newcomers are expected to sit with strangers.",
+      "Walls hung with farm tools, and a fiddler who plays the same three tunes."
+     ]
+    ],
+    [
+     "names",
+     "patterns",
+     [
+      "{noun} and {noun2}",
+      "The {noun} at the Crossing",
+      "The Old {noun}",
+      "The {adj} {noun}'s Arms",
+      "The {noun}'s Head",
+      "{owner}'s Place",
+      "The Sign of the {noun}",
+      "The House of the {adj} {noun}"
+     ]
+    ],
+    [
+     "names",
+     "adj",
+     [
+      "Black",
+      "Red",
+      "Green",
+      "Golden",
+      "Jolly",
+      "Drunken",
+      "Silent",
+      "Howling",
+      "Grinning",
+      "Winking",
+      "Thirsty",
+      "Merry",
+      "Lost",
+      "Lame",
+      "Dancing",
+      "Leaping",
+      "Iron",
+      "Bronze",
+      "Velvet",
+      "Faithful",
+      "Wicked",
+      "Honest",
+      "Lonely",
+      "Proud",
+      "Shy",
+      "Sly",
+      "Tattered",
+      "Bold",
+      "Flying",
+      "Sunken",
+      "Hidden",
+      "Wild",
+      "Merry",
+      "Old",
+      "Bright",
+      "Grey",
+      "Crowned",
+      "Spotted",
+      "Sleepy",
+      "Hollow",
+      "Fat",
+      "Frozen",
+      "Sunlit",
+      "Moonlit",
+      "Salty",
+      "Twin",
+      "Bearded",
+      "Barefoot",
+      "Clever",
+      "Wooden",
+      "Ragged",
+      "Spiced",
+      "Lazy",
+      "Dusty",
+      "Blushing",
+      "Grim"
+     ]
+    ],
+    [
+     "names",
+     "noun",
+     [
+      "Fox",
+      "Hound",
+      "Stag",
+      "Boar",
+      "Bear",
+      "Hare",
+      "Owl",
+      "Raven",
+      "Swan",
+      "Ox",
+      "Ram",
+      "Horse",
+      "Lion",
+      "Cockerel",
+      "Pig",
+      "Fish",
+      "Eel",
+      "Whale",
+      "Ship",
+      "Cart",
+      "Wheel",
+      "Plough",
+      "Sickle",
+      "Hammer",
+      "Anvil",
+      "Bucket",
+      "Tankard",
+      "Flagon",
+      "Cup",
+      "Spoon",
+      "Ladle",
+      "Pipe",
+      "Fiddle",
+      "Drum",
+      "Harp",
+      "Lute",
+      "Candle",
+      "Key",
+      "Door",
+      "Gate",
+      "Bridge",
+      "Ford",
+      "Well",
+      "Mill",
+      "Oak",
+      "Thorn",
+      "Rose",
+      "Thistle",
+      "Pearl",
+      "Coin",
+      "Hand",
+      "Boot",
+      "Hat",
+      "Cloak",
+      "Monk",
+      "Bishop",
+      "Knight",
+      "Maiden",
+      "Pilgrim",
+      "Traveller",
+      "Fiddler",
+      "Piper",
+      "Moon",
+      "Star",
+      "Sun",
+      "Comet",
+      "Griffin",
+      "Basilisk",
+      "Manticore",
+      "Unicorn",
+      "Ape",
+      "Spider"
+     ]
+    ],
+    [
+     "menu",
+     "drink",
+     [
+      "Small beer for the children and the careful",
+      "Pale ale with honey",
+      "Black mead, thick as syrup",
+      "Pear brandy, home-distilled",
+      "Plum wine from the hills",
+      "Hot spiced milk with cinnamon",
+      "Ginger beer that bites back",
+      "Fermented mare's milk, steppe style",
+      "Green tea with roasted rice",
+      "Palm wine, tapped this morning",
+      "Cold hibiscus tea",
+      "Bitter herbal liqueur, said to settle the stomach",
+      "Rough red from the cask",
+      "Sparkling white for those who're paying",
+      "Barley wine that's stronger than it tastes",
+      "Smoked tea from the northern coasts",
+      "Cardamom coffee, thick and black",
+      "Watered-down rum, honestly labelled",
+      "Sweet cider with a cinnamon stick",
+      "Cherry ale, a local pride"
+     ]
+    ],
+    [
+     "menu",
+     "special",
+     [
+      [
+       "Storm-cellar stout, aged in a barrel struck by lightning. Your hair stands up while you drink it.",
+       1
+      ],
+      [
+       "A plate of tiny pies, each with a different filling, and one with a lucky coin inside.",
+       0.5
+      ],
+      [
+       "Ice wine chilled with a sliver of a frost elemental's core. Breath steams for an hour.",
+       6
+      ],
+      [
+       "The owner's grandmother's soup. Nobody knows the recipe. Everybody comes back for it.",
+       0.2
+      ],
+      [
+       "Ember peppers stuffed with goat cheese. Fire affinity patrons swear they taste sweet.",
+       0.8
+      ],
+      [
+       "A glass of wine from a bottle older than the city. One glass only, per patron, per year.",
+       20
+      ],
+      [
+       "Salt-crusted fish cooked in a pit of coals in the yard, served whole for the table.",
+       2
+      ],
+      [
+       "A mug of 'Fresh Start', a sobering tea that clears the head in minutes and tastes of regret.",
+       0.5
+      ],
+      [
+       "Sweet rice dumplings in syrup, served at midnight only.",
+       0.3
+      ],
+      [
+       "Monster-jerky board: six kinds, labelled with the monster and the team that brought it in.",
+       3
+      ],
+      [
+       "Spirit-coin tea, steeped with a copper coin. Faintly restorative to essence users; useless to anyone else.",
+       2
+      ],
+      [
+       "A shared pot of chilli so hot the house keeps a healer on hand. Survivors drink free.",
+       0.5
+      ],
+      [
+       "Candied river eels, a delta delicacy.",
+       1
+      ]
+     ]
+    ],
+    [
+     "staff",
+     [
+      "a server who sings the orders instead of saying them",
+      "an owner who insists on shaking every patron's hand",
+      "a cellar keeper with a lantern and a nervous laugh",
+      "a retired soldier who keeps order with a look",
+      "a goblin cook who swears every dish is his grandmother's recipe",
+      "a quiet server who notices everything and writes it in a little book",
+      "a pot-boy who wants to be an adventurer and asks every team to take him",
+      "an elderly harpist who has played here for forty years",
+      "a doorman who insists on taking everyone's weapons and loses half of them",
+      "a barmaid with a divine essence who blesses the ale",
+      "a nervous new owner still learning the trade",
+      "a former noble's chef who looks down on everything she cooks"
+     ]
+    ],
+    [
+     "patronDetails",
+     [
+      "sharpening a blade at the table",
+      "teaching a card game with rules that change every hand",
+      "loudly describing a surgery in detail",
+      "reading a Society notice aloud to friends who can't read",
+      "drawing everyone in the room in charcoal",
+      "quietly selling awakening stones from a pouch",
+      "insisting the party sit with them",
+      "swearing they saw the duke in disguise last night",
+      "telling a story about an outworlder they met",
+      "trying to start a song nobody joins",
+      "practising a speech under their breath",
+      "picking a fight with the bard",
+      "watching the party a little too closely",
+      "feeding scraps to a monster pup under the table",
+      "arguing about which god is best",
+      "recruiting for a team going somewhere dangerous"
+     ]
+    ],
+    [
+     "entertainment",
+     [
+      "Two bards are duelling in verse, each insulting the other's mother.",
+      "A puppet show retelling a famous monster hunt, with the monster played by a sock.",
+      "Card tournament with a pot of spirit coins.",
+      "A fortune teller reads palms at the corner table, and gets a few uncomfortably right.",
+      "An outworlder sings a song from their home world nobody understands but everyone enjoys.",
+      "A storytelling contest; the best lie wins a free room.",
+      "A drummer and a fiddler who can't agree on the tune.",
+      "A wrestling match between the cook and a farmer, for reasons nobody will explain.",
+      "A choir from the local church practising for the holy day, badly.",
+      "A monster-fighting demonstration by a Bronze-ranker with a stuffed dummy and a very real sword.",
+      "A traveller shows a magic lantern that throws pictures of far places on the wall.",
+      "Dancing, with the tables pushed back and everyone expected to join.",
+      "An Iron-rank team takes bets on whether their healer can heal a drunk faster than he can drink.",
+      "Quiet tonight: a funeral wake for a regular, and toasts in their memory."
+     ]
+    ],
+    [
+     "events",
+     [
+      "A Society clerk bursts in to say a surge has been sighted and every team must report.",
+      "The owner announces the place is closing for good tomorrow, and the room goes very quiet.",
+      "A pickpocket is caught in the act and begs the party for help.",
+      "A wedding party arrives, already drunk, and takes over the room.",
+      "The floor gives way under the bar, revealing a cellar no one knew about.",
+      "A famous adventurer walks in, and three people faint.",
+      "A child brings in a monster egg they found and asks what it is. It's starting to crack.",
+      "A noble insists on the party's table and offers coin to move.",
+      "The lanterns flicker blue for a moment, and every essence user feels a chill.",
+      "A messenger bird lands on the bar with a note tied to its leg, addressed to no one.",
+      "A drunk challenges the toughest-looking party member to a duel.",
+      "The rain turns to hail, and the whole street crams inside.",
+      "A man in chains bursts through the door, closely followed by the watch.",
+      "The owner's prize pig gets loose in the common room.",
+      "A priest arrives to bless the building, and finds something in it that doesn't want blessing.",
+      "Someone has spiked the ale with something that makes everyone tell the truth.",
+      "The bard plays a song and someone in the room starts crying, then runs out.",
+      "A group of masked figures enter, look around, and leave without a word.",
+      "Someone falls ill after eating the special. Was it the food or someone's poison?",
+      "A Silver-rank team stops by to recruit, and they're interested in the party.",
+      "An old woman insists a party member is her long-lost grandchild.",
+      "Every door in the building swings shut at once.",
+      "A monster core rolls across the floor from nowhere and stops at the party's feet.",
+      "The watch announces a curfew, starting now.",
+      "Two teams agree to settle a dispute with an arm-wrestling match and the room clears a table.",
+      "A visiting merchant offers to buy the tavern on the spot.",
+      "A mysterious stranger pays for the party's drinks and leaves before they can thank her.",
+      "The fire in the hearth turns green and starts to speak."
+     ]
+    ],
+    [
+     "rumours",
+     [
+      "The Magic Society is quietly buying land around {place}. Nobody knows why.",
+      "There's a new astral space in the old quarry, and it's leaking cold air.",
+      "A merchant in {place} has been selling cores that aren't monster cores at all.",
+      "The duke's steward has a gambling problem and a lot of debts.",
+      "Someone saw a ship with black sails off the coast, flying no flag.",
+      "{npc} has been seen meeting with people from {faction} after dark.",
+      "A healer at the temple can cure anything, for a price no one will name.",
+      "The last team that went into the marsh came back with one more member than they left with.",
+      "There's going to be a new tax on essences, and the Society is furious.",
+      "A child in {place} was born with a mark that matches an old prophecy.",
+      "The well water's turned salty in three villages this month.",
+      "An outworlder turned up in {place} speaking a language no one understands.",
+      "{church} is quarrelling with {faction} over a plot of land and someone is going to get hurt.",
+      "A new cult is recruiting from the orphanages, offering food and a family.",
+      "The road north is safe now; something killed the bandits there. Something big.",
+      "A Gold-ranker is in town, and she's asking questions about an old contract.",
+      "There's a monster in the sewers that the watch won't admit exists.",
+      "Someone's been buying all the silver in {place}, in small amounts, from every smith.",
+      "The bridge at {place} is being torn down, and people are angry about it.",
+      "The noble houses are arranging a marriage that could change everything.",
+      "The harvest has failed upriver and prices are going to climb.",
+      "A ghost walks the old battlefield every full moon, looking for its sword.",
+      "Someone stole a whole statue from the temple square, overnight, without a sound.",
+      "The Adventure Society is going to raise the price of rank assessments.",
+      "A boatload of refugees arrived from across the sea with stories of a war.",
+      "A traveller paid for a room with a coin from no known mint.",
+      "The old lighthouse keeper says he saw a sea serpent, and nobody laughed this time.",
+      "There's a buyer in {place} who pays triple for monster eggs."
+     ]
+    ],
+    [
+     "hooks",
+     [
+      "A patron hands the party a key and dies before they can say what it opens.",
+      "The owner asks the party to find out who keeps stealing the silverware, one spoon a night.",
+      "A Society clerk off duty asks the party to look into a contract that went wrong, unofficially.",
+      "A widow wants to hire the party to find her husband's killer; the watch has given up.",
+      "A merchant offers to pay for the party's meal if they'll test his new monster-repellent.",
+      "A young noble wants lessons in being an adventurer, and will pay well.",
+      "A tired priest asks the party to escort a relic to a shrine, tomorrow.",
+      "An old map pinned behind the bar has an X on it that the owner swears is real.",
+      "The barkeep slides over a note: someone at the corner table wants the party dead.",
+      "A stranger offers a bet: spend one night in the haunted room upstairs and win a purse of coins.",
+      "Two teams want the party to settle their dispute, and both will pay for the 'right' verdict.",
+      "A child sells a 'magic' pebble that turns out to be an awakening stone.",
+      "A farmer asks for help with a monster nobody believes exists.",
+      "A traveller asks the party to deliver a letter to their sister in another city.",
+      "A Magic Society researcher wants volunteers for a harmless experiment. Probably harmless.",
+      "A notorious smuggler wants to hire guards for one night, no questions, very good money.",
+      "The cook's kitchen has a door that wasn't there yesterday.",
+      "The owner's daughter has run off with an adventurer; the owner wants her back, or at least a letter.",
+      "An outworlder recognises something on a party member and asks where they got it.",
+      "A local hero challenges the party to a contest of strength, with the town watching.",
+      "A cult symbol is carved under the party's table. It's fresh.",
+      "The bard is writing an epic and needs a dragon. The party knows where to find one.",
+      "A beggar offers information about a theft for the price of a meal.",
+      "A noble's lost dog has wandered in, and its collar holds a ransom note.",
+      "A scholar wants an escort to the ruins outside {place}, leaving at dawn.",
+      "A drunk insists he's the rightful heir to a noble house and has proof in a box he buried.",
+      "The owner needs supplies from a farm cut off by a monster, and will pay in free board.",
+      "A retired adventurer wants to sell the party their old team's equipment, cursed or not.",
+      "A merchant's caravan leaves tomorrow, and its guards just quit.",
+      "Someone at the bar is wearing a party member's stolen cloak.",
+      "A messenger has the wrong name but the right description: the party is wanted somewhere.",
+      "A woman asks the party to fake her death."
+     ]
+    ],
+    [
+     "secrets",
+     [
+      "The ale is watered and the wine is worse, and the owner pays a priest to say nothing.",
+      "The owner was once a Silver-rank adventurer who faked their own death.",
+      "There's a body walled up in the cellar, and the cellar knows it.",
+      "The back room is a meeting place for {faction}, who pay well for discretion.",
+      "One of the regulars is a doppelganger who replaced the real one last winter.",
+      "The cook is poisoning one patron, slowly, at someone's request.",
+      "The tavern is built on top of an astral space that opens once a decade. The next opening is close.",
+      "The owner sells patrons' gossip to a gossip sheet.",
+      "The staircase hides a vault full of stolen essences.",
+      "The owner is heavily in debt and plans to burn the place down for the insurance.",
+      "A ghost lives in the attic, and the owner leaves it a drink every night.",
+      "The bard is a spy from the Storm Kingdom.",
+      "The tavern's sign is an awakening stone set in wood; nobody realises.",
+      "One of the rooms has a spyhole, and the owner rents it to a blackmailer.",
+      "The owner's spouse is a cultist who uses the tavern to choose recruits.",
+      "A noble house secretly owns the tavern and uses it to watch a rival.",
+      "The place was cursed by a wronged patron: no one born here can leave for long.",
+      "The well in the yard is connected to the river through a cave where smugglers hide goods.",
+      "The famous house special uses an ingredient that's illegal in the city.",
+      "The owner pays protection to a gang, and the gang wants more.",
+      "The staff are all ex-convicts, given a second chance, and loyal to the owner to a fault.",
+      "A child's room upstairs belongs to a child who disappeared years ago, and the owner keeps it ready.",
+      "The cellar holds a monster the owner is raising as a pet, and it's getting big."
+     ]
+    ]
+   ]
+  }
+ }
+}

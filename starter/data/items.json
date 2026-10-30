@@ -1,0 +1,8068 @@
+{
+ "_about": "The item catalogue: everyday equipment, magic items, gems, trade goods and Pallimustus's own goods. Prices are in gp (1 iron spirit coin = 1 gp). 'rarity' sets where an item can be found: see 'settlements'. 'rank' marks world goods made for a rank. Under 'settlements', maxRarity and maxPrice cap what shops sell, essenceMax caps essences, 'ranks' weights the rank of essences, stones and cores, and 'auction' says whether auction houses are found there. 'places' says which kind of settlement each wiki location is, and 'placeMagic' how much magic it has: in a low-magic place rare goods turn up half as often and high-rank goods are scarce ('magicLevels'). Add your own items here and they appear in the Items browser and in markets.",
+ "version": 3,
+ "_upgrades": {
+  "2": {
+   "set": [
+    [
+     "places",
+     "Greenstone",
+     "city"
+    ],
+    [
+     "places",
+     "The Old City",
+     "city"
+    ],
+    [
+     "settlements",
+     "town",
+     "label",
+     "Town"
+    ]
+   ],
+   "remove": [
+    [
+     "items",
+     "Mana draught (Iron)"
+    ],
+    [
+     "items",
+     "Mana draught (Bronze)"
+    ],
+    [
+     "items",
+     "Mana draught (Silver)"
+    ]
+   ]
+  },
+  "3": {
+   "set": [
+    [
+     "places",
+     "Yaresh",
+     "great city"
+    ],
+    [
+     "places",
+     "Vitesse",
+     "great city"
+    ]
+   ]
+  }
+ },
+ "settlements": {
+  "village": {
+   "label": "Village",
+   "maxRarity": "common",
+   "maxPrice": 100,
+   "essenceMax": "common",
+   "ranks": {
+    "Iron": 1
+   },
+   "auction": false
+  },
+  "town": {
+   "label": "Town",
+   "maxRarity": "uncommon",
+   "maxPrice": 2000,
+   "essenceMax": "uncommon",
+   "ranks": {
+    "Iron": 8,
+    "Bronze": 2
+   },
+   "auction": false
+  },
+  "city": {
+   "label": "City",
+   "maxRarity": "rare",
+   "maxPrice": 50000,
+   "essenceMax": "rare",
+   "ranks": {
+    "Iron": 4,
+    "Bronze": 5,
+    "Silver": 1
+   },
+   "auction": true
+  },
+  "great city": {
+   "label": "Great city",
+   "maxRarity": "very rare",
+   "maxPrice": null,
+   "essenceMax": "rare",
+   "ranks": {
+    "Iron": 2,
+    "Bronze": 5,
+    "Silver": 3
+   },
+   "auction": true
+  }
+ },
+ "places": {
+  "Greenstone": "city",
+  "The Old City": "city",
+  "The Delta and Marshes": "village",
+  "Mosswater": "village",
+  "Harrowfield": "town",
+  "Lantern Ford": "village",
+  "Yaresh": "great city",
+  "Rimaros": "great city",
+  "The Storm Kingdom": "city",
+  "Vitesse": "great city"
+ },
+ "magicLevels": {
+  "low": {
+   "label": "Low magic",
+   "rareStock": 0.5,
+   "rankScale": {
+    "Bronze": 0.6,
+    "Silver": 0.2,
+    "Gold": 0.1
+   },
+   "note": "Low magic: high-magic goods are scarce, and costly to keep powered."
+  },
+  "moderate": {
+   "label": "Moderate magic",
+   "rareStock": 1,
+   "rankScale": {}
+  },
+  "high": {
+   "label": "High magic",
+   "rareStock": 1.25,
+   "rankScale": {
+    "Silver": 1.3
+   }
+  }
+ },
+ "placeMagic": {
+  "Greenstone": "low",
+  "The Old City": "low",
+  "Harrowfield": "low",
+  "Mosswater": "high",
+  "The Delta and Marshes": "high",
+  "Lantern Ford": "moderate"
+ },
+ "rarities": [
+  "mundane",
+  "common",
+  "uncommon",
+  "rare",
+  "very rare",
+  "legendary",
+  "artifact"
+ ],
+ "items": [
+  {
+   "name": "Padded armour",
+   "cat": "Armour",
+   "price": 5,
+   "desc": "Light armour of quilted cloth. AC 11 + Dex modifier. Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 8,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Leather armour",
+   "cat": "Armour",
+   "price": 10,
+   "desc": "Light armour of boiled and stiffened leather. AC 11 + Dex modifier.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 10,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Studded leather armour",
+   "cat": "Armour",
+   "price": 45,
+   "desc": "Light leather armour set with close-set rivets. AC 12 + Dex modifier.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 13,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Hide armour",
+   "cat": "Armour",
+   "price": 10,
+   "desc": "Medium armour of thick furs and pelts. AC 12 + Dex modifier (max 2).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 12,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Chain shirt",
+   "cat": "Armour",
+   "price": 50,
+   "desc": "Medium armour of interlocking rings worn under clothing. AC 13 + Dex modifier (max 2).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 20,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Scale mail",
+   "cat": "Armour",
+   "price": 50,
+   "desc": "Medium armour of overlapping metal scales. AC 14 + Dex modifier (max 2). Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 45,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Breastplate",
+   "cat": "Armour",
+   "price": 400,
+   "desc": "Medium armour: a fitted metal chest piece. AC 14 + Dex modifier (max 2).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 20,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Half plate",
+   "cat": "Armour",
+   "price": 750,
+   "desc": "Medium armour of shaped plates over most of the body. AC 15 + Dex modifier (max 2). Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 40,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Ring mail",
+   "cat": "Armour",
+   "price": 30,
+   "desc": "Heavy leather armour with rings sewn on. AC 14. Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 40,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Chain mail",
+   "cat": "Armour",
+   "price": 75,
+   "desc": "Heavy armour of interlocking rings over padding. AC 16. Strength 13. Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 55,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Splint armour",
+   "cat": "Armour",
+   "price": 200,
+   "desc": "Heavy armour of vertical metal strips riveted to leather. AC 17. Strength 15. Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 60,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Plate armour",
+   "cat": "Armour",
+   "price": 1500,
+   "desc": "Heavy armour of interlocking plates covering the whole body. AC 18. Strength 15. Disadvantage on Stealth.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 65,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Shield",
+   "cat": "Armour",
+   "price": 10,
+   "desc": "Carried in one hand. +2 AC.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 6,
+   "tags": [
+    "armour"
+   ]
+  },
+  {
+   "name": "Club",
+   "cat": "Weapons",
+   "price": 0.1,
+   "desc": "1d4 bludgeoning. Light.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Dagger",
+   "cat": "Weapons",
+   "price": 2,
+   "desc": "1d4 piercing. Finesse, light, thrown (20/60).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 1,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Greatclub",
+   "cat": "Weapons",
+   "price": 0.2,
+   "desc": "1d8 bludgeoning. Two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 10,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Handaxe",
+   "cat": "Weapons",
+   "price": 5,
+   "desc": "1d6 slashing. Light, thrown (20/60).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Javelin",
+   "cat": "Weapons",
+   "price": 0.5,
+   "desc": "1d6 piercing. Thrown (30/120).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Light hammer",
+   "cat": "Weapons",
+   "price": 2,
+   "desc": "1d4 bludgeoning. Light, thrown (20/60).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Mace",
+   "cat": "Weapons",
+   "price": 5,
+   "desc": "1d6 bludgeoning.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 4,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Quarterstaff",
+   "cat": "Weapons",
+   "price": 0.2,
+   "desc": "1d6 bludgeoning. Versatile (1d8).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 4,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Sickle",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "1d4 slashing. Light.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Spear",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "1d6 piercing. Thrown (20/60), versatile (1d8).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "simple"
+   ]
+  },
+  {
+   "name": "Light crossbow",
+   "cat": "Weapons",
+   "price": 25,
+   "desc": "1d8 piercing. Ammunition (80/320), loading, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 5,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Dart",
+   "cat": "Weapons",
+   "price": 0.05,
+   "desc": "1d4 piercing. Finesse, thrown (20/60).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 0.25,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Shortbow",
+   "cat": "Weapons",
+   "price": 25,
+   "desc": "1d6 piercing. Ammunition (80/320), two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Sling",
+   "cat": "Weapons",
+   "price": 0.1,
+   "desc": "1d4 bludgeoning. Ammunition (30/120).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 0,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Battleaxe",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "1d8 slashing. Versatile (1d10).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 4,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Flail",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "1d8 bludgeoning.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Glaive",
+   "cat": "Weapons",
+   "price": 20,
+   "desc": "1d10 slashing. Heavy, reach, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 6,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Greataxe",
+   "cat": "Weapons",
+   "price": 30,
+   "desc": "1d12 slashing. Heavy, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 7,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Greatsword",
+   "cat": "Weapons",
+   "price": 50,
+   "desc": "2d6 slashing. Heavy, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 6,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Halberd",
+   "cat": "Weapons",
+   "price": 20,
+   "desc": "1d10 slashing. Heavy, reach, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 6,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Lance",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "1d12 piercing. Reach; disadvantage against targets within 5 feet; two-handed unless mounted.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 6,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Longsword",
+   "cat": "Weapons",
+   "price": 15,
+   "desc": "1d8 slashing. Versatile (1d10).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Maul",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "2d6 bludgeoning. Heavy, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 10,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Morningstar",
+   "cat": "Weapons",
+   "price": 15,
+   "desc": "1d8 piercing.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 4,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Pike",
+   "cat": "Weapons",
+   "price": 5,
+   "desc": "1d10 piercing. Heavy, reach, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 18,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Rapier",
+   "cat": "Weapons",
+   "price": 25,
+   "desc": "1d8 piercing. Finesse.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Scimitar",
+   "cat": "Weapons",
+   "price": 25,
+   "desc": "1d6 slashing. Finesse, light.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Shortsword",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "1d6 piercing. Finesse, light.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Trident",
+   "cat": "Weapons",
+   "price": 5,
+   "desc": "1d6 piercing. Thrown (20/60), versatile (1d8).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 4,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "War pick",
+   "cat": "Weapons",
+   "price": 5,
+   "desc": "1d8 piercing.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Warhammer",
+   "cat": "Weapons",
+   "price": 15,
+   "desc": "1d8 bludgeoning. Versatile (1d10).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Whip",
+   "cat": "Weapons",
+   "price": 2,
+   "desc": "1d4 slashing. Finesse, reach.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "martial"
+   ]
+  },
+  {
+   "name": "Blowgun",
+   "cat": "Weapons",
+   "price": 10,
+   "desc": "1 piercing. Ammunition (25/100), loading.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 1,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Hand crossbow",
+   "cat": "Weapons",
+   "price": 75,
+   "desc": "1d6 piercing. Ammunition (30/120), light, loading.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Heavy crossbow",
+   "cat": "Weapons",
+   "price": 50,
+   "desc": "1d10 piercing. Ammunition (100/400), heavy, loading, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 18,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Longbow",
+   "cat": "Weapons",
+   "price": 50,
+   "desc": "1d8 piercing. Ammunition (150/600), heavy, two-handed.",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 2,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Net",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "Restrains a Large or smaller creature hit by it (DC 10 Strength to escape). Thrown (5/15).",
+   "rarity": "mundane",
+   "source": "srd",
+   "weight": 3,
+   "tags": [
+    "weapon",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Arrows (20)",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "Ammunition for bows.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Crossbow bolts (20)",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "Ammunition for crossbows.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Sling bullets (20)",
+   "cat": "Weapons",
+   "price": 0.04,
+   "desc": "Lead shot for slings.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Blowgun needles (50)",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "Ammunition for blowguns.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Quiver",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "Holds 20 arrows.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Crossbow bolt case",
+   "cat": "Weapons",
+   "price": 1,
+   "desc": "A wooden case that holds 20 bolts.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "ammo",
+    "ranged"
+   ]
+  },
+  {
+   "name": "Abacus",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "For reckoning sums.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Acid (vial)",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "Thrown or splashed: 2d6 acid damage.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "alchemy"
+   ]
+  },
+  {
+   "name": "Alchemist's fire (flask)",
+   "cat": "Adventuring gear",
+   "price": 50,
+   "desc": "Thrown: the target burns for 1d4 fire damage each turn until it spends an action to put itself out.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "alchemy"
+   ]
+  },
+  {
+   "name": "Antitoxin (vial)",
+   "cat": "Adventuring gear",
+   "price": 50,
+   "desc": "Advantage on saves against poison for 1 hour.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "alchemy"
+   ]
+  },
+  {
+   "name": "Backpack",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Holds 1 cubic foot or 30 pounds of gear.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Ball bearings (bag of 1,000)",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Scattered on the floor to trip anyone running through.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "thief"
+   ]
+  },
+  {
+   "name": "Barrel",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Holds 40 gallons of liquid.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Basket",
+   "cat": "Adventuring gear",
+   "price": 0.4,
+   "desc": "Holds 2 cubic feet.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Bedroll",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "For sleeping rough.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Bell",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "A small brass bell.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Blanket",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Wool, for cold nights.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Block and tackle",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Pulleys that let you hoist four times the usual weight.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Book",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "A bound book of blank or written pages.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Glass bottle",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Holds 1½ pints.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Bucket",
+   "cat": "Adventuring gear",
+   "price": 0.05,
+   "desc": "Holds 3 gallons.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Caltrops (bag of 20)",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Scattered over a 5-foot square to slow and hurt anyone crossing it.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "thief"
+   ]
+  },
+  {
+   "name": "Candle",
+   "cat": "Adventuring gear",
+   "price": 0.01,
+   "desc": "Dim light for 1 hour.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Map or scroll case",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "A leather tube for maps and scrolls.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Chain (10 feet)",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Heavy iron chain.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Chalk (1 piece)",
+   "cat": "Adventuring gear",
+   "price": 0.01,
+   "desc": "For marking walls and floors.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Chest",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Holds 12 cubic feet.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Climber's kit",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "Pitons, boot tips and a harness. Advantage on climbing checks, and you can anchor yourself.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Common clothes",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Plain working clothes.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Costume",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "A performer's costume.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Fine clothes",
+   "cat": "Adventuring gear",
+   "price": 15,
+   "desc": "Clothes for court and good company.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Traveller's clothes",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Hard-wearing clothes for the road.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Robes",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Plain robes, as worn by priests and scholars.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Component pouch",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "Holds the material components for spells.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "arcane"
+   ]
+  },
+  {
+   "name": "Crowbar",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Advantage on Strength checks where leverage helps.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Fishing tackle",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Rod, line, floats and hooks.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Flask or tankard",
+   "cat": "Adventuring gear",
+   "price": 0.02,
+   "desc": "Holds a pint.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Grappling hook",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "For climbing and boarding.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Hammer",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "An ordinary hammer.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Sledgehammer",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "A heavy two-handed hammer.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Healer's kit",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Ten uses. Stabilise a dying creature without a Medicine check.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "herb"
+   ]
+  },
+  {
+   "name": "Holy symbol",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "An amulet, emblem or reliquary used as a divine focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "holy"
+   ]
+  },
+  {
+   "name": "Holy water (flask)",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "Thrown: 2d6 radiant damage to a fiend or undead.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "holy"
+   ]
+  },
+  {
+   "name": "Hourglass",
+   "cat": "Adventuring gear",
+   "price": 25,
+   "desc": "Measures an hour.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Hunting trap",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Steel jaws that clamp shut on whatever steps in.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Ink (1 ounce bottle)",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "Black ink.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Ink pen",
+   "cat": "Adventuring gear",
+   "price": 0.02,
+   "desc": "A wooden pen.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Jug or pitcher",
+   "cat": "Adventuring gear",
+   "price": 0.02,
+   "desc": "Holds a gallon.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Ladder (10 feet)",
+   "cat": "Adventuring gear",
+   "price": 0.1,
+   "desc": "Wooden.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Lamp",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Bright light in a 15-foot radius for 6 hours on a flask of oil.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Bullseye lantern",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "A 60-foot cone of bright light.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Hooded lantern",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Bright light in a 30-foot radius; the hood dims it.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Lock",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "Comes with a key. DC 15 to pick.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "thief"
+   ]
+  },
+  {
+   "name": "Magnifying glass",
+   "cat": "Adventuring gear",
+   "price": 100,
+   "desc": "Lets you start a fire in sunlight, and gives advantage on appraising small or detailed things.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Manacles",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "Bind a Small or Medium creature. DC 20 to slip or break.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "thief"
+   ]
+  },
+  {
+   "name": "Mess kit",
+   "cat": "Adventuring gear",
+   "price": 0.2,
+   "desc": "Tin plates, cup and cutlery.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Steel mirror",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "A small hand mirror.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Oil (flask)",
+   "cat": "Adventuring gear",
+   "price": 0.1,
+   "desc": "Lamp fuel, or splashed and lit for 5 fire damage.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Paper (one sheet)",
+   "cat": "Adventuring gear",
+   "price": 0.2,
+   "desc": "Good paper.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Parchment (one sheet)",
+   "cat": "Adventuring gear",
+   "price": 0.1,
+   "desc": "Prepared animal skin for writing.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Perfume (vial)",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "A small vial of scent.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "clothes"
+   ]
+  },
+  {
+   "name": "Miner's pick",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "For breaking stone.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Piton",
+   "cat": "Adventuring gear",
+   "price": 0.05,
+   "desc": "An iron spike for climbing.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Basic poison (vial)",
+   "cat": "Adventuring gear",
+   "price": 100,
+   "desc": "Coats a blade or three pieces of ammunition: DC 10 Constitution or 1d4 poison damage.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "thief"
+   ]
+  },
+  {
+   "name": "Pole (10 feet)",
+   "cat": "Adventuring gear",
+   "price": 0.05,
+   "desc": "For prodding suspicious floors.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Iron pot",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "A cooking pot.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Pouch",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Holds 6 pounds of small things.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Portable ram",
+   "cat": "Adventuring gear",
+   "price": 4,
+   "desc": "+4 to Strength checks to break doors.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Rations (1 day)",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Dried meat, fruit, hardtack and nuts.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "food"
+   ]
+  },
+  {
+   "name": "Hempen rope (50 feet)",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Holds a lot of weight.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Silk rope (50 feet)",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "Light and strong.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Sack",
+   "cat": "Adventuring gear",
+   "price": 0.01,
+   "desc": "Holds 1 cubic foot.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Merchant's scale",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "Weighs up to 2 pounds.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Sealing wax",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "For sealing letters.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Shovel",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "For digging.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Signal whistle",
+   "cat": "Adventuring gear",
+   "price": 0.05,
+   "desc": "Loud and shrill.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Signet ring",
+   "cat": "Adventuring gear",
+   "price": 5,
+   "desc": "A ring with a personal seal.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "jewel"
+   ]
+  },
+  {
+   "name": "Soap",
+   "cat": "Adventuring gear",
+   "price": 0.02,
+   "desc": "A cake of soap.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Spellbook",
+   "cat": "Adventuring gear",
+   "price": 50,
+   "desc": "A leather-bound book of 100 vellum pages for a wizard's spells.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "arcane"
+   ]
+  },
+  {
+   "name": "Iron spikes (10)",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "For wedging doors and anchoring ropes.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Spyglass",
+   "cat": "Adventuring gear",
+   "price": 1000,
+   "desc": "Objects seen through it are magnified to twice their size.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Two-person tent",
+   "cat": "Adventuring gear",
+   "price": 2,
+   "desc": "A canvas shelter.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Tinderbox",
+   "cat": "Adventuring gear",
+   "price": 0.5,
+   "desc": "Flint, fire steel and tinder.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Torch",
+   "cat": "Adventuring gear",
+   "price": 0.01,
+   "desc": "Bright light in a 20-foot radius for 1 hour.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "name": "Vial",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "Holds 4 ounces.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Waterskin",
+   "cat": "Adventuring gear",
+   "price": 0.2,
+   "desc": "Holds 4 pints.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Whetstone",
+   "cat": "Adventuring gear",
+   "price": 0.01,
+   "desc": "For sharpening blades.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "camp"
+   ]
+  },
+  {
+   "name": "Arcane focus (crystal, orb, rod or wand)",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "A spellcasting focus for arcane magic.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "arcane"
+   ]
+  },
+  {
+   "name": "Druidic focus (sprig, totem or yew wand)",
+   "cat": "Adventuring gear",
+   "price": 1,
+   "desc": "A spellcasting focus for druidic magic.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "holy"
+   ]
+  },
+  {
+   "name": "Burglar's pack",
+   "cat": "Adventuring gear",
+   "price": 16,
+   "desc": "Backpack, ball bearings, string, bell, candles, crowbar, hammer, pitons, hooded lantern, oil, rations, tinderbox, waterskin and rope.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Diplomat's pack",
+   "cat": "Adventuring gear",
+   "price": 39,
+   "desc": "Chest, map cases, fine clothes, ink and pen, lamp, oil, paper, perfume, sealing wax and soap.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Dungeoneer's pack",
+   "cat": "Adventuring gear",
+   "price": 12,
+   "desc": "Backpack, crowbar, hammer, pitons, torches, tinderbox, rations, waterskin and rope.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Entertainer's pack",
+   "cat": "Adventuring gear",
+   "price": 40,
+   "desc": "Backpack, bedroll, costumes, candles, rations, waterskin and a disguise kit.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Explorer's pack",
+   "cat": "Adventuring gear",
+   "price": 10,
+   "desc": "Backpack, bedroll, mess kit, tinderbox, torches, rations, waterskin and rope.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Priest's pack",
+   "cat": "Adventuring gear",
+   "price": 19,
+   "desc": "Backpack, blanket, candles, tinderbox, alms box, incense, censer, vestments, rations and waterskin.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Scholar's pack",
+   "cat": "Adventuring gear",
+   "price": 40,
+   "desc": "Backpack, book of lore, ink and pen, parchment, a bag of sand and a small knife.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "pack"
+   ]
+  },
+  {
+   "name": "Alchemist's supplies",
+   "cat": "Tools",
+   "price": 50,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Brewer's supplies",
+   "cat": "Tools",
+   "price": 20,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Calligrapher's supplies",
+   "cat": "Tools",
+   "price": 10,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Carpenter's tools",
+   "cat": "Tools",
+   "price": 8,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Cartographer's tools",
+   "cat": "Tools",
+   "price": 15,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Cobbler's tools",
+   "cat": "Tools",
+   "price": 5,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Cook's utensils",
+   "cat": "Tools",
+   "price": 1,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Glassblower's tools",
+   "cat": "Tools",
+   "price": 30,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Jeweller's tools",
+   "cat": "Tools",
+   "price": 25,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Leatherworker's tools",
+   "cat": "Tools",
+   "price": 5,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Mason's tools",
+   "cat": "Tools",
+   "price": 10,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Painter's supplies",
+   "cat": "Tools",
+   "price": 10,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Potter's tools",
+   "cat": "Tools",
+   "price": 10,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Smith's tools",
+   "cat": "Tools",
+   "price": 20,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Tinker's tools",
+   "cat": "Tools",
+   "price": 50,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Weaver's tools",
+   "cat": "Tools",
+   "price": 1,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Woodcarver's tools",
+   "cat": "Tools",
+   "price": 1,
+   "desc": "Artisan's tools for a trade. Proficiency adds your proficiency bonus to checks with them.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool"
+   ]
+  },
+  {
+   "name": "Disguise kit",
+   "cat": "Tools",
+   "price": 25,
+   "desc": "Cosmetics, hair dye and props for changing your appearance.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "thief"
+   ]
+  },
+  {
+   "name": "Forgery kit",
+   "cat": "Tools",
+   "price": 15,
+   "desc": "Papers, inks and seals for faking documents.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "thief"
+   ]
+  },
+  {
+   "name": "Herbalism kit",
+   "cat": "Tools",
+   "price": 5,
+   "desc": "Clippers, pouches and vials. Used to make antitoxin and healing potions.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "tool"
+   ]
+  },
+  {
+   "name": "Navigator's tools",
+   "cat": "Tools",
+   "price": 25,
+   "desc": "For charting a course and reading the stars.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "tool"
+   ]
+  },
+  {
+   "name": "Poisoner's kit",
+   "cat": "Tools",
+   "price": 50,
+   "desc": "Vials, chemicals and tools for making and handling poison.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "thief"
+   ]
+  },
+  {
+   "name": "Thieves' tools",
+   "cat": "Tools",
+   "price": 25,
+   "desc": "Lock picks, a small file and narrow pliers.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tool",
+    "thief"
+   ]
+  },
+  {
+   "name": "Dice set",
+   "cat": "Tools",
+   "price": 0.1,
+   "desc": "A gaming set.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gaming"
+   ]
+  },
+  {
+   "name": "Playing card set",
+   "cat": "Tools",
+   "price": 0.5,
+   "desc": "A gaming set.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gaming"
+   ]
+  },
+  {
+   "name": "Strategy board game",
+   "cat": "Tools",
+   "price": 1,
+   "desc": "A gaming set.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gaming"
+   ]
+  },
+  {
+   "name": "Bagpipes",
+   "cat": "Tools",
+   "price": 30,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Drum",
+   "cat": "Tools",
+   "price": 6,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Dulcimer",
+   "cat": "Tools",
+   "price": 25,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Flute",
+   "cat": "Tools",
+   "price": 2,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Lute",
+   "cat": "Tools",
+   "price": 35,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Lyre",
+   "cat": "Tools",
+   "price": 30,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Horn",
+   "cat": "Tools",
+   "price": 3,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Pan flute",
+   "cat": "Tools",
+   "price": 12,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Shawm",
+   "cat": "Tools",
+   "price": 2,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Viol",
+   "cat": "Tools",
+   "price": 30,
+   "desc": "A musical instrument. A bard can use it as a spellcasting focus.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "instrument"
+   ]
+  },
+  {
+   "name": "Camel",
+   "cat": "Mounts and vehicles",
+   "price": 50,
+   "desc": "Speed 50 ft. Carries 480 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Mule",
+   "cat": "Mounts and vehicles",
+   "price": 8,
+   "desc": "Speed 40 ft. Carries 420 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Elephant",
+   "cat": "Mounts and vehicles",
+   "price": 200,
+   "desc": "Speed 40 ft. Carries 1,320 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Draft horse",
+   "cat": "Mounts and vehicles",
+   "price": 50,
+   "desc": "Speed 40 ft. Carries 540 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Riding horse",
+   "cat": "Mounts and vehicles",
+   "price": 75,
+   "desc": "Speed 60 ft. Carries 480 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Mastiff",
+   "cat": "Mounts and vehicles",
+   "price": 25,
+   "desc": "Speed 40 ft. A loyal guard dog.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Pony",
+   "cat": "Mounts and vehicles",
+   "price": 30,
+   "desc": "Speed 40 ft. Carries 225 lb.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Warhorse",
+   "cat": "Mounts and vehicles",
+   "price": 400,
+   "desc": "Speed 60 ft. Trained not to panic in battle.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "animal"
+   ]
+  },
+  {
+   "name": "Bit and bridle",
+   "cat": "Mounts and vehicles",
+   "price": 2,
+   "desc": "For steering a mount.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Riding saddle",
+   "cat": "Mounts and vehicles",
+   "price": 10,
+   "desc": "An ordinary saddle.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Military saddle",
+   "cat": "Mounts and vehicles",
+   "price": 20,
+   "desc": "Advantage on checks to stay mounted.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Pack saddle",
+   "cat": "Mounts and vehicles",
+   "price": 5,
+   "desc": "For carrying loads.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Saddlebags",
+   "cat": "Mounts and vehicles",
+   "price": 4,
+   "desc": "A pair of leather bags.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Feed (per day)",
+   "cat": "Mounts and vehicles",
+   "price": 0.05,
+   "desc": "For one mount.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Stabling (per day)",
+   "cat": "Mounts and vehicles",
+   "price": 0.5,
+   "desc": "A stall, feed and care.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "tack"
+   ]
+  },
+  {
+   "name": "Cart",
+   "cat": "Mounts and vehicles",
+   "price": 15,
+   "desc": "A two-wheeled cart.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "vehicle"
+   ]
+  },
+  {
+   "name": "Wagon",
+   "cat": "Mounts and vehicles",
+   "price": 35,
+   "desc": "A four-wheeled wagon.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "vehicle"
+   ]
+  },
+  {
+   "name": "Carriage",
+   "cat": "Mounts and vehicles",
+   "price": 100,
+   "desc": "An enclosed carriage.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "vehicle"
+   ]
+  },
+  {
+   "name": "Chariot",
+   "cat": "Mounts and vehicles",
+   "price": 250,
+   "desc": "A fast two-person war chariot.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "vehicle"
+   ]
+  },
+  {
+   "name": "Sled",
+   "cat": "Mounts and vehicles",
+   "price": 20,
+   "desc": "For snow and ice.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "vehicle"
+   ]
+  },
+  {
+   "name": "Rowboat",
+   "cat": "Mounts and vehicles",
+   "price": 50,
+   "desc": "Speed 1½ mph.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Keelboat",
+   "cat": "Mounts and vehicles",
+   "price": 3000,
+   "desc": "A river boat. Speed 1 mph.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Sailing ship",
+   "cat": "Mounts and vehicles",
+   "price": 10000,
+   "desc": "Speed 2 mph. Crew of 20.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Longship",
+   "cat": "Mounts and vehicles",
+   "price": 10000,
+   "desc": "Speed 3 mph. Crew of 40.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Galley",
+   "cat": "Mounts and vehicles",
+   "price": 30000,
+   "desc": "Speed 4 mph. Crew of 80.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Warship",
+   "cat": "Mounts and vehicles",
+   "price": 25000,
+   "desc": "Speed 2½ mph. Crew of 60.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "boat"
+   ]
+  },
+  {
+   "name": "Wheat (1 lb)",
+   "cat": "Trade goods",
+   "price": 0.01,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Flour (1 lb)",
+   "cat": "Trade goods",
+   "price": 0.02,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Chicken",
+   "cat": "Trade goods",
+   "price": 0.02,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Salt (1 lb)",
+   "cat": "Trade goods",
+   "price": 0.05,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Iron (1 lb)",
+   "cat": "Trade goods",
+   "price": 0.1,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Canvas (1 sq yd)",
+   "cat": "Trade goods",
+   "price": 0.1,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Copper (1 lb)",
+   "cat": "Trade goods",
+   "price": 0.5,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Cotton cloth (1 sq yd)",
+   "cat": "Trade goods",
+   "price": 0.5,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Ginger (1 lb)",
+   "cat": "Trade goods",
+   "price": 1,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Goat",
+   "cat": "Trade goods",
+   "price": 1,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Cinnamon (1 lb)",
+   "cat": "Trade goods",
+   "price": 2,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Pepper (1 lb)",
+   "cat": "Trade goods",
+   "price": 2,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Sheep",
+   "cat": "Trade goods",
+   "price": 2,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Cloves (1 lb)",
+   "cat": "Trade goods",
+   "price": 3,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Pig",
+   "cat": "Trade goods",
+   "price": 3,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Silver (1 lb)",
+   "cat": "Trade goods",
+   "price": 5,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Linen (1 sq yd)",
+   "cat": "Trade goods",
+   "price": 5,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Cow",
+   "cat": "Trade goods",
+   "price": 10,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Saffron (1 lb)",
+   "cat": "Trade goods",
+   "price": 15,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Ox",
+   "cat": "Trade goods",
+   "price": 15,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Gold (1 lb)",
+   "cat": "Trade goods",
+   "price": 50,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Silk (1 sq yd)",
+   "cat": "Trade goods",
+   "price": 10,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Platinum (1 lb)",
+   "cat": "Trade goods",
+   "price": 500,
+   "desc": "Trade goods, bought and sold by weight or by the head.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "trade"
+   ]
+  },
+  {
+   "name": "Azurite",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Banded agate",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Blue quartz",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Eye agate",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Hematite",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Lapis lazuli",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Malachite",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Moss agate",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Obsidian",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Rhodochrosite",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Tiger eye",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Turquoise",
+   "cat": "Gems",
+   "price": 10,
+   "desc": "A cut gemstone worth about 10 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Bloodstone",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Carnelian",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Chalcedony",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Chrysoprase",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Citrine",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Jasper",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Moonstone",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Onyx",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Rock crystal",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Sardonyx",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Star rose quartz",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Zircon",
+   "cat": "Gems",
+   "price": 50,
+   "desc": "A cut gemstone worth about 50 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Amber",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Amethyst",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Chrysoberyl",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Coral",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Garnet",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Jade",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Jet",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Pearl",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Spinel",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Tourmaline",
+   "cat": "Gems",
+   "price": 100,
+   "desc": "A cut gemstone worth about 100 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Alexandrite",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Aquamarine",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Black pearl",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Blue spinel",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Peridot",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Topaz",
+   "cat": "Gems",
+   "price": 500,
+   "desc": "A cut gemstone worth about 500 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Black opal",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Blue sapphire",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Emerald",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Fire opal",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Opal",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Star ruby",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Star sapphire",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Yellow sapphire",
+   "cat": "Gems",
+   "price": 1000,
+   "desc": "A cut gemstone worth about 1,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Black sapphire",
+   "cat": "Gems",
+   "price": 5000,
+   "desc": "A cut gemstone worth about 5,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Diamond",
+   "cat": "Gems",
+   "price": 5000,
+   "desc": "A cut gemstone worth about 5,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Jacinth",
+   "cat": "Gems",
+   "price": 5000,
+   "desc": "A cut gemstone worth about 5,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Ruby",
+   "cat": "Gems",
+   "price": 5000,
+   "desc": "A cut gemstone worth about 5,000 gp.",
+   "rarity": "mundane",
+   "source": "srd",
+   "tags": [
+    "gem",
+    "jewel"
+   ]
+  },
+  {
+   "name": "Potion of healing",
+   "cat": "Magic items",
+   "price": 50,
+   "desc": "Drink to regain 2d4 + 2 hit points.",
+   "rarity": "common",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of greater healing",
+   "cat": "Magic items",
+   "price": 150,
+   "desc": "Drink to regain 4d4 + 4 hit points.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of superior healing",
+   "cat": "Magic items",
+   "price": 500,
+   "desc": "Drink to regain 8d4 + 8 hit points.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of supreme healing",
+   "cat": "Magic items",
+   "price": 1500,
+   "desc": "Drink to regain 10d4 + 20 hit points.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of climbing",
+   "cat": "Magic items",
+   "price": 75,
+   "desc": "For 1 hour you gain a climbing speed and advantage on climbing checks.",
+   "rarity": "common",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of animal friendship",
+   "cat": "Magic items",
+   "price": 140,
+   "desc": "Cast animal friendship at will for 1 hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of fire breath",
+   "cat": "Magic items",
+   "price": 120,
+   "desc": "For 1 hour, use a bonus action to exhale fire (4d6, DC 13 Dex), up to three times.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of hill giant strength",
+   "cat": "Magic items",
+   "price": 180,
+   "desc": "Your Strength becomes 21 for 1 hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of growth",
+   "cat": "Magic items",
+   "price": 140,
+   "desc": "You grow one size larger for 1d4 hours, as the enlarge spell.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of poison",
+   "cat": "Magic items",
+   "price": 140,
+   "desc": "Looks like a healing potion. Drinking it deals 3d6 poison damage and poisons you.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of resistance",
+   "cat": "Magic items",
+   "price": 140,
+   "desc": "Resistance to one damage type for 1 hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of water breathing",
+   "cat": "Magic items",
+   "price": 150,
+   "desc": "Breathe underwater for 1 hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of clairvoyance",
+   "cat": "Magic items",
+   "price": 1500,
+   "desc": "You gain the effect of the clairvoyance spell.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of diminution",
+   "cat": "Magic items",
+   "price": 1600,
+   "desc": "You shrink as with the reduce part of enlarge/reduce for 1d4 hours.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of gaseous form",
+   "cat": "Magic items",
+   "price": 1800,
+   "desc": "You gain the effect of the gaseous form spell for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of frost giant strength",
+   "cat": "Magic items",
+   "price": 2000,
+   "desc": "Your Strength becomes 23 for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of stone giant strength",
+   "cat": "Magic items",
+   "price": 2100,
+   "desc": "Your Strength becomes 23 for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of fire giant strength",
+   "cat": "Magic items",
+   "price": 2100,
+   "desc": "Your Strength becomes 25 for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of heroism",
+   "cat": "Magic items",
+   "price": 2000,
+   "desc": "10 temporary hit points and the bless effect for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of invulnerability",
+   "cat": "Magic items",
+   "price": 1500,
+   "desc": "Resistance to all damage for 1 minute.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of mind reading",
+   "cat": "Magic items",
+   "price": 1500,
+   "desc": "You gain the effect of the detect thoughts spell.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of cloud giant strength",
+   "cat": "Magic items",
+   "price": 13000,
+   "desc": "Your Strength becomes 27 for 1 hour.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of flying",
+   "cat": "Magic items",
+   "price": 15000,
+   "desc": "A flying speed equal to your walking speed for 1 hour.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of invisibility",
+   "cat": "Magic items",
+   "price": 11000,
+   "desc": "You become invisible for 1 hour, or until you attack or cast a spell.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of longevity",
+   "cat": "Magic items",
+   "price": 9900,
+   "desc": "You become 1d6 + 6 years younger. Each further dose risks aging you instead.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of speed",
+   "cat": "Magic items",
+   "price": 10000,
+   "desc": "You gain the effect of the haste spell for 1 minute, with no lethargy after.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of vitality",
+   "cat": "Magic items",
+   "price": 12000,
+   "desc": "Removes exhaustion and cures disease and poison; hit dice heal for their maximum for 24 hours.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Potion of storm giant strength",
+   "cat": "Magic items",
+   "price": 71000,
+   "desc": "Your Strength becomes 29 for 1 hour.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Oil of slipperiness",
+   "cat": "Magic items",
+   "price": 200,
+   "desc": "Coated creature gains the effect of freedom of movement for 8 hours, or poured out to make a grease spell.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Philter of love",
+   "cat": "Magic items",
+   "price": 200,
+   "desc": "The drinker is charmed by the first creature they see within 10 minutes, for 1 hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Oil of etherealness",
+   "cat": "Magic items",
+   "price": 1500,
+   "desc": "The coated creature gains the effect of the etherealness spell for 1 hour.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Oil of sharpness",
+   "cat": "Magic items",
+   "price": 10000,
+   "desc": "A coated slashing or piercing weapon becomes +3 for 1 hour.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Potion",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "potion",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (Cantrip)",
+   "cat": "Magic items",
+   "price": 25,
+   "desc": "Holds one cantrip spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "common",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (1st level)",
+   "cat": "Magic items",
+   "price": 60,
+   "desc": "Holds one 1st level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "common",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (2nd level)",
+   "cat": "Magic items",
+   "price": 150,
+   "desc": "Holds one 2nd level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (3rd level)",
+   "cat": "Magic items",
+   "price": 300,
+   "desc": "Holds one 3rd level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (4th level)",
+   "cat": "Magic items",
+   "price": 900,
+   "desc": "Holds one 4th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (5th level)",
+   "cat": "Magic items",
+   "price": 2000,
+   "desc": "Holds one 5th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (6th level)",
+   "cat": "Magic items",
+   "price": 6000,
+   "desc": "Holds one 6th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (7th level)",
+   "cat": "Magic items",
+   "price": 12000,
+   "desc": "Holds one 7th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (8th level)",
+   "cat": "Magic items",
+   "price": 25000,
+   "desc": "Holds one 8th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spell scroll (9th level)",
+   "cat": "Magic items",
+   "price": 60000,
+   "desc": "Holds one 9th level spell. A caster who has the spell on their list can read it to cast it without components; others may need an ability check.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Scroll",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "scroll",
+    "magic"
+   ]
+  },
+  {
+   "name": "+1 ammunition (each)",
+   "cat": "Magic items",
+   "price": 200,
+   "desc": "+1 to attack and damage rolls; the magic ends when it hits.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Weapon (ammunition)",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "ammo",
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+2 ammunition (each)",
+   "cat": "Magic items",
+   "price": 1800,
+   "desc": "+2 to attack and damage rolls; the magic ends when it hits.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon (ammunition)",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "ammo",
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+3 ammunition (each)",
+   "cat": "Magic items",
+   "price": 14000,
+   "desc": "+3 to attack and damage rolls; the magic ends when it hits.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon (ammunition)",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "ammo",
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Arrow of slaying",
+   "cat": "Magic items",
+   "price": 13000,
+   "desc": "Made to kill one kind of creature: it must make a DC 17 Con save or take 6d10 extra piercing damage.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon (ammunition)",
+   "attune": false,
+   "consumable": true,
+   "tags": [
+    "ammo",
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+1 weapon",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "+1 to attack and damage rolls with this magic weapon.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+2 weapon",
+   "cat": "Magic items",
+   "price": 4300,
+   "desc": "+2 to attack and damage rolls with this magic weapon.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+3 weapon",
+   "cat": "Magic items",
+   "price": 32000,
+   "desc": "+3 to attack and damage rolls with this magic weapon.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "+1 armour",
+   "cat": "Magic items",
+   "price": 3900,
+   "desc": "+1 AC while worn.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "+2 armour",
+   "cat": "Magic items",
+   "price": 28000,
+   "desc": "+2 AC while worn.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "+3 armour",
+   "cat": "Magic items",
+   "price": 180000,
+   "desc": "+3 AC while worn.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "+1 shield",
+   "cat": "Magic items",
+   "price": 410,
+   "desc": "+1 AC on top of the shield's normal bonus.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "+2 shield",
+   "cat": "Magic items",
+   "price": 4400,
+   "desc": "+2 AC on top of the shield's normal bonus.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "+3 shield",
+   "cat": "Magic items",
+   "price": 35000,
+   "desc": "+3 AC on top of the shield's normal bonus.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Adamantine armour",
+   "cat": "Magic items",
+   "price": 380,
+   "desc": "Any critical hit against you becomes a normal hit.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mithral armour",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Medium or heavy armour with no Strength requirement or Stealth disadvantage.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Elven chain",
+   "cat": "Magic items",
+   "price": 4000,
+   "desc": "A chain shirt granting +1 AC that anyone can wear, proficient or not.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Glamoured studded leather",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "+1 AC; as a bonus action it takes on the look of any clothing.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Armour of resistance",
+   "cat": "Magic items",
+   "price": 3400,
+   "desc": "Resistance to one damage type while worn.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Armour of vulnerability",
+   "cat": "Magic items",
+   "price": 3700,
+   "desc": "Resistance to one physical damage type and vulnerability to the others. Cursed.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Arrow-catching shield",
+   "cat": "Magic items",
+   "price": 4500,
+   "desc": "+2 AC against ranged attacks; you can redirect an attack aimed at someone nearby to yourself.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dragon scale mail",
+   "cat": "Magic items",
+   "price": 35000,
+   "desc": "+1 AC, advantage on saves against dragons' frightful presence, and resistance to one damage type.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dwarven plate",
+   "cat": "Magic items",
+   "price": 27000,
+   "desc": "+2 AC, and you can reduce forced movement against you by 10 feet.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Demon armour",
+   "cat": "Magic items",
+   "price": 24000,
+   "desc": "+1 AC, clawed gauntlets dealing 1d8 slashing, and you understand Abyssal. Cursed: you can't take it off.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Animated shield",
+   "cat": "Magic items",
+   "price": 23000,
+   "desc": "As a bonus action, the shield floats and protects you for 1 minute, leaving your hands free.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Spellguard shield",
+   "cat": "Magic items",
+   "price": 24000,
+   "desc": "Advantage on saves against spells, and spell attacks have disadvantage against you.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Shield of missile attraction",
+   "cat": "Magic items",
+   "price": 3400,
+   "desc": "Resistance to damage from ranged weapons, but ranged attacks nearby are drawn toward you. Cursed.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Armour (shield)",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Armour of invulnerability",
+   "cat": "Magic items",
+   "price": 170000,
+   "desc": "Resistance to nonmagical damage; once a day, immunity to it for 10 minutes.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Plate armour of etherealness",
+   "cat": "Magic items",
+   "price": 150000,
+   "desc": "You can speak the command word to gain the effect of the etherealness spell once a day.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Armour",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "armour",
+    "magic"
+   ]
+  },
+  {
+   "name": "Javelin of lightning",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "Once a day it turns into a bolt of lightning when thrown (4d6 lightning in a line).",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Trident of fish command",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Has 3 charges to cast dominate beast on a beast with a swimming speed.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Weapon of warning",
+   "cat": "Magic items",
+   "price": 490,
+   "desc": "You and allies within 30 feet can't be surprised and have advantage on initiative.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Berserker axe",
+   "cat": "Magic items",
+   "price": 4500,
+   "desc": "+1 axe that gives extra hit points but fills you with battle rage. Cursed.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dagger of venom",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "+1 dagger; once a day it drips poison for 2d10 extra damage and the poisoned condition.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dragon slayer",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "+1 sword that deals 3d6 extra damage to dragons.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Giant slayer",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "+1 weapon that deals 2d6 extra damage to giants and can knock them prone.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Flame tongue",
+   "cat": "Magic items",
+   "price": 4000,
+   "desc": "Sword that bursts into flame on command, dealing 2d6 extra fire damage and shedding light.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mace of disruption",
+   "cat": "Magic items",
+   "price": 3400,
+   "desc": "Deals 2d6 extra radiant damage to fiends and undead, and can destroy weaker ones outright.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mace of smiting",
+   "cat": "Magic items",
+   "price": 5200,
+   "desc": "+1 mace; a natural 20 deals extra damage, and constructs can be shattered.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mace of terror",
+   "cat": "Magic items",
+   "price": 4500,
+   "desc": "Has 3 charges to frighten every creature within 30 feet.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sun blade",
+   "cat": "Magic items",
+   "price": 5000,
+   "desc": "A hilt that forms a blade of sunlight: +2 longsword that deals radiant damage, extra against undead.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sword of life stealing",
+   "cat": "Magic items",
+   "price": 4000,
+   "desc": "On a natural 20, deals 3d6 extra necrotic damage and you gain that many temporary hit points.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sword of wounding",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "Wounds from it can't be healed quickly and bleed for extra damage.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Vicious weapon",
+   "cat": "Magic items",
+   "price": 3200,
+   "desc": "A natural 20 deals 7 extra damage.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dwarven thrower",
+   "cat": "Magic items",
+   "price": 38000,
+   "desc": "+3 warhammer that returns when thrown, with extra damage to giants. For dwarves.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Frost brand",
+   "cat": "Magic items",
+   "price": 28000,
+   "desc": "Sword that deals 1d6 extra cold damage, grants fire resistance and puts out flames.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Nine lives stealer",
+   "cat": "Magic items",
+   "price": 31000,
+   "desc": "+2 sword; on a critical hit it can kill a creature outright. Has limited charges.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Oathbow",
+   "cat": "Magic items",
+   "price": 27000,
+   "desc": "Longbow that marks a sworn enemy for extra damage and advantage.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Scimitar of speed",
+   "cat": "Magic items",
+   "price": 37000,
+   "desc": "+2 scimitar that lets you make an extra attack as a bonus action.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dancing sword",
+   "cat": "Magic items",
+   "price": 31000,
+   "desc": "A sword you can toss into the air to fight on its own for a few turns.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Defender",
+   "cat": "Magic items",
+   "price": 120000,
+   "desc": "+3 sword whose bonus you can move to your AC instead.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Hammer of thunderbolts",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "+1 maul that, with the right belt and gauntlets, can stun giants and throw lightning.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Holy avenger",
+   "cat": "Magic items",
+   "price": 170000,
+   "desc": "+3 sword dealing extra radiant damage to fiends and undead; for paladins, an aura against spells.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Luck blade",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "+1 sword that grants +1 to saves, a reroll each day, and may hold wishes.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sword of sharpness",
+   "cat": "Magic items",
+   "price": 38000,
+   "desc": "Deals maximum damage to objects, and on a natural 20 can sever a limb.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Vorpal sword",
+   "cat": "Magic items",
+   "price": 180000,
+   "desc": "+3 sword that ignores slashing resistance and can behead on a natural 20.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Weapon",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "weapon",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of jumping",
+   "cat": "Magic items",
+   "price": 400,
+   "desc": "Cast jump on yourself at will.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of mind shielding",
+   "cat": "Magic items",
+   "price": 470,
+   "desc": "Your thoughts can't be read, and lies you tell can't be detected by magic.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of swimming",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "A swimming speed of 40 feet.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of warmth",
+   "cat": "Magic items",
+   "price": 350,
+   "desc": "Cold resistance and comfort down to −50 °F.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of water walking",
+   "cat": "Magic items",
+   "price": 510,
+   "desc": "Stand on and move across any liquid as if it were solid ground.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of animal influence",
+   "cat": "Magic items",
+   "price": 3400,
+   "desc": "Has charges to cast animal friendship, fear on beasts, or speak with animals.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of evasion",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Has charges to turn a failed Dexterity save into a success.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of feather falling",
+   "cat": "Magic items",
+   "price": 3200,
+   "desc": "You fall slowly and take no falling damage.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of free action",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "Difficult terrain doesn't slow you, and magic can't paralyse or restrain you.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of protection",
+   "cat": "Magic items",
+   "price": 3000,
+   "desc": "+1 AC and +1 to saving throws.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of resistance",
+   "cat": "Magic items",
+   "price": 4600,
+   "desc": "Resistance to one damage type.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of spell storing",
+   "cat": "Magic items",
+   "price": 4300,
+   "desc": "Stores up to five levels of spells for the wearer to cast.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of the ram",
+   "cat": "Magic items",
+   "price": 3100,
+   "desc": "Has charges to slam a creature or object with spectral force.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of X-ray vision",
+   "cat": "Magic items",
+   "price": 5200,
+   "desc": "See through solid matter within 30 feet for 1 minute, once a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of regeneration",
+   "cat": "Magic items",
+   "price": 27000,
+   "desc": "Regain 1d6 hit points every 10 minutes, and regrow lost limbs.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of shooting stars",
+   "cat": "Magic items",
+   "price": 39000,
+   "desc": "In dim light or darkness: light, faerie fire, ball lightning and shooting stars.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of telekinesis",
+   "cat": "Magic items",
+   "price": 32000,
+   "desc": "Cast telekinesis at will on objects.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of djinni summoning",
+   "cat": "Magic items",
+   "price": 120000,
+   "desc": "Summon a djinni that serves you for a time.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of elemental command",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "Command elementals of one element, and gain its spells and resistances.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of invisibility",
+   "cat": "Magic items",
+   "price": 160000,
+   "desc": "Turn invisible as an action.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of spell turning",
+   "cat": "Magic items",
+   "price": 160000,
+   "desc": "Advantage on saves against single-target spells, and you can turn them back on the caster.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of three wishes",
+   "cat": "Magic items",
+   "price": 110000,
+   "desc": "Holds three castings of the wish spell.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Ring",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "jewel",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of magic detection",
+   "cat": "Magic items",
+   "price": 300,
+   "desc": "Has charges to cast detect magic.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of magic missiles",
+   "cat": "Magic items",
+   "price": 430,
+   "desc": "Has charges to cast magic missile.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of secrets",
+   "cat": "Magic items",
+   "price": 340,
+   "desc": "Points out secret doors and traps within 30 feet.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of web",
+   "cat": "Magic items",
+   "price": 310,
+   "desc": "Has charges to cast web.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of the war mage, +1",
+   "cat": "Magic items",
+   "price": 400,
+   "desc": "+1 to spell attack rolls, and spell attacks ignore half cover.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of the war mage, +2",
+   "cat": "Magic items",
+   "price": 4700,
+   "desc": "+2 to spell attack rolls, and spell attacks ignore half cover.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of the war mage, +3",
+   "cat": "Magic items",
+   "price": 26000,
+   "desc": "+3 to spell attack rolls, and spell attacks ignore half cover.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of binding",
+   "cat": "Magic items",
+   "price": 3100,
+   "desc": "Has charges to cast hold monster and hold person.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of enemy detection",
+   "cat": "Magic items",
+   "price": 5000,
+   "desc": "Points toward the nearest hostile creature within 60 feet.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of fear",
+   "cat": "Magic items",
+   "price": 5000,
+   "desc": "Has charges to cast command (flee) or a cone of fear.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of fireballs",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Has charges to cast fireball.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of lightning bolts",
+   "cat": "Magic items",
+   "price": 4100,
+   "desc": "Has charges to cast lightning bolt.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of paralysis",
+   "cat": "Magic items",
+   "price": 4600,
+   "desc": "Has charges to paralyse a creature.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of wonder",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "Each use produces a random magical effect, from fireballs to a shower of butterflies.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wand of polymorph",
+   "cat": "Magic items",
+   "price": 34000,
+   "desc": "Has charges to cast polymorph.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wand",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of the pact keeper, +1",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "+1 to warlock spell attacks and DCs, and regain a pact slot once a day.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Immovable rod",
+   "cat": "Magic items",
+   "price": 360,
+   "desc": "Press the button and it stays fixed in place, holding up to 8,000 pounds.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of rulership",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Once a day, charm creatures within 120 feet who fail a save.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of alertness",
+   "cat": "Magic items",
+   "price": 25000,
+   "desc": "Advantage on Perception and initiative, plus divination spells and a protective aura.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of absorption",
+   "cat": "Magic items",
+   "price": 38000,
+   "desc": "Absorbs spells aimed only at you and stores their energy for your own spells.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of security",
+   "cat": "Magic items",
+   "price": 29000,
+   "desc": "Transports you and allies to a safe demiplane paradise.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rod of lordly might",
+   "cat": "Magic items",
+   "price": 180000,
+   "desc": "+3 mace with buttons that turn it into other weapons, a ladder and more.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Rod",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of charming",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "Has charges to cast charm person, command or comprehend languages.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of healing",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "Has charges to cast cure wounds, lesser restoration and mass cure wounds.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of swarming insects",
+   "cat": "Magic items",
+   "price": 4700,
+   "desc": "Has charges to summon insect swarms and cast giant insect.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of the adder",
+   "cat": "Magic items",
+   "price": 410,
+   "desc": "The staff's head becomes a venomous snake that bites.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of the python",
+   "cat": "Magic items",
+   "price": 510,
+   "desc": "Throw it down to become a giant constrictor snake under your command.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of the woodlands",
+   "cat": "Magic items",
+   "price": 4900,
+   "desc": "+2 quarterstaff with nature spells; can become a tree.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of withering",
+   "cat": "Magic items",
+   "price": 3900,
+   "desc": "Its strikes deal necrotic damage and sap strength.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of fire",
+   "cat": "Magic items",
+   "price": 36000,
+   "desc": "Fire resistance, and charges to cast burning hands, fireball and wall of fire.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of frost",
+   "cat": "Magic items",
+   "price": 27000,
+   "desc": "Cold resistance, and charges to cast ice storm, wall of ice and cone of cold.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of power",
+   "cat": "Magic items",
+   "price": 26000,
+   "desc": "+2 staff with protective bonuses and powerful spells; can be broken for a retributive strike.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of striking",
+   "cat": "Magic items",
+   "price": 24000,
+   "desc": "+3 quarterstaff that spends charges for extra force damage.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of thunder and lightning",
+   "cat": "Magic items",
+   "price": 34000,
+   "desc": "+2 staff that calls lightning and thunder.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Staff of the magi",
+   "cat": "Magic items",
+   "price": 160000,
+   "desc": "+2 staff that absorbs spells and holds a wizard's arsenal; breaking it unleashes a catastrophe.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Staff",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "arcane",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bag of holding",
+   "cat": "Magic items",
+   "price": 480,
+   "desc": "Holds 500 pounds in a space far bigger inside than out, and always weighs 15 pounds.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Boots of elvenkind",
+   "cat": "Magic items",
+   "price": 390,
+   "desc": "Your steps make no sound. Advantage on Stealth that relies on moving silently.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Boots of striding and springing",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Your speed is 30 feet regardless of load, and you jump three times as far.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Boots of the winterlands",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "Cold resistance, and snow and ice don't slow you.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bracers of archery",
+   "cat": "Magic items",
+   "price": 360,
+   "desc": "+2 to damage with longbows and shortbows.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Brooch of shielding",
+   "cat": "Magic items",
+   "price": 480,
+   "desc": "Resistance to force damage and immunity to magic missile.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Broom of flying",
+   "cat": "Magic items",
+   "price": 490,
+   "desc": "Flies with a rider at 50 feet.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cap of water breathing",
+   "cat": "Magic items",
+   "price": 520,
+   "desc": "Creates a bubble of air around your head underwater.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Circlet of blasting",
+   "cat": "Magic items",
+   "price": 410,
+   "desc": "Once a day, cast scorching ray.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of elvenkind",
+   "cat": "Magic items",
+   "price": 340,
+   "desc": "Advantage on Stealth, and others have disadvantage to see you.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of protection",
+   "cat": "Magic items",
+   "price": 380,
+   "desc": "+1 AC and +1 to saving throws.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of the manta ray",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Breathe underwater and swim at 60 feet with the hood up.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Decanter of endless water",
+   "cat": "Magic items",
+   "price": 520,
+   "desc": "Pours fresh or salt water on command, up to a geyser.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Deck of illusions",
+   "cat": "Magic items",
+   "price": 340,
+   "desc": "Throw a card to create an illusion of the creature on it.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Driftglobe",
+   "cat": "Magic items",
+   "price": 310,
+   "desc": "A glass globe that floats and casts light or daylight.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dust of disappearance",
+   "cat": "Magic items",
+   "price": 450,
+   "desc": "Thrown in the air, it turns everyone nearby invisible for 2d4 minutes.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dust of dryness",
+   "cat": "Magic items",
+   "price": 490,
+   "desc": "Turns 15 cubic feet of water into a small pellet.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dust of sneezing and choking",
+   "cat": "Magic items",
+   "price": 480,
+   "desc": "Looks like dust of disappearance; anyone nearby can't stop sneezing.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Elemental gem",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "Break it to summon an elemental of its type.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Eversmoking bottle",
+   "cat": "Magic items",
+   "price": 490,
+   "desc": "Pours out a cloud of thick smoke.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Eyes of charming",
+   "cat": "Magic items",
+   "price": 430,
+   "desc": "Has charges to cast charm person.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Eyes of minute seeing",
+   "cat": "Magic items",
+   "price": 390,
+   "desc": "Advantage on checks to see fine detail within 1 foot.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Eyes of the eagle",
+   "cat": "Magic items",
+   "price": 420,
+   "desc": "Advantage on sight-based Perception, and see detail at great distance.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Gauntlets of ogre power",
+   "cat": "Magic items",
+   "price": 510,
+   "desc": "Your Strength becomes 19.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Gem of brightness",
+   "cat": "Magic items",
+   "price": 520,
+   "desc": "Has charges to shine light or blind creatures.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Gloves of missile snaring",
+   "cat": "Magic items",
+   "price": 470,
+   "desc": "Catch ranged weapon attacks to reduce their damage.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Gloves of swimming and climbing",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "Climbing and swimming don't slow you, and +5 to such checks.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Goggles of night",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "Darkvision out to 60 feet.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Hat of disguise",
+   "cat": "Magic items",
+   "price": 350,
+   "desc": "Cast disguise self at will.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Headband of intellect",
+   "cat": "Magic items",
+   "price": 400,
+   "desc": "Your Intelligence becomes 19.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Helm of comprehending languages",
+   "cat": "Magic items",
+   "price": 500,
+   "desc": "Cast comprehend languages at will.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Helm of telepathy",
+   "cat": "Magic items",
+   "price": 500,
+   "desc": "Cast detect thoughts and send telepathic messages.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Lantern of revealing",
+   "cat": "Magic items",
+   "price": 520,
+   "desc": "Its light reveals invisible creatures and objects.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Medallion of thoughts",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "Has charges to cast detect thoughts.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Necklace of adaptation",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Breathe in any environment, with advantage against harmful gases.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Pearl of power",
+   "cat": "Magic items",
+   "price": 440,
+   "desc": "Once a day, regain one spent spell slot of 3rd level or lower.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Periapt of health",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "Immunity to disease.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Periapt of wound closure",
+   "cat": "Magic items",
+   "price": 430,
+   "desc": "You stabilise automatically, and hit dice heal double.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Pipes of haunting",
+   "cat": "Magic items",
+   "price": 510,
+   "desc": "Play them to frighten creatures that hear.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Pipes of the sewers",
+   "cat": "Magic items",
+   "price": 460,
+   "desc": "Summon and calm swarms of rats.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Quiver of plenty",
+   "cat": "Magic items",
+   "price": 390,
+   "desc": "Holds sixty arrows, eighteen javelins and six long objects, each in its own compartment.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ring of feather falling (lesser)",
+   "cat": "Magic items",
+   "price": 390,
+   "desc": "Once a day, cast feather fall on yourself.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Robe of useful items",
+   "cat": "Magic items",
+   "price": 470,
+   "desc": "Covered in patches that become real items when pulled off: a ladder, a rowboat, gems and more.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rope of climbing",
+   "cat": "Magic items",
+   "price": 500,
+   "desc": "A 60-foot rope that moves and ties itself on command.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Saddle of the cavalier",
+   "cat": "Magic items",
+   "price": 310,
+   "desc": "You can't be dismounted against your will, and attacks against your mount have disadvantage.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sending stones",
+   "cat": "Magic items",
+   "price": 330,
+   "desc": "A pair of stones: once a day, the holder of one can send a message to the holder of the other.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Slippers of spider climbing",
+   "cat": "Magic items",
+   "price": 320,
+   "desc": "Walk on walls and ceilings with your hands free.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Stone of good luck",
+   "cat": "Magic items",
+   "price": 340,
+   "desc": "+1 to ability checks and saving throws.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wind fan",
+   "cat": "Magic items",
+   "price": 340,
+   "desc": "Cast gust of wind.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Winged boots",
+   "cat": "Magic items",
+   "price": 470,
+   "desc": "A flying speed equal to your walking speed, for 4 hours a day.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bag of tricks",
+   "cat": "Magic items",
+   "price": 310,
+   "desc": "Pull out a fuzzy ball that becomes a random beast for an hour.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Alchemy jug",
+   "cat": "Magic items",
+   "price": 370,
+   "desc": "Pours one of many liquids a day: water, beer, honey, oil, wine and more.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Amulet of proof against detection and location",
+   "cat": "Magic items",
+   "price": 420,
+   "desc": "Hidden from divination magic.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bag of beans",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Plant a bean for a random, often strange, magical effect.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bead of force",
+   "cat": "Magic items",
+   "price": 4300,
+   "desc": "Thrown, it bursts and traps creatures in a sphere of force.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Boots of levitation",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "Cast levitate on yourself at will.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Boots of speed",
+   "cat": "Magic items",
+   "price": 4100,
+   "desc": "Click the heels to double your speed for 10 minutes.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bracers of defence",
+   "cat": "Magic items",
+   "price": 3900,
+   "desc": "+2 AC while you wear no armour and no shield.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Brazier of commanding fire elementals",
+   "cat": "Magic items",
+   "price": 4600,
+   "desc": "Summon a fire elemental once a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Bowl of commanding water elementals",
+   "cat": "Magic items",
+   "price": 4000,
+   "desc": "Summon a water elemental once a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Censer of controlling air elementals",
+   "cat": "Magic items",
+   "price": 4500,
+   "desc": "Summon an air elemental once a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Stone of controlling earth elementals",
+   "cat": "Magic items",
+   "price": 4100,
+   "desc": "Summon an earth elemental once a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cape of the mountebank",
+   "cat": "Magic items",
+   "price": 5200,
+   "desc": "Once a day, cast dimension door in a puff of smoke.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Chime of opening",
+   "cat": "Magic items",
+   "price": 4700,
+   "desc": "Strike it to open locks, lids and doors.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of displacement",
+   "cat": "Magic items",
+   "price": 3700,
+   "desc": "You appear to stand slightly away from where you really are. Attacks have disadvantage.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of the bat",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "Advantage on Stealth; fly in darkness, or become a bat.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cube of force",
+   "cat": "Magic items",
+   "price": 4000,
+   "desc": "Has charges to create barriers that block different things.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Dimensional shackles",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "Bind a creature so it can't teleport or travel between planes.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Folding boat",
+   "cat": "Magic items",
+   "price": 4400,
+   "desc": "A box that unfolds into a rowboat or a sailing boat.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Figurine of wondrous power",
+   "cat": "Magic items",
+   "price": 3800,
+   "desc": "A statuette that becomes a living creature for a time.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Gem of seeing",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Has charges to grant truesight.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Helm of teleportation",
+   "cat": "Magic items",
+   "price": 3800,
+   "desc": "Has charges to cast teleport.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Horn of blasting",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "A blast of sound deals thunder damage and deafens.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Horn of Valhalla",
+   "cat": "Magic items",
+   "price": 4300,
+   "desc": "Summons spirit warriors to fight for you.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Horseshoes of speed",
+   "cat": "Magic items",
+   "price": 3000,
+   "desc": "A horse wearing them gains 30 feet of speed.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Instant fortress",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "A small cube that grows into a stone tower on command.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Iron bands of binding",
+   "cat": "Magic items",
+   "price": 4400,
+   "desc": "Thrown, an iron sphere becomes bands that restrain a creature.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mantle of spell resistance",
+   "cat": "Magic items",
+   "price": 4200,
+   "desc": "Advantage on saves against spells.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Necklace of fireballs",
+   "cat": "Magic items",
+   "price": 3600,
+   "desc": "Detach beads and throw them as fireballs.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Necklace of prayer beads",
+   "cat": "Magic items",
+   "price": 4700,
+   "desc": "Beads that cast bless, cure wounds and other divine spells.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Periapt of proof against poison",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "Immunity to poison damage and the poisoned condition.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Portable hole",
+   "cat": "Magic items",
+   "price": 3200,
+   "desc": "A black cloth circle that unfolds into a 10-foot-deep extradimensional hole.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Robe of eyes",
+   "cat": "Magic items",
+   "price": 3800,
+   "desc": "See in all directions, and see invisible and ethereal things.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Rope of entanglement",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "A rope that ties up a creature on command.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sentinel shield",
+   "cat": "Magic items",
+   "price": 300,
+   "desc": "Advantage on initiative and Perception.",
+   "rarity": "uncommon",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Wings of flying",
+   "cat": "Magic items",
+   "price": 3500,
+   "desc": "A cloak that becomes bat or bird wings for an hour a day.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Amulet of health",
+   "cat": "Magic items",
+   "price": 4400,
+   "desc": "Your Constitution becomes 19.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of dwarvenkind",
+   "cat": "Magic items",
+   "price": 3300,
+   "desc": "+2 Constitution, darkvision and dwarf traits.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of hill giant strength",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "Your Strength becomes 21.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of stone giant strength",
+   "cat": "Magic items",
+   "price": 39000,
+   "desc": "Your Strength becomes 23.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of frost giant strength",
+   "cat": "Magic items",
+   "price": 29000,
+   "desc": "Your Strength becomes 23.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of fire giant strength",
+   "cat": "Magic items",
+   "price": 33000,
+   "desc": "Your Strength becomes 25.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of cloud giant strength",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "Your Strength becomes 27.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Belt of storm giant strength",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "Your Strength becomes 29.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Carpet of flying",
+   "cat": "Magic items",
+   "price": 23000,
+   "desc": "A flying carpet that carries several riders.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cloak of arachnida",
+   "cat": "Magic items",
+   "price": 28000,
+   "desc": "Climb like a spider, resist poison, and cast web.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Crystal ball",
+   "cat": "Magic items",
+   "price": 32000,
+   "desc": "Cast scrying through it.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Efreeti bottle",
+   "cat": "Magic items",
+   "price": 25000,
+   "desc": "Opening it releases an efreeti, who may serve, grant wishes, or attack.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Horseshoes of a zephyr",
+   "cat": "Magic items",
+   "price": 28000,
+   "desc": "A horse wearing them walks on air and never tires.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Manual of bodily health",
+   "cat": "Magic items",
+   "price": 29000,
+   "desc": "Study it for 48 hours to raise your Constitution by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Manual of gainful exercise",
+   "cat": "Magic items",
+   "price": 26000,
+   "desc": "Study it for 48 hours to raise your Strength by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Manual of quickness of action",
+   "cat": "Magic items",
+   "price": 35000,
+   "desc": "Study it for 48 hours to raise your Dexterity by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Tome of clear thought",
+   "cat": "Magic items",
+   "price": 26000,
+   "desc": "Study it for 48 hours to raise your Intelligence by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Tome of leadership and influence",
+   "cat": "Magic items",
+   "price": 30000,
+   "desc": "Study it for 48 hours to raise your Charisma by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Tome of understanding",
+   "cat": "Magic items",
+   "price": 34000,
+   "desc": "Study it for 48 hours to raise your Wisdom by 2, permanently.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Manual of golems",
+   "cat": "Magic items",
+   "price": 24000,
+   "desc": "Instructions for building a golem.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Marvellous pigments",
+   "cat": "Magic items",
+   "price": 23000,
+   "desc": "Paint that becomes real objects when used.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Mirror of life trapping",
+   "cat": "Magic items",
+   "price": 25000,
+   "desc": "Traps the souls and bodies of those who look into it.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Robe of scintillating colours",
+   "cat": "Magic items",
+   "price": 38000,
+   "desc": "Dazzling light that stuns those who see it.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Robe of stars",
+   "cat": "Magic items",
+   "price": 25000,
+   "desc": "+1 to saves, magic missile from its stars, and travel to the astral.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Helm of brilliance",
+   "cat": "Magic items",
+   "price": 33000,
+   "desc": "Studded with gems that cast fire spells and shed light.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of protection",
+   "cat": "Magic items",
+   "price": 5100,
+   "desc": "Orbits your head and grants +1 AC.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of awareness",
+   "cat": "Magic items",
+   "price": 4800,
+   "desc": "Orbits your head; you can't be surprised.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of reserve",
+   "cat": "Magic items",
+   "price": 3000,
+   "desc": "Orbits your head and stores spells.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of sustenance",
+   "cat": "Magic items",
+   "price": 3800,
+   "desc": "Orbits your head; you need no food or water.",
+   "rarity": "rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of fortitude",
+   "cat": "Magic items",
+   "price": 32000,
+   "desc": "Orbits your head and raises your Constitution by 2.",
+   "rarity": "very rare",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Ioun stone of mastery",
+   "cat": "Magic items",
+   "price": 160000,
+   "desc": "Orbits your head and raises your proficiency bonus by 1.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Apparatus of the crab",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "A great iron barrel that becomes a crab-like underwater vehicle.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Cubic gate",
+   "cat": "Magic items",
+   "price": 160000,
+   "desc": "A cube that opens gates to six planes.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Deck of many things",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "Draw a card and change your fate, for better or much worse.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Iron flask",
+   "cat": "Magic items",
+   "price": 140000,
+   "desc": "Traps a creature from another plane inside it.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Robe of the archmagi",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "+2 AC, advantage on saves against spells, and stronger spells for wizards.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Scarab of protection",
+   "cat": "Magic items",
+   "price": 180000,
+   "desc": "Advantage on saves against spells and protection from necromancy.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sovereign glue",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "Bonds any two things permanently.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Universal solvent",
+   "cat": "Magic items",
+   "price": 130000,
+   "desc": "Dissolves any adhesive, even sovereign glue.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Sphere of annihilation",
+   "cat": "Magic items",
+   "price": 170000,
+   "desc": "A floating sphere of nothing that destroys whatever it touches.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Talisman of pure good",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "A holy symbol that can open fissures to swallow evil.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Talisman of ultimate evil",
+   "cat": "Magic items",
+   "price": 170000,
+   "desc": "An unholy symbol that can destroy the good.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Talisman of the sphere",
+   "cat": "Magic items",
+   "price": 190000,
+   "desc": "Lets you control a sphere of annihilation.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Well of many worlds",
+   "cat": "Magic items",
+   "price": 140000,
+   "desc": "A black cloth circle that opens a portal to another world.",
+   "rarity": "legendary",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": false,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Orb of dragonkind",
+   "cat": "Magic items",
+   "price": null,
+   "desc": "One of a few ancient orbs holding the essence of an evil dragon. Priceless, and never truly owned.",
+   "rarity": "artifact",
+   "source": "srd",
+   "kind": "Wondrous item",
+   "attune": true,
+   "consumable": false,
+   "tags": [
+    "wondrous",
+    "magic"
+   ]
+  },
+  {
+   "name": "Essence case",
+   "cat": "Pallimustus goods",
+   "price": 150,
+   "desc": "A padded, warded box for carrying an unabsorbed essence. Its ward hides the essence from anyone sensing for magic.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "container",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Awakening stone tray",
+   "cat": "Pallimustus goods",
+   "price": 5,
+   "desc": "A felt-lined wooden tray with slots for twelve awakening stones.",
+   "rarity": "mundane",
+   "source": "world",
+   "tags": [
+    "container"
+   ]
+  },
+  {
+   "name": "Warded coin purse",
+   "cat": "Pallimustus goods",
+   "price": 25,
+   "desc": "A purse that hums when another hand opens it.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "container",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Core lamp",
+   "cat": "Pallimustus goods",
+   "price": 80,
+   "desc": "A lamp that burns an Iron core for a month of steady light.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "light",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Core stove",
+   "cat": "Pallimustus goods",
+   "price": 120,
+   "desc": "A small stove that cooks and heats a room on one Iron core a week.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "camp",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Surge bell",
+   "cat": "Pallimustus goods",
+   "price": 300,
+   "desc": "A bell that rings by itself when the ambient magic thickens before a monster surge.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Dimensional satchel (Iron)",
+   "cat": "Pallimustus goods",
+   "price": 500,
+   "desc": "Holds 100 pounds in a space far bigger inside than out. Made for Iron-rank adventurers.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "container",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Dimensional bag (Bronze)",
+   "cat": "Pallimustus goods",
+   "price": 6000,
+   "desc": "Holds 1,000 pounds. A Bronze-rank storage item.",
+   "rarity": "rare",
+   "source": "world",
+   "tags": [
+    "container",
+    "magic"
+   ],
+   "rank": "Bronze"
+  },
+  {
+   "name": "Storage ring (Silver)",
+   "cat": "Pallimustus goods",
+   "price": 60000,
+   "desc": "A ring with a room-sized space inside. Only Silver-rank crafters can make one.",
+   "rarity": "very rare",
+   "source": "world",
+   "tags": [
+    "container",
+    "magic",
+    "jewel"
+   ],
+   "rank": "Silver"
+  },
+  {
+   "name": "Stamina tonic",
+   "cat": "Pallimustus goods",
+   "price": 300,
+   "desc": "Removes one level of exhaustion.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "potion",
+    "alchemy",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Marsh fever cure",
+   "cat": "Pallimustus goods",
+   "price": 5,
+   "desc": "A bitter tea that ends marsh fever in a day.",
+   "rarity": "mundane",
+   "source": "world",
+   "tags": [
+    "herb",
+    "alchemy"
+   ]
+  },
+  {
+   "name": "Ritual chalk",
+   "cat": "Pallimustus goods",
+   "price": 10,
+   "desc": "Chalk ground with spirit-coin dust, for drawing ritual circles.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "arcane",
+    "writing",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Ritual circle kit",
+   "cat": "Pallimustus goods",
+   "price": 75,
+   "desc": "Chalk, cord, candles and a folding guide for the most common ritual circles, including essence absorption.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "arcane",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Suppression manacles",
+   "cat": "Pallimustus goods",
+   "price": 800,
+   "desc": "Manacles that stop the wearer from using essence abilities. Crown and Society issue only, officially.",
+   "rarity": "rare",
+   "source": "world",
+   "tags": [
+    "thief",
+    "magic"
+   ],
+   "rank": "Bronze"
+  },
+  {
+   "name": "Cloud-flask",
+   "cat": "Pallimustus goods",
+   "price": 400,
+   "desc": "A flask of shaped cloud that unfolds into a solid 10-foot platform for an hour.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "magic",
+    "camp"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Translation earring",
+   "cat": "Pallimustus goods",
+   "price": 400,
+   "desc": "You understand any spoken language. Popular with outworlders.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "jewel",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Monster-hide coat (Iron)",
+   "cat": "Pallimustus goods",
+   "price": 200,
+   "desc": "Light armour of Iron-rank monster hide. AC 12 + Dex modifier, and it repairs small tears overnight.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "armour",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Monster-scale armour (Bronze)",
+   "cat": "Pallimustus goods",
+   "price": 3000,
+   "desc": "Medium armour of Bronze-rank monster scales. AC 15 + Dex modifier (max 2), no Stealth disadvantage.",
+   "rarity": "rare",
+   "source": "world",
+   "tags": [
+    "armour",
+    "magic"
+   ],
+   "rank": "Bronze"
+  },
+  {
+   "name": "Iron-rank monster blood (vial)",
+   "cat": "Pallimustus goods",
+   "price": 20,
+   "desc": "An alchemical reagent for potions and rituals.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "alchemy",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Bronze-rank monster ichor (vial)",
+   "cat": "Pallimustus goods",
+   "price": 600,
+   "desc": "A potent reagent that only Bronze-rank alchemists can work.",
+   "rarity": "rare",
+   "source": "world",
+   "tags": [
+    "alchemy",
+    "magic"
+   ],
+   "rank": "Bronze"
+  },
+  {
+   "name": "Astral space map",
+   "cat": "Pallimustus goods",
+   "price": 50,
+   "desc": "A map marking the entrance to a known astral space, and what's been seen inside.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Local monster almanac",
+   "cat": "Pallimustus goods",
+   "price": 25,
+   "desc": "The Adventure Society's notes on monsters of the region, what they drop, and how they die.",
+   "rarity": "mundane",
+   "source": "world",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Contract board copy",
+   "cat": "Pallimustus goods",
+   "price": 0.1,
+   "desc": "Today's Adventure Society contracts, copied by hand.",
+   "rarity": "mundane",
+   "source": "world",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "Adventure Society badge",
+   "cat": "Pallimustus goods",
+   "price": null,
+   "desc": "Issued free to members; shows rank. Not sold, and forging one is a crime.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Core-powered carriage",
+   "cat": "Pallimustus goods",
+   "price": 2000,
+   "desc": "A carriage that runs without horses on a Bronze core a week.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "vehicle",
+    "magic"
+   ],
+   "rank": "Bronze"
+  },
+  {
+   "name": "Warding talisman",
+   "cat": "Pallimustus goods",
+   "price": 250,
+   "desc": "Once a day, as a reaction, gain resistance to damage from a monster's attack.",
+   "rarity": "uncommon",
+   "source": "world",
+   "tags": [
+    "holy",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Spirit-coin tea",
+   "cat": "Pallimustus goods",
+   "price": 2,
+   "desc": "Tea brewed with a pinch of coin dust. Counts as a meal for an essence user.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "food",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Self-warming cloak",
+   "cat": "Pallimustus goods",
+   "price": 60,
+   "desc": "Keeps you comfortable in cold weather.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "clothes",
+    "magic"
+   ],
+   "rank": "Iron"
+  },
+  {
+   "name": "Everburning lamp-stone",
+   "cat": "Pallimustus goods",
+   "price": 50,
+   "desc": "A stone that glows like a lantern, forever.",
+   "rarity": "common",
+   "source": "world",
+   "tags": [
+    "light",
+    "magic"
+   ],
+   "rank": "Iron"
+  }
+ ]
+}

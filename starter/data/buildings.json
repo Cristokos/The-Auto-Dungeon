@@ -1,0 +1,1154 @@
+{
+  "_about": "Buildings and features a DM can add to a place from its page: temples (sized by the settlement, with services and prices), and features a town might be built around (decorative, defensive, important or historical). {name} is the place.",
+  "version": 3,
+  "temples": {
+    "sizes": {
+      "hamlet": "wayside shrine",
+      "village": "shrine",
+      "town": "temple",
+      "city": "great temple"
+    },
+    "names": [
+      "The {size} of {church}",
+      "{place} {size}",
+      "The {adj} {size}",
+      "{church}, {place}",
+      "The {adj} {size} of {church}",
+      "{church} at {place}",
+      "The {size} on the Hill",
+      "The {adj} House of {church}"
+    ],
+    "adjectives": [
+      "Old",
+      "Little",
+      "White",
+      "Stone",
+      "Lantern",
+      "Hill",
+      "River",
+      "Bell",
+      "Green",
+      "Quiet",
+      "Gilded",
+      "Ash",
+      "Bright",
+      "Sun",
+      "Deep",
+      "Salt",
+      "Willow",
+      "Golden",
+      "Red",
+      "Blue",
+      "High",
+      "Low",
+      "North",
+      "South",
+      "Morning",
+      "Evening",
+      "Pilgrim",
+      "Lamp",
+      "Iron",
+      "Holy",
+      "Merciful",
+      "Faithful",
+      "Hidden",
+      "Grey",
+      "Sea",
+      "Hearth"
+    ],
+    "services": [
+      {
+        "name": "Healing of wounds",
+        "gp": 10,
+        "churches": [
+          "Healer",
+          "Hearth",
+          "War",
+          "Hero"
+        ]
+      },
+      {
+        "name": "Cure of disease or poison",
+        "gp": 50,
+        "churches": [
+          "Healer",
+          "Purity"
+        ]
+      },
+      {
+        "name": "A blessing for a journey",
+        "gp": 5,
+        "churches": [
+          "Journey",
+          "Ocean",
+          "Storm"
+        ]
+      },
+      {
+        "name": "Rites for the dead",
+        "gp": 5,
+        "churches": [
+          "Death",
+          "Undeath",
+          "Hearth"
+        ]
+      },
+      {
+        "name": "A blessing before battle",
+        "gp": 10,
+        "churches": [
+          "War",
+          "Hero",
+          "Destruction",
+          "Storm"
+        ]
+      },
+      {
+        "name": "Witnessed oaths and contracts",
+        "gp": 5,
+        "churches": [
+          "Trade",
+          "Justice",
+          "Truth"
+        ]
+      },
+      {
+        "name": "Marriage rites",
+        "gp": 10,
+        "churches": [
+          "Hearth",
+          "Revels",
+          "Trade",
+          "Justice"
+        ]
+      },
+      {
+        "name": "Removal of a curse",
+        "gp": 150,
+        "churches": [
+          "Purity",
+          "Healer",
+          "Truth"
+        ]
+      },
+      {
+        "name": "Identify an item",
+        "gp": 20,
+        "churches": [
+          "Knowledge",
+          "Trade",
+          "Truth"
+        ]
+      },
+      {
+        "name": "Shelter for the night",
+        "gp": 0,
+        "churches": [
+          "Hearth",
+          "Journey"
+        ]
+      },
+      {
+        "name": "Restoration (lesser)",
+        "gp": 80,
+        "churches": [
+          "Healer",
+          "Purity",
+          "Hearth"
+        ]
+      },
+      {
+        "name": "A reading of omens",
+        "gp": 5,
+        "churches": [
+          "Storm",
+          "Knowledge",
+          "Truth"
+        ]
+      },
+      {
+        "name": "Release from an unjust oath or contract",
+        "gp": 25,
+        "churches": [
+          "Liberty"
+        ]
+      },
+      {
+        "name": "A blessing for a new building or field",
+        "gp": 10,
+        "churches": [
+          "Earth",
+          "Hearth"
+        ]
+      },
+      {
+        "name": "Sanctioned demolition, with the land's spirits appeased",
+        "gp": 30,
+        "churches": [
+          "Destruction"
+        ]
+      },
+      {
+        "name": "Registration of a contract of service",
+        "gp": 15,
+        "churches": [
+          "Dominion"
+        ]
+      },
+      {
+        "name": "Quiet burial, no questions asked",
+        "gp": 40,
+        "churches": [
+          "Undeath",
+          "Death"
+        ]
+      },
+      {
+        "name": "A disguise for a festival, or a new name for a fresh start",
+        "gp": 20,
+        "churches": [
+          "Disguise"
+        ]
+      },
+      {
+        "name": "A blessing for a boat or a voyage",
+        "gp": 5,
+        "churches": [
+          "Ocean",
+          "Journey"
+        ]
+      },
+      {
+        "name": "Appraisal of goods, honestly done",
+        "gp": 10,
+        "churches": [
+          "Trade"
+        ]
+      },
+      {
+        "name": "Training in arms, for the faithful",
+        "gp": 15,
+        "churches": [
+          "War",
+          "Hero"
+        ]
+      },
+      {
+        "name": "Use of the temple library",
+        "gp": 5,
+        "churches": [
+          "Knowledge"
+        ]
+      },
+      {
+        "name": "Judgement of a dispute",
+        "gp": 10,
+        "churches": [
+          "Justice",
+          "Truth"
+        ]
+      },
+      {
+        "name": "Hosting of a feast or celebration",
+        "gp": 25,
+        "churches": [
+          "Revels",
+          "Hearth"
+        ]
+      },
+      {
+        "name": "Weather-reading and a blessing against storms",
+        "gp": 5,
+        "churches": [
+          "Storm"
+        ]
+      },
+      {
+        "name": "Cleansing of a home after a death or curse",
+        "gp": 30,
+        "churches": [
+          "Purity",
+          "Death"
+        ]
+      },
+      {
+        "name": "Sanctuary for a fugitive, for three days",
+        "gp": 0,
+        "churches": [
+          "Liberty",
+          "Justice",
+          "Hearth"
+        ]
+      },
+      {
+        "name": "A funeral pyre, and a song for the dead",
+        "gp": 10,
+        "churches": [
+          "Destruction",
+          "Hero"
+        ]
+      }
+    ],
+    "details": [
+      "Its doors are never locked.",
+      "Its bells ring the hours for the whole town.",
+      "Its walls are covered in offerings and prayers.",
+      "It is far grander than the town around it.",
+      "It is half ruined, and the priest is rebuilding it alone.",
+      "It doubles as the town's school.",
+      "Pilgrims sleep in its yard.",
+      "Its altar stone is older than the building.",
+      "Its roof is gilded, paid for by one rich family who make sure everyone knows.",
+      "A great tree grows through the middle of it, and the priests say the god planted it.",
+      "Its walls are painted with scenes of the god's legends, faded and touched up in brighter colours.",
+      "It has a hospital wing where the sick sleep in rows.",
+      "Its crypt holds the bones of local heroes, and pilgrims come to touch them.",
+      "Its priest is a former adventurer whose old team still visits.",
+      "It runs the only school in the area, and the children sing at every service.",
+      "It's built from the stones of an older temple to a different god.",
+      "A holy spring rises in its courtyard.",
+      "Its bell was cast from melted-down weapons after a war.",
+      "A stray dog lives in the doorway and is said to be blessed.",
+      "It keeps a book where travellers write their names, going back centuries.",
+      "Its doors are carved with the names of every priest who has served there.",
+      "It feeds the poor every evening from a great kettle.",
+      "It's built on stilts above the floodwaters.",
+      "It has a library of prayers in a dozen languages.",
+      "Its incense is made from a local herb and can be smelled across the town."
+    ],
+    "secrets": [
+      "The priest has lost their faith and goes through the motions.",
+      "The offerings box has been robbed for months.",
+      "A cult meets in the crypt on the dark moon.",
+      "The temple holds a relic another church wants back.",
+      "The priest is spying for the church's leaders in the city.",
+      "The temple's debts are owed to a dangerous house.",
+      "The holy relic on the altar is a fake; the real one was sold years ago.",
+      "The priest has a family the church doesn't know about.",
+      "The temple is hiding a fugitive from the law.",
+      "A demon is bound under the altar, and the wards are weakening.",
+      "The priest has been granting divine essences to people the god didn't choose.",
+      "The temple's spring is drying up, and the priest is faking its flow.",
+      "A noble pays the temple to keep a dangerous secret about his family.",
+      "The temple is a front for smuggling relics across the border.",
+      "The crypt connects to a forgotten astral space.",
+      "The priest is dying and hasn't named a successor.",
+      "Someone has been stealing from the poor box, and it's the acolyte everyone trusts.",
+      "The god's voice hasn't been heard here in a generation, and the priests are afraid to say so.",
+      "A cult of a rival god is slowly taking over the congregation.",
+      "The temple's founder made a pact with an astral power, not a god."
+    ],
+    "priest": {
+      "wayside shrine": "keeper",
+      "shrine": "priest",
+      "temple": "high priest",
+      "great temple": "high priest"
+    }
+  },
+  "features": [
+    {
+      "name": "The painted walls",
+      "kind": "decorative",
+      "text": "Every outer wall in {name} is painted with scenes from the town's history, repainted each spring.",
+      "dm": "One panel was painted over in a hurry years ago. Under it is a scene someone wanted forgotten."
+    },
+    {
+      "name": "The glass bell tower",
+      "kind": "decorative",
+      "text": "A slender tower of green glass rises over {name}, ringing softly whenever the wind turns.",
+      "dm": "The glass was poured by an essence user who never asked for payment, and never left town."
+    },
+    {
+      "name": "The hanging gardens",
+      "kind": "decorative",
+      "text": "Terraces of flowers and herbs spill down every wall around the square of {name}.",
+      "dm": "The gardener feeds the plants something that makes them bloom out of season."
+    },
+    {
+      "name": "The mosaic square",
+      "kind": "decorative",
+      "text": "The square of {name} is a mosaic of a great beast, laid in coloured stone.",
+      "dm": "The beast was real. The mosaic shows where it is buried."
+    },
+    {
+      "name": "The lantern street",
+      "kind": "decorative",
+      "text": "A street of {name} is hung with hundreds of paper lanterns, lit every night by the children.",
+      "dm": "One lantern is never lit. Lighting it is a signal for smugglers."
+    },
+    {
+      "name": "The carved gate",
+      "kind": "decorative",
+      "text": "The town gate of {name} is carved with the faces of every headman it has had.",
+      "dm": "The newest face was carved before that headman took office."
+    },
+    {
+      "name": "The singing fountain",
+      "kind": "decorative",
+      "text": "A fountain in {name} hums a low note when the water runs, and townsfolk tune their instruments by it.",
+      "dm": "A small mana spring feeds it. The Magic Society would like to know."
+    },
+    {
+      "name": "The statue of the founder",
+      "kind": "decorative",
+      "text": "A weathered statue of {name}'s founder looks out over the road.",
+      "dm": "The founder was a bandit. The town tells another story."
+    },
+    {
+      "name": "The rooftop dovecotes",
+      "kind": "decorative",
+      "text": "Every roof in {name} has a dovecote, and the doves carry messages for a copper.",
+      "dm": "One flock flies to a place no one in town admits to knowing."
+    },
+    {
+      "name": "The festival arch",
+      "kind": "decorative",
+      "text": "A great wooden arch, hung with ribbons from every festival, stands at the edge of {name}.",
+      "dm": "The oldest ribbons are wards, tied there by someone who knew what they were doing."
+    },
+    {
+      "name": "The old palisade",
+      "kind": "defensive",
+      "text": "A palisade of sharpened logs rings {name}, mended so often that hardly an old log is left.",
+      "dm": "There is a gap behind the tannery that the watch pretends not to know about."
+    },
+    {
+      "name": "The stone keep",
+      "kind": "defensive",
+      "text": "A squat stone keep stands in the middle of {name}, big enough for everyone to shelter in.",
+      "dm": "The keep's cellar runs into older tunnels nobody has mapped."
+    },
+    {
+      "name": "The ward-stones",
+      "kind": "defensive",
+      "text": "A ring of carved ward-stones around {name} keeps lesser monsters away.",
+      "dm": "One stone has cracked, and the ward is weaker on that side than anyone knows."
+    },
+    {
+      "name": "The watchtowers",
+      "kind": "defensive",
+      "text": "Three watchtowers on the hills around {name} light beacons when anything comes.",
+      "dm": "One watchman sleeps on duty, and takes bribes to say he didn't."
+    },
+    {
+      "name": "The moat",
+      "kind": "defensive",
+      "text": "{name} sits behind a broad moat fed by the river, crossed by a single drawbridge.",
+      "dm": "Something lives in the moat. It has been fed for years."
+    },
+    {
+      "name": "The militia hall",
+      "kind": "defensive",
+      "text": "The militia of {name} drills in a long hall hung with old weapons and trophies.",
+      "dm": "Some trophies were bought, not won."
+    },
+    {
+      "name": "The bell of warning",
+      "kind": "defensive",
+      "text": "A great bronze bell hangs at the centre of {name}; it has rung only three times in living memory.",
+      "dm": "The last time it rang, nothing came. Nobody admits to ringing it."
+    },
+    {
+      "name": "The hidden refuge",
+      "kind": "defensive",
+      "text": "In a crisis the folk of {name} hide in caves above the town, stocked with food and water.",
+      "dm": "The caves were stocked recently. Someone knows a crisis is coming."
+    },
+    {
+      "name": "The thorn hedge",
+      "kind": "defensive",
+      "text": "A hedge of iron-hard thorns, grown by some old essence user, surrounds {name}.",
+      "dm": "The hedge grows a little closer every year."
+    },
+    {
+      "name": "The river chain",
+      "kind": "defensive",
+      "text": "A great chain can be raised across the river at {name} to stop boats.",
+      "dm": "Whoever holds the winch key holds the river. The key is missing."
+    },
+    {
+      "name": "The great well",
+      "kind": "important",
+      "text": "{name} was built around a deep well that never runs dry, even in drought.",
+      "dm": "The well is far deeper than any well should be, and something down there is breathing."
+    },
+    {
+      "name": "The crossroads stone",
+      "kind": "important",
+      "text": "{name} grew up around a stone where four roads meet; travellers touch it for luck.",
+      "dm": "The stone is a waymarker from before the current age, and it points somewhere."
+    },
+    {
+      "name": "The ford",
+      "kind": "important",
+      "text": "{name} sits at the only safe ford for miles, and lives off the travellers who cross.",
+      "dm": "A rival village upstream has been talking about building a bridge."
+    },
+    {
+      "name": "The mill race",
+      "kind": "important",
+      "text": "A long mill race brings water from the hills to the wheels of {name}.",
+      "dm": "Whoever controls the sluice gate upstream could ruin the town in a day."
+    },
+    {
+      "name": "The market cross",
+      "kind": "important",
+      "text": "Traders have met at the market cross of {name} for longer than the town has stood.",
+      "dm": "The right to hold the market is written on a charter the council has lost."
+    },
+    {
+      "name": "The shrine spring",
+      "kind": "important",
+      "text": "A spring sacred to the church rises in {name}, and pilgrims come to drink from it.",
+      "dm": "The spring's healing is real but fading. The priests are keeping it quiet."
+    },
+    {
+      "name": "The old mine",
+      "kind": "important",
+      "text": "The old mine above {name} made the town rich once; now it is mostly worked out.",
+      "dm": "There is a vein no one has found yet. One miner knows where it is."
+    },
+    {
+      "name": "The harbour wall",
+      "kind": "important",
+      "text": "A curved harbour wall shelters the boats of {name} from the worst of the weather.",
+      "dm": "The wall is crumbling. A bad storm would take half the fleet."
+    },
+    {
+      "name": "The grain store",
+      "kind": "important",
+      "text": "{name} keeps a great stone granary that can feed the town through two bad winters.",
+      "dm": "Half the grain is gone. Someone has been selling it."
+    },
+    {
+      "name": "The astral door",
+      "kind": "important",
+      "text": "An old, sealed astral space door stands on the edge of {name}; the Adventure Society checks it every month.",
+      "dm": "The seal has been opened and closed again recently."
+    },
+    {
+      "name": "The teleportation circle",
+      "kind": "important",
+      "text": "{name} has a small teleportation circle, run by the Church of the Journey and the Magic Society, and passage costs a fee in spirit coins.",
+      "dm": "The circle's keeper lets some people through without the fee, for a price of another kind."
+    },
+    {
+      "name": "The Adventure Society post",
+      "kind": "important",
+      "text": "A small Adventure Society post in {name} posts contracts and pays bounties on monster cores.",
+      "dm": "The clerk is skimming from the bounties."
+    },
+    {
+      "name": "The battlefield",
+      "kind": "historical",
+      "text": "A battle was fought in the fields outside {name} long ago, and ploughs still turn up bones and rusted blades.",
+      "dm": "Some of the dead don't stay down on the anniversary."
+    },
+    {
+      "name": "The burnt quarter",
+      "kind": "historical",
+      "text": "A quarter of {name} burned a generation ago and was never rebuilt; it is all blackened walls and weeds.",
+      "dm": "The fire was set. The family who set it still lives in town."
+    },
+    {
+      "name": "The plague stones",
+      "kind": "historical",
+      "text": "Flat stones outside {name} mark where food was left for the town during a plague long ago.",
+      "dm": "The plague came from somewhere. The records were burned."
+    },
+    {
+      "name": "The founding tree",
+      "kind": "historical",
+      "text": "An ancient tree in {name} is said to be where the first settlers camped.",
+      "dm": "The tree is older than it looks, and it remembers."
+    },
+    {
+      "name": "The ruined tower",
+      "kind": "historical",
+      "text": "The stump of a wizard's tower stands on a hill above {name}, its top long since fallen.",
+      "dm": "Its lower floors are intact, sealed, and the town has forgotten the way in."
+    },
+    {
+      "name": "The drowned church",
+      "kind": "historical",
+      "text": "When the river is low, the bell tower of a drowned church shows above the water at {name}.",
+      "dm": "The church was drowned on purpose, to hide what was buried under it."
+    },
+    {
+      "name": "The hero's grave",
+      "kind": "historical",
+      "text": "A local hero is buried under a cairn in {name}; travellers leave small offerings.",
+      "dm": "The grave is empty."
+    },
+    {
+      "name": "The old border stone",
+      "kind": "historical",
+      "text": "A carved stone in {name} marks a border between realms that no longer exist.",
+      "dm": "Someone has been rubbing the inscription for a claim to the land."
+    },
+    {
+      "name": "The monster skull",
+      "kind": "historical",
+      "text": "The huge skull of a monster killed by the founders hangs over the gate of {name}.",
+      "dm": "It was not killed. It was driven off, and its kind is long-lived."
+    },
+    {
+      "name": "The treaty hall",
+      "kind": "historical",
+      "text": "A small hall in {name} is where an old peace was signed, and the table is still kept.",
+      "dm": "A copy of the treaty in the hall differs from the one in the city archives."
+    },
+    {
+      "name": "The outworlder's house",
+      "kind": "historical",
+      "text": "An outworlder lived in {name} long ago and built a house unlike any other, still standing.",
+      "dm": "The house has a room the outworlder never showed anyone. It is still locked."
+    },
+    {
+      "name": "The flood marks",
+      "kind": "historical",
+      "text": "Marks on the wall of the old hall of {name} show how high every great flood has come.",
+      "dm": "The marks are getting higher, faster."
+    }
+  ],
+  "controlPoints": [
+    {
+      "kind": "outpost",
+      "name": "{town} Outpost",
+      "text": "A walled outpost on the road beyond {town}: a dozen soldiers, a signal fire and a stable.",
+      "yields": "Control of the road, and tolls",
+      "dm": "Whoever holds it sees everyone who comes and goes."
+    },
+    {
+      "kind": "watchtower",
+      "name": "{town} Watchtower",
+      "text": "A stone watchtower on the high ground above {town}, with a view for miles.",
+      "yields": "Warning of anything coming, and a place to hold",
+      "dm": "The old garrison left a cache under the floor."
+    },
+    {
+      "kind": "toll fort",
+      "name": "The {town} Toll Fort",
+      "text": "A small fort where the road crosses the river near {town}, taking a coin from every cart.",
+      "yields": "Tolls, and a hand on trade",
+      "dm": "The tolls go somewhere other than the books say."
+    },
+    {
+      "kind": "quarry",
+      "name": "The {town} Quarry",
+      "text": "A quarry cut into the hills near {town}, its stone in every wall for miles.",
+      "yields": "Stone for building, and work for the town",
+      "dm": "A deep cut broke into an old cave last year, and it was quietly sealed."
+    },
+    {
+      "kind": "mine",
+      "name": "The {town} Mine",
+      "text": "An iron mine near {town}, its shafts lit day and night.",
+      "yields": "Iron for weapons and tools",
+      "dm": "The miners say a seam sings at night."
+    },
+    {
+      "kind": "mana-crystal mine",
+      "name": "The {town} Crystal Workings",
+      "text": "A mine near {town} where mana crystals grow in the rock, cut by careful hands and shipped under guard.",
+      "yields": "Mana crystals, worth a fortune to mages and crafters",
+      "dm": "Cutting too fast makes the crystals go wild, and someone wants it done fast."
+    },
+    {
+      "kind": "core refinery",
+      "name": "The {town} Core Works",
+      "text": "A refinery near {town} that renders monster cores into something crafters can use, stinking of ozone.",
+      "yields": "Refined cores for crafting and ritual magic",
+      "dm": "Some of the cores it buys come from monsters no one hunted."
+    },
+    {
+      "kind": "ritual-chalk quarry",
+      "name": "The {town} Chalk Pits",
+      "text": "White pits near {town} where ritual chalk is dug, every scrap of it sold to ritualists.",
+      "yields": "Ritual chalk for magic circles",
+      "dm": "Chalk from the deepest pit is stronger, and it is running out."
+    },
+    {
+      "kind": "lumber camp",
+      "name": "The {town} Lumber Camp",
+      "text": "A logging camp in the woods near {town}, floating timber down the river.",
+      "yields": "Timber for ships and houses",
+      "dm": "The loggers have cut into woods something else thinks of as its own."
+    },
+    {
+      "kind": "granary",
+      "name": "The {town} Granary",
+      "text": "The great granary of {town}, holding the harvest for the whole district.",
+      "yields": "Grain, and the power to feed or starve a district",
+      "dm": "The count in the books and the count in the bins do not match."
+    },
+    {
+      "kind": "warehouse",
+      "name": "The {town} Bonded Warehouse",
+      "text": "A guarded warehouse in {town} where merchants store goods before they are taxed.",
+      "yields": "Goods, and a say in what moves through town",
+      "dm": "A back room holds goods no one has declared."
+    },
+    {
+      "kind": "astral gate camp",
+      "name": "The {town} Gate Camp",
+      "text": "A fortified camp near {town} around an astral space entrance, with the Society's licence to work it.",
+      "yields": "Loot and cores from the astral space",
+      "dm": "The licence was bought, not earned."
+    }
+  ],
+  "orphanage": {
+    "names": [
+      "The {town} Foundling House",
+      "The House of Small Mercies",
+      "{town} Orphans' Hall",
+      "The Lantern House",
+      "The Hearth Home for Children",
+      "The Old Mill Orphanage",
+      "St. Wren's House",
+      "The Home of the Open Door",
+      "{town} Children's House",
+      "The Little Lantern",
+      "The Foundlings' Hearth",
+      "The Blue Door House",
+      "Mother Tully's",
+      "The Ark",
+      "The Shelter of the Journey",
+      "The Sparrows' Nest",
+      "The Hill House",
+      "The Children's Ward of {town}",
+      "The Good Harbour Home",
+      "Hope House",
+      "The Orchard Home",
+      "The Willow House",
+      "The Long Room",
+      "The Grey Sisters' House",
+      "The House by the Bridge",
+      "The Kindly Hall",
+      "The Brightwater Home",
+      "The Weavers' Orphanage",
+      "The Society Orphans' Fund House",
+      "The Bell House"
+    ],
+    "runBy": [
+      "the city council",
+      "the Church of the Hearth",
+      "the Church of the Healer",
+      "a merchant guild's charity",
+      "a retired adventurer, with the council's money",
+      "the Church of the Journey",
+      "the Church of the Hero",
+      "a widowed noblewoman",
+      "the Adventure Society's widows and orphans fund",
+      "two elderly sisters who never married",
+      "a former slave freed by the Church of Liberty",
+      "the Magic Society, which takes promising children as apprentices",
+      "a merchant who grew up there",
+      "the Church of Trade, as a charity for its good name",
+      "an old soldier and his wife",
+      "a goblin family who took in one child and then another",
+      "the harbourmaster's guild",
+      "the Church of Justice",
+      "a noble house, for show",
+      "a group of adventurers who lost their own children",
+      "the Church of the Ocean, for children of the drowned",
+      "the duke's own charity",
+      "a Leonid matriarch with a temper and a big heart",
+      "a retired healer",
+      "a guild of weavers who train the children in the craft",
+      "nobody officially; the children run it themselves",
+      "a reformed smuggler",
+      "the church of the next town over, which resents the cost",
+      "a famous bard who pays for it with her songs"
+    ],
+    "details": [
+      "Children's drawings cover every wall of the common room.",
+      "Bunks three high, and a waiting list.",
+      "A vegetable garden the children run themselves.",
+      "The roof leaks, and the buckets have names.",
+      "Lessons in the morning, chores in the afternoon.",
+      "Older children mind the younger ones.",
+      "Every child has a job, and a badge to show it.",
+      "A big dog guards the door and lets no strangers in.",
+      "Supper is the same stew every night, and everyone loves it.",
+      "The children put on a play every festival.",
+      "A tree in the yard has every child's name carved in it.",
+      "The building is a former noble's townhouse, too grand and too cold.",
+      "Lessons include reading, sums and how to spot a monster.",
+      "The children sleep in hammocks, like sailors.",
+      "The matron sings them all to sleep.",
+      "Visitors must bring a gift, even a small one.",
+      "The oldest children work at the docks and bring their wages home.",
+      "A chalkboard lists who was adopted and where they went.",
+      "There's a shrine to every god, so no child feels left out.",
+      "The children keep chickens and sell the eggs.",
+      "The front room doubles as a schoolroom for the neighbourhood.",
+      "A retired adventurer teaches sword drills on the green.",
+      "The building leans, and the children call it the Drunken House.",
+      "A brass bell calls them in from the streets at dusk.",
+      "The attic is full of toys donated over a hundred years.",
+      "The cook is a goblin who used to cook for a duke.",
+      "Every child gets a birthday, even those who don't know theirs, chosen on arrival.",
+      "The windows are barred, for reasons nobody explains.",
+      "The children have their own court and judge each other's quarrels.",
+      "A mural of famous adventurers covers the outside wall."
+    ],
+    "troubles": [
+      "The money from the council has stopped coming.",
+      "Children have been going missing at night, one at a time.",
+      "A noble family claims one of the children as an heir.",
+      "The building is to be sold to a merchant who wants the land.",
+      "A sickness is going through the dormitory.",
+      "One child found an essence and is hiding it, desperate to use it before they're grown.",
+      "A gang is recruiting the older children as runners.",
+      "The matron has fallen ill and there's no one to replace her.",
+      "Food is short and the children are stealing.",
+      "A rich couple wants to adopt one child and separate them from a sibling.",
+      "The building has been condemned by the city.",
+      "A child has run away to join an adventuring team.",
+      "Someone keeps leaving money on the doorstep, and the matron wants to know who.",
+      "An older child is accused of a theft they didn't do.",
+      "A monster has been seen in the alley behind the building.",
+      "The church that runs it wants to send the children to work on its farms.",
+      "Two children are fighting over the same essence they found.",
+      "A father has come back for a child he left years ago.",
+      "The orphanage owes money to a moneylender who won't wait.",
+      "A child claims they're the heir of a noble house, and the house wants them quiet.",
+      "The neighbours complain about the noise and want the orphanage moved.",
+      "A fire damaged the kitchen, and there's nowhere to cook.",
+      "Several children have started sleepwalking to the same place.",
+      "A visiting priest is taking an unhealthy interest in one child.",
+      "The children's savings box has been stolen.",
+      "A recruiter from the steppe clans wants to take the older boys as riders.",
+      "The roof is about to fall in.",
+      "A child has a divine essence, granted early, and the church wants them.",
+      "A cold has turned into something worse.",
+      "The Adventure Society wants to use the building as a hall."
+    ],
+    "secrets": [
+      "The matron sells the oldest children's names to a recruiter.",
+      "One of the children is an outworlder, and doesn't know it.",
+      "A cult pays the orphanage to send it 'apprentices'.",
+      "The founder's will left the building to the children, and someone hid it.",
+      "Two of the children are a famous adventurer's, left there in secret.",
+      "The building has a hidden room where a previous matron hid a fortune.",
+      "One child is a doppelganger that replaced a real child months ago.",
+      "The orphanage launders money for a crime boss.",
+      "The founder was a cultist, and the cult still visits on her birthday.",
+      "A child here is the real heir to the duke's title.",
+      "The children have found a way into the old tunnels and have been exploring.",
+      "The matron is a former assassin in hiding.",
+      "Children adopted from here are being sold to the Storm Kingdom.",
+      "The building sits on an astral space that hums at night.",
+      "A child's 'imaginary friend' is an astral being.",
+      "The council's inspector takes bribes to look the other way about the conditions.",
+      "The cook is poisoning the matron slowly, for reasons of her own.",
+      "An adventurer who grew up here is secretly paying all its bills.",
+      "Records of the children's parents are kept in a locked chest, and some are false.",
+      "A noble house uses the orphanage to hide its illegitimate children.",
+      "The orphanage's priest has lost the god's favour and fakes the blessings.",
+      "One of the children has a gift for seeing the future, and the matron is afraid of her.",
+      "The building was a prison once, and some cells are still in use.",
+      "A child has been writing to a god and getting answers.",
+      "The founders' ghosts still watch over the children."
+    ],
+    "count": [
+      3,
+      6
+    ]
+  },
+  "_upgrades": {
+    "3": {
+      "add": [
+        [
+          "temples",
+          "names",
+          [
+            "The {adj} {size} of {church}",
+            "{church} at {place}",
+            "The {size} on the Hill",
+            "The {adj} House of {church}"
+          ]
+        ],
+        [
+          "temples",
+          "adjectives",
+          [
+            "Bright",
+            "Sun",
+            "Deep",
+            "Salt",
+            "Willow",
+            "Golden",
+            "Red",
+            "Blue",
+            "High",
+            "Low",
+            "North",
+            "South",
+            "Morning",
+            "Evening",
+            "Pilgrim",
+            "Lamp",
+            "Iron",
+            "Holy",
+            "Merciful",
+            "Faithful",
+            "Hidden",
+            "Grey",
+            "Sea",
+            "Hearth"
+          ]
+        ],
+        [
+          "temples",
+          "details",
+          [
+            "Its roof is gilded, paid for by one rich family who make sure everyone knows.",
+            "A great tree grows through the middle of it, and the priests say the god planted it.",
+            "Its walls are painted with scenes of the god's legends, faded and touched up in brighter colours.",
+            "It has a hospital wing where the sick sleep in rows.",
+            "Its crypt holds the bones of local heroes, and pilgrims come to touch them.",
+            "Its priest is a former adventurer whose old team still visits.",
+            "It runs the only school in the area, and the children sing at every service.",
+            "It's built from the stones of an older temple to a different god.",
+            "A holy spring rises in its courtyard.",
+            "Its bell was cast from melted-down weapons after a war.",
+            "A stray dog lives in the doorway and is said to be blessed.",
+            "It keeps a book where travellers write their names, going back centuries.",
+            "Its doors are carved with the names of every priest who has served there.",
+            "It feeds the poor every evening from a great kettle.",
+            "It's built on stilts above the floodwaters.",
+            "It has a library of prayers in a dozen languages.",
+            "Its incense is made from a local herb and can be smelled across the town."
+          ]
+        ],
+        [
+          "temples",
+          "secrets",
+          [
+            "The holy relic on the altar is a fake; the real one was sold years ago.",
+            "The priest has a family the church doesn't know about.",
+            "The temple is hiding a fugitive from the law.",
+            "A demon is bound under the altar, and the wards are weakening.",
+            "The priest has been granting divine essences to people the god didn't choose.",
+            "The temple's spring is drying up, and the priest is faking its flow.",
+            "A noble pays the temple to keep a dangerous secret about his family.",
+            "The temple is a front for smuggling relics across the border.",
+            "The crypt connects to a forgotten astral space.",
+            "The priest is dying and hasn't named a successor.",
+            "Someone has been stealing from the poor box, and it's the acolyte everyone trusts.",
+            "The god's voice hasn't been heard here in a generation, and the priests are afraid to say so.",
+            "A cult of a rival god is slowly taking over the congregation.",
+            "The temple's founder made a pact with an astral power, not a god."
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "Healing of wounds",
+          "churches",
+          [
+            "War",
+            "Hero"
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "Rites for the dead",
+          "churches",
+          [
+            "Undeath",
+            "Hearth"
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "A blessing before battle",
+          "churches",
+          [
+            "Destruction",
+            "Storm"
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "Marriage rites",
+          "churches",
+          [
+            "Trade",
+            "Justice"
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "Identify an item",
+          "churches",
+          [
+            "Trade",
+            "Truth"
+          ]
+        ],
+        [
+          "temples",
+          "services",
+          "Restoration (lesser)",
+          "churches",
+          [
+            "Purity",
+            "Hearth"
+          ]
+        ],
+        [
+          "orphanage",
+          "names",
+          [
+            "The Home of the Open Door",
+            "{town} Children's House",
+            "The Little Lantern",
+            "The Foundlings' Hearth",
+            "The Blue Door House",
+            "Mother Tully's",
+            "The Ark",
+            "The Shelter of the Journey",
+            "The Sparrows' Nest",
+            "The Hill House",
+            "The Children's Ward of {town}",
+            "The Good Harbour Home",
+            "Hope House",
+            "The Orchard Home",
+            "The Willow House",
+            "The Long Room",
+            "The Grey Sisters' House",
+            "The House by the Bridge",
+            "The Kindly Hall",
+            "The Brightwater Home",
+            "The Weavers' Orphanage",
+            "The Society Orphans' Fund House",
+            "The Bell House"
+          ]
+        ],
+        [
+          "orphanage",
+          "runBy",
+          [
+            "the Church of the Journey",
+            "the Church of the Hero",
+            "a widowed noblewoman",
+            "the Adventure Society's widows and orphans fund",
+            "two elderly sisters who never married",
+            "a former slave freed by the Church of Liberty",
+            "the Magic Society, which takes promising children as apprentices",
+            "a merchant who grew up there",
+            "the Church of Trade, as a charity for its good name",
+            "an old soldier and his wife",
+            "a goblin family who took in one child and then another",
+            "the harbourmaster's guild",
+            "the Church of Justice",
+            "a noble house, for show",
+            "a group of adventurers who lost their own children",
+            "the Church of the Ocean, for children of the drowned",
+            "the duke's own charity",
+            "a Leonid matriarch with a temper and a big heart",
+            "a retired healer",
+            "a guild of weavers who train the children in the craft",
+            "nobody officially; the children run it themselves",
+            "a reformed smuggler",
+            "the church of the next town over, which resents the cost",
+            "a famous bard who pays for it with her songs"
+          ]
+        ],
+        [
+          "orphanage",
+          "details",
+          [
+            "Every child has a job, and a badge to show it.",
+            "A big dog guards the door and lets no strangers in.",
+            "Supper is the same stew every night, and everyone loves it.",
+            "The children put on a play every festival.",
+            "A tree in the yard has every child's name carved in it.",
+            "The building is a former noble's townhouse, too grand and too cold.",
+            "Lessons include reading, sums and how to spot a monster.",
+            "The children sleep in hammocks, like sailors.",
+            "The matron sings them all to sleep.",
+            "Visitors must bring a gift, even a small one.",
+            "The oldest children work at the docks and bring their wages home.",
+            "A chalkboard lists who was adopted and where they went.",
+            "There's a shrine to every god, so no child feels left out.",
+            "The children keep chickens and sell the eggs.",
+            "The front room doubles as a schoolroom for the neighbourhood.",
+            "A retired adventurer teaches sword drills on the green.",
+            "The building leans, and the children call it the Drunken House.",
+            "A brass bell calls them in from the streets at dusk.",
+            "The attic is full of toys donated over a hundred years.",
+            "The cook is a goblin who used to cook for a duke.",
+            "Every child gets a birthday, even those who don't know theirs, chosen on arrival.",
+            "The windows are barred, for reasons nobody explains.",
+            "The children have their own court and judge each other's quarrels.",
+            "A mural of famous adventurers covers the outside wall."
+          ]
+        ],
+        [
+          "orphanage",
+          "troubles",
+          [
+            "A gang is recruiting the older children as runners.",
+            "The matron has fallen ill and there's no one to replace her.",
+            "Food is short and the children are stealing.",
+            "A rich couple wants to adopt one child and separate them from a sibling.",
+            "The building has been condemned by the city.",
+            "A child has run away to join an adventuring team.",
+            "Someone keeps leaving money on the doorstep, and the matron wants to know who.",
+            "An older child is accused of a theft they didn't do.",
+            "A monster has been seen in the alley behind the building.",
+            "The church that runs it wants to send the children to work on its farms.",
+            "Two children are fighting over the same essence they found.",
+            "A father has come back for a child he left years ago.",
+            "The orphanage owes money to a moneylender who won't wait.",
+            "A child claims they're the heir of a noble house, and the house wants them quiet.",
+            "The neighbours complain about the noise and want the orphanage moved.",
+            "A fire damaged the kitchen, and there's nowhere to cook.",
+            "Several children have started sleepwalking to the same place.",
+            "A visiting priest is taking an unhealthy interest in one child.",
+            "The children's savings box has been stolen.",
+            "A recruiter from the steppe clans wants to take the older boys as riders.",
+            "The roof is about to fall in.",
+            "A child has a divine essence, granted early, and the church wants them.",
+            "A cold has turned into something worse.",
+            "The Adventure Society wants to use the building as a hall."
+          ]
+        ],
+        [
+          "orphanage",
+          "secrets",
+          [
+            "The building has a hidden room where a previous matron hid a fortune.",
+            "One child is a doppelganger that replaced a real child months ago.",
+            "The orphanage launders money for a crime boss.",
+            "The founder was a cultist, and the cult still visits on her birthday.",
+            "A child here is the real heir to the duke's title.",
+            "The children have found a way into the old tunnels and have been exploring.",
+            "The matron is a former assassin in hiding.",
+            "Children adopted from here are being sold to the Storm Kingdom.",
+            "The building sits on an astral space that hums at night.",
+            "A child's 'imaginary friend' is an astral being.",
+            "The council's inspector takes bribes to look the other way about the conditions.",
+            "The cook is poisoning the matron slowly, for reasons of her own.",
+            "An adventurer who grew up here is secretly paying all its bills.",
+            "Records of the children's parents are kept in a locked chest, and some are false.",
+            "A noble house uses the orphanage to hide its illegitimate children.",
+            "The orphanage's priest has lost the god's favour and fakes the blessings.",
+            "One of the children has a gift for seeing the future, and the matron is afraid of her.",
+            "The building was a prison once, and some cells are still in use.",
+            "A child has been writing to a god and getting answers.",
+            "The founders' ghosts still watch over the children."
+          ]
+        ]
+      ]
+    }
+  }
+}

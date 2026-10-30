@@ -1,0 +1,14 @@
+{
+  "name": "dnd-campaign-manager",
+  "productName": "D&D Campaign Manager",
+  "version": "0.17.0",
+  "description": "Offline D&D campaign wiki, party tracker and generators",
+  "main": "src/main.js",
+  "author": "Austin",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "js-yaml": "^5.4.3",
+    "marked": "^18.1.1",
+    "pdf-lib": "^1.17.1"
+  }
+}

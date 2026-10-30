@@ -1,0 +1,1398 @@
+{
+  "_about": "People: NPC traits, goals with steps (a goal that reaches its last step becomes a storyteller pitch), the ties between people, the memories that move an NPC's opinion of the party, and how often the people near the party act when time advances. grudges: what someone who thinks badly enough of the party (opinion at or below threshold) does about it, at most once per cooldownDays; an act needs their opinion at or below its min. standing moves the party's standing where they live; friends moves the opinion of their friends and family; threat marks a danger the DM should plan for.",
+  "version": 3,
+  "traits": [
+    {
+      "key": "ambitious",
+      "name": "Ambitious",
+      "text": "Wants more than they have, and works for it.",
+      "tags": [
+        "ambition"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "content",
+      "name": "Content",
+      "text": "Happy with their lot; hard to tempt.",
+      "tags": [
+        "calm"
+      ],
+      "pace": -1
+    },
+    {
+      "key": "greedy",
+      "name": "Greedy",
+      "text": "Counts everything in spirit coins.",
+      "tags": [
+        "greed",
+        "ambition"
+      ]
+    },
+    {
+      "key": "generous",
+      "name": "Generous",
+      "text": "Gives freely, sometimes too freely.",
+      "tags": [
+        "kind"
+      ]
+    },
+    {
+      "key": "kind",
+      "name": "Kind",
+      "text": "Helps strangers without being asked.",
+      "tags": [
+        "kind"
+      ]
+    },
+    {
+      "key": "cruel",
+      "name": "Cruel",
+      "text": "Enjoys other people's pain a little too much.",
+      "tags": [
+        "cruel"
+      ]
+    },
+    {
+      "key": "honest",
+      "name": "Honest",
+      "text": "Says what they mean, even when it costs them.",
+      "tags": [
+        "honest"
+      ]
+    },
+    {
+      "key": "sly",
+      "name": "Sly",
+      "text": "Never quite says what they mean.",
+      "tags": [
+        "sly"
+      ]
+    },
+    {
+      "key": "brave",
+      "name": "Brave",
+      "text": "Walks toward danger.",
+      "tags": [
+        "brave"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "cautious",
+      "name": "Cautious",
+      "text": "Checks twice, then checks again.",
+      "tags": [
+        "careful"
+      ],
+      "pace": -1
+    },
+    {
+      "key": "reckless",
+      "name": "Reckless",
+      "text": "Acts first; regrets later, sometimes.",
+      "tags": [
+        "brave",
+        "rash"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "pious",
+      "name": "Pious",
+      "text": "Keeps the rites of their church and expects others to.",
+      "tags": [
+        "faith"
+      ]
+    },
+    {
+      "key": "sceptic",
+      "name": "Sceptic",
+      "text": "Trusts no church, no god and few people.",
+      "tags": [
+        "doubt"
+      ]
+    },
+    {
+      "key": "proud",
+      "name": "Proud",
+      "text": "Will not be seen to lose.",
+      "tags": [
+        "pride"
+      ]
+    },
+    {
+      "key": "humble",
+      "name": "Humble",
+      "text": "Shrugs off praise and gives the credit away.",
+      "tags": [
+        "kind",
+        "calm"
+      ]
+    },
+    {
+      "key": "jealous",
+      "name": "Jealous",
+      "text": "Keeps a careful tally of what others have.",
+      "tags": [
+        "envy"
+      ]
+    },
+    {
+      "key": "loyal",
+      "name": "Loyal",
+      "text": "Stands by friends long after it stops being wise.",
+      "tags": [
+        "loyal"
+      ]
+    },
+    {
+      "key": "fickle",
+      "name": "Fickle",
+      "text": "Their loyalties last about a season.",
+      "tags": [
+        "rash"
+      ]
+    },
+    {
+      "key": "vengeful",
+      "name": "Vengeful",
+      "text": "Never forgets a slight and always repays it.",
+      "tags": [
+        "grudge",
+        "cruel"
+      ]
+    },
+    {
+      "key": "forgiving",
+      "name": "Forgiving",
+      "text": "Lets old wrongs go.",
+      "tags": [
+        "kind",
+        "calm"
+      ]
+    },
+    {
+      "key": "curious",
+      "name": "Curious",
+      "text": "Has to know how things work, and what is behind the door.",
+      "tags": [
+        "curious"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "studious",
+      "name": "Studious",
+      "text": "Lives among books, notes and essence theory.",
+      "tags": [
+        "curious",
+        "careful"
+      ]
+    },
+    {
+      "key": "lazy",
+      "name": "Lazy",
+      "text": "Does the least that will do.",
+      "tags": [
+        "calm"
+      ],
+      "pace": -1
+    },
+    {
+      "key": "driven",
+      "name": "Driven",
+      "text": "Works through the night and expects others to.",
+      "tags": [
+        "ambition"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "charming",
+      "name": "Charming",
+      "text": "Gets their way with a smile.",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "key": "gruff",
+      "name": "Gruff",
+      "text": "Short words, shorter temper, good heart (maybe).",
+      "tags": [
+        "blunt"
+      ]
+    },
+    {
+      "key": "shy",
+      "name": "Shy",
+      "text": "Avoids crowds and attention.",
+      "tags": [
+        "solitary"
+      ]
+    },
+    {
+      "key": "gregarious",
+      "name": "Gregarious",
+      "text": "Knows everyone in town and their business.",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "key": "romantic",
+      "name": "Romantic",
+      "text": "Falls in love easily and loudly.",
+      "tags": [
+        "love",
+        "social"
+      ]
+    },
+    {
+      "key": "cold",
+      "name": "Cold",
+      "text": "Keeps everyone at arm's length.",
+      "tags": [
+        "solitary"
+      ]
+    },
+    {
+      "key": "protective",
+      "name": "Protective",
+      "text": "Would burn the world down for their family.",
+      "tags": [
+        "loyal",
+        "family"
+      ]
+    },
+    {
+      "key": "family-minded",
+      "name": "Family first",
+      "text": "Everything they do is for their kin.",
+      "tags": [
+        "family"
+      ]
+    },
+    {
+      "key": "rebellious",
+      "name": "Rebellious",
+      "text": "Pushes against every rule and ruler.",
+      "tags": [
+        "rash",
+        "doubt"
+      ]
+    },
+    {
+      "key": "dutiful",
+      "name": "Dutiful",
+      "text": "Follows the rules, the chain of command and the contract.",
+      "tags": [
+        "careful",
+        "loyal"
+      ]
+    },
+    {
+      "key": "scheming",
+      "name": "Scheming",
+      "text": "Always has a plan, and a plan behind it.",
+      "tags": [
+        "sly",
+        "ambition"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "gossip",
+      "name": "Gossip",
+      "text": "Cannot keep a secret to save their life.",
+      "tags": [
+        "social",
+        "rash"
+      ]
+    },
+    {
+      "key": "ruthless",
+      "name": "Ruthless",
+      "text": "Does what it takes.",
+      "tags": [
+        "cruel",
+        "ambition"
+      ],
+      "pace": 1
+    },
+    {
+      "key": "idealist",
+      "name": "Idealist",
+      "text": "Believes the world can be better, and acts like it.",
+      "tags": [
+        "kind",
+        "faith"
+      ]
+    },
+    {
+      "key": "bitter",
+      "name": "Bitter",
+      "text": "Remembers what life took from them.",
+      "tags": [
+        "grudge",
+        "envy"
+      ]
+    },
+    {
+      "key": "thrill-seeker",
+      "name": "Thrill-seeker",
+      "text": "Bored unless something is trying to kill them.",
+      "tags": [
+        "brave",
+        "rash"
+      ],
+      "pace": 1
+    }
+  ],
+  "opposed": [
+    [
+      "kind",
+      "cruel"
+    ],
+    [
+      "honest",
+      "sly"
+    ],
+    [
+      "brave",
+      "careful"
+    ],
+    [
+      "faith",
+      "doubt"
+    ],
+    [
+      "social",
+      "solitary"
+    ],
+    [
+      "calm",
+      "rash"
+    ],
+    [
+      "loyal",
+      "rash"
+    ],
+    [
+      "pride",
+      "kind"
+    ],
+    [
+      "greed",
+      "kind"
+    ],
+    [
+      "ambition",
+      "calm"
+    ],
+    [
+      "grudge",
+      "kind"
+    ]
+  ],
+  "goals": [
+    {
+      "key": "rich",
+      "name": "Get rich",
+      "wants": "get rich",
+      "likes": [
+        "greed",
+        "ambition"
+      ],
+      "steps": [
+        "{person} is borrowing to buy into a {goods} venture in {place}.",
+        "{person}'s {goods} venture is paying, and they are buying out partners.",
+        "{person} is close to owning most of the {goods} trade in {place}."
+      ],
+      "climax": {
+        "kind": "economy",
+        "drama": 2,
+        "title": "{person} corners the {goods}",
+        "text": "{person} now controls most of the {goods} in {place}, and prices are climbing.",
+        "dm": "{person} has bought, bullied and bribed their way here. Some partners did not sell willingly.",
+        "goal": "Find out how {person} did it, and decide whether {place} needs saving from them."
+      }
+    },
+    {
+      "key": "rank",
+      "name": "Reach the next rank",
+      "wants": "reach {nextrank} rank",
+      "likes": [
+        "ambition",
+        "brave"
+      ],
+      "steps": [
+        "{person} has started taking harder contracts from the Adventure Society.",
+        "{person} is buying monster cores and pushing their essences hard.",
+        "{person} is ready to face the assessment for the next rank."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "{person}'s assessment",
+        "text": "{person} faces their rank assessment at the Adventure Society and wants a team at their back for the field test.",
+        "dm": "{person} has been using too many cores; the residue could make them fail at the worst moment.",
+        "goal": "Help {person} through the field test, or watch them fail it."
+      }
+    },
+    {
+      "key": "revenge",
+      "name": "Avenge a wrong",
+      "wants": "avenge a wrong done to their family",
+      "likes": [
+        "grudge",
+        "cruel",
+        "family"
+      ],
+      "steps": [
+        "{person} has learned the name of whoever wronged their family.",
+        "{person} is watching {rival}, learning their habits.",
+        "{person} has the means and the moment to strike at {rival}."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 3,
+        "title": "{person} takes revenge",
+        "text": "{person} means to settle an old score with {rival} in {place}, tonight.",
+        "dm": "{rival} is guilty, but not of everything {person} believes. Someone else set them against each other.",
+        "goal": "Stop it, help it, or find the truth first."
+      }
+    },
+    {
+      "key": "love",
+      "name": "Win someone's heart",
+      "wants": "win the heart of {rival}",
+      "likes": [
+        "love",
+        "social"
+      ],
+      "steps": [
+        "{person} has fallen for {rival} and cannot stop talking about it.",
+        "{person} is courting {rival} with gifts and bad poetry.",
+        "{person} has planned a grand gesture to win {rival}."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "{person}'s grand gesture",
+        "text": "{person} wants help with a grand gesture to win {rival}: a rare flower from a dangerous place, a song, a duel, something.",
+        "dm": "{rival} already loves someone else and has been too kind to say so.",
+        "goal": "Help with the gesture, or with the heartbreak."
+      }
+    },
+    {
+      "key": "temple",
+      "name": "Found a shrine",
+      "wants": "found a shrine of the {church} in {place}",
+      "likes": [
+        "faith",
+        "kind"
+      ],
+      "steps": [
+        "{person} is collecting donations for a shrine of the {church} in {place}.",
+        "{person} has bought a plot and builders are at work.",
+        "The shrine is almost finished, and {person} needs a relic to bless it."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 2,
+        "title": "A relic for the shrine",
+        "text": "{person}'s shrine in {place} needs a relic before it can be blessed, and the one they want lies in a monster-haunted ruin.",
+        "dm": "A rival church wants the shrine to fail and has paid someone to make sure the relic never arrives.",
+        "goal": "Fetch the relic and see the shrine blessed."
+      }
+    },
+    {
+      "key": "ruin",
+      "name": "Ruin a rival house",
+      "wants": "bring down {faction}",
+      "likes": [
+        "grudge",
+        "sly",
+        "ambition"
+      ],
+      "steps": [
+        "{person} is collecting secrets about {faction}.",
+        "{person} is quietly turning {faction}'s allies against it.",
+        "{person} has enough to ruin {faction}, and means to use it."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 3,
+        "title": "{person} moves against {faction}",
+        "text": "{person} is about to make public what they know about {faction}, and the city will take sides.",
+        "dm": "Half of what {person} has is forged. The other half is worse than anyone suspects.",
+        "goal": "Decide what happens to the secret before it breaks."
+      }
+    },
+    {
+      "key": "escape",
+      "name": "Leave it all behind",
+      "wants": "escape their old life",
+      "likes": [
+        "rash",
+        "solitary",
+        "doubt"
+      ],
+      "steps": [
+        "{person} has been selling their things quietly.",
+        "{person} has bought passage through the teleportation circle under another name.",
+        "{person} is ready to vanish from {place}."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "{person} vanishes",
+        "text": "{person} has gone, and someone in {place} is paying well to have them found.",
+        "dm": "{person} fled a debt to a dangerous house. Finding them could get them killed.",
+        "goal": "Find {person}, or help them stay lost."
+      }
+    },
+    {
+      "key": "master",
+      "name": "Master a craft",
+      "wants": "become the best {craft} in {place}",
+      "likes": [
+        "curious",
+        "ambition",
+        "careful"
+      ],
+      "steps": [
+        "{person} has taken on an old master in {place} as a teacher.",
+        "{person}'s work is starting to sell for real money.",
+        "{person} is entering a contest that will decide who is the best {craft} in {place}."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 1,
+        "title": "The contest in {place}",
+        "text": "The {craft}s of {place} hold a contest, and {person} needs a rare material to win it.",
+        "dm": "Their rival is cheating, with help from a merchant who wants {person} to lose.",
+        "goal": "Find the material, and maybe the cheat."
+      },
+      "craft": [
+        "smith",
+        "alchemist",
+        "enchanter",
+        "brewer",
+        "tailor",
+        "cook"
+      ]
+    },
+    {
+      "key": "protect",
+      "name": "Keep their family safe",
+      "wants": "keep their family safe",
+      "likes": [
+        "family",
+        "loyal"
+      ],
+      "steps": [
+        "{person} has heard threats against their family.",
+        "{person} is hiring guards they cannot afford.",
+        "{person} has found who is behind the threats."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "{person}'s family is threatened",
+        "text": "Someone has been threatening {person}'s family in {place}, and the guards {person} hired have run off.",
+        "dm": "The threats come from {rival}, over a debt {person} never told their family about.",
+        "goal": "Protect the family and settle what is owed."
+      }
+    },
+    {
+      "key": "power",
+      "name": "Take a seat of power",
+      "wants": "take a seat on the council of {place}",
+      "likes": [
+        "ambition",
+        "social",
+        "sly"
+      ],
+      "steps": [
+        "{person} is making friends in the right houses in {place}.",
+        "{person} is spending heavily on gifts and favours.",
+        "{person} needs one more vote to take a council seat."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 2,
+        "title": "{person} wants the last vote",
+        "text": "{person} is one vote short of a seat on the council of {place}, and the last voter wants a favour done.",
+        "dm": "The favour is ugly: proof against a rival, real or not.",
+        "goal": "Win the vote for {person}, or make sure they lose it."
+      }
+    },
+    {
+      "key": "cure",
+      "name": "Find a cure",
+      "wants": "find a cure for a sick relative",
+      "likes": [
+        "family",
+        "kind",
+        "curious"
+      ],
+      "steps": [
+        "{person}'s relative is ill with a sickness the healers cannot name.",
+        "{person} has heard of a cure, far off and costly.",
+        "{person} has the coin for the cure but no one to fetch it."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "A cure for {person}'s kin",
+        "text": "{person} has found a cure for their sick relative, but it grows in a dangerous place.",
+        "dm": "The sickness is not natural. Someone close to the family is behind it.",
+        "goal": "Bring the cure back, and maybe find who made them ill."
+      }
+    },
+    {
+      "key": "debt",
+      "name": "Pay off a debt",
+      "wants": "pay off a crushing debt",
+      "likes": [
+        "careful",
+        "honest"
+      ],
+      "steps": [
+        "{person} owes more than they can earn to {rival}.",
+        "{person} is taking risky work to pay {rival} back.",
+        "{rival} has called in the debt, all of it, now."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "{rival} calls in the debt",
+        "text": "{rival} has called in {person}'s whole debt, and {person} cannot pay.",
+        "dm": "{rival} wants {person}'s property, not the coins, and forged part of the debt.",
+        "goal": "Find the money, the forgery, or another way out."
+      }
+    },
+    {
+      "key": "expose",
+      "name": "Expose a cult",
+      "wants": "expose a hidden cult in {place}",
+      "likes": [
+        "faith",
+        "brave",
+        "curious"
+      ],
+      "steps": [
+        "{person} has noticed people in {place} going missing at the new moon.",
+        "{person} has followed a cultist to a meeting place.",
+        "{person} knows the cult's next gathering and needs help to break it up."
+      ],
+      "climax": {
+        "kind": "magic",
+        "drama": 3,
+        "title": "The cult in {place}",
+        "text": "{person} knows where a hidden cult gathers in {place}, and the next gathering is soon.",
+        "dm": "The cult has a member on the town watch. {person} is already being followed.",
+        "goal": "Break up the gathering and save who they mean to sacrifice."
+      }
+    },
+    {
+      "key": "explore",
+      "name": "Find a lost place",
+      "wants": "find a lost ruin spoken of in old books",
+      "likes": [
+        "curious",
+        "brave"
+      ],
+      "steps": [
+        "{person} has found an old map in a library in {place}.",
+        "{person} has narrowed the ruin down to a valley in the wilds.",
+        "{person} has found the entrance but cannot go in alone."
+      ],
+      "climax": {
+        "kind": "magic",
+        "drama": 2,
+        "title": "{person}'s lost ruin",
+        "text": "{person} has found the entrance to a lost ruin and wants a team to go inside.",
+        "dm": "The ruin is an old astral space, and it is waking up.",
+        "goal": "Explore the ruin with {person}."
+      },
+      "newPlace": "site"
+    },
+    {
+      "key": "duel",
+      "name": "Beat a rival",
+      "wants": "beat {rival} once and for all",
+      "likes": [
+        "pride",
+        "envy"
+      ],
+      "steps": [
+        "{person} has lost to {rival} again and swears it was the last time.",
+        "{person} is training and buying better gear.",
+        "{person} has challenged {rival} to a public duel."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "The duel in {place}",
+        "text": "{person} has challenged {rival} to a duel in {place}, and half the town is coming to watch.",
+        "dm": "{person} has bought a cursed weapon to make sure of it.",
+        "goal": "Watch, bet, stop it, or find the cursed weapon."
+      }
+    },
+    {
+      "key": "free",
+      "name": "Free someone",
+      "wants": "free a friend from prison",
+      "likes": [
+        "loyal",
+        "rash"
+      ],
+      "steps": [
+        "{person}'s friend has been jailed in {place} on a charge {person} swears is false.",
+        "{person} is gathering proof and allies.",
+        "{person} plans to break their friend out."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 2,
+        "title": "{person}'s jailbreak",
+        "text": "{person} plans to break a friend out of jail in {place}, with or without help.",
+        "dm": "The friend is guilty, but the real crime was ordered by someone powerful.",
+        "goal": "Find the truth, or help with the jailbreak."
+      }
+    },
+    {
+      "key": "heir",
+      "name": "Win an inheritance",
+      "wants": "claim an inheritance from a dead relative",
+      "likes": [
+        "greed",
+        "family"
+      ],
+      "steps": [
+        "A relative of {person} has died and left a fortune with no clear heir.",
+        "{person} is fighting {rival} over the will.",
+        "The will is to be read, and {person} expects to lose."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 2,
+        "title": "The will",
+        "text": "The will of a rich relative of {person} is read in {place}, and {rival} has brought armed friends.",
+        "dm": "There is a second will, hidden somewhere in the dead man's house.",
+        "goal": "Find the second will or keep the peace at the reading."
+      }
+    },
+    {
+      "key": "essence",
+      "name": "Gain a rare essence",
+      "wants": "gain a rare essence",
+      "likes": [
+        "ambition",
+        "curious"
+      ],
+      "steps": [
+        "{person} has set their heart on a rare essence.",
+        "{person} has saved enough spirit coins for half of it.",
+        "{person} has found someone selling the essence, below its price."
+      ],
+      "climax": {
+        "kind": "economy",
+        "drama": 2,
+        "title": "The cheap essence",
+        "text": "{person} has found the rare essence they want, for sale below its price, and wants someone to come along to buy it.",
+        "dm": "It's stolen. The owner wants it back and is not forgiving.",
+        "goal": "Help {person} buy it, or find out where it came from."
+      }
+    },
+    {
+      "key": "redeem",
+      "name": "Make amends",
+      "wants": "make amends for an old wrong",
+      "likes": [
+        "kind",
+        "honest",
+        "faith"
+      ],
+      "steps": [
+        "{person} has confessed an old wrong to a priest of the {church}.",
+        "{person} is looking for the family they wronged.",
+        "{person} has found them, and they want more than an apology."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "{person}'s amends",
+        "text": "{person} has found the family they wronged long ago and needs help to make it right.",
+        "dm": "The family wants {person} to give up their rank badge, or their home.",
+        "goal": "Help {person} make amends, or bargain for them."
+      }
+    },
+    {
+      "key": "found-team",
+      "name": "Build a team",
+      "wants": "build their own adventuring team",
+      "likes": [
+        "social",
+        "ambition",
+        "brave"
+      ],
+      "steps": [
+        "{person} is recruiting for a new team at the Adventure Society.",
+        "{person} has two members, and they don't get along.",
+        "{person}'s team is about to take its first real contract."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "{person}'s first contract",
+        "text": "{person}'s new team takes its first contract and is out of its depth.",
+        "dm": "One of the team is working for a rival team that wants them to fail.",
+        "goal": "Rescue the team, or teach them how it's done."
+      }
+    },
+    {
+      "key": "smuggle",
+      "name": "Run a smuggling ring",
+      "wants": "run a smuggling ring",
+      "likes": [
+        "greed",
+        "sly",
+        "rash"
+      ],
+      "steps": [
+        "{person} has started moving untaxed {goods} through {place}.",
+        "{person}'s ring is growing, and the watch has noticed.",
+        "{person} has one big shipment that will make them, or break them."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 2,
+        "title": "The big shipment",
+        "text": "{person}'s biggest smuggling run comes through {place} this week.",
+        "dm": "The shipment is not {goods}. It's something {person} would never have agreed to carry.",
+        "goal": "Stop the shipment, take a cut, or find what's really in it."
+      }
+    },
+    {
+      "key": "mend",
+      "name": "Mend a family feud",
+      "wants": "end a family feud with {rival}",
+      "likes": [
+        "kind",
+        "family",
+        "forgiving"
+      ],
+      "steps": [
+        "{person} has written to {rival} after years of silence.",
+        "{person} and {rival} have met, and it went badly.",
+        "{person} has arranged a family dinner to settle it."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "The family dinner",
+        "text": "{person} has invited {rival} and the whole family to dinner in {place} to end the feud.",
+        "dm": "Someone at the table wants the feud to go on, and has poisoned the wine.",
+        "goal": "Keep the peace, and the guests alive."
+      }
+    },
+    {
+      "key": "discover",
+      "name": "Make a discovery",
+      "wants": "discover something new about magic",
+      "likes": [
+        "curious",
+        "careful"
+      ],
+      "steps": [
+        "{person} has a theory about essences no one believes.",
+        "{person}'s experiments have started to work, and to go wrong.",
+        "{person} is ready for the test that will prove them right."
+      ],
+      "climax": {
+        "kind": "magic",
+        "drama": 2,
+        "title": "{person}'s experiment",
+        "text": "{person}'s big experiment in {place} is set for tonight, and the Magic Society wants it stopped.",
+        "dm": "The experiment will work, and draw something from beyond.",
+        "goal": "Help, stop it, or stand ready for what comes through."
+      }
+    },
+    {
+      "key": "belong",
+      "name": "Be accepted",
+      "wants": "be accepted by the people of {place}",
+      "likes": [
+        "social",
+        "solitary"
+      ],
+      "steps": [
+        "{person} is new in {place} and the locals don't trust them.",
+        "{person} is working hard to win people over.",
+        "{person} has a chance to prove themselves at the next festival."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 1,
+        "title": "{person} at the festival",
+        "text": "{person} wants to win the people of {place} over at the coming festival, and has a plan that could go badly wrong.",
+        "dm": "Someone in town wants {person} gone and will sabotage it.",
+        "goal": "Help {person} win them over."
+      }
+    },
+    {
+      "key": "hunt",
+      "name": "Hunt a monster",
+      "wants": "hunt the monster that scarred them",
+      "likes": [
+        "brave",
+        "grudge"
+      ],
+      "steps": [
+        "{person} has heard the monster that scarred them was seen near {place}.",
+        "{person} is tracking it.",
+        "{person} has found its lair."
+      ],
+      "climax": {
+        "kind": "monster",
+        "drama": 3,
+        "title": "{person}'s hunt",
+        "text": "{person} has found the lair of the monster that scarred them years ago and is going in, alone if need be.",
+        "dm": "It's bigger than it was. It has been eating cores.",
+        "goal": "Help {person} kill it."
+      }
+    },
+    {
+      "key": "sell-out",
+      "name": "Sell a secret",
+      "wants": "sell a secret to the highest bidder",
+      "likes": [
+        "greed",
+        "sly"
+      ],
+      "steps": [
+        "{person} has learned something {faction} would pay to keep quiet.",
+        "{person} has been sounding out buyers.",
+        "{person} has set up an auction of the secret, tonight."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "A secret for sale",
+        "text": "{person} is selling a secret about {faction} to the highest bidder in {place}.",
+        "dm": "{faction} knows, and has sent someone to make sure there is no sale.",
+        "goal": "Buy the secret, protect {person}, or let it play out."
+      }
+    },
+    {
+      "key": "pilgrim",
+      "name": "Make a pilgrimage",
+      "wants": "make a pilgrimage for the {church}",
+      "likes": [
+        "faith"
+      ],
+      "steps": [
+        "{person} has vowed to make a pilgrimage for the {church}.",
+        "{person} is saving for the journey and the circle fee.",
+        "{person} sets out, and asks for an escort."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "{person}'s pilgrimage",
+        "text": "{person} sets out on a pilgrimage and wants an escort for the dangerous first stretch.",
+        "dm": "The road is watched by bandits who know pilgrims carry offerings.",
+        "goal": "Escort {person}."
+      }
+    },
+    {
+      "key": "marry-up",
+      "name": "Marry well",
+      "wants": "marry into a rich family",
+      "likes": [
+        "ambition",
+        "greed",
+        "love"
+      ],
+      "steps": [
+        "{person} has their eye on an heir of a rich family in {place}.",
+        "{person} is courting the heir, and the heir's family is not pleased.",
+        "The wedding is set, if the family doesn't stop it."
+      ],
+      "climax": {
+        "kind": "society",
+        "drama": 1,
+        "title": "The wedding",
+        "text": "{person}'s wedding into a rich family in {place} is this week, and the family wants it stopped.",
+        "dm": "{person} loves the heir. The heir is the one marrying for money.",
+        "goal": "Keep the wedding on, or stop it."
+      }
+    },
+    {
+      "key": "honour",
+      "name": "Clear their name",
+      "wants": "clear their name of a crime",
+      "likes": [
+        "honest",
+        "pride"
+      ],
+      "steps": [
+        "{person} is accused of a crime in {place} they did not commit.",
+        "{person} has found a witness who saw the real culprit.",
+        "The witness has gone missing."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 2,
+        "title": "The missing witness",
+        "text": "{person}'s witness has vanished, and with them {person}'s best chance of clearing their name.",
+        "dm": "The witness was paid to vanish by the real culprit, who is close to {person}.",
+        "goal": "Find the witness."
+      }
+    },
+    {
+      "key": "teach",
+      "name": "Pass on what they know",
+      "wants": "find a worthy student",
+      "likes": [
+        "kind",
+        "calm",
+        "careful"
+      ],
+      "steps": [
+        "{person} is looking for a student to pass their knowledge on to.",
+        "{person} has found a promising student, from a poor family.",
+        "The student's family wants them home, and {person} needs help to change their mind."
+      ],
+      "climax": {
+        "kind": "personal",
+        "drama": 1,
+        "title": "{person}'s student",
+        "text": "{person}'s new student is being pulled home by family debts, and {person} wants help to keep them.",
+        "dm": "The family owes money to dangerous people, who see the student as payment.",
+        "goal": "Settle the debt or keep the student safe."
+      }
+    }
+  ],
+  "ties": [
+    {
+      "key": "parent",
+      "name": "parent of",
+      "back": "child"
+    },
+    {
+      "key": "child",
+      "name": "child of",
+      "back": "parent"
+    },
+    {
+      "key": "sibling",
+      "name": "sibling of",
+      "back": "sibling"
+    },
+    {
+      "key": "spouse",
+      "name": "married to",
+      "back": "spouse"
+    },
+    {
+      "key": "lover",
+      "name": "in love with",
+      "back": "lover"
+    },
+    {
+      "key": "friend",
+      "name": "friends with",
+      "back": "friend"
+    },
+    {
+      "key": "rival",
+      "name": "rival of",
+      "back": "rival"
+    },
+    {
+      "key": "enemy",
+      "name": "enemy of",
+      "back": "enemy"
+    },
+    {
+      "key": "mentor",
+      "name": "mentor of",
+      "back": "student"
+    },
+    {
+      "key": "student",
+      "name": "student of",
+      "back": "mentor"
+    },
+    {
+      "key": "owes",
+      "name": "owes money to",
+      "back": "owed"
+    },
+    {
+      "key": "owed",
+      "name": "is owed money by",
+      "back": "owes"
+    },
+    {
+      "key": "serves",
+      "name": "works for",
+      "back": "employs"
+    },
+    {
+      "key": "employs",
+      "name": "employs",
+      "back": "serves"
+    }
+  ],
+  "memories": [
+    {
+      "key": "helped",
+      "name": "Helped them",
+      "delta": 10
+    },
+    {
+      "key": "saved",
+      "name": "Saved their life, or someone dear",
+      "delta": 25
+    },
+    {
+      "key": "paid",
+      "name": "Paid well, or gave a gift",
+      "delta": 5
+    },
+    {
+      "key": "promise",
+      "name": "Kept a promise",
+      "delta": 8
+    },
+    {
+      "key": "respect",
+      "name": "Treated them with respect",
+      "delta": 4
+    },
+    {
+      "key": "insulted",
+      "name": "Insulted or humiliated them",
+      "delta": -8
+    },
+    {
+      "key": "ignored",
+      "name": "Ignored their plea",
+      "delta": -6
+    },
+    {
+      "key": "cheated",
+      "name": "Cheated or stole from them",
+      "delta": -12
+    },
+    {
+      "key": "hurt",
+      "name": "Hurt them",
+      "delta": -15
+    },
+    {
+      "key": "betrayed",
+      "name": "Betrayed them",
+      "delta": -30
+    },
+    {
+      "key": "kin",
+      "name": "Killed or let their kin die",
+      "delta": -40
+    }
+  ],
+  "events": {
+    "goal": "{person} wants to {wants}.",
+    "friend": [
+      "{a} and {b} have become good friends.",
+      "{a} and {b} are often seen drinking together in {place}."
+    ],
+    "rival": [
+      "{a} and {b} have fallen out, loudly, in {place}.",
+      "There is bad blood between {a} and {b} now."
+    ],
+    "lover": [
+      "{a} and {b} are courting.",
+      "{a} has been seen leaving {b}'s house at dawn."
+    ],
+    "spouse": [
+      "{a} and {b} were married in {place}."
+    ],
+    "child": [
+      "A child, {child}, was born to {a} and {b} in {place}."
+    ],
+    "breakup": [
+      "{a} and {b} are not speaking any more."
+    ],
+    "reconcile": [
+      "{a} and {b} have made up."
+    ],
+    "sibling": [
+      "{a} and {b} are siblings, and never far apart for long."
+    ],
+    "mentor": [
+      "{a} took {b} on as an apprentice."
+    ],
+    "owes": [
+      "{a} borrowed heavily from {b}, and has not paid it back."
+    ],
+    "enemy": [
+      "{a} and {b} became sworn enemies after a quarrel in {place}."
+    ]
+  },
+  "opinion": [
+    {
+      "min": 60,
+      "name": "Devoted"
+    },
+    {
+      "min": 25,
+      "name": "Friendly"
+    },
+    {
+      "min": 8,
+      "name": "Warm"
+    },
+    {
+      "min": -7,
+      "name": "Indifferent"
+    },
+    {
+      "min": -24,
+      "name": "Wary"
+    },
+    {
+      "min": -59,
+      "name": "Hostile"
+    },
+    {
+      "min": -100,
+      "name": "Hates the party"
+    }
+  ],
+  "outcomeMemory": {
+    "success": 10,
+    "partial": 4,
+    "failed": -2,
+    "ignored": -6,
+    "worse": -10
+  },
+  "sim": {
+    "actorsPerMonth": 8,
+    "goalStepPerMonth": 0.35,
+    "newGoalPerMonth": 0.5,
+    "tiesPerMonth": 0.35,
+    "marryPerMonth": 0.12,
+    "marryAfterDays": 150,
+    "childPerMonth": 0.03,
+    "breakupPerMonth": 0.04,
+    "reconcilePerMonth": 0.04,
+    "standingShare": 0.25,
+    "factionShare": 0.25
+  },
+  "grudges": {
+    "threshold": -25,
+    "chancePerMonth": 0.3,
+    "cooldownDays": 60,
+    "acts": [
+      {
+        "key": "lies",
+        "news": "Talk in {place}: the party are thieves and cowards, some say",
+        "name": "Lies about the party",
+        "min": -25,
+        "weight": 4,
+        "public": true,
+        "standing": -4,
+        "text": "{person} has been telling anyone who will listen in {place} that the party are thieves and cowards."
+      },
+      {
+        "key": "doors",
+        "news": "Doors closing on the party in {place}",
+        "name": "Closed doors",
+        "min": -30,
+        "weight": 3,
+        "public": true,
+        "standing": -3,
+        "text": "{person} has turned the shopkeepers of {place} against the party. Prices are up, and some doors are shut.",
+        "dm": "The party's prices in {place} follow their standing there."
+      },
+      {
+        "key": "friends",
+        "name": "Turning friends",
+        "min": -30,
+        "weight": 3,
+        "public": false,
+        "friends": -10,
+        "text": "{person} has turned {friends} against the party.",
+        "needs": "friends"
+      },
+      {
+        "key": "report",
+        "name": "A complaint to the Society",
+        "min": -35,
+        "weight": 2,
+        "public": false,
+        "standing": -2,
+        "text": "{person} has made a formal complaint about the party to the Adventure Society in {place}.",
+        "dm": "A Society official will want a word next time the party is there."
+      },
+      {
+        "key": "thugs",
+        "name": "Thugs hired",
+        "min": -45,
+        "weight": 3,
+        "public": false,
+        "threat": true,
+        "text": "{person} has hired thugs to teach the party a lesson.",
+        "dm": "Three or four toughs of the party's rank or lower will be waiting the next time the party is in {place}, on a dark street."
+      },
+      {
+        "key": "rivals",
+        "name": "A rival team paid",
+        "min": -45,
+        "weight": 2,
+        "public": false,
+        "threat": true,
+        "text": "{person} has paid a rival team to beat the party to their next contract, and to make sure they know who paid.",
+        "dm": "The next contract the party takes has a rival team on it."
+      },
+      {
+        "key": "break-in",
+        "name": "A break-in",
+        "min": -50,
+        "weight": 2,
+        "public": false,
+        "threat": true,
+        "text": "Someone broke into the party's lodgings in {place} while they were out. {person} paid for it.",
+        "dm": "Something from the party inventory may be missing."
+      },
+      {
+        "key": "bounty",
+        "name": "A bounty",
+        "min": -65,
+        "weight": 2,
+        "public": false,
+        "threat": true,
+        "text": "{person} has put a bounty of {bounty} spirit coins on the party, no questions asked.",
+        "dm": "Bounty hunters of the party's rank hear of it within a tenday."
+      },
+      {
+        "key": "poison",
+        "name": "Poison",
+        "min": -75,
+        "weight": 1,
+        "public": false,
+        "threat": true,
+        "text": "{person} has bought poison, and knows which inn the party favours in {place}.",
+        "dm": "A Constitution save the first night they stay there, or worse."
+      }
+    ]
+  }
+}

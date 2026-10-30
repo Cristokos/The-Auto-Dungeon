@@ -1,0 +1,2319 @@
+{
+ "_about": "Banks for the market generator. Prices are in gp: magical goods are shown in spirit coins (1 iron = 1 gp, 1 bronze = 100 gp, 1 silver = 10,000 gp), everyday goods in gold, silver and copper. Edit freely; {place}, {faction}, {npc} and {church} are filled from your wiki. A stall with 'catalog' stocks from the item catalogue (items.json): cats and tags pick items, 'not' leaves tagged items out, 'magic' takes only magical ones, magicWeight makes magic items rarer on that stall, and 'flavour' is the share of the stall's own 'items' list. A kind's 'settlements' says where it is found.",
+ "version": 7,
+ "prices": {
+  "essence": {
+   "common": 2500,
+   "uncommon": 10000,
+   "rare": 50000,
+   "legendary": 250000
+  },
+  "stone": {
+   "1": 150,
+   "2": 600,
+   "3": 2500,
+   "4": 10000,
+   "5": 40000
+  },
+  "core": {
+   "Iron": 60,
+   "Bronze": 6000,
+   "Silver": 600000,
+   "Gold": 60000000
+  },
+  "wealth": {
+   "poor": 0.85,
+   "common": 1,
+   "wealthy": 1.4
+  },
+  "coreIntact": 0.5
+ },
+ "rankLevel": {
+  "Iron": 3,
+  "Bronze": 7,
+  "Silver": 11,
+  "Gold": 15
+ },
+ "kinds": [
+  {
+   "name": "Street market",
+   "wealth": "common",
+   "names": [
+    "{place} Street Market",
+    "The Lantern Row Market",
+    "The Crossways Market",
+    "Tanner's Square Market",
+    "The Old Wall Market",
+    "The Cobbler's Cross Market",
+    "The Five Lanes Market",
+    "Bellfounders' Square",
+    "The Weavers' Market",
+    "The Fountain Market",
+    "The Long Row"
+   ],
+   "stalls": {
+    "Essence dealer": 1,
+    "Awakening stone dealer": 2,
+    "Core broker": 2,
+    "Alchemist": 3,
+    "Smith": 3,
+    "Provisioner": 4,
+    "Food stall": 5,
+    "Herbalist": 3,
+    "Curio dealer": 2,
+    "Tailor": 2,
+    "Scribe and map seller": 2,
+    "Animal trader": 2,
+    "Temple stall": 2,
+    "Enchanter": 1,
+    "Bowyer and fletcher": 2,
+    "Toolmaker": 2,
+    "Jeweller": 1
+   },
+   "settlements": [
+    "town",
+    "city",
+    "great city"
+   ]
+  },
+  {
+   "name": "Harbour market",
+   "wealth": "common",
+   "names": [
+    "{place} Harbour Market",
+    "The Saltquay Market",
+    "The Fish Steps",
+    "The Tidewall Market",
+    "Net-Mender's Row",
+    "The Wharfside Market",
+    "The Gull Steps",
+    "The Barnacle Row",
+    "The Pier Market",
+    "The Low Tide Market",
+    "The Chandlers' Quay"
+   ],
+   "stalls": {
+    "Essence dealer": 1,
+    "Awakening stone dealer": 1,
+    "Core broker": 3,
+    "Alchemist": 2,
+    "Smith": 2,
+    "Provisioner": 4,
+    "Food stall": 5,
+    "Curio dealer": 3,
+    "Animal trader": 1,
+    "Scribe and map seller": 3,
+    "Fence": 1,
+    "Toolmaker": 2,
+    "Jeweller": 1
+   },
+   "settlements": [
+    "town",
+    "city",
+    "great city"
+   ]
+  },
+  {
+   "name": "Night market",
+   "wealth": "common",
+   "names": [
+    "The {place} Night Market",
+    "The Moth Market",
+    "Lamplight Row",
+    "The Midnight Arcade",
+    "The Glowworm Market",
+    "The Owl Market",
+    "The Candle Row",
+    "The Starlit Bazaar",
+    "The Dusk Market",
+    "The Shadow Arcade",
+    "The Lantern Fair"
+   ],
+   "stalls": {
+    "Essence dealer": 2,
+    "Awakening stone dealer": 2,
+    "Core broker": 2,
+    "Alchemist": 3,
+    "Food stall": 4,
+    "Curio dealer": 4,
+    "Herbalist": 2,
+    "Fence": 2,
+    "Temple stall": 1,
+    "Enchanter": 2,
+    "Jeweller": 1
+   },
+   "settlements": [
+    "town",
+    "city",
+    "great city"
+   ]
+  },
+  {
+   "name": "Adventure Society exchange",
+   "wealth": "wealthy",
+   "names": [
+    "The {place} Society Exchange",
+    "The Contract Hall Exchange",
+    "The Core Floor",
+    "The Society Trading Floor",
+    "The Badge Hall Exchange",
+    "The Rank Floor",
+    "The Contract Exchange",
+    "The Trophy Hall Market",
+    "The Core Exchange",
+    "The Society Lots"
+   ],
+   "stalls": {
+    "Essence dealer": 4,
+    "Awakening stone dealer": 5,
+    "Core broker": 5,
+    "Alchemist": 3,
+    "Smith": 3,
+    "Provisioner": 2,
+    "Scribe and map seller": 2,
+    "Enchanter": 3,
+    "Bowyer and fletcher": 2
+   },
+   "settlements": [
+    "town",
+    "city",
+    "great city"
+   ]
+  },
+  {
+   "name": "Noble arcade",
+   "wealth": "wealthy",
+   "names": [
+    "The {place} Arcade",
+    "The Gilded Gallery",
+    "The Glass Promenade",
+    "The Velvet Arcade",
+    "The Crown Arcade",
+    "The Silver Walk",
+    "The Marble Colonnade",
+    "The Peacock Gallery",
+    "The Orchid Arcade",
+    "The Duke's Promenade"
+   ],
+   "stalls": {
+    "Essence dealer": 4,
+    "Awakening stone dealer": 3,
+    "Alchemist": 2,
+    "Smith": 2,
+    "Curio dealer": 3,
+    "Tailor": 4,
+    "Food stall": 2,
+    "Temple stall": 1,
+    "Enchanter": 4,
+    "Jeweller": 4
+   },
+   "settlements": [
+    "city",
+    "great city"
+   ]
+  },
+  {
+   "name": "Village market day",
+   "wealth": "poor",
+   "names": [
+    "{place} Market Day",
+    "The Green Market",
+    "The Well Square Fair",
+    "The Harvest Fair",
+    "The Mill Green Market",
+    "The Tenday Market",
+    "The Crossroads Fair",
+    "The Churchyard Market",
+    "The Spring Fair",
+    "The Sheep Fair"
+   ],
+   "stalls": {
+    "Core broker": 1,
+    "Provisioner": 4,
+    "Food stall": 5,
+    "Herbalist": 3,
+    "Animal trader": 4,
+    "Smith": 2,
+    "Tailor": 2,
+    "Temple stall": 2,
+    "Curio dealer": 1,
+    "Bowyer and fletcher": 1,
+    "Toolmaker": 1
+   },
+   "settlements": [
+    "village",
+    "town"
+   ]
+  },
+  {
+   "name": "Black market",
+   "wealth": "common",
+   "dm": true,
+   "names": [
+    "The Undercroft",
+    "The Drowned Market",
+    "The Back of {place}",
+    "The Rat's Bazaar",
+    "Below the Bridge",
+    "The Hollow",
+    "The Sewer Stalls",
+    "The Night Below",
+    "The Smugglers' Cellar",
+    "The Gallows Market",
+    "The Quiet Door"
+   ],
+   "stalls": {
+    "Essence dealer": 3,
+    "Awakening stone dealer": 3,
+    "Core broker": 3,
+    "Alchemist": 2,
+    "Fence": 5,
+    "Curio dealer": 2,
+    "Enchanter": 2,
+    "Jeweller": 2
+   },
+   "settlements": [
+    "town",
+    "city",
+    "great city"
+   ]
+  }
+ ],
+ "stalls": [
+  {
+   "type": "Essence dealer",
+   "goods": "essences",
+   "count": [
+    2,
+    4
+   ],
+   "role": "Merchant",
+   "names": [
+    "{keeper}'s Essences",
+    "The Bonded Vault",
+    "Ashgrove Essence House",
+    "The Glass Case",
+    "Bright Seed Essences",
+    "The Third Slot",
+    "The Fourth Light",
+    "Seedwell Essences",
+    "{keeper} and Daughters, Essences",
+    "The Gift House",
+    "The Waking Room"
+   ],
+   "looks": [
+    "Essences sit in velvet-lined cases behind a locked glass front, each with a small card naming its affinity.",
+    "A guard in Bronze-rank armour stands beside the counter and does not pretend to be relaxed.",
+    "The essences are kept in a strongbox; only one is brought out at a time, on a silver tray.",
+    "Each essence glows faintly under a cloth hood, lifted only for serious buyers.",
+    "Each essence is shown in a cupped glass hand, and the dealer won't let anyone touch the glass.",
+    "A ledger chained to the counter records every essence sold and who bought it.",
+    "The dealer offers a free reading of which affinity suits you, which leads straight to the most expensive case.",
+    "Shutters close the moment anyone with a cult's mark walks past."
+   ]
+  },
+  {
+   "type": "Awakening stone dealer",
+   "goods": "stones",
+   "count": [
+    3,
+    6
+   ],
+   "role": "Merchant",
+   "names": [
+    "{keeper}'s Stones",
+    "The Awakening Shelf",
+    "Stone and Spark",
+    "The Quiet Pebble",
+    "Second Breath Stones",
+    "The Stone Garden",
+    "Wake and Wonder",
+    "The Pebble Vault",
+    "Stones of Every Kind"
+   ],
+   "looks": [
+    "Stones are sorted in shallow trays by affinity, each tray lined with coloured felt.",
+    "A chalkboard lists today's stones and their spells; sold ones are crossed out with a flourish.",
+    "The stones hum faintly when picked up, and the keeper insists on gloves.",
+    "Every stone is tagged with a tiny paper label in cramped handwriting.",
+    "Stones lie sorted by affinity in shallow trays of sand, each tray a different colour.",
+    "A sample board shows what each stone does, written in a tidy hand and slightly exaggerated.",
+    "The dealer polishes each stone before handing it over, as if it matters.",
+    "A bored apprentice tests stones against a Society chart and sighs at every one."
+   ]
+  },
+  {
+   "type": "Core broker",
+   "goods": "cores",
+   "count": [
+    1,
+    3
+   ],
+   "role": "Merchant",
+   "names": [
+    "{keeper}'s Cores",
+    "The Core Scale",
+    "Monster Bits and Cores",
+    "The Weighing House",
+    "Honest Cores",
+    "The Core Table",
+    "{keeper} Weighs Cores",
+    "Rank and Weight",
+    "The Heartstone Exchange",
+    "Monster Hearts Bought and Sold"
+   ],
+   "looks": [
+    "Cores are weighed on brass scales and sorted into iron-banded crates.",
+    "A sign reads 'We buy cores. We sell cores. We do not ask where.'",
+    "Rows of cores glow under a canvas awning, faintly warming the air.",
+    "The broker tests each core with a tuning fork and listens closely.",
+    "Scales of every size, from one for Iron cores to one that could weigh a calf.",
+    "Cores sit in shallow dishes of water that glow faintly with their rank.",
+    "A blackboard lists today's price by rank and type, rubbed out and rewritten hourly.",
+    "Adventurers queue to sell with a sack in each hand and blood still on their boots."
+   ]
+  },
+  {
+   "type": "Alchemist",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "names": [
+    "{keeper}'s Tinctures",
+    "The Green Bottle",
+    "Bubble and Brew",
+    "The Copper Still",
+    "Remedies and Solutions",
+    "The Bubbling Flask",
+    "{keeper}'s Remedies",
+    "Mixtures and Cures"
+   ],
+   "looks": [
+    "Shelves of stoppered bottles clink whenever someone walks past.",
+    "Something on a burner is bubbling a worrying shade of purple.",
+    "A row of potions sits in the sun 'to charge', the keeper claims.",
+    "Everything smells faintly of mint and burnt hair.",
+    "Glass bottles in every colour line the shelves, and some of the colours move.",
+    "A small explosion from the back room makes no one but newcomers flinch.",
+    "The alchemist tastes a drop of everything she sells, which may explain her eyebrows.",
+    "Labels are written in a code only the alchemist reads; she translates for a price."
+   ],
+   "items": [
+    [
+     "Smelling salts that wake the unconscious",
+     10
+    ],
+    [
+     "Tincture of clear sight (advantage on one Perception check)",
+     35
+    ],
+    [
+     "Coin-dust tonic (counts as a day's food for an essence user)",
+     1
+    ],
+    [
+     "Soothing balm for burns",
+     3
+    ],
+    [
+     "Ink that fades after a day",
+     8
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "alchemy",
+     "potion"
+    ],
+    "magicWeight": 1
+   }
+  },
+  {
+   "type": "Smith",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "names": [
+    "{keeper}'s Forge",
+    "Anvil and Ember",
+    "The Red Hammer",
+    "Iron and Oath",
+    "The Honest Edge",
+    "The Ringing Anvil",
+    "Hammer and Tongs",
+    "The Red Iron",
+    "Steel and Spark"
+   ],
+   "looks": [
+    "The heat from the portable forge makes the air shimmer.",
+    "Blades hang from hooks, turning slowly in the breeze.",
+    "The smith is mid-argument with a customer about a bent sword.",
+    "A row of helmets sits on posts like a silent audience.",
+    "Sparks fly into the street, and the smith doesn't apologise.",
+    "Blades hang from the rafters like bats, edges catching the light.",
+    "An apprentice works the bellows while the smith talks to customers without looking up.",
+    "A rack of second-hand armour, each piece with a story the smith will happily tell."
+   ],
+   "items": [
+    [
+     "Monster-hide gloves",
+     8
+    ],
+    [
+     "Sword sharpened and balanced",
+     1
+    ],
+    [
+     "Armour repaired by morning",
+     5
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "armour",
+     "weapon"
+    ],
+    "not": [
+     "ranged",
+     "ammo"
+    ],
+    "magicWeight": 0.25
+   }
+  },
+  {
+   "type": "Provisioner",
+   "goods": "items",
+   "count": [
+    4,
+    6
+   ],
+   "role": "Merchant",
+   "names": [
+    "{keeper}'s Provisions",
+    "The Pack Mule",
+    "Rope and Rations",
+    "The Long Road",
+    "Everything for the Trail",
+    "The Ready Pack",
+    "{keeper}'s Supplies",
+    "Everything for the Road",
+    "Rope and Ration",
+    "The Kit Shop"
+   ],
+   "looks": [
+    "Rope, lanterns and bedrolls are piled in friendly chaos.",
+    "Packs hang from every post, each already half-filled 'to save you time'.",
+    "A child runs the till while a grandparent naps in the shade.",
+    "Everything is labelled with a price and a short opinion.",
+    "Coils of rope, stacks of bedrolls and barrels of hardtack crowd every inch.",
+    "A sign promises 'Everything an adventurer needs' and a smaller sign says 'except luck'.",
+    "The keeper sizes up the party and starts packing before they've asked for anything.",
+    "Waterskins hang in bunches like grapes from the awning."
+   ],
+   "items": [],
+   "catalog": {
+    "tags": [
+     "camp",
+     "light",
+     "container",
+     "pack"
+    ],
+    "magicWeight": 0.3
+   }
+  },
+  {
+   "type": "Food stall",
+   "goods": "food",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "names": [
+    "{keeper}'s Kitchen",
+    "The Hot Griddle",
+    "Spice and Smoke",
+    "The Steaming Pot",
+    "Honey and Salt",
+    "The Hot Plate",
+    "Pies and Pots",
+    "The Steaming Bowl",
+    "Grill on the Corner"
+   ],
+   "looks": [
+    "The smell reaches you three stalls before you see it.",
+    "A queue of dockhands waits patiently, which is a good sign.",
+    "Skewers sizzle over coals while the cook argues with a seagull.",
+    "A sign promises 'no monster meat', in small letters.",
+    "A queue of workers forms whenever the lid comes off the pot.",
+    "Skewers of meat sizzle over coals, and the smoke draws customers from three streets away.",
+    "A grandmother runs the stall with a ladle and an iron will.",
+    "Everything is cooked to order, slowly, and nobody complains because it's worth it."
+   ],
+   "items": [
+    [
+     "Spiced lamb skewer",
+     0.05
+    ],
+    [
+     "Fried river fish in flatbread",
+     0.04
+    ],
+    [
+     "Honey cakes (three)",
+     0.03
+    ],
+    [
+     "Bowl of lentil stew",
+     0.03
+    ],
+    [
+     "Candied dates",
+     0.05
+    ],
+    [
+     "Mug of mint tea",
+     0.01
+    ],
+    [
+     "Grilled cheese with herbs",
+     0.04
+    ],
+    [
+     "Monster-meat pie (it's good, honestly)",
+     0.2
+    ],
+    [
+     "Chilled melon slices",
+     0.02
+    ],
+    [
+     "Flask of strong coffee",
+     0.1
+    ]
+   ],
+   "base": 0.1
+  },
+  {
+   "type": "Herbalist",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Wilderness guide",
+   "names": [
+    "{keeper}'s Herbs",
+    "Root and Leaf",
+    "The Drying Rack",
+    "Green Hands",
+    "The Wild Garden",
+    "The Green Hand",
+    "Simples and Salves"
+   ],
+   "looks": [
+    "Bundles of herbs hang upside down from the awning to dry.",
+    "The keeper insists on telling you what each plant cures and what it kills.",
+    "Pots of living plants line the front, some of them twitching.",
+    "Everything is wrapped in paper and tied with string.",
+    "Bunches of herbs hang from every beam, and the air is thick with their scent.",
+    "Jars of dried leaves are labelled with the place and day they were picked.",
+    "The herbalist asks about your symptoms before you've said you're ill.",
+    "A cat sleeps in a basket of catnip and growls at anyone who reaches for it."
+   ],
+   "items": [
+    [
+     "Sleep-root (a sound night's rest)",
+     0.5
+    ],
+    [
+     "Fever bark",
+     0.2
+    ],
+    [
+     "Wolfsbane, dried",
+     1
+    ],
+    [
+     "Swamp moss poultice (heals 1d4)",
+     2
+    ],
+    [
+     "Bitterleaf (cures a hangover)",
+     0.1
+    ],
+    [
+     "Firethorn seeds (spicy enough to hurt)",
+     0.3
+    ],
+    [
+     "Ghost lily (glows in the dark)",
+     3
+    ],
+    [
+     "Dried mushrooms of uncertain kind",
+     0.5
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "herb"
+    ],
+    "flavour": 0.7
+   }
+  },
+  {
+   "type": "Curio dealer",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Street operator",
+   "names": [
+    "{keeper}'s Curiosities",
+    "The Odd Shelf",
+    "Oddments and Wonders",
+    "The Magpie's Nest",
+    "Things Found",
+    "Strange Things",
+    "The Wonder Box",
+    "Lost and Found"
+   ],
+   "looks": [
+    "Nothing on the table seems to belong with anything else.",
+    "A stuffed monster head watches the street with glass eyes.",
+    "Every item comes with a story, and the stories get longer as you listen.",
+    "A small brass bell rings by itself when someone lies nearby. Supposedly.",
+    "Nothing has a price tag; the dealer names a price after looking you over.",
+    "A stuffed monster nobody can identify stands guard at the door.",
+    "Shelves of broken things that the dealer insists are not broken.",
+    "Every item comes with a story, and the stories get better the more you pay."
+   ],
+   "items": [
+    [
+     "A music box that plays a tune no one recognises",
+     15
+    ],
+    [
+     "A compass that points to the nearest spirit coin",
+     120
+    ],
+    [
+     "A map of a city that may not exist",
+     5
+    ],
+    [
+     "A monster tooth carved with tiny runes",
+     8
+    ],
+    [
+     "A cracked mirror that shows the room a moment late",
+     40
+    ],
+    [
+     "A glass eye that blinks",
+     12
+    ],
+    [
+     "Astral space trinket: a stone that is always cold",
+     30
+    ],
+    [
+     "An outworlder's coin from no known kingdom",
+     25
+    ],
+    [
+     "A deck of cards with one card blank",
+     3
+    ],
+    [
+     "A wind-up toy bird that actually flies, once",
+     18
+    ],
+    [
+     "A rusted key said to open a vault in the Old City",
+     10
+    ],
+    [
+     "A jar of sand from a desert that sings at night",
+     6
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "wondrous",
+     "instrument",
+     "gaming"
+    ],
+    "magicWeight": 0.5,
+    "flavour": 0.5
+   }
+  },
+  {
+   "type": "Tailor",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "names": [
+    "{keeper}'s Cloth",
+    "Needle and Thread",
+    "The Fine Cut",
+    "Silks of the Delta",
+    "The Patched Coat",
+    "{keeper}'s Fittings",
+    "The Cut and Stitch",
+    "Cloth of Every Kind",
+    "The Fashion House"
+   ],
+   "looks": [
+    "Bolts of bright cloth flutter like flags.",
+    "The tailor measures customers with their eyes and is never wrong.",
+    "Half-finished coats hang on wooden dummies with painted faces.",
+    "A sign offers 'repairs for monster damage, no questions'.",
+    "Bolts of cloth lean against every wall in a riot of colour.",
+    "A wooden dummy wears the latest fashion from Vitesse, slightly wrong.",
+    "The tailor measures with a glance and is never wrong.",
+    "Adventurers' coats hang for repair, each with a tag listing the monster that tore it."
+   ],
+   "items": [
+    [
+     "Hooded cloak",
+     1
+    ],
+    [
+     "Sturdy boots",
+     1
+    ],
+    [
+     "Robes in a church's colours",
+     4
+    ],
+    [
+     "Gloves of monster leather",
+     3
+    ],
+    [
+     "Repairs while you wait",
+     0.2
+    ],
+    [
+     "A waterproof coat that actually is",
+     6
+    ],
+    [
+     "Silk scarf from the delta",
+     3
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "clothes"
+    ],
+    "flavour": 0.5
+   }
+  },
+  {
+   "type": "Scribe and map seller",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Magic Society scholar",
+   "names": [
+    "{keeper}'s Maps",
+    "Ink and Parchment",
+    "The Copy House",
+    "Charts and Letters",
+    "The Careful Quill",
+    "The Inkwell",
+    "The Quill and Compass",
+    "Words for Hire"
+   ],
+   "looks": [
+    "Maps are pinned under stones to stop them blowing away.",
+    "The scribe writes letters for those who cannot, reading each one back aloud.",
+    "A stack of contract notices from the Adventure Society is for sale, sorted by danger.",
+    "Ink-stained fingers and a magnifying lens are the keeper's whole personality.",
+    "Maps cover every surface, some of places that may not exist.",
+    "A scribe writes letters for the illiterate at a table by the door, for a copper a page.",
+    "The map seller marks monster sightings on her maps in red, and updates them weekly.",
+    "Rolled charts stand in umbrella stands, labelled by region."
+   ],
+   "items": [
+    [
+     "Map of the local region",
+     5
+    ],
+    [
+     "Sea chart of the coast",
+     15
+    ],
+    [
+     "Letter written for you",
+     0.2
+    ],
+    [
+     "Copy of a public record",
+     1
+    ],
+    [
+     "Book of local monster lore",
+     25
+    ],
+    [
+     "Guide to the city's districts",
+     3
+    ],
+    [
+     "Forged travel papers (DM: not very good)",
+     20
+    ],
+    [
+     "Map of a known astral space entrance",
+     50
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "writing",
+     "scroll"
+    ],
+    "flavour": 0.4
+   }
+  },
+  {
+   "type": "Animal trader",
+   "goods": "items",
+   "count": [
+    2,
+    4
+   ],
+   "role": "Wilderness guide",
+   "names": [
+    "{keeper}'s Beasts",
+    "The Paddock",
+    "Hoof and Wing",
+    "The Feed Trough",
+    "Good Mounts",
+    "The Pen",
+    "Hoof and Feather",
+    "The Stable Yard",
+    "Mounts and Mousers"
+   ],
+   "looks": [
+    "A goat is eating the price list.",
+    "Horses doze in a rope pen while the trader brushes them.",
+    "A cage of messenger birds squabbles noisily.",
+    "The trader smells strongly of their stock and is proud of it.",
+    "Cages of chickens, a goat on a rope and a mule that bites.",
+    "A pen of horses and a man who swears each one is the best he's ever owned.",
+    "Exotic birds shriek from tall cages, and one of them knows a rude word.",
+    "A monster pup in a locked cage draws a crowd and a guard."
+   ],
+   "items": [
+    [
+     "Messenger bird",
+     10
+    ],
+    [
+     "Guard dog",
+     25
+    ],
+    [
+     "Feed (1 day)",
+     0.05
+    ],
+    [
+     "A monster cub of uncertain species",
+     300
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "animal",
+     "tack",
+     "vehicle"
+    ],
+    "not": [
+     "boat"
+    ],
+    "magicWeight": 0.3
+   }
+  },
+  {
+   "type": "Temple stall",
+   "goods": "items",
+   "count": [
+    3,
+    4
+   ],
+   "role": "Priest",
+   "church": true,
+   "names": [
+    "{church} Offering Table",
+    "{church} Alms Stall",
+    "Blessings of {church}",
+    "The Blessing Table",
+    "{keeper}'s Holy Goods",
+    "Prayers and Charms",
+    "The Pilgrim's Stall",
+    "Votive and Candle"
+   ],
+   "looks": [
+    "A priest in church colours offers blessings to anyone who stops.",
+    "Candles burn in rows; each one is someone's prayer.",
+    "Acolytes collect coins in a bowl and do not make change.",
+    "A small shrine sits at the back, and people bow to it as they pass.",
+    "Candles, charms and holy water sold beside a box for donations.",
+    "An acolyte blesses each purchase with a quick prayer and a smile.",
+    "Symbols of a dozen gods hang together, so nobody has to walk far for the right one.",
+    "A priest offers to hear confessions at the back, for a small offering."
+   ],
+   "items": [
+    [
+     "Healing of minor wounds (cure wounds)",
+     10
+    ],
+    [
+     "Blessing for a journey",
+     1
+    ],
+    [
+     "Candle lit in your name for a month",
+     0.5
+    ],
+    [
+     "Lesser restoration",
+     40
+    ],
+    [
+     "Remove curse (by appointment)",
+     90
+    ],
+    [
+     "Prayer beads",
+     1
+    ],
+    [
+     "Sermon pamphlet, free with any purchase",
+     0
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "holy"
+    ],
+    "flavour": 0.6
+   }
+  },
+  {
+   "type": "Fence",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Street operator",
+   "dm": true,
+   "names": [
+    "{keeper}'s Second-Hand Goods",
+    "No Questions",
+    "The Lost and Found",
+    "Fallen Off a Cart",
+    "The Quiet Table",
+    "The Back Door",
+    "Bargains",
+    "Found Things"
+   ],
+   "looks": [
+    "The table is covered by a cloth that is whisked off only for regulars.",
+    "Two lookouts lean against the wall pretending not to watch the street.",
+    "Everything is a little too cheap, and the keeper smiles a little too much.",
+    "A trapdoor under the table suggests a quick exit.",
+    "The stall sells honest pots and pans at the front; the real trade is under the counter.",
+    "The fence speaks only in hints and never says the word 'stolen'.",
+    "Goods are wrapped in old newspaper and handed over without a glance.",
+    "A lookout child sits on the roof and whistles when the watch is near."
+   ],
+   "items": [
+    [
+     "A noble house signet ring",
+     150
+    ],
+    [
+     "Adventure Society badge, slightly scratched",
+     80
+    ],
+    [
+     "A crate of 'spare' crossbows",
+     60
+    ],
+    [
+     "Guard rota for the {place} watch",
+     40
+    ],
+    [
+     "A locked strongbox, contents unknown",
+     100
+    ],
+    [
+     "Crown seal wax, a whole stick",
+     200
+    ],
+    [
+     "Magic Society lab notes, stolen",
+     120
+    ],
+    [
+     "A spirit coin farm's guard roster",
+     250
+    ],
+    [
+     "A sword with a name filed off",
+     30
+    ]
+   ],
+   "catalog": {
+    "tags": [
+     "thief",
+     "jewel"
+    ],
+    "magicWeight": 1,
+    "flavour": 0.5
+   }
+  },
+  {
+   "type": "Enchanter",
+   "goods": "items",
+   "count": [
+    2,
+    4
+   ],
+   "role": "Magic Society scholar",
+   "catalog": {
+    "magic": true,
+    "not": [
+     "potion",
+     "scroll"
+    ]
+   },
+   "names": [
+    "{keeper}'s Enchantments",
+    "The Glimmering Shelf",
+    "Rune and Ring",
+    "The Bound Spark",
+    "Wonders by {keeper}",
+    "The Glowing Rune",
+    "Spells While You Wait",
+    "The Lit Blade",
+    "Rune and Ward"
+   ],
+   "looks": [
+    "Every item sits on its own little cushion under a glass dome.",
+    "A ward line is painted on the floor; customers are asked not to step over it.",
+    "The enchanter wears gloves of spun silver and will not shake hands.",
+    "A slate on the wall says 'Appraisals: 5 iron. Opinions: free.'",
+    "Runes drift across the enchanter's arms as she works, and she doesn't seem to notice.",
+    "A board lists prices for each enchantment, and a smaller board lists failures.",
+    "Items sit on a slow turntable under glass, each glowing a different shade.",
+    "The enchanter asks for a drop of blood for the best work, and won't say why."
+   ],
+   "items": [
+    [
+     "Appraisal of one magic item",
+     5
+    ],
+    [
+     "Identify an item's powers (by tomorrow)",
+     20
+    ],
+    [
+     "Recharge a wand (one charge, by appointment)",
+     50
+    ]
+   ]
+  },
+  {
+   "type": "Bowyer and fletcher",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "catalog": {
+    "tags": [
+     "ranged",
+     "ammo"
+    ],
+    "magicWeight": 0.3
+   },
+   "names": [
+    "{keeper}'s Bows",
+    "The Straight Shaft",
+    "Yew and Feather",
+    "The Taut String",
+    "Feather and String",
+    "The Quiver",
+    "Yew and Ash"
+   ],
+   "looks": [
+    "Unstrung bows lean in a rack like a row of reeds.",
+    "Bundles of arrows are sorted by fletching colour.",
+    "The bowyer tests every string with a thumb and a frown.",
+    "A straw target out back is full of holes and one dagger.",
+    "Staves of yew and ash lean in bundles, waiting to be shaped.",
+    "A test target hangs at the back of the stall, and customers may try before they buy.",
+    "The bowyer strings each bow while talking, never looking at his hands.",
+    "Arrows sorted by fletching colour in tall jars, like flowers."
+   ],
+   "items": [
+    [
+     "Bow restrung while you wait",
+     0.5
+    ],
+    [
+     "Arrows fletched with monster feathers (20)",
+     3
+    ],
+    [
+     "Quiver of oiled leather",
+     1
+    ]
+   ]
+  },
+  {
+   "type": "Toolmaker",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Crafter",
+   "catalog": {
+    "tags": [
+     "tool",
+     "instrument",
+     "gaming"
+    ],
+    "magicWeight": 0.3
+   },
+   "names": [
+    "{keeper}'s Tools",
+    "The Right Tool",
+    "Awl and Anvil",
+    "The Workbench",
+    "The Handy Shop",
+    "Pick and Saw",
+    "Every Tool"
+   ],
+   "looks": [
+    "Tools hang on pegboards, outlined in chalk so the keeper knows when one walks off.",
+    "A half-built lute sits on the counter beside a set of lockpicks.",
+    "The keeper is mending a customer's spectacles with tiny pliers.",
+    "Everything smells of oil and sawdust.",
+    "Hooks on every wall hold saws, picks, hammers and things nobody can name.",
+    "The toolmaker repairs as much as he sells, and the repair pile is taller than he is.",
+    "A sign offers to make any tool to order, and lists some odd ones as examples.",
+    "Thieves' tools are sold openly, labelled 'locksmith's set'."
+   ],
+   "items": [
+    [
+     "Tool sharpening",
+     0.1
+    ],
+    [
+     "A tool made to fit your hand (by next week)",
+     10
+    ]
+   ]
+  },
+  {
+   "type": "Jeweller",
+   "goods": "items",
+   "count": [
+    3,
+    5
+   ],
+   "role": "Merchant",
+   "catalog": {
+    "cats": [
+     "Gems"
+    ],
+    "tags": [
+     "jewel"
+    ],
+    "magicWeight": 0.3
+   },
+   "names": [
+    "{keeper}'s Jewels",
+    "The Cut Stone",
+    "Facets",
+    "The Velvet Tray",
+    "The Glittering Case",
+    "Gold and Stone",
+    "The Bright Setting",
+    "Rings and Things"
+   ],
+   "looks": [
+    "Gems glitter on black velvet under a hooded lamp.",
+    "A loupe hangs from the jeweller's neck on a silver chain.",
+    "Two guards stand by the door, bored and very large.",
+    "Every stone comes with a little paper certificate in fine handwriting.",
+    "Gems lie on black velvet, each with its own tiny lamp.",
+    "The jeweller weighs everything twice and trusts nothing.",
+    "A guard sits in the corner, pretending to read and never turning a page.",
+    "Rings set with tiny monster cores are this season's fashion."
+   ],
+   "items": [
+    [
+     "Silver ring",
+     5
+    ],
+    [
+     "Gold chain",
+     25
+    ],
+    [
+     "Pearl earrings",
+     50
+    ],
+    [
+     "A stone set in a ring of your choice",
+     10
+    ],
+    [
+     "Brooch in a noble house's colours",
+     15
+    ]
+   ]
+  }
+ ],
+ "keeperRoles": [
+  "Merchant",
+  "Crafter"
+ ],
+ "haggle": [
+  [
+   "Fixed prices",
+   "Won't haggle, but adds a small extra for anyone who compliments the stock."
+  ],
+  [
+   "Loves a contest",
+   "Haggles for sport: a DC 13 Persuasion check takes 10% off, a 20 takes 20%, and a 1 adds 10%."
+  ],
+  [
+   "Sizes you up",
+   "Raises prices 20% for anyone who looks rich or has an Adventure Society badge showing."
+  ],
+  [
+   "Trades in favours",
+   "Will knock 25% off for a small job, usually delivering something to {place}."
+  ],
+  [
+   "Swaps not sells",
+   "Prefers trades: offer an item worth at least 80% of the price and they'll take it."
+  ],
+  [
+   "Bulk discount",
+   "Buy three things and the cheapest is free."
+  ],
+  [
+   "Distracted",
+   "Busy with another customer; a DC 15 Sleight of Hand could lift something small. They'd notice later."
+  ],
+  [
+   "Superstitious",
+   "Won't sell to anyone carrying an item from an astral space. They claim they can smell it."
+  ],
+  [
+   "Gossip",
+   "Knocks 10% off for a good rumour, and gives one back for free."
+  ],
+  [
+   "Loyal to a faction",
+   "Gives members of {faction} 15% off, and charges their rivals 15% more."
+  ],
+  [
+   "Coin snob",
+   "Only takes spirit coins for anything over 10 gp, and checks each one with a loupe."
+  ],
+  [
+   "Desperate",
+   "Needs money fast for a debt to {npc}; a DC 10 Insight sees it, and they'll drop 30% if pressed."
+  ],
+  [
+   "Old friend",
+   "Treats the party like long-lost family, and charges them like it: 10% off if anyone remembers his name next time."
+  ],
+  [
+   "Barter only",
+   "Prefers goods to coin and will trade fairly for monster parts, gossip or a good story."
+  ],
+  [
+   "Bulk deals",
+   "Takes 10% off for any purchase of three or more of the same thing, and complains the whole time."
+  ],
+  [
+   "Superstitious",
+   "Won't sell to anyone with a Dark or Sin essence at any price, and charges Light essence users less."
+  ],
+  [
+   "Grudge holder",
+   "Charges double to anyone wearing a noble house's colours; she lost a stall to one once."
+  ],
+  [
+   "Gambler",
+   "Offers to roll a die for the price: even, it's half; odd, it's double."
+  ],
+  [
+   "Devout",
+   "Gives a tenth off to anyone who shows the symbol of her god, and preaches to the rest."
+  ],
+  [
+   "Desperate",
+   "Needs money fast and will sell at cost to anyone who pays today, in coin."
+  ]
+ ],
+ "feel": {
+  "sights": [
+   "Awnings in faded reds and blues sag over the stalls.",
+   "Bunting strung between lampposts flutters in the wind off the water.",
+   "Lanterns of coloured glass make the whole market glow.",
+   "A town crier on a barrel shouts news nobody is listening to.",
+   "Children dart between legs, chasing a loose chicken.",
+   "A street magician makes coins vanish, and sometimes they don't come back.",
+   "Adventurers in mismatched armour stroll through, and the crowd parts for them.",
+   "A Society notice board is plastered with monster bounties.",
+   "Guards in a great house's colours watch from a corner, bored.",
+   "Pigeons line every roof, waiting for dropped food.",
+   "A cat sleeps on top of a stack of cheeses and no one dares move it.",
+   "A juggler drops a ball and pretends it was meant to happen.",
+   "A noblewoman in a veil buys nothing and watches everything.",
+   "Laundry dries on lines strung above the stalls, dripping on customers.",
+   "Two guards argue about whose turn it is to buy lunch.",
+   "A monster-hide awning, scaled and shimmering, shades the most expensive stall.",
+   "A line of pilgrims shuffles through, heads bowed, buying nothing.",
+   "Painted signs in a dozen styles compete for every eye.",
+   "A beggar sits beside a sign that says 'Former Gold-ranker', which might be true.",
+   "A street sweeper with a broom of monster bristles leaves the cobbles gleaming."
+  ],
+  "sounds": [
+   "Hawkers compete to be loudest, and the fish seller is winning.",
+   "A fiddler plays the same three songs on a loop.",
+   "Somewhere a bell rings the hour, slightly late.",
+   "Haggling voices rise and fall like waves.",
+   "Cart wheels rattle on cobbles and someone shouts about a stolen purse.",
+   "A preacher from {church} warns the crowd about essences bought without blessing.",
+   "Gulls scream over the fish stalls.",
+   "Hammering from the smiths keeps a steady, dull rhythm.",
+   "A child cries for a toy, and a parent says no for the fourth time.",
+   "Coins clink in a moneychanger's scale.",
+   "A barker announces a freak show with a 'real live outworlder'.",
+   "Chickens squawk in a cage stacked six high.",
+   "A temple bell answers another from across the city.",
+   "An argument in a language nobody else speaks.",
+   "The rhythmic thud of a butcher's cleaver.",
+   "Laughter from a group of off-duty sailors."
+  ],
+  "smells": [
+   "Roasting nuts and hot sugar.",
+   "Fish, tar and seaweed.",
+   "Spices, sweat and horse.",
+   "Fresh bread over something less pleasant from the drains.",
+   "Incense from a temple stall, fighting the smell of the tannery.",
+   "Hot oil, mint and ozone from the magic stalls.",
+   "Wet canvas and cheap perfume.",
+   "Fresh leather from the saddler's.",
+   "Burnt sugar from a toffee stall.",
+   "Wet dog and wetter wool.",
+   "Coffee roasting in an iron drum.",
+   "The sharp tang of an alchemist's mistake.",
+   "Sweet hay and horse dung from the animal pens.",
+   "Lavender from the herbalist, too much of it.",
+   "Frying fish and lemon."
+  ]
+ },
+ "events": [
+  "A pickpocket bumps into one of the party. DC 14 Perception notices a hand in their pouch.",
+  "A cart overturns and spills cages of messenger birds into the crowd.",
+  "Two merchants come to blows over who owns a corner pitch. Guards take their time arriving.",
+  "A Magic Society inspector is going stall to stall testing essences for fakes. Several stalls suddenly close.",
+  "A rain shower sends everyone under the awnings, crushing the party in with a stranger who wants to talk.",
+  "A monster core cracks on a broker's scale and a small, angry creature crawls out of the light.",
+  "A noble's procession forces the crowd aside. Someone in it is looking at the party.",
+  "A child offers to carry the party's bags for a copper, then runs off with one.",
+  "An auctioneer announces a rare essence will be sold at sundown, and the crowd buzzes.",
+  "A priest of {church} denounces a stall as selling 'unblessed' goods, and a crowd gathers.",
+  "A street performer picks one of the party to 'help' with a trick. The trick involves a real knife.",
+  "A wanted poster on the market board looks a lot like {npc}.",
+  "A merchant's guard dog takes a sudden dislike to the party's tallest member.",
+  "A small earthquake rattles the stalls. The locals barely notice; visitors panic.",
+  "A street preacher declares the end of the world, and a goat interrupts him.",
+  "A noble's carriage pushes through the crowd and knocks over a fruit stall.",
+  "A Society clerk posts a fresh bounty and a crowd gathers to read it.",
+  "A child loses their parent and attaches to the party.",
+  "A fight breaks out over the last of a rare spice.",
+  "Guards close the market gates to search for a thief, and nobody may leave.",
+  "A stallholder collapses, and a healer can't be found.",
+  "A merchant offers a free sample of something that turns the eater's tongue blue for a day.",
+  "A procession for {church} passes through and every stall has to close for a prayer.",
+  "Fireworks go off by accident in a crate and the crowd scatters.",
+  "A monster pup escapes its cage and runs straight for the party.",
+  "A tax collector arrives and stallholders start hiding stock.",
+  "Two rival guilds hold a shouting match about prices in the middle of the square.",
+  "A rainstorm drives everyone under the awnings, the party included, shoulder to shoulder with strangers.",
+  "A man offers to sell the party a map to his own house, which he says is haunted.",
+  "Someone is handing out pamphlets attacking {faction}, and watchmen are chasing them.",
+  "An outworlder tries to pay with a coin from their world and causes a crowd.",
+  "A stallholder recognises an item the party carries and wants to know where they got it.",
+  "A bell tolls for a death, and the whole market falls silent for a minute.",
+  "A charity collection for an orphanage passes through, and refusing is noticed.",
+  "A team of adventurers comes back from a contract carrying a monster's head through the market."
+ ],
+ "rumours": [
+  "The essence dealers have been buying up every {affinity} essence they can find. Someone big must want one.",
+  "A stall here sold a fake essence last week, a dyed monster core in a velvet box. The buyer hasn't been seen since.",
+  "{npc} was seen here buying awakening stones in bulk, and paying in silver.",
+  "The market tax is going up again, and the stallholders blame {faction}.",
+  "A new astral space opened near {place}, and the core brokers are already hiring people to clear it.",
+  "The Adventure Society is quietly asking traders whether anyone has sold cores from the wrong side of the river.",
+  "A noble house is buying up debts from the stallholders. Nobody knows why.",
+  "Someone has been paying children to watch the essence stalls and report who buys what.",
+  "The fish has been strange lately: glowing scales, too many teeth. The fishers are nervous.",
+  "Priests of {church} offer a divine essence to any worker who joins the church, and the market is losing porters to it.",
+  "Someone is buying up all the cores of one rank in every market from here to the coast.",
+  "There's a new essence dealer in town whose stock is all from the same astral space.",
+  "A Storm Kingdom merchant fleet is due, and prices will drop when it lands.",
+  "Prices for healing potions are up because the Healer's church has stopped making them.",
+  "The market guild is about to raise stall rents, and some stallholders are planning to move.",
+  "A forger has been making copies of rare awakening stones that work once and then shatter.",
+  "{npc} owes money to half the stallholders here.",
+  "The black market has an essence no one has ever seen before, and it isn't for sale. Yet.",
+  "A ship came in with crates no one was allowed to see, and they went straight to {faction}.",
+  "A Leonid trader has been selling monster eggs that hatch into something that isn't what was promised.",
+  "Someone has been leaving gifts of food on the poorest stalls every morning.",
+  "A dealer in {place} sold an essence to someone who then disappeared. The dealer says it's not his fault.",
+  "A new road is being built and the market may move.",
+  "Someone poisoned the well near the market last year, and they've never been caught.",
+  "The duke's own steward was here last week, buying perfume and cheap wine, in disguise.",
+  "{affinity} stones are cheap this season; someone cleared a big astral space.",
+  "A noble is paying silly money for monster parts for a feast, and suppliers can't keep up.",
+  "Salt prices are climbing; the salt road has trouble on it again.",
+  "A curio dealer has a book that writes itself, and she keeps it chained.",
+  "The core broker's scales are rigged, but only for adventurers who look new."
+ ],
+ "secrets": [
+  "One essence for sale here is fake: a dyed monster core in a velvet box. A DC 15 Arcana check, or any essence user who touches it, can tell.",
+  "The market's protection money goes to {faction}, and the stallholders hate it.",
+  "A cultist uses the market to pass messages, hidden in the folds of paper bags.",
+  "The core broker is smuggling cores to a buyer outside the city, against the Adventure Society's rules.",
+  "One stallholder is an informant for a great house and reports anyone who buys more than three awakening stones.",
+  "The curio dealer's 'cursed' trinket is actually cursed.",
+  "A tunnel under the market leads to the smugglers' stores beneath {place}.",
+  "The stall that sells everything cheaply is a front for a fence, and the guards are paid to look away.",
+  "A stallholder is a cult recruiter who picks out the lonely and the desperate.",
+  "The guild master takes a cut from every stall and keeps a second ledger.",
+  "A trapdoor under the fishmonger's stall leads to the smugglers' tunnels.",
+  "One essence dealer is an agent of a noble house tracking who buys what.",
+  "A stallholder sells monster parts poached from a protected forest.",
+  "The healer at the temple stall is a fraud with no divine essence at all.",
+  "The market's oldest stall belongs to a family that has secretly paid off the watch for three generations.",
+  "A fence here is holding stolen goods from the duke's own house and is terrified.",
+  "A stallholder is a hidden outworlder, selling goods made with knowledge from another world.",
+  "One of the curio dealer's items is an astral power's lost possession, and the power wants it back.",
+  "The animal trader is keeping a sick monster that could spread disease to every beast in the market.",
+  "The food stall that everyone loves uses meat from a source that would horrify them.",
+  "Someone is murdering stallholders who refuse to pay protection, and making it look like accidents.",
+  "A Magic Society scholar runs a stall in disguise to watch for illegal essences.",
+  "The market sits over a crack in the world that the Magic Society has sealed with wards under the cobbles.",
+  "Two stallholders who claim to hate each other are married and run a scam together.",
+  "A child runner is the real brains of the black market here."
+ ],
+ "_upgrades": {
+  "3": {
+   "replace": [
+    [
+     "Guards in crown colours watch from a corner, bored.",
+     "Guards in a great house's colours watch from a corner, bored."
+    ],
+    [
+     "The core broker is smuggling cores to a buyer outside the kingdom, against crown law.",
+     "The core broker is smuggling cores to a buyer outside the city, against the Adventure Society's rules."
+    ],
+    [
+     "One stallholder is an informant for the crown and reports anyone who buys more than three awakening stones.",
+     "One stallholder is an informant for a great house and reports anyone who buys more than three awakening stones."
+    ]
+   ]
+  },
+  "4": {
+   "set": [
+    [
+     "prices",
+     "core",
+     "Gold",
+     60000000
+    ]
+   ]
+  },
+  "5": {
+   "set": [
+    [
+     "prices",
+     "coreIntact",
+     0.5
+    ]
+   ]
+  },
+  "7": {
+   "add": [
+    [
+     "kinds",
+     "Street market",
+     "names",
+     [
+      "The Cobbler's Cross Market",
+      "The Five Lanes Market",
+      "Bellfounders' Square",
+      "The Weavers' Market",
+      "The Fountain Market",
+      "The Long Row"
+     ]
+    ],
+    [
+     "kinds",
+     "Harbour market",
+     "names",
+     [
+      "The Wharfside Market",
+      "The Gull Steps",
+      "The Barnacle Row",
+      "The Pier Market",
+      "The Low Tide Market",
+      "The Chandlers' Quay"
+     ]
+    ],
+    [
+     "kinds",
+     "Night market",
+     "names",
+     [
+      "The Owl Market",
+      "The Candle Row",
+      "The Starlit Bazaar",
+      "The Dusk Market",
+      "The Shadow Arcade",
+      "The Lantern Fair"
+     ]
+    ],
+    [
+     "kinds",
+     "Adventure Society exchange",
+     "names",
+     [
+      "The Badge Hall Exchange",
+      "The Rank Floor",
+      "The Contract Exchange",
+      "The Trophy Hall Market",
+      "The Core Exchange",
+      "The Society Lots"
+     ]
+    ],
+    [
+     "kinds",
+     "Noble arcade",
+     "names",
+     [
+      "The Crown Arcade",
+      "The Silver Walk",
+      "The Marble Colonnade",
+      "The Peacock Gallery",
+      "The Orchid Arcade",
+      "The Duke's Promenade"
+     ]
+    ],
+    [
+     "kinds",
+     "Village market day",
+     "names",
+     [
+      "The Mill Green Market",
+      "The Tenday Market",
+      "The Crossroads Fair",
+      "The Churchyard Market",
+      "The Spring Fair",
+      "The Sheep Fair"
+     ]
+    ],
+    [
+     "kinds",
+     "Black market",
+     "names",
+     [
+      "The Hollow",
+      "The Sewer Stalls",
+      "The Night Below",
+      "The Smugglers' Cellar",
+      "The Gallows Market",
+      "The Quiet Door"
+     ]
+    ],
+    [
+     "stalls",
+     "Essence dealer",
+     "names",
+     [
+      "The Fourth Light",
+      "Seedwell Essences",
+      "{keeper} and Daughters, Essences",
+      "The Gift House",
+      "The Waking Room"
+     ]
+    ],
+    [
+     "stalls",
+     "Essence dealer",
+     "looks",
+     [
+      "Each essence is shown in a cupped glass hand, and the dealer won't let anyone touch the glass.",
+      "A ledger chained to the counter records every essence sold and who bought it.",
+      "The dealer offers a free reading of which affinity suits you, which leads straight to the most expensive case.",
+      "Shutters close the moment anyone with a cult's mark walks past."
+     ]
+    ],
+    [
+     "stalls",
+     "Awakening stone dealer",
+     "names",
+     [
+      "The Stone Garden",
+      "Wake and Wonder",
+      "The Pebble Vault",
+      "Stones of Every Kind"
+     ]
+    ],
+    [
+     "stalls",
+     "Awakening stone dealer",
+     "looks",
+     [
+      "Stones lie sorted by affinity in shallow trays of sand, each tray a different colour.",
+      "A sample board shows what each stone does, written in a tidy hand and slightly exaggerated.",
+      "The dealer polishes each stone before handing it over, as if it matters.",
+      "A bored apprentice tests stones against a Society chart and sighs at every one."
+     ]
+    ],
+    [
+     "stalls",
+     "Core broker",
+     "names",
+     [
+      "The Core Table",
+      "{keeper} Weighs Cores",
+      "Rank and Weight",
+      "The Heartstone Exchange",
+      "Monster Hearts Bought and Sold"
+     ]
+    ],
+    [
+     "stalls",
+     "Core broker",
+     "looks",
+     [
+      "Scales of every size, from one for Iron cores to one that could weigh a calf.",
+      "Cores sit in shallow dishes of water that glow faintly with their rank.",
+      "A blackboard lists today's price by rank and type, rubbed out and rewritten hourly.",
+      "Adventurers queue to sell with a sack in each hand and blood still on their boots."
+     ]
+    ],
+    [
+     "stalls",
+     "Alchemist",
+     "names",
+     [
+      "The Bubbling Flask",
+      "{keeper}'s Remedies",
+      "Mixtures and Cures"
+     ]
+    ],
+    [
+     "stalls",
+     "Alchemist",
+     "looks",
+     [
+      "Glass bottles in every colour line the shelves, and some of the colours move.",
+      "A small explosion from the back room makes no one but newcomers flinch.",
+      "The alchemist tastes a drop of everything she sells, which may explain her eyebrows.",
+      "Labels are written in a code only the alchemist reads; she translates for a price."
+     ]
+    ],
+    [
+     "stalls",
+     "Smith",
+     "names",
+     [
+      "The Ringing Anvil",
+      "Hammer and Tongs",
+      "The Red Iron",
+      "Steel and Spark"
+     ]
+    ],
+    [
+     "stalls",
+     "Smith",
+     "looks",
+     [
+      "Sparks fly into the street, and the smith doesn't apologise.",
+      "Blades hang from the rafters like bats, edges catching the light.",
+      "An apprentice works the bellows while the smith talks to customers without looking up.",
+      "A rack of second-hand armour, each piece with a story the smith will happily tell."
+     ]
+    ],
+    [
+     "stalls",
+     "Provisioner",
+     "names",
+     [
+      "The Ready Pack",
+      "{keeper}'s Supplies",
+      "Everything for the Road",
+      "Rope and Ration",
+      "The Kit Shop"
+     ]
+    ],
+    [
+     "stalls",
+     "Provisioner",
+     "looks",
+     [
+      "Coils of rope, stacks of bedrolls and barrels of hardtack crowd every inch.",
+      "A sign promises 'Everything an adventurer needs' and a smaller sign says 'except luck'.",
+      "The keeper sizes up the party and starts packing before they've asked for anything.",
+      "Waterskins hang in bunches like grapes from the awning."
+     ]
+    ],
+    [
+     "stalls",
+     "Food stall",
+     "names",
+     [
+      "The Hot Plate",
+      "Pies and Pots",
+      "The Steaming Bowl",
+      "Grill on the Corner"
+     ]
+    ],
+    [
+     "stalls",
+     "Food stall",
+     "looks",
+     [
+      "A queue of workers forms whenever the lid comes off the pot.",
+      "Skewers of meat sizzle over coals, and the smoke draws customers from three streets away.",
+      "A grandmother runs the stall with a ladle and an iron will.",
+      "Everything is cooked to order, slowly, and nobody complains because it's worth it."
+     ]
+    ],
+    [
+     "stalls",
+     "Herbalist",
+     "names",
+     [
+      "The Green Hand",
+      "Simples and Salves"
+     ]
+    ],
+    [
+     "stalls",
+     "Herbalist",
+     "looks",
+     [
+      "Bunches of herbs hang from every beam, and the air is thick with their scent.",
+      "Jars of dried leaves are labelled with the place and day they were picked.",
+      "The herbalist asks about your symptoms before you've said you're ill.",
+      "A cat sleeps in a basket of catnip and growls at anyone who reaches for it."
+     ]
+    ],
+    [
+     "stalls",
+     "Curio dealer",
+     "names",
+     [
+      "Strange Things",
+      "The Wonder Box",
+      "Lost and Found"
+     ]
+    ],
+    [
+     "stalls",
+     "Curio dealer",
+     "looks",
+     [
+      "Nothing has a price tag; the dealer names a price after looking you over.",
+      "A stuffed monster nobody can identify stands guard at the door.",
+      "Shelves of broken things that the dealer insists are not broken.",
+      "Every item comes with a story, and the stories get better the more you pay."
+     ]
+    ],
+    [
+     "stalls",
+     "Tailor",
+     "names",
+     [
+      "{keeper}'s Fittings",
+      "The Cut and Stitch",
+      "Cloth of Every Kind",
+      "The Fashion House"
+     ]
+    ],
+    [
+     "stalls",
+     "Tailor",
+     "looks",
+     [
+      "Bolts of cloth lean against every wall in a riot of colour.",
+      "A wooden dummy wears the latest fashion from Vitesse, slightly wrong.",
+      "The tailor measures with a glance and is never wrong.",
+      "Adventurers' coats hang for repair, each with a tag listing the monster that tore it."
+     ]
+    ],
+    [
+     "stalls",
+     "Scribe and map seller",
+     "names",
+     [
+      "The Inkwell",
+      "The Quill and Compass",
+      "Words for Hire"
+     ]
+    ],
+    [
+     "stalls",
+     "Scribe and map seller",
+     "looks",
+     [
+      "Maps cover every surface, some of places that may not exist.",
+      "A scribe writes letters for the illiterate at a table by the door, for a copper a page.",
+      "The map seller marks monster sightings on her maps in red, and updates them weekly.",
+      "Rolled charts stand in umbrella stands, labelled by region."
+     ]
+    ],
+    [
+     "stalls",
+     "Animal trader",
+     "names",
+     [
+      "The Pen",
+      "Hoof and Feather",
+      "The Stable Yard",
+      "Mounts and Mousers"
+     ]
+    ],
+    [
+     "stalls",
+     "Animal trader",
+     "looks",
+     [
+      "Cages of chickens, a goat on a rope and a mule that bites.",
+      "A pen of horses and a man who swears each one is the best he's ever owned.",
+      "Exotic birds shriek from tall cages, and one of them knows a rude word.",
+      "A monster pup in a locked cage draws a crowd and a guard."
+     ]
+    ],
+    [
+     "stalls",
+     "Temple stall",
+     "names",
+     [
+      "The Blessing Table",
+      "{keeper}'s Holy Goods",
+      "Prayers and Charms",
+      "The Pilgrim's Stall",
+      "Votive and Candle"
+     ]
+    ],
+    [
+     "stalls",
+     "Temple stall",
+     "looks",
+     [
+      "Candles, charms and holy water sold beside a box for donations.",
+      "An acolyte blesses each purchase with a quick prayer and a smile.",
+      "Symbols of a dozen gods hang together, so nobody has to walk far for the right one.",
+      "A priest offers to hear confessions at the back, for a small offering."
+     ]
+    ],
+    [
+     "stalls",
+     "Fence",
+     "names",
+     [
+      "The Back Door",
+      "Bargains",
+      "Found Things"
+     ]
+    ],
+    [
+     "stalls",
+     "Fence",
+     "looks",
+     [
+      "The stall sells honest pots and pans at the front; the real trade is under the counter.",
+      "The fence speaks only in hints and never says the word 'stolen'.",
+      "Goods are wrapped in old newspaper and handed over without a glance.",
+      "A lookout child sits on the roof and whistles when the watch is near."
+     ]
+    ],
+    [
+     "stalls",
+     "Enchanter",
+     "names",
+     [
+      "The Glowing Rune",
+      "Spells While You Wait",
+      "The Lit Blade",
+      "Rune and Ward"
+     ]
+    ],
+    [
+     "stalls",
+     "Enchanter",
+     "looks",
+     [
+      "Runes drift across the enchanter's arms as she works, and she doesn't seem to notice.",
+      "A board lists prices for each enchantment, and a smaller board lists failures.",
+      "Items sit on a slow turntable under glass, each glowing a different shade.",
+      "The enchanter asks for a drop of blood for the best work, and won't say why."
+     ]
+    ],
+    [
+     "stalls",
+     "Bowyer and fletcher",
+     "names",
+     [
+      "Feather and String",
+      "The Quiver",
+      "Yew and Ash"
+     ]
+    ],
+    [
+     "stalls",
+     "Bowyer and fletcher",
+     "looks",
+     [
+      "Staves of yew and ash lean in bundles, waiting to be shaped.",
+      "A test target hangs at the back of the stall, and customers may try before they buy.",
+      "The bowyer strings each bow while talking, never looking at his hands.",
+      "Arrows sorted by fletching colour in tall jars, like flowers."
+     ]
+    ],
+    [
+     "stalls",
+     "Toolmaker",
+     "names",
+     [
+      "The Handy Shop",
+      "Pick and Saw",
+      "Every Tool"
+     ]
+    ],
+    [
+     "stalls",
+     "Toolmaker",
+     "looks",
+     [
+      "Hooks on every wall hold saws, picks, hammers and things nobody can name.",
+      "The toolmaker repairs as much as he sells, and the repair pile is taller than he is.",
+      "A sign offers to make any tool to order, and lists some odd ones as examples.",
+      "Thieves' tools are sold openly, labelled 'locksmith's set'."
+     ]
+    ],
+    [
+     "stalls",
+     "Jeweller",
+     "names",
+     [
+      "The Glittering Case",
+      "Gold and Stone",
+      "The Bright Setting",
+      "Rings and Things"
+     ]
+    ],
+    [
+     "stalls",
+     "Jeweller",
+     "looks",
+     [
+      "Gems lie on black velvet, each with its own tiny lamp.",
+      "The jeweller weighs everything twice and trusts nothing.",
+      "A guard sits in the corner, pretending to read and never turning a page.",
+      "Rings set with tiny monster cores are this season's fashion."
+     ]
+    ],
+    [
+     "events",
+     [
+      "A street preacher declares the end of the world, and a goat interrupts him.",
+      "A noble's carriage pushes through the crowd and knocks over a fruit stall.",
+      "A Society clerk posts a fresh bounty and a crowd gathers to read it.",
+      "A child loses their parent and attaches to the party.",
+      "A fight breaks out over the last of a rare spice.",
+      "Guards close the market gates to search for a thief, and nobody may leave.",
+      "A stallholder collapses, and a healer can't be found.",
+      "A merchant offers a free sample of something that turns the eater's tongue blue for a day.",
+      "A procession for {church} passes through and every stall has to close for a prayer.",
+      "Fireworks go off by accident in a crate and the crowd scatters.",
+      "A monster pup escapes its cage and runs straight for the party.",
+      "A tax collector arrives and stallholders start hiding stock.",
+      "Two rival guilds hold a shouting match about prices in the middle of the square.",
+      "A rainstorm drives everyone under the awnings, the party included, shoulder to shoulder with strangers.",
+      "A man offers to sell the party a map to his own house, which he says is haunted.",
+      "Someone is handing out pamphlets attacking {faction}, and watchmen are chasing them.",
+      "An outworlder tries to pay with a coin from their world and causes a crowd.",
+      "A stallholder recognises an item the party carries and wants to know where they got it.",
+      "A bell tolls for a death, and the whole market falls silent for a minute.",
+      "A charity collection for an orphanage passes through, and refusing is noticed.",
+      "A team of adventurers comes back from a contract carrying a monster's head through the market."
+     ]
+    ],
+    [
+     "rumours",
+     [
+      "Someone is buying up all the cores of one rank in every market from here to the coast.",
+      "There's a new essence dealer in town whose stock is all from the same astral space.",
+      "A Storm Kingdom merchant fleet is due, and prices will drop when it lands.",
+      "Prices for healing potions are up because the Healer's church has stopped making them.",
+      "The market guild is about to raise stall rents, and some stallholders are planning to move.",
+      "A forger has been making copies of rare awakening stones that work once and then shatter.",
+      "{npc} owes money to half the stallholders here.",
+      "The black market has an essence no one has ever seen before, and it isn't for sale. Yet.",
+      "A ship came in with crates no one was allowed to see, and they went straight to {faction}.",
+      "A Leonid trader has been selling monster eggs that hatch into something that isn't what was promised.",
+      "Someone has been leaving gifts of food on the poorest stalls every morning.",
+      "A dealer in {place} sold an essence to someone who then disappeared. The dealer says it's not his fault.",
+      "A new road is being built and the market may move.",
+      "Someone poisoned the well near the market last year, and they've never been caught.",
+      "The duke's own steward was here last week, buying perfume and cheap wine, in disguise.",
+      "{affinity} stones are cheap this season; someone cleared a big astral space.",
+      "A noble is paying silly money for monster parts for a feast, and suppliers can't keep up.",
+      "Salt prices are climbing; the salt road has trouble on it again.",
+      "A curio dealer has a book that writes itself, and she keeps it chained.",
+      "The core broker's scales are rigged, but only for adventurers who look new."
+     ]
+    ],
+    [
+     "secrets",
+     [
+      "A stallholder is a cult recruiter who picks out the lonely and the desperate.",
+      "The guild master takes a cut from every stall and keeps a second ledger.",
+      "A trapdoor under the fishmonger's stall leads to the smugglers' tunnels.",
+      "One essence dealer is an agent of a noble house tracking who buys what.",
+      "A stallholder sells monster parts poached from a protected forest.",
+      "The healer at the temple stall is a fraud with no divine essence at all.",
+      "The market's oldest stall belongs to a family that has secretly paid off the watch for three generations.",
+      "A fence here is holding stolen goods from the duke's own house and is terrified.",
+      "A stallholder is a hidden outworlder, selling goods made with knowledge from another world.",
+      "One of the curio dealer's items is an astral power's lost possession, and the power wants it back.",
+      "The animal trader is keeping a sick monster that could spread disease to every beast in the market.",
+      "The food stall that everyone loves uses meat from a source that would horrify them.",
+      "Someone is murdering stallholders who refuse to pay protection, and making it look like accidents.",
+      "A Magic Society scholar runs a stall in disguise to watch for illegal essences.",
+      "The market sits over a crack in the world that the Magic Society has sealed with wards under the cobbles.",
+      "Two stallholders who claim to hate each other are married and run a scam together.",
+      "A child runner is the real brains of the black market here."
+     ]
+    ],
+    [
+     "haggle",
+     [
+      [
+       "Old friend",
+       "Treats the party like long-lost family, and charges them like it: 10% off if anyone remembers his name next time."
+      ],
+      [
+       "Barter only",
+       "Prefers goods to coin and will trade fairly for monster parts, gossip or a good story."
+      ],
+      [
+       "Bulk deals",
+       "Takes 10% off for any purchase of three or more of the same thing, and complains the whole time."
+      ],
+      [
+       "Superstitious",
+       "Won't sell to anyone with a Dark or Sin essence at any price, and charges Light essence users less."
+      ],
+      [
+       "Grudge holder",
+       "Charges double to anyone wearing a noble house's colours; she lost a stall to one once."
+      ],
+      [
+       "Gambler",
+       "Offers to roll a die for the price: even, it's half; odd, it's double."
+      ],
+      [
+       "Devout",
+       "Gives a tenth off to anyone who shows the symbol of her god, and preaches to the rest."
+      ],
+      [
+       "Desperate",
+       "Needs money fast and will sell at cost to anyone who pays today, in coin."
+      ]
+     ]
+    ],
+    [
+     "feel",
+     "sights",
+     [
+      "A cat sleeps on top of a stack of cheeses and no one dares move it.",
+      "A juggler drops a ball and pretends it was meant to happen.",
+      "A noblewoman in a veil buys nothing and watches everything.",
+      "Laundry dries on lines strung above the stalls, dripping on customers.",
+      "Two guards argue about whose turn it is to buy lunch.",
+      "A monster-hide awning, scaled and shimmering, shades the most expensive stall.",
+      "A line of pilgrims shuffles through, heads bowed, buying nothing.",
+      "Painted signs in a dozen styles compete for every eye.",
+      "A beggar sits beside a sign that says 'Former Gold-ranker', which might be true.",
+      "A street sweeper with a broom of monster bristles leaves the cobbles gleaming."
+     ]
+    ],
+    [
+     "feel",
+     "sounds",
+     [
+      "A child cries for a toy, and a parent says no for the fourth time.",
+      "Coins clink in a moneychanger's scale.",
+      "A barker announces a freak show with a 'real live outworlder'.",
+      "Chickens squawk in a cage stacked six high.",
+      "A temple bell answers another from across the city.",
+      "An argument in a language nobody else speaks.",
+      "The rhythmic thud of a butcher's cleaver.",
+      "Laughter from a group of off-duty sailors."
+     ]
+    ],
+    [
+     "feel",
+     "smells",
+     [
+      "Fresh leather from the saddler's.",
+      "Burnt sugar from a toffee stall.",
+      "Wet dog and wetter wool.",
+      "Coffee roasting in an iron drum.",
+      "The sharp tang of an alchemist's mistake.",
+      "Sweet hay and horse dung from the animal pens.",
+      "Lavender from the herbalist, too much of it.",
+      "Frying fish and lemon."
+     ]
+    ]
+   ]
+  }
+ },
+ "salvage": {
+  "_about": "Monster parts the party can salvage and sell after a fight. value is gp for one Medium monster of each rank; size multiplies it. A monster in the food list adds its parts too.",
+  "value": {
+   "Normal": 2,
+   "Iron": 5,
+   "Bronze": 500,
+   "Silver": 50000,
+   "Gold": 5000000,
+   "Diamond": 500000000
+  },
+  "size": {
+   "Tiny": 0.25,
+   "Small": 0.5,
+   "Medium": 1,
+   "Large": 1.5,
+   "Huge": 2,
+   "Gargantuan": 3
+  },
+  "types": {
+   "aberration": [
+    "eyes",
+    "ichor",
+    "tentacles",
+    "brain matter"
+   ],
+   "beast": [
+    "pelt",
+    "fangs",
+    "claws",
+    "meat",
+    "hide"
+   ],
+   "celestial": [
+    "feathers",
+    "radiant blood",
+    "halo shards"
+   ],
+   "construct": [
+    "enchanted plating",
+    "gears",
+    "binding runes"
+   ],
+   "dragon": [
+    "scales",
+    "teeth",
+    "blood",
+    "horns",
+    "claws"
+   ],
+   "elemental": [
+    "elemental shards",
+    "essence dust"
+   ],
+   "fey": [
+    "wings",
+    "glamour dust",
+    "hair"
+   ],
+   "fiend": [
+    "horns",
+    "brimstone blood",
+    "hide"
+   ],
+   "giant": [
+    "bones",
+    "hide",
+    "teeth"
+   ],
+   "humanoid": [
+    "salvageable gear",
+    "weapons",
+    "trinkets"
+   ],
+   "monstrosity": [
+    "hide",
+    "venom sac",
+    "claws",
+    "horns",
+    "carapace"
+   ],
+   "ooze": [
+    "acidic gel",
+    "membrane"
+   ],
+   "plant": [
+    "sap",
+    "seeds",
+    "bark",
+    "spores"
+   ],
+   "undead": [
+    "bone dust",
+    "grave essence",
+    "ectoplasm"
+   ]
+  }
+ }
+}

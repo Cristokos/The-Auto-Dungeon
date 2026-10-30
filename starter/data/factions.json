@@ -1,0 +1,959 @@
+{
+  "_about": "Factions: goals they work toward a step at a time (each, at its last step, becomes a storyteller pitch), what winning gives them, and the light economy: the goods a place makes (from its terrain and size) and needs, and what shortages and gluts do to prices and contracts. prices: trade goods the party can buy and sell, [unit, gp each]; trade: percent changes to them where a place makes, needs, is short of or has plenty of a good, and the gap between buying and selling. grudges: what a faction the party has angered (standing at or below threshold) does about it, as for people. sim.contestPerMonth: how often a faction tries to claim or take a control point within pointMiles of its seat (outposts, watchtowers, quarries, magical industries, a market or tavern it could run); each point it holds adds pointWealth to its wealth a month.",
+  "version": 4,
+  "goals": [
+    {
+      "key": "expand",
+      "name": "Spread its influence",
+      "wants": "spread its influence into {place}",
+      "kinds": [
+        "any"
+      ],
+      "steps": [
+        "Agents of {faction} have arrived in {place}.",
+        "{faction} is buying friends in {place}: loans, gifts and favours.",
+        "{faction} is ready to take a real hold on {place}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "{faction} takes hold in {place}",
+        "text": "{faction} is moving to take a hold on {place}: its people are on the council, in the market and at the gates.",
+        "dm": "{lead} runs it for {faction}, and not everyone they paid stays paid.",
+        "goal": "Decide whether {place} should belong to {faction}.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 25
+      }
+    },
+    {
+      "key": "converts",
+      "name": "Win converts",
+      "wants": "win converts in {place}",
+      "kinds": [
+        "church"
+      ],
+      "steps": [
+        "Preachers of {faction} are on the streets of {place}.",
+        "{faction} has opened a soup kitchen and a school in {place}.",
+        "{faction} has called a great gathering in {place}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "A great sermon in {place}",
+        "text": "{faction} holds a great gathering in {place}, and the whole town is talking about it.",
+        "dm": "{rival} means to disrupt it, and has hired thugs to do it.",
+        "goal": "Keep the peace at the gathering.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 20
+      }
+    },
+    {
+      "key": "shrine",
+      "name": "Open a shrine",
+      "wants": "open a shrine in {place}",
+      "kinds": [
+        "church",
+        "cult"
+      ],
+      "steps": [
+        "{faction} has bought land in {place}.",
+        "Builders are at work on a shrine of {faction} in {place}.",
+        "The shrine is nearly finished, and needs a blessing, or a sacrifice."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "A shrine for {faction}",
+        "text": "{faction}'s new shrine in {place} is to be consecrated, and it needs something brought from far away first.",
+        "dm": "The thing they need is guarded, and the guardians were promised it would never be taken.",
+        "goal": "Help, or hinder, the consecration.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 15
+      }
+    },
+    {
+      "key": "council",
+      "name": "Take the council",
+      "wants": "take control of the council of {place}",
+      "kinds": [
+        "house",
+        "guild",
+        "any"
+      ],
+      "steps": [
+        "{faction} has backed a candidate for the council of {place}.",
+        "{faction}'s candidate is winning votes with gifts and threats.",
+        "The council of {place} votes soon, and {faction} has it nearly won."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 3,
+        "title": "The vote in {place}",
+        "text": "The council of {place} votes this week, and {faction} has nearly bought it.",
+        "dm": "Votes have been bought, and one councillor is being blackmailed by {lead}.",
+        "goal": "Decide who rules {place}.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 30,
+        "rivalPower": -10
+      }
+    },
+    {
+      "key": "trade",
+      "name": "Control the trade",
+      "wants": "control the {goods} trade through {place}",
+      "kinds": [
+        "house",
+        "guild",
+        "any"
+      ],
+      "steps": [
+        "{faction} is buying {goods} in {place} at any price.",
+        "{faction}'s rivals in the {goods} trade are being squeezed out.",
+        "{faction} needs one last deal to own the {goods} trade in {place}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "{faction} corners the {goods}",
+        "text": "{faction} is about to close a deal that gives it the whole {goods} trade through {place}.",
+        "dm": "The other side of the deal is being forced, and wants a way out.",
+        "goal": "Help the deal, or break it.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 15,
+        "wealth": 15
+      }
+    },
+    {
+      "key": "crush",
+      "name": "Crush a rival",
+      "wants": "crush {rival}",
+      "kinds": [
+        "any"
+      ],
+      "steps": [
+        "{faction} is gathering what it knows about {rival}.",
+        "{faction} is turning {rival}'s friends in {place}.",
+        "{faction} is ready to strike at {rival}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 3,
+        "title": "{faction} strikes at {rival}",
+        "text": "{faction} moves against {rival} in {place}, and the streets will not stay quiet.",
+        "dm": "{faction}'s plan uses the party's name. They will be blamed whether they help or not.",
+        "goal": "Pick a side, or keep {place} from burning.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "rivalPower": -20,
+        "tie": "enemy"
+      }
+    },
+    {
+      "key": "alliance",
+      "name": "Seal an alliance",
+      "wants": "seal an alliance with {rival}",
+      "kinds": [
+        "any"
+      ],
+      "steps": [
+        "{faction} has sent envoys to {rival}.",
+        "{faction} and {rival} are haggling over terms.",
+        "The treaty between {faction} and {rival} is to be signed in {place}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "A treaty in {place}",
+        "text": "{faction} and {rival} sign a treaty in {place}, and they want trusted guards for the ceremony.",
+        "dm": "Someone on each side wants the treaty to fail.",
+        "goal": "Keep the signing safe.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "power": 10,
+        "tie": "ally"
+      }
+    },
+    {
+      "key": "outlaw",
+      "name": "Outlaw a rival",
+      "wants": "have {rival} outlawed in {place}",
+      "kinds": [
+        "church",
+        "guild",
+        "house"
+      ],
+      "steps": [
+        "{faction} is preaching against {rival} in {place}.",
+        "{faction} has brought charges against {rival}'s people.",
+        "{faction} is pressing the lords of {place} to outlaw {rival}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 3,
+        "title": "{rival} outlawed?",
+        "text": "The lords of {place} are about to outlaw {rival}, at {faction}'s urging.",
+        "dm": "Half of {faction}'s charges are true. The other half were made up.",
+        "goal": "Find the truth before the decree.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 10,
+        "rivalPower": -15,
+        "tie": "enemy"
+      }
+    },
+    {
+      "key": "relic",
+      "name": "Recover a relic",
+      "wants": "recover a relic it lost long ago",
+      "kinds": [
+        "church",
+        "cult",
+        "society"
+      ],
+      "steps": [
+        "{faction} has learned where its lost relic might be.",
+        "{faction} has sent searchers, and one did not come back.",
+        "{faction} has found the relic's resting place."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "The lost relic",
+        "text": "{faction} knows where its lost relic lies, near {place}, and needs someone to fetch it.",
+        "dm": "The relic is not what {faction} thinks: it is what drove them to lose it.",
+        "goal": "Recover the relic.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ],
+        "newPlace": "site"
+      },
+      "win": {
+        "power": 10
+      }
+    },
+    {
+      "key": "debts",
+      "name": "Pay its debts",
+      "wants": "pay off what it owes",
+      "kinds": [
+        "house",
+        "guild"
+      ],
+      "steps": [
+        "{faction} is selling land around {place} to pay its debts.",
+        "{faction} is calling in every favour it is owed.",
+        "{faction} has one last chance to clear its debts, with a risky venture."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "A risky venture",
+        "text": "{faction} has staked what is left of its fortune on one venture out of {place}, and needs it guarded.",
+        "dm": "The venture is a swindle. {faction} is the mark, not the swindler.",
+        "goal": "Guard the venture, or expose the swindle.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "wealth": 20
+      }
+    },
+    {
+      "key": "marriage",
+      "name": "Marry well",
+      "wants": "marry its heir into {rival}",
+      "kinds": [
+        "house"
+      ],
+      "steps": [
+        "{faction} has proposed a match with {rival}.",
+        "{faction} and {rival} are haggling over the dowry.",
+        "The wedding of {faction}'s heir is set, in {place}."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "The great wedding",
+        "text": "{faction}'s heir is to marry into {rival} in {place}, and the whole city is invited.",
+        "dm": "The heir loves someone else, and plans to run on the wedding day.",
+        "goal": "Keep the wedding on track, or help the heir run.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "power": 10,
+        "tie": "ally"
+      },
+      "rivalKind": "house"
+    },
+    {
+      "key": "expedition",
+      "name": "Fund an expedition",
+      "wants": "fund an expedition into the wilds",
+      "kinds": [
+        "society",
+        "guild",
+        "any"
+      ],
+      "steps": [
+        "{faction} is hiring for an expedition out of {place}.",
+        "{faction}'s expedition has set out.",
+        "{faction}'s expedition has found something, and gone quiet."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "The lost expedition",
+        "text": "{faction}'s expedition out of {place} has stopped sending word, and {faction} wants it found.",
+        "dm": "The expedition found an astral space, and part of it went in.",
+        "goal": "Find the expedition.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ],
+        "newPlace": "site"
+      },
+      "win": {
+        "power": 10,
+        "wealth": 5
+      }
+    },
+    {
+      "key": "recruit",
+      "name": "Raise fighters",
+      "wants": "raise fighters of its own",
+      "kinds": [
+        "any"
+      ],
+      "steps": [
+        "{faction} is recruiting in {place}.",
+        "{faction}'s new fighters are training openly.",
+        "{faction} has enough fighters to make the lords of {place} nervous."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "{faction}'s fighters",
+        "text": "{faction}'s new fighters are swaggering through {place}, and the watch wants to know who they answer to.",
+        "dm": "They answer to {lead}, who has plans {faction} doesn't know about.",
+        "goal": "Find out what the fighters are for.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "power": 15
+      }
+    },
+    {
+      "key": "spy",
+      "name": "Plant spies",
+      "wants": "plant spies inside {rival}",
+      "kinds": [
+        "house",
+        "guild",
+        "society",
+        "any"
+      ],
+      "steps": [
+        "{faction} is looking for someone inside {rival}.",
+        "{faction} has turned one of {rival}'s clerks.",
+        "{faction}'s spy is about to steal {rival}'s secrets."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 2,
+        "title": "A spy in {rival}",
+        "text": "{faction}'s spy inside {rival} is about to be caught in {place}, and needs getting out.",
+        "dm": "The spy has been turned back. {faction} is being fed lies.",
+        "goal": "Get the spy out, or turn the tables.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "rivalPower": -10
+      }
+    },
+    {
+      "key": "festival",
+      "name": "Win the people",
+      "wants": "win the people of {place} with a festival",
+      "kinds": [
+        "any"
+      ],
+      "steps": [
+        "{faction} has announced a festival in {place}.",
+        "{faction} is spending freely on the festival.",
+        "The festival in {place} is about to begin."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 1,
+        "title": "{faction}'s festival",
+        "text": "{faction}'s festival in {place} is about to begin, and it is meant to win the town over.",
+        "dm": "{rival} has a plan to ruin it.",
+        "goal": "Enjoy the festival, and keep it from going wrong.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 10
+      }
+    },
+    {
+      "key": "summon",
+      "name": "Summon a power",
+      "wants": "summon something in {place}",
+      "kinds": [
+        "cult"
+      ],
+      "steps": [
+        "Cultists of {faction} are gathering in secret around {place}.",
+        "{faction} has taken people from {place} for its rite.",
+        "The rite of {faction} is set for the next dark moon."
+      ],
+      "climax": {
+        "kind": "faction",
+        "drama": 4,
+        "title": "The rite of {faction}",
+        "text": "{faction} will finish its rite near {place} at the dark moon, and the people it took are still alive.",
+        "dm": "The rite will work if it isn't stopped.",
+        "goal": "Stop the rite and save the captives.",
+        "cast": [
+          {
+            "key": "lead",
+            "label": "{faction}'s agent"
+          }
+        ]
+      },
+      "win": {
+        "influence": 20,
+        "power": 20
+      }
+    }
+  ],
+  "econ": {
+    "terrain": {
+      "coast": [
+        "fish",
+        "salt"
+      ],
+      "lake": [
+        "fish"
+      ],
+      "forest": [
+        "timber"
+      ],
+      "jungle": [
+        "timber"
+      ],
+      "farmland": [
+        "grain",
+        "wine"
+      ],
+      "plains": [
+        "grain",
+        "horses"
+      ],
+      "grassland": [
+        "horses"
+      ],
+      "hills": [
+        "iron",
+        "wine"
+      ],
+      "mountains": [
+        "iron"
+      ],
+      "river": [
+        "fish",
+        "grain"
+      ],
+      "delta": [
+        "grain",
+        "fish"
+      ],
+      "marsh": [
+        "fish"
+      ],
+      "desert": [
+        "salt"
+      ]
+    },
+    "settlement": {
+      "city": [
+        "cloth",
+        "paper",
+        "healing potions"
+      ],
+      "town": [
+        "cloth",
+        "rope"
+      ],
+      "village": [],
+      "hamlet": []
+    },
+    "shortPrice": 10,
+    "plentyPrice": -5,
+    "prices": {
+      "grain": [
+        "sack",
+        0.5
+      ],
+      "salt": [
+        "sack",
+        2
+      ],
+      "lamp oil": [
+        "jug",
+        0.5
+      ],
+      "timber": [
+        "log",
+        1
+      ],
+      "cloth": [
+        "bolt",
+        5
+      ],
+      "wine": [
+        "cask",
+        8
+      ],
+      "iron": [
+        "bar",
+        1
+      ],
+      "healing potions": [
+        "potion",
+        50
+      ],
+      "fish": [
+        "barrel",
+        3
+      ],
+      "horses": [
+        "horse",
+        75
+      ],
+      "rope": [
+        "coil",
+        1
+      ],
+      "paper": [
+        "ream",
+        2
+      ],
+      "smoked fish": [
+        "barrel",
+        4
+      ],
+      "copper ore": [
+        "load",
+        3
+      ],
+      "cut stone": [
+        "block",
+        1
+      ],
+      "planks": [
+        "bundle",
+        1.5
+      ],
+      "flour": [
+        "sack",
+        0.8
+      ],
+      "apples": [
+        "barrel",
+        1
+      ],
+      "dates": [
+        "basket",
+        2
+      ],
+      "beef and hides": [
+        "carcass",
+        10
+      ],
+      "wool": [
+        "bale",
+        4
+      ],
+      "goat cheese": [
+        "wheel",
+        1
+      ],
+      "rice": [
+        "sack",
+        0.6
+      ],
+      "reeds": [
+        "bundle",
+        0.2
+      ],
+      "peat": [
+        "load",
+        0.3
+      ],
+      "pottery": [
+        "crate",
+        2
+      ],
+      "bricks": [
+        "load",
+        2
+      ],
+      "leather": [
+        "hide",
+        2
+      ],
+      "dyed cloth": [
+        "bolt",
+        8
+      ],
+      "ironwork": [
+        "crate",
+        10
+      ],
+      "charcoal": [
+        "sack",
+        0.4
+      ],
+      "ale": [
+        "cask",
+        3
+      ],
+      "honey": [
+        "jar",
+        1
+      ],
+      "pearls": [
+        "pearl",
+        25
+      ],
+      "whale oil": [
+        "barrel",
+        10
+      ],
+      "livestock": [
+        "head",
+        8
+      ],
+      "spices": [
+        "pouch",
+        5
+      ],
+      "cotton": [
+        "bale",
+        3
+      ],
+      "furs and meat": [
+        "bundle",
+        6
+      ],
+      "glass": [
+        "crate",
+        12
+      ],
+      "clockwork": [
+        "piece",
+        30
+      ],
+      "monster parts": [
+        "crate",
+        40
+      ],
+      "alchemical herbs": [
+        "bundle",
+        15
+      ],
+      "mana crystals": [
+        "crystal",
+        60
+      ],
+      "ritual chalk": [
+        "box",
+        10
+      ],
+      "enchanted silk": [
+        "bolt",
+        80
+      ],
+      "essence-touched fruit": [
+        "basket",
+        30
+      ],
+      "potions": [
+        "potion",
+        50
+      ],
+      "bone tools": [
+        "crate",
+        20
+      ],
+      "mana-rich water": [
+        "flask",
+        8
+      ],
+      "ward stones": [
+        "stone",
+        40
+      ],
+      "glowing fungus": [
+        "basket",
+        6
+      ],
+      "stormglass": [
+        "pane",
+        35
+      ],
+      "warding salt": [
+        "sack",
+        12
+      ],
+      "spider-silk cloth": [
+        "bolt",
+        60
+      ],
+      "enchanted ink": [
+        "bottle",
+        25
+      ],
+      "blood tonics": [
+        "vial",
+        30
+      ],
+      "lake herbs": [
+        "bundle",
+        8
+      ],
+      "echo stone": [
+        "block",
+        20
+      ],
+      "sunstone": [
+        "stone",
+        45
+      ],
+      "scaled leather": [
+        "hide",
+        50
+      ],
+      "spirit lanterns": [
+        "lantern",
+        30
+      ],
+      "healing herbs": [
+        "bundle",
+        10
+      ],
+      "mirage silk": [
+        "bolt",
+        70
+      ],
+      "mana pearls": [
+        "pearl",
+        90
+      ],
+      "bottled marsh-lights": [
+        "bottle",
+        15
+      ],
+      "bone-fruit": [
+        "basket",
+        12
+      ],
+      "fire-glazed ceramics": [
+        "crate",
+        40
+      ]
+    },
+    "trade": {
+      "makes": -25,
+      "needs": 25,
+      "short": 50,
+      "plenty": -35,
+      "spread": 20
+    },
+    "wanted": {
+      "grain": "guards for the grain carts",
+      "salt": "escorts for the salt caravans",
+      "lamp oil": "escorts for the oil wagons",
+      "timber": "guards for the timber rafts",
+      "cloth": "escorts for the cloth merchants",
+      "wine": "guards for the wine barges",
+      "iron": "escorts for the ore wagons",
+      "healing potions": "someone to fetch herbs for the healers",
+      "fish": "guards for the fishing boats",
+      "horses": "riders to bring horses in",
+      "rope": "escorts for the rope makers' carts",
+      "paper": "couriers for the paper mills"
+    }
+  },
+  "sim": {
+    "actorsPerMonth": 3,
+    "goalStepPerMonth": 0.3,
+    "newGoalPerMonth": 0.5,
+    "tiesPerMonth": 0.15,
+    "influencePerStep": 5,
+    "contestPerMonth": 0.25,
+    "pointWealth": 2,
+    "pointMiles": 60
+  },
+  "grudges": {
+    "threshold": -25,
+    "chancePerMonth": 0.35,
+    "cooldownDays": 45,
+    "acts": [
+      {
+        "key": "smear",
+        "news": "Word in {place}: the party can't be trusted",
+        "name": "A smear",
+        "min": -25,
+        "weight": 4,
+        "public": true,
+        "standing": -4,
+        "text": "{faction} is spreading word around {place} that the party cannot be trusted."
+      },
+      {
+        "key": "blacklist",
+        "news": "{faction} won't deal with the party",
+        "name": "Blacklisted",
+        "min": -35,
+        "weight": 3,
+        "public": true,
+        "standing": -3,
+        "text": "{faction} has told its people in {place} not to deal with the party."
+      },
+      {
+        "key": "contracts",
+        "name": "Contracts kept away",
+        "min": -40,
+        "weight": 2,
+        "public": false,
+        "text": "{faction} is leaning on the Adventure Society in {place} to keep good contracts away from the party.",
+        "dm": "The next contract board near {place} offers the party one fewer good notice."
+      },
+      {
+        "key": "spies",
+        "name": "Watchers",
+        "min": -45,
+        "weight": 2,
+        "public": false,
+        "threat": true,
+        "text": "{faction} has set people to watch the party.",
+        "dm": "Someone has been following them for days. A spy may already be close to them."
+      },
+      {
+        "key": "ambush",
+        "name": "An ambush",
+        "min": -55,
+        "weight": 2,
+        "public": false,
+        "threat": true,
+        "text": "{faction} has sent armed men to ambush the party on the road near {place}.",
+        "dm": "A fight at a bad place on the road: a bridge, a gully, a ford."
+      },
+      {
+        "key": "framed",
+        "news": "The party named in a robbery in {place}",
+        "name": "Framed",
+        "min": -60,
+        "weight": 1,
+        "public": true,
+        "standing": -6,
+        "text": "Witnesses paid by {faction} swear the party were behind a robbery in {place}.",
+        "dm": "The watch has a warrant, and the witnesses can be broken."
+      },
+      {
+        "key": "assassins",
+        "name": "Killers hired",
+        "min": -70,
+        "weight": 1,
+        "public": false,
+        "threat": true,
+        "text": "{faction} has hired killers to deal with the party for good.",
+        "dm": "Killers a rank above the party, who strike when they are split up."
+      }
+    ]
+  }
+}

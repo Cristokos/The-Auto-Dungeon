@@ -1,0 +1,23 @@
+{
+  "_about": "Lists used by the encounter generator.",
+  "environments": [
+    {"name": "Delta waterways", "themes": ["Water", "Earth"]},
+    {"name": "Marsh", "themes": ["Water", "Blood", "Dark"]},
+    {"name": "Farmland", "themes": ["Earth", "Might"]},
+    {"name": "Greenstone streets", "themes": ["Sin", "Dark", "Swift"]},
+    {"name": "Coin farm", "themes": ["Magic", "Earth"]},
+    {"name": "Road to Rimaros", "themes": ["Wind", "Might", "Swift"]}
+  ],
+  "situations": [
+    "The monsters are fighting each other when the party arrives.",
+    "A Normal-rank farmer is hiding nearby and needs rescue.",
+    "Another Iron-rank team is already here and wants the kill.",
+    "The monsters are guarding a fresh spawn point thick with magic.",
+    "Fog or reeds limit sight to 30 feet.",
+    "They are fleeing something worse.",
+    "A coin-farm patrol is overdue and these monsters are why.",
+    "The ground is unstable; a failed check drops someone into water.",
+    "A Church of Purity zealot is watching how the party fights.",
+    "The monsters are unusually strong; the local magic is rising."
+  ]
+}
