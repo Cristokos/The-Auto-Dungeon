@@ -8,6 +8,7 @@ import * as CR from './classref.js';
 import * as ST from './story.js';
 import * as R from './rolls.js';
 import * as SU from './summons.js';
+import * as PLAY from './play.js';
 
 const api = window.api;
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -1242,6 +1243,7 @@ function render() {
       ${state.dm ? '<button class="btn" id="sys-open-settings">Switch it on in Settings</button> ' : ''}<button class="btn" data-nav="home">Go home</button></div>`;
     $('#sys-open-settings')?.addEventListener('click', openSettings);
   } else if (v.kind === 'page') { renderPage(v.id, v.edit); if (state.pages.has(v.id)) noteRecent(v.id); }
+  else if (v.kind === 'play') renderPlay();
   else if (v.kind === 'party') renderParty();
   else if (v.kind === 'sessions') renderSessions();
   else if (v.kind === 'world') renderWorld();
@@ -2063,6 +2065,113 @@ function partySVG() {
   }).join('')}</g>`;
 }
 
+/** The New party member dialog: name, class, people, level and scores, then the sheet made from them. */
+async function addPartyMember() {
+  const r = await formDialog('New party member', `
+    <label class="field">Character name<input name="title" required></label>
+    <label class="field">Player<input name="player"></label>
+    <div class="row"><label class="field">Class<select name="class">${(state.data.classes?.classes || []).map(c => `<option>${c.name}</option>`).join('')}</select></label>
+    <label class="field">People<select name="species">${(state.data.peoples?.peoples || []).map(p => `<option>${p.name}</option>`).join('')}<option>Outworlder</option></select></label>
+    <label class="field" style="width:80px">Level<input name="level" type="number" min="1" max="20" value="1"></label></div>
+    <p class="settings-group" style="margin:10px 0 4px">Ability scores</p>
+    <div class="row new-pc-abils">${S.ABILITIES.map((a, i) => `<label class="field" style="width:62px">${a}<input name="ab${i}" type="number" min="1" max="30" value="10"></label>`).join('')}</div>
+    <div class="row" style="gap:6px;align-items:center"><button type="button" class="btn small" data-abils="array" title="15, 14, 13, 12, 10 and 8, placed for the class">Standard array</button><button type="button" class="btn small" data-abils="roll" title="4d6, drop the lowest, placed for the class">Roll 4d6</button><span class="hint" id="new-pc-points"></span></div>
+    <div class="row" style="align-items:flex-end"><label class="field" style="width:150px" title="The background raises one score by 2 and another by 1 (or three by 1: set them on the sheet)">Background +2<select name="bg2"><option value="">None</option>${S.ABILITIES.map(a => `<option>${a}</option>`).join('')}</select></label>
+      <label class="field" style="width:150px">Background +1<select name="bg1"><option value="">None</option>${S.ABILITIES.map(a => `<option>${a}</option>`).join('')}</select></label>
+      <p class="hint" style="margin:0 0 8px;flex:1">Scores above are before the background. Typing final scores? Set both to None.</p></div>
+    <div id="new-pc-class-picks"></div>
+    <div id="new-pc-level-picks"></div>
+    <label class="inline-check" style="margin-top:8px"><input type="checkbox" name="kit" checked> Starting equipment: <span class="muted" id="new-pc-kit"></span></label>
+    <p class="hint" style="margin:4px 0 0">Max HP follows Constitution. Background skills, feats and languages go on the sheet.</p>`, 'Add', form => {
+    const boxes = S.ABILITIES.map((_, i) => form.elements[`ab${i}`]);
+    const points = () => {
+      const v = boxes.map(b => Number(b.value) || 0);
+      const cost = v.every(x => x >= 8 && x <= 15) ? v.reduce((a, x) => a + POINT_COST[x], 0) : null;
+      $('#new-pc-points', form).textContent = cost == null ? '' : `Point buy: ${cost} of 27 points`;
+    };
+    // A class's best abilities get the highest scores: the standard array, or a set of 4d6 rolls, sorted.
+    const place = scores => { const order = ABILITY_ORDER[form.elements.class.value] || S.ABILITIES; scores.sort((a, b) => b - a).forEach((x, i) => { boxes[S.ABILITIES.indexOf(order[i])].value = x; }); points(); };
+    let touched = false;
+    boxes.forEach(b => b.addEventListener('input', () => { touched = true; points(); }));
+    // The background bonus goes to the class's two best abilities until the DM picks otherwise; skills, the cleric's
+    // or druid's order and the kit follow the class.
+    let bgTouched = false;
+    ['bg2', 'bg1'].forEach(k => form.elements[k].addEventListener('change', () => { bgTouched = true; }));
+    const classPicks = () => {
+      const cls = form.elements.class.value, order = ABILITY_ORDER[cls] || S.ABILITIES;
+      if (!bgTouched) { form.elements.bg2.value = order[0]; form.elements.bg1.value = order[1]; }
+      const [n, skills] = CLASS_SKILLS[cls] || [0, []];
+      const ord = LEVEL1_ORDER[cls];
+      $('#new-pc-class-picks', form).innerHTML = `${n ? `<p class="settings-group" style="margin:10px 0 4px">Skills <span class="muted">(pick ${n})</span></p>
+        <div class="new-pc-skills">${skills.map(x => `<label class="inline-check"><input type="checkbox" name="sk:${esc(x)}"> ${esc(x)}</label>`).join('')}</div>` : ''}
+        ${ord ? `<label class="field" style="margin-top:8px">${esc(ord[1])}<select name="order">${Object.entries(ord[2]).map(([k, t]) => `<option value="${esc(k)}">${esc(k)}: ${esc(t)}</option>`).join('')}</select></label>` : ''}`;
+      const boxes = $$('[name^="sk:"]', form);
+      boxes.forEach(b => b.addEventListener('change', () => { const on = boxes.filter(x => x.checked).length; boxes.forEach(x => { x.disabled = !x.checked && on >= n; }); }));
+      $('#new-pc-kit', form).textContent = kitText(STARTING_KIT[cls]) || 'none for this class';
+      levelPicks();
+    };
+    // What their level brings: subclass, feats or ability increases, class picks, expertise and spells.
+    const levelPicks = () => {
+      const cls = form.elements.class.value, level = Math.max(1, Math.min(20, Number(form.elements.level.value) || 1));
+      const sub = form.elements.sub?.value || '';
+      const gold = higherLevelGold(level);
+      $('#new-pc-kit', form).textContent = `${kitText(STARTING_KIT[cls]) || 'none for this class'}${gold ? `, and about ${gold.toLocaleString()} gp more for starting at level ${level}${level >= 11 ? ` (with ${level >= 17 ? 'two' : 'one'} uncommon magic item${level >= 17 ? 's' : ''} of their choice)` : ''}` : ''}`;
+      const box = $('#new-pc-level-picks', form);
+      box.innerHTML = newPcLevelPicks(cls, level, sub);
+      // Checkbox groups stop at their count.
+      $$('[data-limit]', box).forEach(g => {
+        const n = Number(g.dataset.limit), bs = $$('input[type=checkbox]', g);
+        const cap = () => { const on = bs.filter(x => x.checked).length; bs.forEach(x => { x.disabled = !x.checked && on >= n; }); };
+        bs.forEach(b => b.addEventListener('change', cap)); cap();
+      });
+      form.elements.sub?.addEventListener('change', levelPicks);
+    };
+    form.elements.level.addEventListener('input', levelPicks);
+    form.elements.class.addEventListener('change', () => { if (!touched) place([15, 14, 13, 12, 10, 8]); classPicks(); });
+    classPicks();
+    $$('[data-abils]', form).forEach(b => b.onclick = () => { touched = true; place(b.dataset.abils === 'array' ? [15, 14, 13, 12, 10, 8] : Array.from({ length: 6 }, () => { const d = Array.from({ length: 4 }, () => 1 + Math.floor(Math.random() * 6)).sort((x, y) => x - y); return d[1] + d[2] + d[3]; })); });
+    place([15, 14, 13, 12, 10, 8]);
+  });
+  if (!r) return;
+  const cls = state.data.classes?.classes.find(c => c.name === r.class);
+  const level = Number(r.level) || 1;
+  const bonus = a => (r.bg2 === a ? 2 : 0) + (r.bg1 === a ? 1 : 0);
+  // The bonus can't take a score past 20; a score typed above 20 is kept as it is.
+  const abilities = S.ABILITIES.map((a, i) => { const v = Math.max(1, Math.min(30, Number(r[`ab${i}`]) || 10)); return v >= 20 ? v : Math.min(20, v + bonus(a)); });
+  // Level choices: ability score improvements raise the scores (to 20 at most), feats and class picks are kept.
+  const featPicks = [];
+  for (let i = 0; r[`feat${i}`] !== undefined; i++) {
+    const v = r[`feat${i}`];
+    if (!v) continue;
+    const asi = v.match(/^asi:(\w+)(?::(\w+))?$/);
+    if (!asi) { featPicks.push(v); continue; }
+    const ups = asi[2] ? [asi[1], asi[2]] : [asi[1], asi[1]];
+    for (const a of ups) { const k = S.ABILITIES.indexOf(a); if (k >= 0 && abilities[k] < 20) abilities[k]++; }
+    featPicks.push(`Ability Score Improvement (${asi[2] ? `+1 ${asi[1]}, +1 ${asi[2]}` : `+2 ${asi[1]}`})${featPicks.some(x => x.startsWith('Ability Score Improvement')) ? ` #${featPicks.filter(x => x.startsWith('Ability Score Improvement')).length + 1}` : ''}`);
+  }
+  const levelOpts = {};
+  for (const k of Object.keys(r).filter(k => k.startsWith('co:'))) { const [, key, ...name] = k.split(':'); (levelOpts[key] ||= []).push(name.join(':')); }
+  if (featPicks.length) levelOpts.feats = featPicks;
+  const expertise = Object.keys(r).filter(k => k.startsWith('ex:')).map(k => k.slice(3));
+  const subclass = level >= C.SUBCLASS_LEVEL && r.sub ? r.sub : '';
+  const hpMax = sheetHp({ class: r.class, level, abilities });
+  const kit = r.kit ? STARTING_KIT[r.class] : null;
+  const skills = Object.keys(r).filter(k => k.startsWith('sk:')).map(k => k.slice(3));
+  const ord = LEVEL1_ORDER[r.class];
+  // Weapon Mastery starts on the kit's weapons, as many as the class gets at this level.
+  const mOpt = C.classOptionsFor({ class: r.class, level }).find(o => o.key === 'mastery');
+  const masteries = kit && mOpt ? [...new Set(kit.weapons.map(w => Object.keys(mOpt.choices).find(k => k.toLowerCase() === w.toLowerCase())).filter(Boolean))].slice(0, mOpt.count) : [];
+  await createPage(r.title.trim(), {
+    type: 'pc', player: r.player, class: r.class, species: r.species, level,
+    hp: hpMax, hpMax, ac: 10, armor: kit?.armor || 'none', ...(kit?.shield ? { shield: kit.shield } : {}), abilities, speed: 30, essences: [], confluence: '', stones: [],
+    ...(skills.length ? { skills } : {}), ...(expertise.length ? { expertise } : {}), ...(subclass ? { subclass } : {}),
+    ...(ord && r.order || masteries.length || Object.keys(levelOpts).length ? { classOpts: { ...levelOpts, ...(ord && r.order ? { [ord[0]]: [r.order] } : {}), ...(masteries.length ? { mastery: masteries } : {}) } } : {}),
+    ...(r.spells ? { spells: startingSpells({ class: r.class, level, subclass, abilities }) } : {}),
+    ...(kit ? { equipped: kit.weapons.map(w => S.equipEntry(state.data, w)) } : {}),
+    coins: gpToCoins((kit?.gp || 0) + (r.kit ? higherLevelGold(level, true) : 0)), cores: { iron: 0, bronze: 0, silver: 0 }, coreLevels: 0,
+  }, kit ? TEMPLATES.pc.replace('## Inventory\n\n', `## Inventory\n\n${[...kit.carry, ...(level >= 11 ? Array(level >= 17 ? 2 : 1).fill('An uncommon magic item of their choice (for starting above level 10)') : [])].map(x => `- ${x}`).join('\n')}\n`) : TEMPLATES.pc);
+}
+
 function renderParty() {
   const list = pcs();
   $('#view').innerHTML = `<div class="wide">
@@ -2092,111 +2201,7 @@ function renderParty() {
   $('#short-rest').onclick = shortRest;
   $('#long-rest').onclick = longRest;
   $('#import-pc').onclick = async () => { await importSheet(); if (state.view?.kind === 'party') renderParty(); };
-  $('#add-pc').onclick = async () => {
-    const r = await formDialog('New party member', `
-      <label class="field">Character name<input name="title" required></label>
-      <label class="field">Player<input name="player"></label>
-      <div class="row"><label class="field">Class<select name="class">${(state.data.classes?.classes || []).map(c => `<option>${c.name}</option>`).join('')}</select></label>
-      <label class="field">People<select name="species">${(state.data.peoples?.peoples || []).map(p => `<option>${p.name}</option>`).join('')}<option>Outworlder</option></select></label>
-      <label class="field" style="width:80px">Level<input name="level" type="number" min="1" max="20" value="1"></label></div>
-      <p class="settings-group" style="margin:10px 0 4px">Ability scores</p>
-      <div class="row new-pc-abils">${S.ABILITIES.map((a, i) => `<label class="field" style="width:62px">${a}<input name="ab${i}" type="number" min="1" max="30" value="10"></label>`).join('')}</div>
-      <div class="row" style="gap:6px;align-items:center"><button type="button" class="btn small" data-abils="array" title="15, 14, 13, 12, 10 and 8, placed for the class">Standard array</button><button type="button" class="btn small" data-abils="roll" title="4d6, drop the lowest, placed for the class">Roll 4d6</button><span class="hint" id="new-pc-points"></span></div>
-      <div class="row" style="align-items:flex-end"><label class="field" style="width:150px" title="The background raises one score by 2 and another by 1 (or three by 1: set them on the sheet)">Background +2<select name="bg2"><option value="">None</option>${S.ABILITIES.map(a => `<option>${a}</option>`).join('')}</select></label>
-        <label class="field" style="width:150px">Background +1<select name="bg1"><option value="">None</option>${S.ABILITIES.map(a => `<option>${a}</option>`).join('')}</select></label>
-        <p class="hint" style="margin:0 0 8px;flex:1">Scores above are before the background. Typing final scores? Set both to None.</p></div>
-      <div id="new-pc-class-picks"></div>
-      <div id="new-pc-level-picks"></div>
-      <label class="inline-check" style="margin-top:8px"><input type="checkbox" name="kit" checked> Starting equipment: <span class="muted" id="new-pc-kit"></span></label>
-      <p class="hint" style="margin:4px 0 0">Max HP follows Constitution. Background skills, feats and languages go on the sheet.</p>`, 'Add', form => {
-      const boxes = S.ABILITIES.map((_, i) => form.elements[`ab${i}`]);
-      const points = () => {
-        const v = boxes.map(b => Number(b.value) || 0);
-        const cost = v.every(x => x >= 8 && x <= 15) ? v.reduce((a, x) => a + POINT_COST[x], 0) : null;
-        $('#new-pc-points', form).textContent = cost == null ? '' : `Point buy: ${cost} of 27 points`;
-      };
-      // A class's best abilities get the highest scores: the standard array, or a set of 4d6 rolls, sorted.
-      const place = scores => { const order = ABILITY_ORDER[form.elements.class.value] || S.ABILITIES; scores.sort((a, b) => b - a).forEach((x, i) => { boxes[S.ABILITIES.indexOf(order[i])].value = x; }); points(); };
-      let touched = false;
-      boxes.forEach(b => b.addEventListener('input', () => { touched = true; points(); }));
-      // The background bonus goes to the class's two best abilities until the DM picks otherwise; skills, the cleric's
-      // or druid's order and the kit follow the class.
-      let bgTouched = false;
-      ['bg2', 'bg1'].forEach(k => form.elements[k].addEventListener('change', () => { bgTouched = true; }));
-      const classPicks = () => {
-        const cls = form.elements.class.value, order = ABILITY_ORDER[cls] || S.ABILITIES;
-        if (!bgTouched) { form.elements.bg2.value = order[0]; form.elements.bg1.value = order[1]; }
-        const [n, skills] = CLASS_SKILLS[cls] || [0, []];
-        const ord = LEVEL1_ORDER[cls];
-        $('#new-pc-class-picks', form).innerHTML = `${n ? `<p class="settings-group" style="margin:10px 0 4px">Skills <span class="muted">(pick ${n})</span></p>
-          <div class="new-pc-skills">${skills.map(x => `<label class="inline-check"><input type="checkbox" name="sk:${esc(x)}"> ${esc(x)}</label>`).join('')}</div>` : ''}
-          ${ord ? `<label class="field" style="margin-top:8px">${esc(ord[1])}<select name="order">${Object.entries(ord[2]).map(([k, t]) => `<option value="${esc(k)}">${esc(k)}: ${esc(t)}</option>`).join('')}</select></label>` : ''}`;
-        const boxes = $$('[name^="sk:"]', form);
-        boxes.forEach(b => b.addEventListener('change', () => { const on = boxes.filter(x => x.checked).length; boxes.forEach(x => { x.disabled = !x.checked && on >= n; }); }));
-        $('#new-pc-kit', form).textContent = kitText(STARTING_KIT[cls]) || 'none for this class';
-        levelPicks();
-      };
-      // What their level brings: subclass, feats or ability increases, class picks, expertise and spells.
-      const levelPicks = () => {
-        const cls = form.elements.class.value, level = Math.max(1, Math.min(20, Number(form.elements.level.value) || 1));
-        const sub = form.elements.sub?.value || '';
-        const gold = higherLevelGold(level);
-        $('#new-pc-kit', form).textContent = `${kitText(STARTING_KIT[cls]) || 'none for this class'}${gold ? `, and about ${gold.toLocaleString()} gp more for starting at level ${level}${level >= 11 ? ` (with ${level >= 17 ? 'two' : 'one'} uncommon magic item${level >= 17 ? 's' : ''} of their choice)` : ''}` : ''}`;
-        const box = $('#new-pc-level-picks', form);
-        box.innerHTML = newPcLevelPicks(cls, level, sub);
-        // Checkbox groups stop at their count.
-        $$('[data-limit]', box).forEach(g => {
-          const n = Number(g.dataset.limit), bs = $$('input[type=checkbox]', g);
-          const cap = () => { const on = bs.filter(x => x.checked).length; bs.forEach(x => { x.disabled = !x.checked && on >= n; }); };
-          bs.forEach(b => b.addEventListener('change', cap)); cap();
-        });
-        form.elements.sub?.addEventListener('change', levelPicks);
-      };
-      form.elements.level.addEventListener('input', levelPicks);
-      form.elements.class.addEventListener('change', () => { if (!touched) place([15, 14, 13, 12, 10, 8]); classPicks(); });
-      classPicks();
-      $$('[data-abils]', form).forEach(b => b.onclick = () => { touched = true; place(b.dataset.abils === 'array' ? [15, 14, 13, 12, 10, 8] : Array.from({ length: 6 }, () => { const d = Array.from({ length: 4 }, () => 1 + Math.floor(Math.random() * 6)).sort((x, y) => x - y); return d[1] + d[2] + d[3]; })); });
-      place([15, 14, 13, 12, 10, 8]);
-    });
-    if (!r) return;
-    const cls = state.data.classes?.classes.find(c => c.name === r.class);
-    const level = Number(r.level) || 1;
-    const bonus = a => (r.bg2 === a ? 2 : 0) + (r.bg1 === a ? 1 : 0);
-    // The bonus can't take a score past 20; a score typed above 20 is kept as it is.
-    const abilities = S.ABILITIES.map((a, i) => { const v = Math.max(1, Math.min(30, Number(r[`ab${i}`]) || 10)); return v >= 20 ? v : Math.min(20, v + bonus(a)); });
-    // Level choices: ability score improvements raise the scores (to 20 at most), feats and class picks are kept.
-    const featPicks = [];
-    for (let i = 0; r[`feat${i}`] !== undefined; i++) {
-      const v = r[`feat${i}`];
-      if (!v) continue;
-      const asi = v.match(/^asi:(\w+)(?::(\w+))?$/);
-      if (!asi) { featPicks.push(v); continue; }
-      const ups = asi[2] ? [asi[1], asi[2]] : [asi[1], asi[1]];
-      for (const a of ups) { const k = S.ABILITIES.indexOf(a); if (k >= 0 && abilities[k] < 20) abilities[k]++; }
-      featPicks.push(`Ability Score Improvement (${asi[2] ? `+1 ${asi[1]}, +1 ${asi[2]}` : `+2 ${asi[1]}`})${featPicks.some(x => x.startsWith('Ability Score Improvement')) ? ` #${featPicks.filter(x => x.startsWith('Ability Score Improvement')).length + 1}` : ''}`);
-    }
-    const levelOpts = {};
-    for (const k of Object.keys(r).filter(k => k.startsWith('co:'))) { const [, key, ...name] = k.split(':'); (levelOpts[key] ||= []).push(name.join(':')); }
-    if (featPicks.length) levelOpts.feats = featPicks;
-    const expertise = Object.keys(r).filter(k => k.startsWith('ex:')).map(k => k.slice(3));
-    const subclass = level >= C.SUBCLASS_LEVEL && r.sub ? r.sub : '';
-    const hpMax = sheetHp({ class: r.class, level, abilities });
-    const kit = r.kit ? STARTING_KIT[r.class] : null;
-    const skills = Object.keys(r).filter(k => k.startsWith('sk:')).map(k => k.slice(3));
-    const ord = LEVEL1_ORDER[r.class];
-    // Weapon Mastery starts on the kit's weapons, as many as the class gets at this level.
-    const mOpt = C.classOptionsFor({ class: r.class, level }).find(o => o.key === 'mastery');
-    const masteries = kit && mOpt ? [...new Set(kit.weapons.map(w => Object.keys(mOpt.choices).find(k => k.toLowerCase() === w.toLowerCase())).filter(Boolean))].slice(0, mOpt.count) : [];
-    await createPage(r.title.trim(), {
-      type: 'pc', player: r.player, class: r.class, species: r.species, level,
-      hp: hpMax, hpMax, ac: 10, armor: kit?.armor || 'none', ...(kit?.shield ? { shield: kit.shield } : {}), abilities, speed: 30, essences: [], confluence: '', stones: [],
-      ...(skills.length ? { skills } : {}), ...(expertise.length ? { expertise } : {}), ...(subclass ? { subclass } : {}),
-      ...(ord && r.order || masteries.length || Object.keys(levelOpts).length ? { classOpts: { ...levelOpts, ...(ord && r.order ? { [ord[0]]: [r.order] } : {}), ...(masteries.length ? { mastery: masteries } : {}) } } : {}),
-      ...(r.spells ? { spells: startingSpells({ class: r.class, level, subclass, abilities }) } : {}),
-      ...(kit ? { equipped: kit.weapons.map(w => S.equipEntry(state.data, w)) } : {}),
-      coins: gpToCoins((kit?.gp || 0) + (r.kit ? higherLevelGold(level, true) : 0)), cores: { iron: 0, bronze: 0, silver: 0 }, coreLevels: 0,
-    }, kit ? TEMPLATES.pc.replace('## Inventory\n\n', `## Inventory\n\n${[...kit.carry, ...(level >= 11 ? Array(level >= 17 ? 2 : 1).fill('An uncommon magic item of their choice (for starting above level 10)') : [])].map(x => `- ${x}`).join('\n')}\n`) : TEMPLATES.pc);
-  };
+  $('#add-pc').onclick = addPartyMember;
   $$('.card h3').forEach(h => h.onclick = () => openPage(h.dataset.id));
   $$('.card [data-hp]').forEach(b => b.onclick = () => adjustHP(b.dataset.id, Number(b.dataset.hp)));
   playRest($('#view'), state.restFx);
@@ -3735,7 +3740,7 @@ async function shiftPlace(title, from, to) {
 }
 
 /** Play the world forward. quiet: a toast instead of opening the summary (journeys use it). */
-async function advanceWorld(days, { quiet = false, why = '', rest = false, journey = null, arrive = null } = {}) {
+async function advanceWorld(days, { quiet = false, stay = false, why = '', rest = false, journey = null, arrive = null } = {}) {
   if (!(days > 0) || !state.data.calendar) return null;
   const w = world();
   // The journey ends before the world moves, so the party is where it's going while the days pass.
@@ -3771,7 +3776,7 @@ async function advanceWorld(days, { quiet = false, why = '', rest = false, journ
   refreshDate();
   const events = res.entries.filter(e => e.kind !== 'festival').length;
   if (quiet) toast(`${days} day${days === 1 ? '' : 's'} pass in the world${events ? `: ${events} thing${events === 1 ? '' : 's'} happened` : ''}. It's now ${fmtDay(w.today)}.`);
-  else go({ kind: 'world', advance: res.advance.id });
+  else if (!stay) go({ kind: 'world', advance: res.advance.id });
   return res.advance;
 }
 
@@ -4622,6 +4627,170 @@ async function worldToNotes(p) {
   renderPage(p.id);
 }
 
+// ---------- play ----------
+// The Auto DM: one player's character in the living world. The app makes the DM's calls (which check, how hard,
+// what turns up) from the same generators, storyteller and world clock the DM tools use, and keeps a journal of it.
+// The words and rules are in play.js.
+
+const play = () => {
+  const p = (state.saved.play ||= PLAY.newPlay());
+  p.log ||= [];
+  return p;
+};
+/** The character the player plays: the one they chose, else the first party member. */
+function playPc() {
+  const list = pcs();
+  return list.find(p => p.id === play().pc) || list[0] || null;
+}
+async function journal(kind, text, extra = {}) {
+  const p = play();
+  p.log.push({ day: today(), part: p.part, kind, text, ...extra });
+  if (p.log.length > PLAY.LOG_KEEP) p.log.splice(0, p.log.length - PLAY.LOG_KEEP);
+  await saveWorld();
+}
+const playPace = () => { try { return G.travelDayPace(G.travelSettings(state.data, {}), state.data) || 24; } catch { return 24; } };
+
+/** The scene as the player sees it now, built from the place's page, its numbers and the quick-roll tables. */
+function playScene() {
+  const here = partyPlace();
+  const page = here && state.pages.get(resolve(here.title));
+  const at = here ? rollPlace(here.title) : null;
+  const q = kind => R.quickRoll(state.data, kind, { mix: at?.mix, style: at?.style || '', place: here?.title || '', terrain: at?.terrain || at?.terrains?.[0], wiki: wikiTitles(), rank: G.rankForLevel(partyLevel()), seen: rollDeck() }, Math.random);
+  const d = ST.dateOf(cal(), today());
+  const about = page?.body.replace(/^#.*$/gm, '').replace(/\[\[([^\]|]+)(\|([^\]]+))?\]\]/g, (m, t, _, label) => label || t).replace(/[*_>]/g, '').split(/\n\s*\n/).map(x => x.trim()).find(x => x && !x.startsWith('-') && !x.startsWith('|') && !x.startsWith(':::')) || '';
+  return { here, page, q, ctx: { place: here?.title, part: play().part, date: fmtDay(today()), season: d.season, about, nums: here ? placeNums(here.title) : null } };
+}
+
+/** Moves the day on by one part; the evening's end sleeps the night and advances the world a day. */
+async function spendTime() {
+  const p = play();
+  if (p.part < PLAY.PARTS.length - 1) { p.part++; await saveWorld(); return; }
+  await journal('night', PLAY.nightText(partyPlace()?.title));
+  await passDays(1, 'The night passes');
+}
+/** Advances the world, then tells the player the news that reached them. */
+async function passDays(days, why, opts = {}) {
+  const from = today();
+  await advanceWorld(days, { why, stay: true, ...opts });
+  play().part = 0;
+  const at = partyPlace()?.map || null;
+  const heard = world().chronicle.filter(e => e.public && e.kind !== 'festival' && e.day > from && e.day <= today() && ST.heard(e, { today: today(), at, wordMiles: wordMiles() }).heard);
+  for (const line of PLAY.newsText(heard.slice(-5))) await journal('news', line);
+  await saveWorld();
+  refreshDate();
+}
+
+function renderPlay() {
+  const pc = playPc();
+  if (!pc) {
+    $('#view').innerHTML = `<div class="page play"><h1>Play</h1>
+      <p>The app is your DM. Make a character, and play them in Pallimustus: explore, talk to people, take work, travel. The world keeps moving whether you act or not.</p>
+      <button class="btn primary" id="play-new">Make your character</button></div>`;
+    $('#play-new').onclick = async () => { await addPartyMember(); if (playPc()) { play().pc = playPc().id; await journal('start', `${playPc().meta.title} arrives in ${partyPlace()?.title || 'the world'}.`); } go({ kind: 'play' }); };
+    return;
+  }
+  const m = pc.meta;
+  const { here, ctx } = playScene();
+  const p = play();
+  const scene = PLAY.sceneText(ctx);
+  const folk = here ? peopleOf(here).slice(0, 6) : [];
+  const jobs = sysOn('storyteller') && state.data.incidents ? ST.teller(world()).pitches : [];
+  const near = here?.map ? storyPlaces().filter(x => x.title !== here.title && !x.wide).map(x => ({ ...x, miles: Math.round(PL.milesBetween(here.map, x.map)) })).sort((a, b) => a.miles - b.miles).slice(0, 8) : [];
+  const log = p.log.slice(-40);
+  const hp = `${Number(m.hp) || 0}/${Number(m.hpMax) || 0}`;
+  $('#view').innerHTML = `<div class="wide play">
+    <div class="row" style="margin-bottom:8px"><h1 style="flex:1;margin:0;font:600 32px var(--serif)">${esc(here?.title || 'On the road')}</h1>
+      <span class="badge" title="Time of day">${esc(cap(PLAY.PARTS[p.part]))}</span></div>
+    <p class="play-scene">${esc(scene)}</p>
+    <div class="play-grid">
+      <section class="play-log" aria-live="polite">${log.length ? log.map(e => `<p class="pl-${esc(e.kind)}"><span class="muted">${esc(fmtDay(e.day))}</span> ${esc(e.text)}${e.check ? ` <span class="muted">(${esc(e.check)})</span>` : ''}</p>`).join('') : '<p class="muted">Your story starts here. Pick something to do.</p>'}</section>
+      <aside class="play-side">
+        <div class="card play-pc"><h3 data-id="${esc(pc.id)}">${esc(m.title)}</h3><p class="muted">Level ${esc(m.level || 1)} ${esc(m.species || '')} ${esc(m.class || '')} · HP ${esc(hp)}</p></div>
+        <h3>Do something</h3>
+        <div class="play-acts">
+          <button class="btn" data-play="explore" title="Look around ${esc(here?.title || 'here')}: a Perception or Investigation check">Explore</button>
+          <button class="btn" data-play="talk" title="Strike up a conversation with whoever is about">Talk to someone</button>
+          ${jobs ? `<button class="btn" data-play="work" title="See what work is going near here">Look for work</button>` : ''}
+          <button class="btn" data-play="rest" title="A day's rest: full HP and spells back. The world moves a day.">Rest a day</button>
+          <button class="btn" data-play="wait" title="Let a tenday go by">Wait a tenday</button>
+        </div>
+        ${folk.length ? `<h3>People here</h3><div class="play-acts">${folk.map(f => `<button class="btn small" data-talk="${esc(f.title)}">${esc(f.title)}</button>`).join('')}</div>` : ''}
+        ${jobs.length ? `<h3>Work on offer</h3>${jobs.map(j => `<div class="card play-job" data-pitch="${esc(j.id)}"><b>${esc(j.title)}</b><p>${esc(PLAY.jobText(j))}</p>
+          <div class="row"><button class="btn primary small" data-take>Take the job</button><button class="btn small" data-pass>Pass</button></div></div>`).join('')}` : ''}
+        ${near.length ? `<h3>Travel</h3><div class="play-acts">${near.map(x => `<button class="btn small" data-go="${esc(x.title)}" data-miles="${x.miles}">${esc(x.title)} <span class="muted">${x.miles.toLocaleString()} mi</span></button>`).join('')}</div>` : ''}
+      </aside>
+    </div></div>`;
+  const logEl = $('.play-log');
+  logEl.scrollTop = logEl.scrollHeight;
+  $('.play-pc h3').onclick = () => openPage(pc.id);
+  const act = fn => async e => { $$('#view button').forEach(b => { b.disabled = true; }); await attempt(() => fn(e)); if (state.view?.kind === 'play') renderPlay(); };
+  const scene2 = () => playScene();
+  $$('[data-play]').forEach(b => b.onclick = act(async () => {
+    const k = b.dataset.play;
+    const { q } = scene2();
+    const safety = placeNums(here?.title)?.safety ?? 50;
+    if (k === 'explore') {
+      const c = PLAY.check(m, PLAY.bestSkill(m, ['Perception', 'Investigation']), PLAY.dcFor(safety));
+      const x = c.ok ? q(c.crit ? 'loot' : PLAY.PARTS[p.part] === 'evening' ? 'senses' : Math.random() < 0.5 ? 'trinket' : 'passer') : q('complication');
+      saveDeck();
+      await journal('explore', PLAY.exploreText(c, x.text, here?.title), { check: PLAY.checkText(c) });
+      if (c.ok && x.treasure?.gp) await addToPurse(x.treasure.gp, 'exploring');
+      await spendTime();
+    } else if (k === 'talk') {
+      await talkTo(null, q);
+    } else if (k === 'work') {
+      if (!jobs.length) await newPitches(false);
+      if (!ST.teller(world()).pitches.length) await journal('work', 'Nobody near here has work for you today.');
+      else await journal('work', `You ask around for work. ${ST.teller(world()).pitches.length} jobs are going.`);
+    } else if (k === 'rest') {
+      const hurt = (Number(m.hp) || 0) < (Number(m.hpMax) || 0);
+      await journal('rest', PLAY.restText(here?.title, hurt));
+      await passDays(1, 'A day of rest', { rest: true });
+    } else if (k === 'wait') {
+      await journal('wait', PLAY.waitText(10, here?.title));
+      await passDays(10, 'Waiting');
+    }
+  }));
+  $$('[data-talk]').forEach(b => b.onclick = act(() => talkTo(b.dataset.talk, scene2().q)));
+  $$('[data-take]').forEach(b => b.onclick = act(async () => {
+    const j = ST.teller(world()).pitches.find(x => x.id === b.closest('[data-pitch]').dataset.pitch);
+    if (!j) return;
+    const r = { title: j.title, text: j.text, dm: j.dm, goal: j.goal, quest: true, place: true, trouble: true, effects: true, public: true, notes: false, ...Object.fromEntries(j.cast.filter(c => !c.page).map((c, i) => [`npc${i}`, true])) };
+    await makePitch(j, r, null);
+    await journal('job', PLAY.tookJobText(j));
+  }));
+  $$('[data-pass]').forEach(b => b.onclick = act(async () => {
+    const j = ST.teller(world()).pitches.find(x => x.id === b.closest('[data-pitch]').dataset.pitch);
+    if (!j) return;
+    ST.declinePitch(world(), j);
+    await journal('job', PLAY.passedJobText(j));
+  }));
+  $$('[data-go]').forEach(b => b.onclick = act(async () => {
+    const to = b.dataset.go, from = here?.title || 'the road';
+    const days = Math.max(1, Math.ceil(Number(b.dataset.miles) / playPace()));
+    world().partyAt = state.pages.get(resolve(to))?.meta.title || to;
+    world().partyPoint = null;
+    await journal('travel', PLAY.travelText(from, to, days));
+    await passDays(days, `Travel to ${to}`);
+  }));
+}
+
+/** A conversation: with someone from the wiki who lives here, or with a passer-by. */
+async function talkTo(name, q) {
+  const m = playPc().meta;
+  const here = partyPlace();
+  const passer = name ? null : q('passer');
+  const who = name || passer?.name || 'A local';
+  const c = PLAY.check(m, PLAY.bestSkill(m, ['Persuasion', 'Insight']), PLAY.dcFor(placeNums(here?.title)?.safety ?? 50, 11));
+  // Good talk passes on news the party hasn't heard yet, else a rumour from the tables.
+  const fresh = newsItems().filter(x => x.h.heard && !play().log.some(l => l.text.includes(x.e.title))).map(x => x.e);
+  const said = fresh.length && Math.random() < 0.6 ? `Did you hear? ${PLAY.newsText([fresh[0]])[0]}` : q('rumour').text || PLAY.smallTalk(Math.random);
+  saveDeck();
+  if (passer) await journal('meet', `You meet ${passer.text}`);
+  await journal('talk', PLAY.talkText(c, who, said), { check: PLAY.checkText(c) });
+  await spendTime();
+}
+
 // ---------- the storyteller ----------
 // A session-prep assistant: it pitches incidents with reasons from the world, and the DM accepts, rerolls, edits or
 // turns each one down. Accepting builds the prep (quest page, NPC pages, a new place, a trouble, the chronicle entry
@@ -4711,60 +4880,68 @@ async function acceptDialog(id) {
   if (!r) return;
   let opened = null;
   await attempt(async () => {
-    const made = [];
-    const pitch = { ...p, title: r.title.trim() || p.title, text: r.text.trim(), dm: r.dm.trim(), goal: r.goal.trim() };
-    let placeTitle = null;
-    if (r.place && p.placeDraft) { await keepPlaces([p.placeDraft], pitch.title); placeTitle = p.placeDraft.name; made.push(placeTitle); }
-    const placePage = state.pages.get(resolve(p.place));
-    for (const [i, c] of fresh.entries()) {
-      if (!r[`npc${i}`]) continue;
-      const n = G.generateNPC(state.data, { wiki: wikiTitles(), twist: 'none', ...(c.role ? { role: c.role } : {}) });
-      n.name = c.name;
-      let title = c.name;
-      for (let k = 2; resolve(title); k++) title = `${c.name} (${k})`;
-      // Like the quest, they start hidden from players, and their part in it stays a DM note even once shown.
-      const id = await api.pages.create(title, { type: 'npc', rank: n.rank, origin: S.originFor(n.cover?.role || n.role, n.class), ...(placePage ? { parent: placePage.meta.title } : {}), ...(r.quest ? { dmOnly: true } : {}), tags: ['generated', 'storyteller'] },
-        G.npcToMarkdown(n) + `\n## In the story\n\n:::dm\n${cap(c.label || 'Part of the story')} in [[${pitch.title}]]${placePage ? `, in [[${placePage.meta.title}]]` : ''}.\n:::\n`);
-      state.pages.set(id, await api.pages.read(id));
-      c.name = title;
-      if (state.data.people) ST.person(w, title).traits = ST.rollTraits(PEOPLE(), Math.random);
-      made.push(title);
-    }
-    let questTitle = null;
-    if (r.quest) {
-      questTitle = pitch.title;
-      for (let k = 2; resolve(questTitle); k++) questTitle = `${pitch.title} (${k})`;
-      const id = await api.pages.create(questTitle, { type: 'adventure', dmOnly: true, tags: ['storyteller', p.kind] }, ST.questMarkdown({ ...pitch, newPlaceTitle: placeTitle }));
-      state.pages.set(id, await api.pages.read(id));
-      made.push(questTitle);
-    }
-    rebuildIndex(); renderTree();
-    if (r.trouble && p.trouble) {
-      const here = placePage && problemHere(placePage);
-      const x = here && PL.newProblem(state.data, here, Math.random, { name: p.trouble.name, summary: p.trouble.summary, effect: p.trouble.effect });
-      if (x) { if (p.trouble.radius) x.radius = p.trouble.radius; x.startedDay = today(); problems().push(x); made.push(`the trouble "${x.name}"`); }
-    }
-    if (r.effects && p.effects) { const now = placeNums(p.place); if (now) await setPlaceNums(p.place, ST.applyEffects(now, p.effects)); }
-    const e = ST.entry({ day: today(), kind: 'event', title: pitch.title, text: pitch.text, dm: pitch.dm, places: [p.place, ...(placeTitle ? [placeTitle] : [])], people: p.cast.map(c => c.name), tags: [...p.tags, p.kind], at: p.at, source: p.card, isPublic: !!r.public });
-    if (r.effects) e.effects = p.effects;
-    e.quest = questTitle;
-    e.drama = p.drama;
-    if (p.faction) e.faction = p.faction;
-    if (p.factionGoal && w.factions?.[p.goalOf]?.goal) e.fx = ST.factionWins(w, FACTIONS(), p.goalOf, today());
-    else if (p.goalOf && w.people?.[p.goalOf]?.goal) { w.people[p.goalOf].goal.done = today(); e.goalOf = p.goalOf; }
-    w.chronicle.push(e);
-    if (r.notes && latest) {
-      const link = t => `[[${t}]]`;
-      const md = [`### Prep: ${questTitle ? link(questTitle) : pitch.title}`, '', pitch.text, '', `- **Where:** ${link(p.place)}${placeTitle ? `, ${link(placeTitle)}` : ''}`, ...(p.cast.length ? [`- **Who:** ${p.cast.map(c => link(c.name)).join(', ')}`] : []), `- **Hook:** ${pitch.rumour || pitch.goal}`, '', ':::dm', pitch.dm, ':::'].join('\n');
-      latest.body = G.putSection(latest.body, `pitch ${p.id}`, md);
-      await api.pages.write(latest.id, latest.meta, latest.body);
-    }
-    ST.acceptPitch(w, p);
-    await saveWorld();
+    const { made, questTitle } = await makePitch(p, r, latest);
     toast(`Accepted. Made ${made.length ? made.join(', ') : 'the chronicle entry'}.`);
     opened = questTitle;
   });
   return opened;
+}
+
+/** Makes what accepting a pitch makes, as the accept dialog's answers `r` say (each box on or off, and the words). */
+async function makePitch(p, r, latest = sessionPages()[0]) {
+  const w = world();
+  const fresh = p.cast.filter(c => !c.page);
+  const made = [];
+  const pitch = { ...p, title: r.title.trim() || p.title, text: r.text.trim(), dm: r.dm.trim(), goal: r.goal.trim() };
+  let placeTitle = null;
+  if (r.place && p.placeDraft) { await keepPlaces([p.placeDraft], pitch.title); placeTitle = p.placeDraft.name; made.push(placeTitle); }
+  const placePage = state.pages.get(resolve(p.place));
+  for (const [i, c] of fresh.entries()) {
+    if (!r[`npc${i}`]) continue;
+    const n = G.generateNPC(state.data, { wiki: wikiTitles(), twist: 'none', ...(c.role ? { role: c.role } : {}) });
+    n.name = c.name;
+    let title = c.name;
+    for (let k = 2; resolve(title); k++) title = `${c.name} (${k})`;
+    // Like the quest, they start hidden from players, and their part in it stays a DM note even once shown.
+    const id = await api.pages.create(title, { type: 'npc', rank: n.rank, origin: S.originFor(n.cover?.role || n.role, n.class), ...(placePage ? { parent: placePage.meta.title } : {}), ...(r.quest ? { dmOnly: true } : {}), tags: ['generated', 'storyteller'] },
+      G.npcToMarkdown(n) + `\n## In the story\n\n:::dm\n${cap(c.label || 'Part of the story')} in [[${pitch.title}]]${placePage ? `, in [[${placePage.meta.title}]]` : ''}.\n:::\n`);
+    state.pages.set(id, await api.pages.read(id));
+    c.name = title;
+    if (state.data.people) ST.person(w, title).traits = ST.rollTraits(PEOPLE(), Math.random);
+    made.push(title);
+  }
+  let questTitle = null;
+  if (r.quest) {
+    questTitle = pitch.title;
+    for (let k = 2; resolve(questTitle); k++) questTitle = `${pitch.title} (${k})`;
+    const id = await api.pages.create(questTitle, { type: 'adventure', dmOnly: true, tags: ['storyteller', p.kind] }, ST.questMarkdown({ ...pitch, newPlaceTitle: placeTitle }));
+    state.pages.set(id, await api.pages.read(id));
+    made.push(questTitle);
+  }
+  rebuildIndex(); renderTree();
+  if (r.trouble && p.trouble) {
+    const here = placePage && problemHere(placePage);
+    const x = here && PL.newProblem(state.data, here, Math.random, { name: p.trouble.name, summary: p.trouble.summary, effect: p.trouble.effect });
+    if (x) { if (p.trouble.radius) x.radius = p.trouble.radius; x.startedDay = today(); problems().push(x); made.push(`the trouble "${x.name}"`); }
+  }
+  if (r.effects && p.effects) { const now = placeNums(p.place); if (now) await setPlaceNums(p.place, ST.applyEffects(now, p.effects)); }
+  const e = ST.entry({ day: today(), kind: 'event', title: pitch.title, text: pitch.text, dm: pitch.dm, places: [p.place, ...(placeTitle ? [placeTitle] : [])], people: p.cast.map(c => c.name), tags: [...p.tags, p.kind], at: p.at, source: p.card, isPublic: !!r.public });
+  if (r.effects) e.effects = p.effects;
+  e.quest = questTitle;
+  e.drama = p.drama;
+  if (p.faction) e.faction = p.faction;
+  if (p.factionGoal && w.factions?.[p.goalOf]?.goal) e.fx = ST.factionWins(w, FACTIONS(), p.goalOf, today());
+  else if (p.goalOf && w.people?.[p.goalOf]?.goal) { w.people[p.goalOf].goal.done = today(); e.goalOf = p.goalOf; }
+  w.chronicle.push(e);
+  if (r.notes && latest) {
+    const link = t => `[[${t}]]`;
+    const md = [`### Prep: ${questTitle ? link(questTitle) : pitch.title}`, '', pitch.text, '', `- **Where:** ${link(p.place)}${placeTitle ? `, ${link(placeTitle)}` : ''}`, ...(p.cast.length ? [`- **Who:** ${p.cast.map(c => link(c.name)).join(', ')}`] : []), `- **Hook:** ${pitch.rumour || pitch.goal}`, '', ':::dm', pitch.dm, ':::'].join('\n');
+    latest.body = G.putSection(latest.body, `pitch ${p.id}`, md);
+    await api.pages.write(latest.id, latest.meta, latest.body);
+  }
+  ST.acceptPitch(w, p);
+  await saveWorld();
+  return { made, questTitle };
 }
 
 const DRAMA = ['', 'Small', 'Local', 'Serious', 'Big', 'Huge'];

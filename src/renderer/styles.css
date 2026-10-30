@@ -1598,3 +1598,17 @@ input.pinned { box-shadow: inset 3px 0 0 var(--accent); }
 .leg-row .leg-stop { min-width: 120px; font-weight: 600; }
 .leg-row select { width: auto; }
 .journey-settings { margin: 0 0 10px; }
+
+/* ---------- play ---------- */
+.play-scene { font: 17px/1.6 var(--serif); margin: 0 0 16px; max-width: 75ch; }
+.play-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 20px; align-items: start; }
+.play-log { max-height: calc(100vh - 260px); min-height: 200px; overflow-y: auto; padding: 4px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.play-log p { margin: 8px 0; line-height: 1.55; }
+.play-log .pl-news { color: var(--muted); font-style: italic; }
+.play-log .pl-night, .play-log .pl-start { color: var(--accent); }
+.play-side h3 { margin: 16px 0 6px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.play-acts { display: flex; flex-wrap: wrap; gap: 6px; }
+.play-pc h3 { cursor: pointer; margin: 0 0 4px; }
+.play-pc p, .play-job p { margin: 4px 0 8px; }
+.play-job { margin-bottom: 8px; }
+@media (max-width: 900px) { .play-grid { grid-template-columns: 1fr; } .play-log { max-height: 50vh; } }
